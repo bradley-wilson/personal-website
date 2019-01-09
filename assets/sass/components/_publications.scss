@@ -1,0 +1,70 @@
+.publication {
+    margin: 1rem 0;
+    background-color: rgba($black, 0.6);
+    padding: 2rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: all .3s;
+
+    @include screen(desktop) {
+        &:hover {
+            border: 1px solid white;
+        }
+    }
+
+    &__abstract {
+        overflow: hidden;
+    }
+
+    &__authors {
+        color: white;
+        overflow: hidden;
+    }
+
+    &__side-info {
+        margin-top: 1rem;
+        border-top: 1px solid $grey;
+        padding-top: 1rem;
+
+        @include screen(desktop) {
+            margin-top: 0;
+            padding-top: 0;
+            border-top: none;
+        }
+    }
+
+    &__year {
+        color: white;
+    }
+
+    &__tags {
+        @extend .text--metadata;
+        color: $grey;
+        font-weight: 400;
+        font-size: 1.3rem;
+    }
+
+    &__thumbnail {
+        @include screen(desktop) {
+            width: 11rem;
+            height: 16rem;
+            float: left;
+            background-size: cover;
+            background-position: center;
+            margin-right: 2rem;
+        }
+    }
+
+    &__missing-label {
+        padding: 3rem;
+        background-color: rgba($black, 0.6);
+    }
+}
+
+.publications {
+    margin-bottom: 3rem;
+
+    &--expanded {
+        margin-bottom: 6rem;
+    }
+}

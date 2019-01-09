@@ -1,0 +1,71 @@
+// CENTERING
+.u-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+}
+
+.u-center-x {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.u-center-y {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+// margins
+.u-margin-bottom {
+	&--small {
+		margin-bottom: 2rem;
+	}
+	&--medium {
+		margin-bottom: 5rem;
+	}
+	&--big {
+		margin-bottom: 10rem;
+	}
+    &--none {
+        margin-bottom: 0;
+    }
+}
+
+.u-margin-top {
+	&--small {
+		margin-top: 2rem;
+	}
+	&--medium {
+		margin-top: 5rem;
+	}
+	&--big {
+		margin-top: 10rem;
+	}
+    &--none {
+        margin-top: 0;
+    }
+}
+
+// ICONS
+.chevron {
+	width: 4rem;
+	opacity: .5;
+}
+
+// PREVENT SCROLLING ON FULL SCREEN APP IPHONE
+.u-view {
+    height: 100%;
+    width: 100%;
+
+    &--hidden {
+        overflow: hidden;
+    }
+
+    &--scroll {
+        overflow: scroll;
+    }
+}

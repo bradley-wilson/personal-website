@@ -1,0 +1,118 @@
+.button {
+	border: 1px solid transparent;
+	padding: 1.2rem 4rem;
+	border-radius: 4px;
+	transition: all .2s;
+	background-color: transparent;
+
+	cursor: pointer;
+
+    &:focus {
+        outline: 0;
+    }
+
+	&--active {
+		border-color: white;
+	}
+
+	&--primary {
+		border-color: white;
+
+		@include screen(desktop) {
+			&:hover {
+				border-color: transparent;
+				background-color: $color-primary;
+			}
+		}
+	}
+
+	&--tab {
+		padding: 1rem 3rem;
+        margin: 0 .2rem;
+		@include screen(desktop) {
+			&:hover {
+				border-color: white;
+			}
+		}
+	}
+
+    &--bar {
+        display: block;
+        text-align: center;
+        color: $color-secondary;
+        background-color: $light-blue;
+        width: 100%;
+        
+        &:hover {
+            color: rgba($color-secondary, .8);
+        }
+    }
+
+    &--close {
+        &:after {
+            content: "\2715";
+        }
+        position: absolute;
+        right: -1rem;
+        top: -1.5rem;
+        padding: 0;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        border: 1px solid white;
+        background-color: rgba($black, .8);
+        text-align: center;
+        line-height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    &--modal {
+        display: block;
+        text-align: center;
+        width: 13rem;
+        margin: 1rem auto;
+        border-color: $dark-blue;
+        color: $dark-blue;
+
+        @include screen(desktop) {
+            display: inline-block;
+            margin: 1.5rem;
+        }
+    }
+
+    &--stats {
+        display:  inline-block;
+        background-color: $light-grey;
+        border-radius: 0;
+        opacity: .6;
+        font-family: "Muli", sans-serif;
+        text-align: left;
+    }
+}
+
+.stats-button {
+    &--active {
+        opacity: 1;
+    }
+
+    &__figure {
+        color: $color-secondary;
+        font-weight: 700;
+        font-size: 2.4rem;
+    }
+
+    &__label {
+        text-transform: none;
+        color: #868686;
+    }
+}
+
+.menu_link {
+	@include screen(desktop) {
+		&:hover {
+			border-color: white;
+		}
+	}
+}
+
+// SOCIAL MEDIA BUTTONS

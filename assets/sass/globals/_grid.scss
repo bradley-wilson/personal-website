@@ -1,0 +1,160 @@
+// GRID SETUP
+.row {
+    // padding-right: 0;
+    @include clearfix;
+}
+
+.col--phone-1 {
+    @include grid-column(1);
+}
+.col--phone-2 {
+    @include grid-column(2);
+}
+.col--phone-3 {
+    @include grid-column(3);
+}
+.col--phone-4 {
+    @include grid-column(4);
+}
+.col--phone-5 {
+    @include grid-column(5);
+}
+.col--phone-6 {
+    @include grid-column(6);
+}
+.col--phone-7 {
+    @include grid-column(7);
+}
+.col--phone-8 {
+    @include grid-column(8);
+}
+.col--phone-9 {
+    @include grid-column(9);
+}
+.col--phone-10 {
+    @include grid-column(10);
+}
+.col--phone-11 {
+    @include grid-column(11);
+}
+.col--phone-12 {
+    @include grid-column(12);
+}
+  
+@include screen(tablet) {
+    .col--tablet-1 {
+        @include grid-column(1);
+    }
+    .col--tablet-2 {
+        @include grid-column(2);
+    }
+    .col--tablet-3 {
+        @include grid-column(3);
+    }
+    .col--tablet-4 {
+        @include grid-column(4);
+    }
+    .col--tablet-5 {
+        @include grid-column(5);
+    }
+    .col--tablet-6 {
+        @include grid-column(6);
+    }
+    .col--tablet-7 {
+        @include grid-column(7);
+    }
+    .col--tablet-8 {
+        @include grid-column(8);
+    }
+    .col--tablet-9 {
+        @include grid-column(9);
+    }
+    .col--tablet-10 {
+        @include grid-column(10);
+    }
+    .col--tablet-11 {
+        @include grid-column(11);
+    }
+    .col--tablet-12 {
+        @include grid-column(12);
+    }
+}
+
+@include screen(desktop) {
+    .col--desktop-1 {
+        @include grid-column(1);
+    }
+    .col--desktop-2 {
+        @include grid-column(2);
+    }
+    .col--desktop-3 {
+        @include grid-column(3);
+    }
+    .col--desktop-4 {
+        @include grid-column(4);
+    }
+    .col--desktop-5 {
+        @include grid-column(5);
+    }
+    .col--desktop-6 {
+        @include grid-column(6);
+    }
+    .col--desktop-7 {
+        @include grid-column(7);
+    }
+    .col--desktop-8 {
+        @include grid-column(8);
+    }
+    .col--desktop-9 {
+        @include grid-column(9);
+    }
+    .col--desktop-10 {
+        @include grid-column(10);
+    }
+    .col--desktop-11 {
+        @include grid-column(11);
+    }
+    .col--desktop-12 {
+        @include grid-column(12);
+    }
+}
+
+@include screen(wide) {
+    .col--wide-1 {
+        @include grid-column(1);
+    }
+    .col--wide-2 {
+        @include grid-column(2);
+    }
+    .col--wide-3 {
+        @include grid-column(3);
+    }
+    .col--wide-4 {
+        @include grid-column(4);
+    }
+    .col--wide-5 {
+        @include grid-column(5);
+    }
+    .col--wide-6 {
+        @include grid-column(6);
+    }
+    .col--wide-7 {
+        @include grid-column(7);
+    }
+    .col--wide-8 {
+        @include grid-column(8);
+    }
+    .col--wide-9 {
+        @include grid-column(9);
+    }
+    .col--wide-10 {
+        @include grid-column(10);
+    }
+    .col--wide-11 {
+        @include grid-column(11);
+    }
+    .col--wide-12 {
+        @include grid-column(12);
+    }
+}
+  

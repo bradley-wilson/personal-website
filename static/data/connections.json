@@ -1,0 +1,282 @@
+[
+    {
+        "title": "University of los Andes",
+        "description": "Associate Professor of Communication, Brand and Urban Creative Cultures.",
+        "country": "Colombia",
+        "date": "2014 - Present",
+        "icon": "img/logo_andes_cropped.jpg",
+        "id": "uni-andes"
+    },
+    {
+        "title": "University of Bayreuth",
+        "description": "Visiting Professor and Adjunct Facility.",
+        "country": "Germany",
+        "date": "2013 - 2017",
+        "icon": "img/logo_bayreuth_cropped.jpg",
+        "id": "uni-bayreuth"
+    },
+    {
+        "title": "LMU Munich Business School",
+        "description": "Visiting Professor in Marketing Communication.",
+        "country": "Germany",
+        "date": "2013 and 2016",
+        "icon": "img/logo_lmu.jpg",
+        "id": "uni-munich"
+    },
+    {
+        "title": "RMIT University",
+        "description": "Senior Lecturer in Advertising, Former Program Director and Discipline Leader.",
+        "country": "Australia",
+        "date": null,
+        "icon": "img/logo_rmit_cropped.jpg",
+        "id": "uni-rmit"
+    },
+    {
+        "title": "Saint Petersburg State University",
+        "description": "Visiting Professor of Marketing.",
+        "country": "Russia",
+        "date": "2014",
+        "icon": "img/logo_stpetersburg.jpg",
+        "id": "uni-st-petersburg"
+    },
+    {
+        "title": "University of los Andes",
+        "description": "Invited by MBA Director Claudia Ferrufino. Talk to MBA students on: Trends in Modern Branding and Communication... Some global insights.",
+        "country": "Colombia",
+        "date": "2015",
+        "icon": "img/logo_andes_cropped.jpg",
+        "id": "pres-colombia-2015"
+    },
+    {
+        "title": "Saint Petersburg State University",
+        "description": "Invited by Associate Professor Maria Smimova and Dean/Managing Director Yuriy Fedotov. Talk to Faculty, Research Students and Research Assistants on: Profiling Advanced Structural Equation Modeling Approaches in Brand and Sponsorship Research.",
+        "country": "Russia",
+        "date": "2014",
+        "icon": "img/logo_stpetersburg.jpg",
+        "id": "pres-st-petersburg-2014" 
+    },
+    {
+        "title": "University of los Andes",
+        "description": "Invited by Professor Carlos Trujillo. Talk to Faculty and Research Assistants on: A Demonstration of Partial Least Squares Structural Equation Modeling for Advances in Branding and Sponsorship Communication Contexts.",
+        "country": "Colombia",
+        "date": "2013",
+        "icon": "img/logo_andes_cropped.jpg",
+        "id": "pres-colombia-2013"
+    },
+    {
+        "title": "Copenhagen Business School",
+        "description": "Invited by Professor Alex Klinge. Talk to Faculty and Research Assistants on: The Challenges of Organisational Communication in Multicultural and Multilingual Organisations.",
+        "country": "Denmark",
+        "date": "2013",
+        "icon": "img/logo_copenhagen_business_school_cropped.jpg",
+        "id": "pres-copenhagen-2013"
+    },
+    {
+        "title": "Autonomous University of Barcelona",
+        "description": "Invited by Dr. David Roca. Talk to Faculty and Students on: Focused Communication is Effective Communication: A Demonstration of Strategic Models to Transfer Benefits, Attributes and Emotions.",
+        "country": "Spain",
+        "date": "2013",
+        "icon": "img/logo-uab.jpg",
+        "id": "pres-barcelona-2013"
+    },
+    {
+        "title": "ISC Paris",
+        "description": "Invited by Professor Michael Desborder. Sport Crises as a Threat to Organisational Legitimacy: Implementing a Strategic Planning Grid and A Discussion on the Role of Emotions and Neuroscience in Successful Events Activation.",
+        "country": "France",
+        "date": "2013",
+        "icon": "img/logo_isc.jpg",
+        "id": "pres-paris-2013"
+    },
+    {
+        "title": "University of Southampton",
+        "description": "Invited by Dr. Julia Wolsny. Talk to Students on The Importance of Targeted Value Propositions in Communication.",
+        "country": "UK",
+        "date": "2013",
+        "icon": "img/logo_university_of_southampton.jpg",
+        "id": "pres-southampton-2013"
+    },
+    {
+        "title": "Yonsei University",
+        "description": "Invited by Professor Eunju Ko and Professor Sangwon Lee. Talk to Faculty on: Inspirational Branding and Integrated Communication Concepts.",
+        "country": "South Korea",
+        "date": "2013",
+        "icon": "img/logo_yonsei_university.jpg",
+        "id": "pres-seoul-2013"
+    },
+    {
+        "title": "University of Nottingham Ningbo China",
+        "description": "Invited by Professor Gus Hooke and Associate Professor Lars Bergkvist. Talk to Faculty and Graduate Students on A Demonstration with Branding and Communication Examples on How to Implement Advanced Structural Equation Modeling Techniques.",
+        "country": "China",
+        "date": "2012",
+        "icon": "img/logo_university_of_nottingham.jpg",
+        "id": "pres-ningbo-2012"
+    },
+    {
+        "title": "University of Bayreuth",
+        "description": "Invited by Professor Dr. Herbert Woratschek. Talk to Faculty and Sport Management Graduate Students on Stakeholder Views of Player Crises, Brand Damage and Reputational Harm in Sport Sponsorship.",
+        "country": "Germany",
+        "date": "2012",
+        "icon": "img/logo_bayreuth_cropped.jpg",
+        "id": "pres-bayreuth-2012"
+    },
+    {
+        "title": "Lisbon University Institute",
+        "description": "Invited by Professor Dr. Paulo Rita. Talk to Faculty and Research Graduate Students on Investigating Modern Modeling Approaches in Branding and Communication: Dealing with Objections and Necessary Consideration in Robust Practice.",
+        "country": "Portugal",
+        "date": "2012",
+        "icon": "img/logo_iscte.jpg",
+        "id": "pres-lisbon-2012"
+    },
+    {
+        "title": "Monash University, Malaysia",
+        "description": "Invited by Vicki Little Ph.D. and Associate Professor Christina Lee. Talk to Faculty and Graduate Students on Structural Equation Modeling with PLS: An Illustrative Review with Branding and Communications Examples.",
+        "country": "Malaysia",
+        "date": "2012",
+        "icon": "img/logo_monash_university.jpg",
+        "id": "pres-malaysia-2012"
+    },
+    {
+        "title": "Copenhagen Business School",
+        "description": "Invited by Professor Judy Zaichkowsky. Talk to Faculty and Marketing Communication Graduate Students in Department of Marketing on The Evolution from Crisis to Transgression to Episodes: Profiling Brand and Reputational Harm in Sponsorship.",
+        "country": "Denmark",
+        "date": "2011",
+        "icon": "img/logo_copenhagen_cropped.jpg",
+        "id": "pres-copenhagen-2011"
+    },
+    {
+        "title": "Vienna University of Economics and Business",
+        "description": "Invited by Professor Doctor Josef Mazanec and Dr Thomas Salzberger. Talk to Faculty and Graduate Students in the Institute for Tourism and Leisure Studies on Modern PLS Path Modelling Developments: Robustness, Implementation Approaches and Examples.",
+        "country": "Austria",
+        "date": "2009",
+        "icon": "img/logo_wu.jpg",
+        "id": "pres-vienna-2009"
+    },
+    {
+        "title": "LMU Munich School of Management",
+        "description": "Invited by Professor Doctor Manfred Schwaiger and Professor Doctor Marki Sarstedt. Talk to Faculty and Graduate Students (Dipl-Kfm) on How to Apply the Latest Methodological Advances in Structural Equation Modeling To Your Work: Some Examples from Branding and Communication.",
+        "country": "Germany",
+        "date": "2009",
+        "icon": "img/logo_lmu.jpg",
+        "id": "pres-munich-2009"
+    },
+    {
+        "title": "University of Kaiserslautern",
+        "description": "Invited by Professor Doctor Stefan Roth. Talk to Faculty and Graduate Students on Crisis Management and Sponsorship Strategies.",
+        "country": "Germany",
+        "date": "2009",
+        "icon": "img/logo_kaiserslautern.jpg",
+        "id": "pres-kaiserslautern-2009"
+    },
+    {
+        "title": "University of Münster",
+        "description": "Invited by Professor Dr Manfred Krafft and Assitant Professor Dr. Oliver Gotz. Talk to Graduate Students on A Discussion on Communication Effectiveness Evaluation: Moving Towards Accountability.",
+        "country": "Germany",
+        "date": "2009",
+        "icon": "img/logo_university_of_munster.jpg",
+        "id": "pres-münster-2009"
+    },
+    {
+        "title": "University of Hamburg",
+        "description": "Invited by Professor Dr Christian Ringle. Talk to Students and Faculty on The Importance of Personal Relationship Characteristics in Brand-Person Bonding.",
+        "country": "Germany",
+        "date": "2009",
+        "icon": "img/logo_university_of_hamburg.jpg",
+        "id": "pres-hamburg-2009"
+    },
+    {
+        "title": "University of Göttingen",
+        "description": "Invited by Professor Dr Gunter Silberer. Talk to Faculty and Students on The Use of Structural Equation Methods in Communication and Branding. Some Applications and Recent Developments.",
+        "country": "Germany",
+        "date": "2009",
+        "icon": "img/logo_university_of_gottingen.jpg",
+        "id": "pres-gottingen-2009"
+    },
+    {
+        "title": "Korea University Business School",
+        "description": "Invited by Associate Professor Tony Garrett. Talk to Graduate Students on Exploring the Theory and Practice Disconnect: Some Reflections in Communication.",
+        "country": "South Korea",
+        "date": "2009",
+        "icon": "img/logo_kubs.jpg",
+        "id": "pres-seoul-2009"
+    },
+    {
+        "title": "RMIT University",
+        "description": "Talk to School on Brand management and the sponsorship relationship: Exploring the impact of degenerative episodes.",
+        "country": "Australia",
+        "date": "2009",
+        "icon": "img/logo_rmit_cropped.jpg",
+        "id": "pres-australia-2009"
+    },
+    {
+        "title": "Radboud University",
+        "description": "Invited by Professor Dr. Jose Bloemer and Dr. Joerg Henseler. Talk to Research Group on A Discussion of a Structural Model for Player Crises in Sport.",
+        "country": "Netherlands",
+        "date": "2008",
+        "icon": "img/logo_radboud_university.jpg",
+        "id": "pres-nijmegen-2008"
+    },
+    {
+        "title": "University of Hamburg",
+        "description": "Invited by Professor Dr K, W Hansmann and Dr. Christian Ringle. Talk to Research Group on Statistical Methods to Measure Brand Personality, Brand Relationship Quality and Brand Image.",
+        "country": "Germany",
+        "date": "2008",
+        "icon": "img/logo_university_of_hamburg.jpg",
+        "id": "pres-hamburg-2008"
+    },
+    {
+        "title": "RMIT University",
+        "description": "Talk to Faculty and Graduate Students on Investigation whether Involvement Moderates Relations Between Brand Personality, OR, do a brand’s softer attributes influence consumer loyalty.",
+        "country": "Australia",
+        "date": "2006",
+        "icon": "img/logo_rmit_cropped.jpg",
+        "id": "pres-australia-2006"
+    },
+    {
+        "title": "University of Oregon",
+        "description": "Invited by Bettina Cornwell. Topic: Sponsorship.",
+        "country": "USA",
+        "date": "2018",
+        "icon": "img/logo-oregon.jpg",
+        "id": "pres-oregon-2018"
+    },
+    {
+        "title": "Universidad Catolica Santa Maria la Antigua",
+        "description": "Invited by Dean of Facultad de Negocios Eduardo Pazmiño and Adjunct Dean of Facultad de Negocios Maximiliano Jimenez. Topic: Discussing University Partnerships and Shared Research on the Panama Canal.",
+        "country": "Panama",
+        "date": "2018",
+        "icon": "img/logo-santa-maria.png",
+        "id": "pres-panama-2018"
+    },
+    {
+        "title": "Technische Universität Kaiserslautern",
+        "description": "Invited by Dr. Stephan Roth. Topic: Potential PhD and Research Topics in Branding and Communication in Emerging Markets.",
+        "country": "Germany",
+        "date": "2018",
+        "icon": "img/logo_kaiserslautern.jpg",
+        "id": "pres-kaiserslautern-2018"
+    },
+    {
+        "title": "Saarland University",
+        "description": "Invited by Dr. Bastian Popp. Topic: What Every Good Manager Should Know About Emerging Markets!: Insights from (an outsider) in Colombia.",
+        "country": "Germany",
+        "date": "2018",
+        "icon": "img/logo-saarland.jpg",
+        "id": "pres-saarland-2018"
+    },
+    {
+        "title": "Alpen-Adria Universität",
+        "description": "Invited by Ralph Terlutter Topics: Branding and Consumer Insights in Latin America: A Cultural Challenge.",
+        "country": "Austria",
+        "date": "2018",
+        "icon": "img/logo-alpen-adria.jpg",
+        "id": "pres-klagenfurt-2018"
+    },
+    {
+        "title": "University of Puerto Rico",
+        "description": "Invited by . Topics: Musings on Effective Branding and Communication in the Modern Era.",
+        "country": "Puerto Rico",
+        "date": "2018",
+        "icon": "img/logo-upr.jpg",
+        "id": "pres-puerto-rico-2018"
+    }
+]

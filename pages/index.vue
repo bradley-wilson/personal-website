@@ -1,66 +1,492 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        brad-wilson
-      </h1>
-      <h2 class="subtitle">
-        Brad Wilson personal blog
-      </h2>
-      <div class="links">
+  <div>
+    <!-- Hero banner ----------------------------------------------------->
+    <section class="section-banner">
+      <BGVideo
+        poster="img/banner-video.jpg"
+        mp4-src="videos/bg_banner.mp4"
+        webm-src="videos/bg_banner.webm" />
+
+      <div class="container u-center">
+        <h1 class="heading heading--title">Bradley Wilson</h1>
+        <p class="subheading">
+          Bradley has a keen interest in sponsorship, branding, advertising research,
+          understanding image transfer, and methods advancement research.
+        </p>
         <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+          href="#booking-modal"
+          class="button">
+          <button
+            class="button button--primary"
+            onclick="closeModal('hot-sale-modal')">
+            Book a meeting</button>
+        </a>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- About section --------------------------------------------------->
+    <section
+      id="section-about"
+      class="section-about">
+      <div class="container container--narrow">
+        <div class="section-about__content">
+          <h3>He has multiple affiliations as: Associate Professor of Communication, Branding and Urban Creative Cultures.</h3>
+          <p class="text--body">
+            Facultad de Administración, <a href="http://administracion.uniandes.edu.co/index/es/">Universidad de Los Andes</a>, Bogota, Colombia and Visiting Professor of Sponsorship and Services at Department of Services Management, <a href="https://www.dlm.uni-bayreuth.de/en/team/woratschek_herber/index.php">Universität Bayreuth</a>, Germany. He also has a frequent association with <a href="http://www.en.bwl.uni-muenchen.de/index.html">LMU Munich Business School</a> in Munich, Germany being a Visiting Professor of Communication at the Institute of Market-based Management. <a href="https://www.en.imm.bwl.uni-muenchen.de/06_persons/professoren/schwaiger/index.html">Munich Business School. Ludwig Maximilan Universitat (LMU).</a> He is a former Visiting Professor at <a href="http://gsom.spbru.ru/en/">Graduate School of Management (GSOM)</a> <a href="http://english.spbu.ru">St. Petersburg State University</a> in Russia.
+          </p>
+          <p class="text--body">
+            Brad is a former Postgraduate Director and Senior Lecturer in Advertising at <a href="https://www.rmit.edu.au/about/our-education/academic-school/media-and-communication">"RMIT University in the School of Media and Communication</a>, Melbourne, Australia. This is the largest Media, Communication and Design School in the Southern Hemisphere. Brad is quite unique in his experience by spending half of his career in Arts, Design and Communications Faculties and also the other half in Business Faculties over a 20 year period.
+          </p>
+          <p class="text--body">
+            Brad is on six Editorial Advisory Boards including Journal of Advertising Research, International Journal of Advertising, Corporate Reputation Review, International Journal of Sports Marketing and Sponsorship, Human Communication Research and a new predominantly Spanish language journal Revista Cientifica Internacional de Comunicacion y Publicidad (International Journal of Advertising and Communication). He used to work as a marketing research consultant in Advertising and Brand Evaluation at the previously named company <a href="http://www.addimpact.net">Advertising Development Solutions and ADD+Impact</a> (now <a href="http://www.lumaresearch.com">Luma Research</a>) in Melbourne, Australia.
+          </p>
+        </div>
+
+        <!-- Background Van-de-Graff videos --------------------------------->
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          class="van-de-graaff-generator van-de-graaff-generator--left">
+          <source
+            src="videos/van-de-graaff-left.mp4"
+            type="video/mp4">
+          <source
+            src="videos/van-de-graaff-left.webm"
+            type="video/webm">
+        </video>
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          webkit-playsinline
+          class="van-de-graaff-generator van-de-graaff-generator--right">
+          <source
+            src="videos/van-de-graaff-right.mp4"
+            type="video/mp4">
+          <source
+            src="videos/van-de-graaff-right.webm"
+            type="video/webm">
+        </video>
+      </div>
+    </section>
+
+    <!-- Services section ------------------------------------------------>
+    <section
+      id="section-services"
+      class="section-services">
+      <div class="container">
+        <h1 class="heading heading--primary">Services</h1>
+
+        <div class="container container--narrow ">
+          <div class="row">
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/chat-icon.svg"
+                  alt="Chat icon">
+                Consulting
+              </div>
+            </div>
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/presentation-icon.svg"
+                  alt="Presentation icon">
+                Invited presentations
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/link-icon.svg"
+                  alt="Link icon">
+                Talent-matching &amp; placement
+              </div>
+            </div>
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/education-icon.svg"
+                  alt="Education icon">
+                Courses &amp; seminars
+              </div>
+            </div>
+          </div>
+
+          <div class="row u-margin-bottom--medium">
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/award-icon.svg"
+                  alt="Award icon">
+                Awards
+              </div>
+            </div>
+            <div class="col--phone-6">
+              <div class="service-item">
+                <img
+                  class="service-item__icon"
+                  src="img/stats-icon.svg"
+                  alt="Stats icon">
+                Statistics
+              </div>
+            </div>
+          </div>
+
+          <div style="text-align: center">
+            <a
+              href="#section-contact"
+              class="button button--primary u-margin-bottom--big">Contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events section -------------------------------------------------->
+    <section class="section-events">
+      <div class="container">
+        <h1 class="heading heading--primary">Upcoming events</h1>
+        <Events
+          v-for="event in events"
+          :key="event.id"
+          :event="event"/>
+      </div>
+    </section>
+
+    <!-- Connections section --------------------------------------------->
+    <section
+      id="section-connections"
+      class="section-connections">
+      <div class="container">
+        <h1 class="heading heading--primary">Connections</h1>
+        <nuxt-link
+          class="connections-thumbnail heading heading--secondary"
+          to="/connections">View map!</nuxt-link>
+      </div>
+    </section>
+
+    <!-- Stats section ---------------------------------------------------->
+    <section class="section-stats">
+      <!-- eslint-disable-next-line -->
+      <div class="container"></div>
+    </section>
+
+    <!-- Publications section --------------------------------------------->
+    <section
+      id="section-publications"
+      class="section-publications">
+      <div class="container">
+        <h1 class="heading heading--primary">Publications</h1>
+
+        <Publications :publications="publications"/>
+
+        <div style="text-align: center">
+          <a
+            href="publications.html"
+            class="button button--primary">View all</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feedback section ------------------------------------------------->
+    <section class="section-feedback">
+      <BGVideo 
+        poster="img/feedback-video.jpg"
+        mp4-src="videos/bg_lights_low.mp4"
+        webm-src="videos/bg_lights_low.webm"/>
+
+      <div class="container">
+        <Carousel :quotes="quotes"/>
+      </div>
+    </section>
+
+    <!-- Word cloud section ------------------------------------------------>
+    <section class="section-word-cloud">
+      <div class="container">
+        <img
+          class="word-cloud"
+          src="img/word-cloud.svg"
+          alt="Word cloud graphic">
+      </div>
+    </section>
+
+    <!-- Contact section --------------------------------------------------->
+    <section
+      id="section-contact"
+      class="section-contact">
+      <Contact/>
+    </section>
+
+    <!-- Contacts section -------------------------------------------------->
+    <section class="section-contacts">
+      <div class="container">
+        <h1 class="heading heading--primary">Contacts</h1>
+        <TheContacts :contacts="contacts"/>
+      </div>
+    </section>
+  </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import BGVideo from '@/components/BGVideo'
+import Events from '@/components/Events'
+import TheContacts from '@/components/TheContacts'
+import Carousel from '@/components/Carousel'
+import Publications from '@/components/Publications'
+import Contact from '@/components/Contact'
 
 export default {
+  async asyncData({ $axios }) {
+    const token = '?token=4458f0a2d0d2793a50fe20d0e9c519'
+    let eventsRes = await $axios.$get('/cockpit/event' + token)
+    let quotesRes = await $axios.$get('/cockpit/quote' + token)
+    let publicationsRes = await $axios.$get(
+      '/cockpit/article' + token + '&sort[year]=-1'
+    )
+    let contactsRes = await $axios.$get('/cockpit/contact' + token)
+    return {
+      events: eventsRes.entries,
+      quotes: quotesRes.entries,
+      publications: publicationsRes.entries,
+      contacts: contactsRes.entries
+    }
+  },
   components: {
-    Logo
+    BGVideo,
+    Events,
+    TheContacts,
+    Carousel,
+    Publications,
+    Contact
   }
 }
 </script>
 
-<style>
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang="scss">
+// BANNER ---------------------------------------------------------
+.section-banner {
+  height: 90vh;
+  position: relative;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+// ABOUT -----------------------------------------------------------
+.section-about {
+  background-color: #0e151f;
+  padding: $section-padding;
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    z-index: 10;
+    position: relative;
+  }
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+.van-de-graaff-generator {
+  position: absolute;
+  bottom: 0;
+  max-width: 60%;
+  max-height: 100%;
+  display: none;
+
+  &--right {
+    right: -19rem;
+  }
+  &--left {
+    left: -17.5rem;
+  }
+
+  @include screen(desktop) {
+    display: block;
+  }
+}
+
+// SERVICES -------------------------------------------------------
+.section-services {
+  padding: $section-padding;
+  background-image: $gradient-light;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+
+  .service-item {
+    margin: 2rem 0;
+
+    @include screen(tablet) {
+      margin: 2rem auto;
+      max-width: 20rem;
+    }
+
+    @include screen(desktop) {
+      max-width: 30rem;
+    }
+
+    &__icon {
+      height: 4rem;
+      display: block;
+      margin: 0 auto 1.5rem auto;
+
+      @include screen(tablet) {
+        display: inline-block;
+        float: left;
+        margin-right: 3rem;
+      }
+    }
+  }
+}
+
+// EVENTS ----------------------------------------------------
+.section-events {
+  background-color: #0e151f;
+  padding: $section-padding;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+// CONNECTIONS -----------------------------------------------
+.section-connections {
+  padding: $section-padding;
+  background-color: #061017;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+.connections-thumbnail {
+  width: 90%;
+  padding: 15rem 0;
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  margin: auto;
+  border-radius: 1rem;
+  border-bottom: none;
+  background-image: url('/img/map-thumbnail.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: all 0.2s;
+  text-align: center;
+
+  @include screen(tablet) {
+    padding: 20rem 0;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+// STATS -----------------------------------------------------
+.section-stats {
+  padding: $section-padding;
+  background-image: $gradient-light;
+  position: relative;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
 }
 
-.links {
-  padding-top: 15px;
+// PUBLICATIONS --------------------------------------------
+.section-publications {
+  padding: $section-padding;
+  background-color: #061017;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+// FEEDBACK -----------------------------------------------
+.section-feedback {
+  padding: $section-padding;
+  position: relative;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+// WORD CLOUD --------------------------------------------
+.section-word-cloud {
+  padding: $section-padding;
+  background-image: $gradient-light;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+.word-cloud {
+  max-width: 80rem;
+  margin: auto;
+  display: block;
+}
+
+// CONTACT SECTION -------------------------------------
+.section-contact {
+  padding: $section-padding;
+  background-color: #061017;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+}
+
+// CONTACTS SECTION ----------------------------------
+.section-contacts {
+  padding: $section-padding;
+  background-image: $gradient-light;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
 }
 </style>

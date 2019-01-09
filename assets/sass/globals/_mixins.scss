@@ -1,0 +1,51 @@
+// MEDIA QUERIES
+@mixin screen($breakpoint) {
+    $value: map-get($map: $breakpoints, $key: $breakpoint);
+
+    @if $value != null {
+        @media (min-width: $value) { @content; }
+    } @else {
+      @warn "The key '#{breakpoint}' could not be found in the '$breakpoints' map.";
+    }
+}
+
+// GRID
+@mixin grid-column($columnWidth) {
+  width: (100% / 12) * ($columnWidth);
+  float: left;
+  @if $columnWidth == 12 {
+    padding-right: 0;
+  }
+  @else {
+    padding-right: $gutterWidth;
+  }
+  &:last-of-type {
+    padding-right: 0;
+  }
+}
+
+// CLEARFIX
+@mixin clearfix {
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin resetCenter {
+  position: initial;
+  top: initial;
+  left: initial;
+  transform: initial;
+  width: initial;
+}
+
+// CENTER
+@mixin centerElement {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+}

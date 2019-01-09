@@ -39,14 +39,32 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+
+    // SASS resources loader
+    ['nuxt-sass-resources-loader', [
+      '@/assets/sass/main.scss',
+    ]]
   ],
+
   /*
   ** Axios module configuration
   */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    proxy: true,
+    // debug: true,
+    retry: true
+    // baseURL: 'http://www.bradwilsonphd.com'
+  },
+
+  /*
+  ** Proxy configuration
+  */
+  proxy: {
+    '/cockpit': {
+      target: 'http://www.bradwilsonphd.com/cockpit/api/collections/get',
+      pathRewrite: { '^/cockpit': '' }
+    }
   },
 
   /*

@@ -1,0 +1,35 @@
+// SCREEN SIZES
+$breakpoints: (
+    'tablet': 767px,
+    'desktop': 940px,
+    'wide': 1200px
+);
+
+// GRID GUTTER WIDTH
+$gutterWidth: 3rem;
+
+// COLOURS
+$color-primary: #424BAF;
+$color-secondary: #09A47B;
+$light-blue: #05314F;
+$dark-blue: #04263E;
+$black: #00080D;
+$light-grey: #DDDDDD;
+$grey: #B5B5B5;
+
+// GRADIENTS
+$gradient-dark: #0E151F;
+$gradient-light: radial-gradient(circle, #04263E, #021523);
+
+// FONTS
+$Muli: "Muli", Verdana, sans-serif;
+$Bebas: "Bebas Neue", sans-serif;
+$Josefin: "Josefin Sans", Verdana, sans-serif;
+
+// ELEMENTS
+$link: $light-grey;
+
+// SECTION STYLING
+$section-padding: 3rem 0;
+$section-padding-tablet: 5rem 0;
+$section-padding-desktop: 9rem 0;

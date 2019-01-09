@@ -1,0 +1,3 @@
+@function base-font($font-size) {
+	@return ($font-size * 100%) / 16;
+}

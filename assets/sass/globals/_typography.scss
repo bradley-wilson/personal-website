@@ -1,0 +1,256 @@
+// FONTS
+@font-face {
+	font-family: "Muli";
+	src: url(/fonts/Muli-Regular.ttf);
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Muli";
+	src: url(/fonts/Muli-Italic.ttf);
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Muli";
+	src: url(/fonts/Muli-Bold.ttf);
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Muli";
+	src: url(/fonts/Muli-BoldItalic.ttf);
+	font-style: italic;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "Bebas Neue";
+	src: url(/fonts/BebasNeue-Regular.woff2);
+}
+
+@font-face {
+    font-family: 'merlo_neueblack_italic';
+    src: url('/fonts/merloneue-blackitalic-webfont.woff2') format('woff2'),
+         url('/fonts/merloneue-blackitalic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "Josefin Sans";
+	src: url(/fonts/JosefinSans-Bold.ttf);
+}
+
+// BASE SETTINGS
+a {
+	color: $link;
+	border-bottom: 1px solid $color-secondary;
+	text-decoration: none;
+
+	@include screen(desktop) {
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 3.6rem;
+	margin-bottom: 4.8rem;
+}
+
+h2 {
+	font-weight: 400;
+	font-size: 2.9rem;
+	font-weight: 700;
+	margin-bottom: 3.5rem;
+}
+
+h3 {
+	font-size: 2rem;
+	margin-bottom: 2.4rem;
+	line-height: 1.5;
+}
+
+p {
+	font-size: 1.7rem;
+	color: $light-grey;
+	line-height: 1.8;
+	font-weight: 400;
+}
+
+.text {
+	&--body {
+		@extend p;
+		word-spacing: 3px;
+		margin-bottom: 2.4rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&--description {
+		font-size: 1.4rem;
+		color: $grey;
+		margin-bottom: .5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&--metadata {
+		font-size: 1.4rem;
+		font-weight: 700;
+		margin-bottom: .5rem;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.heading {
+	&--primary {
+		font-family: $Bebas;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-size: 4rem;
+		margin-bottom: 3rem;
+	}
+
+  &--secondary {
+    @extend .heading--primary;
+    font-size: 3rem;
+  }
+
+	&--tertiary {
+		font-family: $Bebas;
+		color: $color-primary;
+		font-size: 1.9rem;
+		text-transform: uppercase;
+		margin-bottom: .5rem;
+		letter-spacing: .5px;
+	}
+
+  &--promo {
+	  font-family: 'merlo_neueblack_italic';
+	  letter-spacing: .2rem;
+	  text-transform: uppercase;
+	  line-height: 1.2;
+	  font-size: 1.8rem;
+	  margin: auto;
+	  padding: 1.5rem 0;
+	  text-align: center;
+
+    @include screen(tablet) {
+	    text-align: left;
+	    font-size: 2.8rem;
+	    padding: 3rem 7rem;
+	    // max-width: 40%;
+    }
+    @include screen(desktop) {
+      max-width: initial;
+    }
+  }
+
+    &--modal {
+      font-weight: 400;
+      text-align: center;
+      font-size: 2.4rem;
+    }
+	
+	&--title {
+		@extend .heading--primary;
+		font-family: $Josefin;
+		line-height: 1.2;
+		letter-spacing: 0;
+		text-shadow: rgba(255, 255, 255, .7) 0 0 .7rem, rgba(255, 255, 255, .7) 0 0 6rem;
+
+		@include screen(tablet) {
+			font-size: 6.2rem;
+		}
+	}
+}
+
+.subheading {
+	font-family: $Muli;
+	line-height: initial;
+	font-weight: 700;
+	max-width: 70rem;
+	margin: auto;
+	margin-bottom: 5rem;
+}
+
+// BUTTONS
+.button {
+	font-size: 1.8rem;
+	font-family: $Bebas;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+
+	&:hover {
+		color: white;
+	}
+}
+
+// NAV LINKS
+.menu__link {
+	@extend .button;
+	font-size: 2.2rem;
+}
+
+// BANNER
+.section-banner {
+	text-align: center;
+}
+
+// SERVICES
+.service-item {
+	font-size: 1.6rem;
+	text-align: center;
+
+	@include screen(tablet) {
+		text-align: left;
+		font-size: 2rem;
+	}
+}
+
+// FEEDBACK
+.quote {
+		text-align: center;
+		max-width: 70%;
+	&__text {
+		@extend p;
+		color: white;
+
+		@include screen(tablet) {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__by {
+		color: $grey;
+		margin-bottom: 0;
+
+		@include screen(tablet) {
+			font-size: 2.4rem;
+		}
+	}
+
+	&__place {
+		font-size: 1.4rem;
+		color: $grey;
+
+		@include screen(tablet) {
+			font-size: 2rem;
+		}
+	}
+}
