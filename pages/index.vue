@@ -190,12 +190,12 @@
       <div class="container">
         <h1 class="heading heading--primary">Publications</h1>
 
-        <Publications :publications="publications"/>
+        <RecentPublications :publications="publications"/>
 
         <div style="text-align: center">
-          <a
-            href="publications.html"
-            class="button button--primary">View all</a>
+          <nuxt-link
+            to="/publications"
+            class="button button--primary">View all</nuxt-link>
         </div>
       </div>
     </section>
@@ -247,7 +247,7 @@ import BGVideo from '@/components/BGVideo'
 import Events from '@/components/Events'
 import TheContacts from '@/components/TheContacts'
 import Carousel from '@/components/Carousel'
-import Publications from '@/components/Publications'
+import RecentPublications from '@/components/RecentPublications'
 import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
@@ -273,7 +273,7 @@ export default {
     Events,
     TheContacts,
     Carousel,
-    Publications,
+    RecentPublications,
     Contact,
     BookingModal,
     HotSaleModal

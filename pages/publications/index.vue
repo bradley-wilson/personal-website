@@ -3,21 +3,21 @@
     <h1 class="heading heading--primary">Publications</h1>     
 
     <h2 class="heading heading--secondary">Journals</h2>
-    <Publication :publications="journals"/>
+    <Publications :publications="journals"/>
 
     <h2 class="heading heading--secondary">Book Chapters</h2>
-    <Publication :publications="bookChapters"/>
+    <Publications :publications="bookChapters"/>
 
     <h2 class="heading heading--secondary">Conferences</h2>
-    <Publication :publications="conferences"/>
+    <Publications :publications="conferences"/>
 
     <h2 class="heading heading--secondary">Other</h2>
-    <Publication :publications="other"/>
+    <Publications :publications="other"/>
   </div>
 </template>
 
 <script>
-import Publication from '@/components/Publication'
+import Publications from '@/components/Publications'
 
 export default {
   async asyncData({ $axios }) {
@@ -42,7 +42,7 @@ export default {
     }
   },
   components: {
-    Publication
+    Publications
   }
 }
 </script>
