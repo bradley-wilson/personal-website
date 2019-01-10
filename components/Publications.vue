@@ -49,7 +49,7 @@ export default {
     truncateAbstract: function(str) {
       let abs = str
         .split(/\s+/)
-        .slice(0, 20)
+        .slice(0, 40)
         .join(' ')
       abs += '...'
       return abs
@@ -102,7 +102,16 @@ export default {
     @extend .text--metadata;
     color: $grey;
     font-weight: 400;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+
+  &__tag {
+    display: inline-block;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
   }
 
   &__thumbnail {
