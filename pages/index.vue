@@ -236,6 +236,9 @@
         <TheContacts :contacts="contacts"/>
       </div>
     </section>
+
+    <BookingModal/>
+    <HotSaleModal/>
   </div>
 </template>
 
@@ -246,6 +249,8 @@ import TheContacts from '@/components/TheContacts'
 import Carousel from '@/components/Carousel'
 import Publications from '@/components/Publications'
 import Contact from '@/components/Contact'
+import BookingModal from '@/components/BookingModal'
+import HotSaleModal from '@/components/HotSaleModal'
 
 export default {
   async asyncData({ $axios }) {
@@ -269,7 +274,9 @@ export default {
     TheContacts,
     Carousel,
     Publications,
-    Contact
+    Contact,
+    BookingModal,
+    HotSaleModal
   }
 }
 </script>
