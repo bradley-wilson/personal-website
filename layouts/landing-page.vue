@@ -1,12 +1,8 @@
 <template>
   <div>
+    <TheAnnouncementBar/>
     <TheNavbar @hash-clicked="scrollToHash"/>
-    <div class="wrapper">
-      <h1
-        class="heading heading--title u-margin-top--big"
-        style="text-align: center">Bradley Wilson</h1>
-      <nuxt/>
-    </div>
+    <nuxt/>
     <TheFooter/>
   </div>
 </template>
@@ -31,6 +27,8 @@ export default {
       }
     }
   }
+  // mounted() {
+  // }
 }
 </script>
 
@@ -54,6 +52,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: $black;
 }
 
 .container {
@@ -64,18 +63,6 @@ body {
   &--narrow {
     @extend .container;
     max-width: 85rem;
-  }
-}
-
-.wrapper {
-  padding: $section-padding;
-  background-color: #061017;
-
-  @include screen(tablet) {
-    padding: $section-padding-tablet;
-  }
-  @include screen(desktop) {
-    padding: $section-padding-desktop;
   }
 }
 </style>

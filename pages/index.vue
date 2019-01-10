@@ -277,7 +277,8 @@ export default {
     Contact,
     BookingModal,
     HotSaleModal
-  }
+  },
+  layout: 'landing-page'
 }
 </script>
 
