@@ -1,5 +1,6 @@
 <template>
   <div>
+    <TheAnnouncementBar/>
     <TheNavbar @hash-clicked="scrollToHash"/>
     <div class="wrapper">
       <h1
