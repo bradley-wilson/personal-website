@@ -253,14 +253,13 @@ import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 
 export default {
-  async asyncData({ $axios }) {
-    const token = '?token=4458f0a2d0d2793a50fe20d0e9c519'
-    let eventsRes = await $axios.$get('/cockpit/event' + token)
-    let quotesRes = await $axios.$get('/cockpit/quote' + token)
+  async asyncData({ $axios, env }) {
+    let eventsRes = await $axios.$get(`/cockpit/event/?token=${env.token}`)
+    let quotesRes = await $axios.$get(`/cockpit/quote?token=${env.token}`)
     let publicationsRes = await $axios.$get(
-      '/cockpit/article' + token + '&sort[year]=-1'
+      `/cockpit/article?token=${env.token}&sort[year]=-1`
     )
-    let contactsRes = await $axios.$get('/cockpit/contact' + token)
+    let contactsRes = await $axios.$get(`/cockpit/contact?token=${env.token}`)
     return {
       events: eventsRes.entries,
       quotes: quotesRes.entries,

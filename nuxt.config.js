@@ -40,6 +40,7 @@ module.exports = {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
 
     // SASS resources loader
     ['nuxt-sass-resources-loader', [
@@ -51,9 +52,7 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    proxy: true,
-    // debug: true,
-    retry: true
+    proxy: true
     // baseURL: 'http://www.bradwilsonphd.com'
   },
 
@@ -65,6 +64,18 @@ module.exports = {
       target: 'http://www.bradwilsonphd.com/cockpit/api/collections/get',
       pathRewrite: { '^/cockpit': '' }
     }
+  },
+
+  markdownit: {
+    injected: true,
+    breaks: true
+  },
+
+  /*
+  ** Environment variables
+  */
+  env: {
+    token: '4458f0a2d0d2793a50fe20d0e9c519'
   },
 
   /*
