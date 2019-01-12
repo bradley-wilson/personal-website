@@ -179,8 +179,17 @@
 
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
-      <!-- eslint-disable-next-line -->
-      <div class="container"></div>
+      <div class="container">
+        <Stats
+          :styles="lineChartStyles"
+          :chartdata="stats"/>
+        <div class="clustrmaps">
+          <script
+            id="clustrmaps"
+            type="text/javascript"
+            src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+        </div>
+      </div>
     </section>
 
     <!-- Publications section --------------------------------------------->
@@ -249,6 +258,7 @@ import TheContacts from '@/components/TheContacts'
 import Carousel from '@/components/Carousel'
 import RecentPublications from '@/components/RecentPublications'
 import Contact from '@/components/Contact'
+import Stats from '@/components/Stats'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 
@@ -260,11 +270,39 @@ export default {
       `/cockpit/article?token=${env.token}&sort[year]=-1`
     )
     let contactsRes = await $axios.$get(`/cockpit/contact?token=${env.token}`)
+    let statsRes = await $axios.$get(
+      `/cockpit/stats?token=${env.token}&sort[week]=1`
+    )
     return {
       events: eventsRes.entries,
       quotes: quotesRes.entries,
       publications: publicationsRes.entries,
-      contacts: contactsRes.entries
+      contacts: contactsRes.entries,
+      stats: {
+        labels: statsRes.entries.map(stat => stat.week),
+        datasets: [
+          {
+            label: 'Reads',
+            data: statsRes.entries.map(stat => stat.reads),
+            borderColor: 'rgb(50, 164, 123)',
+            backgroundColor: 'rgba(50, 164, 123, 0.2)',
+            pointBackgroundColor: 'rgb(50, 164, 123)',
+            lineTension: 0.2,
+            pointHitRadius: 20,
+            borderWidth: 2
+          },
+          {
+            label: 'Citations',
+            data: statsRes.entries.map(stat => stat.citations),
+            borderColor: 'rgb(66, 75, 175)',
+            backgroundColor: 'rgba(66, 75, 175, 0.2)',
+            pointBackgroundColor: 'rgb(66, 75, 175)',
+            lineTension: 0.2,
+            pointHitRadius: 20,
+            borderWidth: 2
+          }
+        ]
+      }
     }
   },
   components: {
@@ -275,7 +313,19 @@ export default {
     RecentPublications,
     Contact,
     BookingModal,
-    HotSaleModal
+    HotSaleModal,
+    Stats
+  },
+  data() {
+    return {
+      lineChartStyles: {
+        height: '50vh',
+        width: '`100%',
+        position: 'relative',
+        backgroundColor: '#dddddd',
+        borderRadius: '4px'
+      }
+    }
   },
   layout: 'landing-page'
 }
@@ -424,6 +474,22 @@ export default {
   }
   @include screen(desktop) {
     padding: $section-padding-desktop;
+  }
+}
+
+.clustrmaps {
+  margin-top: 8rem;
+  overflow: hidden;
+  // padding-top: 56.25%;
+  position: relative;
+
+  & iframe {
+    // border: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
 
