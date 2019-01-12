@@ -2807,10 +2807,10 @@ export default {
   head() {
     return {
       script: [
-        { src: 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.2/dist/svg-pan-zoom.min.js' },
-        { src: 'scripts/hammer.js' },
-        { src: 'scripts/map.js' },
-        { src: 'scripts/sidebar.js' }
+        { src: 'scripts/svg-pan-zoom.min.js', defer: '' },
+        { src: 'scripts/hammer.js', defer: '' },
+        { src: 'scripts/map.js', body: true, defer: '' },
+        { src: 'scripts/sidebar.js', body: true, defer: '' }
       ]
     }
   },
