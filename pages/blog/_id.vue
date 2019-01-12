@@ -10,6 +10,18 @@
       <div
         class="text--body article__body"
         v-html="$md.render(post.content)"/>
+
+      <div
+        v-if="post.tags[0]"
+        class="article__info">
+        <span class="text--description tags__title">Tags:</span>
+        <div class="article__tags text--description">
+          <div
+            v-for="(tag, id) in post.tags"
+            :key="id"
+            class="article__tag"> {{ tag }} </div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
@@ -42,6 +54,27 @@ export default {
     margin-bottom: 2rem;
     color: $grey;
   }
+  &__tags {
+    border-top: 1px solid #3c3c39;
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
+  &__tag {
+    display: inline-block;
+    border: 1px solid $grey;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__info {
+    margin-top: 8rem;
+  }
+}
+
+.tags__title {
+  font-size: 1.8rem;
+  font-family: 'Bebas Neue';
 }
 </style>
 
