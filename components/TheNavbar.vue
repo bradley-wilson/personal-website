@@ -61,6 +61,7 @@ export default {
         },
         { title: 'Connections', url: '/connections' },
         { title: 'Publications', url: '/publications' },
+        { title: 'Team', url: '/team' },
         { title: 'Blog', url: '/blog' },
         {
           title: 'Contact',

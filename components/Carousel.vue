@@ -16,8 +16,12 @@
           class="carousel__slide">
           <div class="quote u-center">
             <div class="quote__text subheading"> {{ quote.quote }} </div>
-            <div class="quote__by heading--tertiary"> {{ quote.author }} </div>
-            <div class="quote__place text--description"> {{ quote.country }}, {{ quote.role }} </div>
+            <div
+              v-if="quote.author"
+              class="quote__by heading--tertiary"> {{ quote.author }} </div>
+            <div
+              v-if="quote.country && quote.role"
+              class="quote__place text--description"> {{ quote.country }}, {{ quote.role }} </div>
           </div>
         </div>
       </div>

@@ -209,6 +209,19 @@
       </div>
     </section>
 
+    <!-- Awards section --------------------------------------------------->
+    <section class="section-awards">
+      <div class="container">
+        <h1 class="heading heading--primary">Awards</h1>
+        <div class="awards">
+          <Award
+            v-for="award in awards"
+            :key="award.id"
+            :award="award"/>
+        </div>
+      </div>
+    </section>
+
     <!-- Feedback section ------------------------------------------------->
     <section class="section-feedback">
       <BGVideo 
@@ -261,6 +274,7 @@ import Contact from '@/components/Contact'
 import Stats from '@/components/Stats'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
+import Award from '@/components/Award'
 
 export default {
   async asyncData({ $axios, env }) {
@@ -273,11 +287,13 @@ export default {
     let statsRes = await $axios.$get(
       `/cockpit/stats?token=${env.token}&sort[week]=1`
     )
+    let awardsRes = await $axios.$get(`/cockpit/award?token=${env.token}`)
     return {
       events: eventsRes.entries,
       quotes: quotesRes.entries,
       publications: publicationsRes.entries,
       contacts: contactsRes.entries,
+      awards: awardsRes.entries,
       stats: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -314,7 +330,8 @@ export default {
     Contact,
     BookingModal,
     HotSaleModal,
-    Stats
+    Stats,
+    Award
   },
   data() {
     return {
@@ -516,6 +533,17 @@ export default {
   }
   @include screen(desktop) {
     padding: $section-padding-desktop;
+  }
+}
+
+// AWARDS ------------------------------------------------
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include screen(tablet) {
+    flex-direction: row;
   }
 }
 

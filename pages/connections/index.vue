@@ -22,9 +22,6 @@
         <button
           class="button button--tab side-bar__button"
           onclick="togglePresentations(this, 'map__side-bar')">Presentations</button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="toggleVisitors(this, 'map__side-bar')">Online visitors</button>
       </div>
       <div class="map">
         <svg

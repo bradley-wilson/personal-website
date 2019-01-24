@@ -49,20 +49,35 @@
       <form
         id="newsletter"
         class="form"
+        action="https://bradwilsonphd.us7.list-manage.com/subscribe/post"
         method="post"
         accept-charset="UTF-8">
         <input
-          id="email"
+          type="hidden"
+          name="u"
+          value="0ca2187b7102f72e754391083">
+        <input
+          type="hidden"
+          name="id"
+          value="eede23b3c3">
+        <input
+          id="MERGE0"
           v-model="newsletter.email"
           type="email"
           class="form__input form__input--newsletter"
-          name="email"
+          name="MERGE0"
+          autocapitalize="off"
+          autocorrect="off"
+          size="25"
+          value=""
           required
           placeholder="Email">
         <div style="text-align: center">
-          <button
+          <input
             class="button button--primary"
-            type="submit">Sign up</button>
+            type="submit"
+            name="submit"
+            value="Sign up">
         </div>
       </form>
     </div>

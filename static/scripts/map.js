@@ -266,12 +266,6 @@ function togglePresentations(button, id) {
     mapWork.style.display = 'none';
 }
 
-function toggleVisitors(button, id) {
-    toggleButton(button, id);
-    resetMapColors();
-    map.style.visibility = 'hidden';
-}
-
 // Performs AJAX JSON request from server
 function getJSON(path, callback) {
     var xhr = new XMLHttpRequest();
