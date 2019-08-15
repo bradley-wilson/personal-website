@@ -2,12 +2,29 @@
   <section class="announcement-bar">
     <div class="container">
       <p class="announcement-bar__text">Check out our latest blog post!</p>
-      <a
-        class="announcement-bar__link"
-        href="#">Click here.</a>
+      <nuxt-link
+        :to="'/blog/' + recentPost._id"
+        class="announcement-bar__link">Click here.</nuxt-link>
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return { recentPost: '' }
+  },
+  mounted() {
+    this.$axios
+      .$get(
+        `${process.env.postsUrl}&filter[published]=true&sort[_created]=-1`
+      )
+      .then(res => {
+        this.recentPost = res.entries[0]
+      })
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .announcement-bar {

@@ -16,7 +16,7 @@
 <script>
 export default {
   async asyncData({ $axios, env }) {
-    let biosRes = await $axios.$get(`/cockpit/bios?token=${env.token}`)
+    let biosRes = await $axios.$get(env.biosUrl)
     return {
       bios: biosRes.entries
     }

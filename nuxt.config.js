@@ -27,6 +27,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/sass/main.scss'
   ],
 
   /*
@@ -41,29 +42,15 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
-
-    // SASS resources loader
-    ['nuxt-sass-resources-loader', [
-      '@/assets/sass/main.scss',
-    ]]
+    '@nuxtjs/style-resources'
   ],
 
   /*
   ** Axios module configuration
   */
   axios: {
-    proxy: true
+    // proxy: true
     // baseURL: 'http://www.bradwilsonphd.com'
-  },
-
-  /*
-  ** Proxy configuration
-  */
-  proxy: {
-    '/cockpit': {
-      target: 'http://www.bradwilsonphd.com/cockpit/api/collections/get',
-      pathRewrite: { '^/cockpit': '' }
-    }
   },
 
   markdownit: {
@@ -71,12 +58,43 @@ module.exports = {
     breaks: true
   },
 
+  styleResources: {
+    scss: [
+      './assets/sass/main.scss'
+    ]
+  },
+
   /*
   ** Environment variables
   */
   env: {
-    token: '4458f0a2d0d2793a50fe20d0e9c519'
+    baseUrl: process.env.BASE_URL || 'http://www.bradwilsonphd.com/cockpit',
+    url: process.env.URL || 'http://bradwilsonphd.com',
+    eventsUrl: process.env.EVENTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/event?token=4458f0a2d0d2793a50fe20d0e9c519',
+    quotesUrl: process.env.QUOTES_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/quote?token=4458f0a2d0d2793a50fe20d0e9c519',
+    publicationsUrl: process.env.PUBLICATIONS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/article?token=4458f0a2d0d2793a50fe20d0e9c519',
+    contactsUrl: process.env.CONTACTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/contact?token=4458f0a2d0d2793a50fe20d0e9c519',
+    statsUrl: process.env.STATS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+    awardsUrl: process.env.AWARDS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/award?token=4458f0a2d0d2793a50fe20d0e9c519',
+    biosUrl: process.env.BIOS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
+    postsUrl: process.env.POSTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519'
   },
+
+  generate: {
+    routes: async () => {
+      let { data } = await axios.post(process.env.POSTS_URL)
+      return data.entries.map((post) => {
+        return {
+          route: '/blog/' + post.slug,
+          payload: post
+        }
+      })
+    }
+  },
+
+  serverMiddleware: [
+  '@/api/contact'
+  ],
 
   /*
   ** Build configuration

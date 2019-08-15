@@ -22,20 +22,16 @@ import Publications from '@/components/Publications'
 export default {
   async asyncData({ $axios, env }) {
     let journalsRes = await $axios.$get(
-      `/cockpit/article?token=${env.token}&filter[type]=Journal&sort[year]=-1`
+      `${env.publicationsUrl}&filter[type]=Journal&sort[year]=-1`
     )
     let bookChaptersRes = await $axios.$get(
-      `/cockpit/article?token=${
-        env.token
-      }&filter[type]=Book+chapter&sort[year]=-1`
+      `${env.publicationsUrl}&filter[type]=Book+chapter&sort[year]=-1`
     )
     let conferencesRes = await $axios.$get(
-      `/cockpit/article?token=${
-        env.token
-      }&filter[type]=Conference&sort[year]=-1`
+      `${env.publicationsUrl}&filter[type]=Conference&sort[year]=-1`
     )
     let otherRes = await $axios.$get(
-      `/cockpit/article?token=${env.token}&filter[type]=Other&sort[year]=-1`
+      `${env.publicationsUrl}&filter[type]=Other&sort[year]=-1`
     )
     return {
       journals: journalsRes.entries,

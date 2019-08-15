@@ -17,6 +17,12 @@
           :key="post.id"
           :post="post"/>
       </section>
+      <div
+        v-if="posts[0] == undefined"
+        class="text--description label--missing"
+      >
+        No blog posts to show.
+      </div>
       <div class="blog__pagination">
         <img
           v-if="currentPage != 1"
@@ -42,7 +48,7 @@ import Post from '@/components/Post'
 export default {
   async asyncData({ $axios, env }) {
     let postsRes = await $axios.$get(
-      `/cockpit/post?token=${env.token}&sort[_created]=-1`
+      `${env.postsUrl}&filter[published]=true&sort[_created]=-1`
     )
     return { posts: postsRes.entries }
   },
