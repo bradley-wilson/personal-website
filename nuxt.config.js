@@ -68,16 +68,16 @@ module.exports = {
   ** Environment variables
   */
   env: {
-    baseUrl: process.env.BASE_URL || 'http://www.bradwilsonphd.com/cockpit',
-    url: process.env.URL || 'http://bradwilsonphd.com',
-    eventsUrl: process.env.EVENTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/event?token=4458f0a2d0d2793a50fe20d0e9c519',
-    quotesUrl: process.env.QUOTES_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/quote?token=4458f0a2d0d2793a50fe20d0e9c519',
-    publicationsUrl: process.env.PUBLICATIONS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/article?token=4458f0a2d0d2793a50fe20d0e9c519',
-    contactsUrl: process.env.CONTACTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/contact?token=4458f0a2d0d2793a50fe20d0e9c519',
-    statsUrl: process.env.STATS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-    awardsUrl: process.env.AWARDS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/award?token=4458f0a2d0d2793a50fe20d0e9c519',
-    biosUrl: process.env.BIOS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
-    postsUrl: process.env.POSTS_URL || 'http://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519'
+    baseUrl: process.env.BASE_URL || 'https://www.bradwilsonphd.com/cockpit',
+    url: process.env.URL || 'https://bradwilsonphd.com',
+    eventsUrl: process.env.EVENTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/event?token=4458f0a2d0d2793a50fe20d0e9c519',
+    quotesUrl: process.env.QUOTES_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/quote?token=4458f0a2d0d2793a50fe20d0e9c519',
+    publicationsUrl: process.env.PUBLICATIONS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/article?token=4458f0a2d0d2793a50fe20d0e9c519',
+    contactsUrl: process.env.CONTACTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/contact?token=4458f0a2d0d2793a50fe20d0e9c519',
+    statsUrl: process.env.STATS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+    awardsUrl: process.env.AWARDS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/award?token=4458f0a2d0d2793a50fe20d0e9c519',
+    biosUrl: process.env.BIOS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
+    postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519'
   },
 
   generate: {
