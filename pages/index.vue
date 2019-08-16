@@ -278,16 +278,12 @@ import Award from '@/components/Award'
 
 export default {
   async asyncData({ $axios, env }) {
-    let eventsRes = await $axios.$get(`/cockpit/event/?token=${env.token}`)
-    let quotesRes = await $axios.$get(`/cockpit/quote?token=${env.token}`)
-    let publicationsRes = await $axios.$get(
-      `/cockpit/article?token=${env.token}&sort[year]=-1`
-    )
-    let contactsRes = await $axios.$get(`/cockpit/contact?token=${env.token}`)
-    let statsRes = await $axios.$get(
-      `/cockpit/stats?token=${env.token}&sort[week]=1`
-    )
-    let awardsRes = await $axios.$get(`/cockpit/award?token=${env.token}`)
+    let eventsRes = await $axios.$get(env.eventsUrl)
+    let quotesRes = await $axios.$get(env.quotesUrl)
+    let publicationsRes = await $axios.$get(`${env.publicationsUrl}&sort[year]=-1`)
+    let contactsRes = await $axios.$get(env.contactsUrl)
+    let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
+    let awardsRes = await $axios.$get(env.awardsUrl)
     return {
       events: eventsRes.entries,
       quotes: quotesRes.entries,
