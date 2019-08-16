@@ -16,9 +16,7 @@ export default {
   },
   mounted() {
     this.$axios
-      .$get(
-        `${process.env.postsUrl}&filter[published]=true&sort[_created]=-1`
-      )
+      .$get(`${process.env.postsUrl}&filter[published]=true&sort[_created]=-1`)
       .then(res => {
         this.recentPost = res.entries[0]
       })
