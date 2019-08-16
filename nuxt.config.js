@@ -1,3 +1,5 @@
+require('dotenv').config()
+import axios from 'axios'
 const pkg = require('./package')
 
 module.exports = {
@@ -49,8 +51,6 @@ module.exports = {
   ** Axios module configuration
   */
   axios: {
-    // proxy: true
-    // baseURL: 'http://www.bradwilsonphd.com'
   },
 
   markdownit: {

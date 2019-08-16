@@ -20,6 +20,7 @@
     "chart.js": "^2.7.3",
     "cross-env": "^5.2.0",
     "dot-env": "0.0.1",
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "nodemailer": "^5.0.0",
     "nuxt": "^2.0.0",
