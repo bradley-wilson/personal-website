@@ -32,7 +32,7 @@ import markdownIt from 'markdown-it'
 export default {
   async asyncData({ $axios, params, env }) {
     let postRes = await $axios.$get(
-      `${env.postsUrl}&filter[_id]=${params.id}`
+      `${env.postsUrl}&filter[slug]=${params.id}`
     )
     return { post: postRes.entries[0] }
   }
