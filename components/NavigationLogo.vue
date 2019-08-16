@@ -1,12 +1,12 @@
 <template>
-  <nuxt-link
-    to="/"
+  <a
+    href="/"
     class="logo">
     <img
       class="logo__content"
       src="img/brad-wilson-logo-white.svg"
       alt="Brad Wilson logo">
-  </nuxt-link>
+  </a>
 </template>
 
 <style lang="scss" scoped>

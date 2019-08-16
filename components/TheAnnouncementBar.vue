@@ -3,7 +3,7 @@
     <div class="container">
       <p class="announcement-bar__text">Check out our latest blog post!</p>
       <nuxt-link
-        :to="'/blog/' + recentPost._id"
+        :to="'/blog/' + recentPost.slug"
         class="announcement-bar__link">Click here.</nuxt-link>
     </div>
   </section>
