@@ -1,7 +1,7 @@
 <template>
   <div class="award">
     <img
-      src="img/laurel.svg"
+      src="/img/laurel.svg"
       alt="Laurel icon"
       class="award__icon">
     <div class="award__title heading--tertiary"> {{ award.title }} </div>

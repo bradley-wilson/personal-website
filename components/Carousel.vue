@@ -1,7 +1,7 @@
 <template>
   <div class="carousel">
     <img
-      src="img/chevron-left.svg"
+      src="/img/chevron-left.svg"
       class="chevron carousel__chevron-left u-center-y"
       alt="Chevron left"
       @click="carouselMoveBackward">
@@ -27,7 +27,7 @@
       </div>
     </div>
     <img
-      src="img/chevron-right.svg"
+      src="/img/chevron-right.svg"
       class="chevron carousel__chevron-right u-center-y"
       alt="Chevron right"
       @click="carouselMoveForward">

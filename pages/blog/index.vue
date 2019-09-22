@@ -3,7 +3,7 @@
     <div class="blog">
       <div class="search-box">
         <img
-          src="img/glass.svg"
+          src="/img/glass.svg"
           alt="Search icon"
           class="search-box__icon">
         <input
@@ -26,14 +26,14 @@
       <div class="blog__pagination">
         <img
           v-if="currentPage != 1"
-          src="img/chevron-left.svg"
+          src="/img/chevron-left.svg"
           class="chevron chevron-left"
           alt="Chevron left"
           @click="currentPage--; scrollToTop()">
         <div class="pagination__text text--description"> Page {{ currentPage }} of {{ pages }} </div>
         <img
           v-if="currentPage < pages && pages > currentPage"
-          src="img/chevron-right.svg"
+          src="/img/chevron-right.svg"
           class="chevron chevron-right"
           alt="Chevron left"
           @click="currentPage++; scrollToTop()">
