@@ -4,8 +4,8 @@
     <section class="section-banner">
       <BGVideo
         poster="img/banner-video.jpg"
-        mp4-src="videos/bg_banner.mp4"
-        webm-src="videos/bg_banner.webm" />
+        mp4-src="/videos/bg_banner.mp4"
+        webm-src="/videos/bg_banner.webm" />
 
       <div class="container u-center">
         <h1 class="heading heading--title">Bradley Wilson</h1>
@@ -51,10 +51,10 @@
           webkit-playsinline
           class="van-de-graaff-generator van-de-graaff-generator--left">
           <source
-            src="videos/van-de-graaff-left.mp4"
+            src="/videos/van-de-graaff-left.mp4"
             type="video/mp4">
           <source
-            src="videos/van-de-graaff-left.webm"
+            src="/videos/van-de-graaff-left.webm"
             type="video/webm">
         </video>
         <video
@@ -65,10 +65,10 @@
           webkit-playsinline
           class="van-de-graaff-generator van-de-graaff-generator--right">
           <source
-            src="videos/van-de-graaff-right.mp4"
+            src="/videos/van-de-graaff-right.mp4"
             type="video/mp4">
           <source
-            src="videos/van-de-graaff-right.webm"
+            src="/videos/van-de-graaff-right.webm"
             type="video/webm">
         </video>
       </div>
@@ -87,7 +87,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/chat-icon.svg"
+                  src="/img/chat-icon.svg"
                   alt="Chat icon">
                 Consulting
               </div>
@@ -96,7 +96,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/presentation-icon.svg"
+                  src="/img/presentation-icon.svg"
                   alt="Presentation icon">
                 Invited presentations
               </div>
@@ -108,7 +108,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/link-icon.svg"
+                  src="/img/link-icon.svg"
                   alt="Link icon">
                 Talent-matching &amp; placement
               </div>
@@ -117,7 +117,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/education-icon.svg"
+                  src="/img/education-icon.svg"
                   alt="Education icon">
                 Courses &amp; seminars
               </div>
@@ -129,7 +129,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/award-icon.svg"
+                  src="/img/award-icon.svg"
                   alt="Award icon">
                 Awards
               </div>
@@ -138,7 +138,7 @@
               <div class="service-item">
                 <img
                   class="service-item__icon"
-                  src="img/stats-icon.svg"
+                  src="/img/stats-icon.svg"
                   alt="Stats icon">
                 Statistics
               </div>
@@ -226,8 +226,8 @@
     <section class="section-feedback">
       <BGVideo 
         poster="img/feedback-video.jpg"
-        mp4-src="videos/bg_lights_low.mp4"
-        webm-src="videos/bg_lights_low.webm"/>
+        mp4-src="/videos/bg_lights_low.mp4"
+        webm-src="/videos/bg_lights_low.webm"/>
 
       <div class="container">
         <Carousel :quotes="quotes"/>
@@ -239,7 +239,7 @@
       <div class="container">
         <img
           class="word-cloud"
-          src="img/word-cloud.svg"
+          src="/img/word-cloud.svg"
           alt="Word cloud graphic">
       </div>
     </section>

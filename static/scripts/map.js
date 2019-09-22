@@ -118,7 +118,7 @@ for (var i = 0; i < mapMarkers.length; i++) {
                 mapMarkers[u].style.fill = '#09A47C';
             }
 
-            getJSON('data/connections.json', function(data){
+            getJSON('/data/connections.json', function(data){
                 showMarkerData(data, markerId);
             });
             this.style.fill = '#424BAF';
