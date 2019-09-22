@@ -10,9 +10,9 @@
       <div
         id="map__side-bar"
         class="side-bar map__side-bar">
-        <nuxt-link
+        <a
           class="button button--tab side-bar__button"
-          to="/#section-connections">&lt; Go back</nuxt-link>
+          href="/#section-connections">&lt; Go back</a>
         <button
           class="button button--tab side-bar__button button--active"
           onclick="toggleWork(this, 'map__side-bar')">Work connections</button>
