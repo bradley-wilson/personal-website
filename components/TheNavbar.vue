@@ -18,9 +18,9 @@
             :key="id"
             class="menu__link"
             @click="toTarget(link.target); closeNav()">
-            <nuxt-link
-              :to="link.url"
-              class="menu__link--inner"> {{ link.title }} </nuxt-link>
+            <a
+              :href="link.url"
+              class="menu__link--inner"> {{ link.title }} </a>
           </div>
           
           <div class="social-media">
