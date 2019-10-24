@@ -18,10 +18,11 @@
           onclick="toggleWork(this, 'map__side-bar')">Work connections</button>
         <button
           class="button button--tab side-bar__button"
-          onclick="toggleEngagement(this, 'map__side-bar')">Global engagement</button>
+          @click="sortCountries"
+          onclick="toggleEngagement(this, 'map__side-bar');">Global readership</button>
         <button
           class="button button--tab side-bar__button"
-          onclick="togglePresentations(this, 'map__side-bar')">Presentations</button>
+          onclick="togglePresentations(this, 'map__side-bar')">Invited Presentations</button>
       </div>
       <div class="map">
         <svg
@@ -2712,87 +2713,23 @@
           </div>
         </div>
         <div id="country-rankings" class="country-rankings map__info">
-          <div class="country-rankings__country">1. United States</div>
-          <div class="country-rankings__country">2. Colombia</div>
-          <div class="country-rankings__country">3. Germany</div>
-          <div class="country-rankings__country">4. United Kingdom</div>
-          <div class="country-rankings__country">5. Australia</div>
-          <div class="country-rankings__country">6. Indonesia</div>
-          <div class="country-rankings__country">7. France</div>
-          <div class="country-rankings__country">8. India</div>
-          <div class="country-rankings__country">9. Malaysia</div>
-          <div class="country-rankings__country">10. Austria</div>
-          <div class="country-rankings__country">11. Republic of Korea</div>
-          <div class="country-rankings__country">12. Netherlands</div>
-          <div class="country-rankings__country">13. Denmark</div>
-          <div class="country-rankings__country">14. Turkey</div>
-          <div class="country-rankings__country">15. New Zealand</div>
-          <div class="country-rankings__country">16. Greece</div>
-          <div class="country-rankings__country">17. Canada</div>
-          <div class="country-rankings__country">18. Poland</div>
-          <div class="country-rankings__country">19. Peru</div>
-          <div class="country-rankings__country">20. China</div>
-          <div class="country-rankings__country">21. Italy</div>
-          <div class="country-rankings__country">22. Vietnam</div>
-          <div class="country-rankings__country">23. Pakistan</div>
-          <div class="country-rankings__country">24. Hong Kong</div>
-          <div class="country-rankings__country">25. Brazil</div>
-          <div class="country-rankings__country">26. Sweden</div>
-          <div class="country-rankings__country">27. Philippines</div>
-          <div class="country-rankings__country">28. Spain</div>
-          <div class="country-rankings__country">29. South Africa</div>
-          <div class="country-rankings__country">30. Russian Federation</div>
-          <div class="country-rankings__country">31. Switzerland</div>
-          <div class="country-rankings__country">32. Islam Republic of Iran</div>
-          <div class="country-rankings__country">33. Ireland</div>
-          <div class="country-rankings__country">34. Venezuela</div>
-          <div class="country-rankings__country">35. Taiwan</div>
-          <div class="country-rankings__country">36. Singapore</div>
-          <div class="country-rankings__country">27. Thailand</div>
-          <div class="country-rankings__country">38. Romania</div>
-          <div class="country-rankings__country">39. Portugal</div>
-          <div class="country-rankings__country">40. Kenya</div>
-          <div class="country-rankings__country">41. Japan</div>
-          <div class="country-rankings__country">42. Jordan</div>
-          <div class="country-rankings__country">43. United Arab Emirates</div>
-          <div class="country-rankings__country">44. Mexico</div>
-          <div class="country-rankings__country">45. Sri Lanka</div>
-          <div class="country-rankings__country">46. Egypt</div>
-          <div class="country-rankings__country">47. Czech Republic</div>
-          <div class="country-rankings__country">48. Chile</div>
-          <div class="country-rankings__country">49. Puerto Rico</div>
-          <div class="country-rankings__country">50. Norway</div>
-          <div class="country-rankings__country">51. Maldives</div>
-          <div class="country-rankings__country">52. Mauritius</div>
-          <div class="country-rankings__country">53. Malta</div>
-          <div class="country-rankings__country">54. Kuwait</div>
-          <div class="country-rankings__country">55. Israel</div>
-          <div class="country-rankings__country">56. Hungary</div>
-          <div class="country-rankings__country">57. Tunisia</div>
-          <div class="country-rankings__country">58. Serbia</div>
-          <div class="country-rankings__country">59. Nigeria</div>
-          <div class="country-rankings__country">60. Morocco</div>
-          <div class="country-rankings__country">61. Croatia</div>
-          <div class="country-rankings__country">62. Finland</div>
-          <div class="country-rankings__country">63. Belgium</div>
-          <div class="country-rankings__country">64. Zambia</div>
-          <div class="country-rankings__country">65. Uganda</div>
-          <div class="country-rankings__country">66. Ukraine</div>
-          <div class="country-rankings__country">67. Trinidad and Tobago</div>
-          <div class="country-rankings__country">68.. Slovakia</div>
-          <div class="country-rankings__country">69. Slovenia</div>
-          <div class="country-rankings__country">70. Panama</div>
-          <div class="country-rankings__country">71. Oman</div>
-          <div class="country-rankings__country">72. Nepal</div>
-          <div class="country-rankings__country">73. MMacao</div>
-          <div class="country-rankings__country">74. Lithuania</div>
-          <div class="country-rankings__country">75. Guadeloupe</div>
-          <div class="country-rankings__country">76. Estonia</div>
-          <div class="country-rankings__country">77. Ecuador</div>
-          <div class="country-rankings__country">78. Algeria</div>
-          <div class="country-rankings__country">79. Cyprus</div>
-          <div class="country-rankings__country">80. Argentina</div>
-          <div class="country-rankings__country">81. Albania</div>
+          <h2
+            @click="sortCountries"
+            class="heading heading--secondary u-margin-bottom u-margin-bottom--none"
+          >
+            Where Brad is being read
+          </h2>
+            <div class="list">
+              <div
+                v-for="(country, index) in countries"
+                :key="index"
+                class="country-rankings__country"
+              >
+                {{index + 1}}. {{country.name}}
+
+              </div>
+            </div>
+
         </div>
       </div>
     </div>
@@ -2801,6 +2738,7 @@
 
 <script>
 export default {
+
   head() {
     return {
       script: [
@@ -2808,11 +2746,111 @@ export default {
         { src: '/scripts/hammer.js', defer: '' },
         { src: '/scripts/map.js', body: true, defer: '' },
         { src: '/scripts/sidebar.js', body: true, defer: '' }
-      ]
+      ],
+    }
+  },
+  data(){
+    return{
+      countries: [
+        {name:'United States'},
+        {name:'Colombia'},
+        {name:'Germany' },
+        {name:'United Kingdom'},
+        {name:'Australia'},
+        {name:'Indonesia'},
+        {name:'France'},
+        {name:'India'},
+        {name:'Malaysia'},
+        {name:'Austria'},
+        {name:'Republic of Korea'},
+        {name:'Netherlands'},
+        {name:'Denmark'},
+        {name:'Turkey'},
+        {name:'New Zealand'},
+        {name:'Greece'},
+        {name:'Canada'},
+        {name:'Poland'},
+        {name:'Peru'},
+        {name:'China'},
+        {name:'Italy'},
+        {name:'Vietnam'},
+        {name:'Pakistan'},
+        {name:'Hong Kong'},
+        {name:'Brazil'},
+        {name:'Sweden'},
+        {name:'Philippines'},
+        {name:'Spain'},
+        {name:'South Africa'},
+        {name:'Russian Federation'},
+        {name:'Switzerland'},
+        {name:'Islam Republic of Iran'},
+        {name:'Ireland'},
+        {name:'Venezuela'},
+        {name:'Taiwan'},
+        {name:'Singapore'},
+        {name:'Thailand'},
+        {name:'Romania'},
+        {name:'Portugal'},
+        {name:'Kenya'},
+        {name:'Japan'},
+        {name:'Jordan'},
+        {name:'United Arab Emirates'},
+        {name:'Mexico'},
+        {name:'Sri Lanka'},
+        {name:'Egypt'},
+        {name:'Czech Republic'},
+        {name:'Chile'},
+        {name:'Puerto Rico'},
+        {name:'Norway'},
+        {name:'Maldives'},
+        {name:'Mauritius'},
+        {name:'Malta'},
+        {name:'Kuwait'},
+        {name:'Israel'},
+        {name:'Hungary'},
+        {name:'Tunisia'},
+        {name:'Serbia'},
+        {name:'Nigeria'},
+        {name:'Morocco'},
+        {name:'Croatia'},
+        {name:'Finland'},
+        {name:'Belgium'},
+        {name:'Zambia'},
+        {name:'Uganda'},
+        {name:'Ukraine'},
+        {name:'Trinidad and Tobago'},
+        {name:'Slovakia'},
+        {name:'Slovenia'},
+        {name:'Panama'},
+        {name:'Oman'},
+        {name:'Nepal'},
+        {name:'MMacao'},
+        {name:'Lithuania'},
+        {name:'Guadeloupe'},
+        {name:'Estonia'},
+        {name:'Ecuador'},
+        {name:'Algeria'},
+        {name:'Cyprus'},
+        {name:'Argentina'},
+        {name:'Albania'}
+      ],
+    }
+  },
+  methods: {
+    sortCountries: function(){
+
+        setInterval(() => {
+          let rand = Math.round(Math.random() * 6);
+          let country = this.countries.splice(rand, 1);
+          // alert(country);
+          this.countries.unshift(country[0]);
+        }, 1400);
+
     }
   },
   layout: 'map'
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -2870,12 +2908,19 @@ export default {
     }
   }
 }
+#country-rankings{
 
+}
 .country-rankings {
   display: none;
   overflow: auto;
-  height: 20rem;
+  height: 25rem;
+  /*position: relative;*/
   // max-width: 40rem;
+  .list{
+  width: 100%;
+    max-width: initial;
+}
 
   &__country {
     font-size: 1.4rem;

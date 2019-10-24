@@ -45,7 +45,7 @@
 
       <h2
         class="heading heading--secondary u-margin-top--big"
-        style="text-align: center">Or subscribe to our newsletter:</h2>
+        style="text-align: center">Or subscribe to our mailing list:</h2>
       <form
         id="newsletter"
         class="form"

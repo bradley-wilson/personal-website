@@ -31,7 +31,9 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, params, env }) {
-    const postRes = await $axios.$get(`${env.postsUrl}&filter[slug]=${params.id}`)
+    const postRes = await $axios.$get(
+      `${env.postsUrl}&filter[slug]=${params.id}`
+    )
     return { post: postRes.entries[0] }
   }
 }

@@ -1,16 +1,34 @@
 <template>
   <div class="container">
+
+    <h2>Current Team</h2>
     <div
       v-for="bio in bios"
+      v-if="bio.current"
       :key="bio.id"
-      class="bio"> 
+      class="bio"
+    >
       <div
         :style="{backgroundImage: `url(${bio.image.path})`}"
         class="bio__image"/>
       <h2 class="bio__name"> {{ bio.name }} </h2>
       <p class="bio__description"> {{ bio.bio }} </p>
-    </div> 
+    </div>
+    <h2>Esteemed Alumni</h2>
+    <div
+      v-for="bio in bios"
+      v-if="!(bio.current)"
+      :key="bio.id"
+      class="bio"
+    >
+      <div
+        :style="{backgroundImage: `url(${bio.image.path})`}"
+        class="bio__image"/>
+      <h2 class="bio__name"> {{ bio.name }} </h2>
+      <p class="bio__description"> {{ bio.bio }} </p>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -29,7 +47,10 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-
+h2 {
+  width: 100%;
+  text-align: center;
+}
 .bio {
   display: flex;
   flex-direction: column;

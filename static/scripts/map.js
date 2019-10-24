@@ -278,3 +278,20 @@ function getJSON(path, callback) {
     xhr.open('GET', path);
     xhr.send();
 }
+
+//---
+// let countryList = Array.from(
+//   document.querySelectorAll('.country-rankings__country')
+// )
+// let firstTen = countryList.splice(0, 10);
+// console.log(firstTen);
+// let list = document.querySelector('.list')
+// function reorderCountries() {
+//   let rand = Math.round(Math.random() * 10);
+//   list.insertBefore(firstTen[rand], firstTen[0]);
+//   countryList = Array.from(
+//     document.querySelectorAll('.country-rankings__country')
+//   )
+//   firstTen = countryList.splice(0, 10);
+//   console.log(firstTen);
+// }

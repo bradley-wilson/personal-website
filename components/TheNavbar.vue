@@ -107,11 +107,6 @@ export default {
           icon: '/img/kudos-logo.png'
         },
         {
-          title: 'Google+',
-          url: '#',
-          icon: '/img/google-plus-logo.png'
-        },
-        {
           title: 'Facebook',
           url: '#',
           icon: '/img/facebook-logo.png'

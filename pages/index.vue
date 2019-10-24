@@ -124,15 +124,21 @@
             </div>
           </div>
 
-          <div class="row u-margin-bottom--medium">
-            <div class="col--phone-6">
-              <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/award-icon.svg"
-                  alt="Award icon">
-                Awards
-              </div>
+          <div
+            class="row u-margin-bottom--medium">
+            <div
+              class="col--phone-6"
+              @click="toTarget('#section-awards')"
+            >
+              <a href="/#section-awards">
+                <div class="service-item">
+                  <img
+                    class="service-item__icon"
+                    src="/img/award-icon.svg"
+                    alt="Award icon">
+                  Awards
+                </div>
+              </a>
             </div>
             <div class="col--phone-6">
               <div class="service-item">
@@ -180,14 +186,62 @@
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
       <div class="container">
-        <Stats
-          :styles="lineChartStyles"
-          :chartdata="stats"/>
-        <div class="clustrmaps">
-          <script
-            id="clustrmaps"
-            type="text/javascript"
-            src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Readers
+          </h3>
+          <strong id="readers">
+            729
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Highly Engaged Readers
+          </h3>
+          <strong id="highReaders">
+            187
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Citations
+          </h3>
+          <strong id="citations">
+            328
+          </strong>
+        </div>
+        <div class="liveKeywords">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Keywords
+          </h3>
+          <div class="keyword-grid">
+            <span
+              v-for="word in appear"
+              :key="word.index"
+            >
+              {{ word.word }}
+            </span>
+          </div>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Universities
+          </h3>
+          <strong class="">
+            Universidad de los Andes,<br>Bogotá, Colombia
+          </strong>
+          <strong>
+            Universtat of Bayreuth,<br>Bayreuth, Germany
+          </strong>
+          <strong>
+            Munich Business School,<br>München, Germany
+          </strong>
+          <strong>
+            RMIT University,<br>Melbourne, Australia
+          </strong>
+          <strong>
+            Saint Petersburg State University,<br>St. Petersburg, Russia
+          </strong>
         </div>
       </div>
     </section>
@@ -210,7 +264,10 @@
     </section>
 
     <!-- Awards section --------------------------------------------------->
-    <section class="section-awards">
+    <section
+      id="section-awards"
+      class="section-awards"
+    >
       <div class="container">
         <h1 class="heading heading--primary">Awards</h1>
         <div class="awards">
@@ -237,6 +294,14 @@
     <!-- Word cloud section ------------------------------------------------>
     <section class="section-word-cloud">
       <div class="container">
+        <h2
+          class="heading heading--primary u-margin-bottom u-margin-bottom--none"
+        >Teaching Style</h2>
+        <h2
+          class="heading--secondary heading"
+        >
+          As described by students
+        </h2>
         <img
           class="word-cloud"
           src="/img/word-cloud.svg"
@@ -280,7 +345,9 @@ export default {
   async asyncData({ $axios, env }) {
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
-    let publicationsRes = await $axios.$get(`${env.publicationsUrl}&sort[year]=-1`)
+    let publicationsRes = await $axios.$get(
+      `${env.publicationsUrl}&sort[year]=-1`
+    )
     let contactsRes = await $axios.$get(env.contactsUrl)
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
@@ -331,6 +398,15 @@ export default {
   },
   data() {
     return {
+      appear: [],
+      keywords: [
+        { word: 'Marketing' },
+        { word: 'Marketing' },
+        { word: 'Marketing' },
+        { word: 'Marketing' },
+        { word: 'Marketing' },
+        { word: 'Marketing' }
+      ],
       lineChartStyles: {
         height: '50vh',
         width: '`100%',
@@ -338,6 +414,46 @@ export default {
         backgroundColor: '#dddddd',
         borderRadius: '4px'
       }
+    }
+  },
+  mounted: function() {
+    this.animateValue('readers', 0, 729, 8000)
+    this.animateValue('highReaders', 0, 187, 8000)
+    this.animateValue('citations', 0, 328, 8000)
+    this.appearWords(this.keywords, this.appear)
+  },
+  methods: {
+    toTarget: function(target) {
+      if (target) {
+        console.log('Has target')
+        this.$emit('hash-clicked', target)
+      }
+    },
+    relaunch: function(id, start, end, duration) {
+      this.animateValue(id, start, end, duration)
+    },
+    animateValue: function(id, start, end, duration) {
+      var range = end - start
+      var current = start
+      var increment = end > start ? 1 : -1
+      var stepTime = Math.abs(Math.floor(duration / range))
+      var obj = document.getElementById(id)
+      var timer = setInterval(function() {
+        current += increment
+        obj.innerHTML = current
+        if (current == end) {
+          clearInterval(timer)
+        }
+      }, stepTime)
+    },
+    appearWords: function(first, second) {
+      let timer = setInterval(function() {
+        if (first.length == 1) {
+          clearInterval(timer)
+        }
+        let currentW = first.splice(0, 1)
+        second.push(currentW[0])
+      }, 1400)
     }
   },
   layout: 'landing-page'
@@ -481,12 +597,47 @@ export default {
   padding: $section-padding;
   background-image: $gradient-light;
   position: relative;
-
-  @include screen(tablet) {
-    padding: $section-padding-tablet;
-  }
-  @include screen(desktop) {
-    padding: $section-padding-desktop;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    .stat {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+      margin: 5vh 0;
+      flex-direction: column;
+      h3 {
+        text-align: center !important;
+      }
+      strong {
+        text-align: center;
+        font-size: 1.4vw;
+        margin: 2vh 0;
+        display: block;
+      }
+    }
+    .liveKeywords {
+      width: 100%;
+      h3 {
+        text-align: center !important;
+      }
+      .keyword-grid {
+        display: flex;
+        min-height: 3vh;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        span {
+          font-size: 1.5vw;
+          display: block;
+          text-transform: uppercase;
+          padding: 2vh 1vw;
+          font-weight: bolder;
+        }
+      }
+    }
   }
 }
 
