@@ -1,36 +1,109 @@
+<template>
+  <div class="example">
+    <apexcharts
+      :options="chartOptions"
+      :series="series"
+      width="700"
+      height="350"
+      type="line" />
+  </div>
+</template>
 <script>
-import { Line } from 'vue-chartjs'
-function setIntervalX(callback, delay, repetitions) {
-  var x = 0
-  var intervalID = window.setInterval(function() {
-    callback()
+import VueApexCharts from 'vue-apexcharts'
 
-    if (++x === repetitions) {
-      window.clearInterval(intervalID)
-    }
-  }, delay)
-}
 export default {
-  extends: Line,
-  data: () => ({
-    chartdata: {
-      labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Now'],
-      datasets: [
-        {
-          label: 'Data One',
-          data: [0, 100, 180, 299, 360, 403, 489, 532, 594, 632, 688, 729],
-          backgroundColor: '#424BAF'
+  name: 'Chart',
+  components: {
+    apexcharts: VueApexCharts
+  },
+  data: function() {
+    return {
+      chartOptions: {
+        chart: {
+          id: 'basic-bar'
+        },
+        xaxis: {
+          categories: [
+            '2017 Q4',
+            '2018 Q1',
+            '2018 Q2',
+            '2018 Q3',
+            '2018 Q4',
+            '2019 Q1',
+            '2019 Q2',
+            '2019 Q3',
+            '2019 Q4'
+          ]
+        },
+        yaxis: [
+          {
+            axisTicks: {
+              show: true
+            },
+            axisBorder: {
+              show: true,
+              color: '#008FFB'
+            },
+            labels: {
+              style: {
+                color: '#008FFB'
+              }
+            },
+            title: {
+              text: 'Readers',
+              style: {
+                color: '#008FFB'
+              }
+            },
+            tooltip: {
+              enabled: true
+            }
+          },
+          {
+            seriesName: 'Citations',
+            opposite: true,
+            axisTicks: {
+              show: true
+            },
+            axisBorder: {
+              show: true,
+              color: '#00E396'
+            },
+            labels: {
+              style: {
+                color: '#00E396'
+              }
+            },
+            title: {
+              text: 'Citations',
+              style: {
+                color: '#00E396'
+              }
+            }
+          }
+        ],
+        title: {
+          text: "Bradley's work",
+          align: 'left',
+          offsetX: 110
         }
-      ]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false
+      },
+      series: [
+        {
+          name: 'Readers',
+          type: 'line',
+          data: [506, 540, 590, 627, 670, 698, 723, 766]
+        },
+        {
+          name: 'Citations',
+          type: 'line',
+          data: [69, 72, 78, 81, 86, 90, 98, 107]
+        }
+      ],
+      stroke: {
+        width: [1, 1, 4]
+      }
     }
-  }),
-
-  mounted() {
-    this.renderChart(this.chartdata, this.options)
   }
 }
 </script>

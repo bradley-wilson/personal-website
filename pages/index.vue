@@ -244,6 +244,7 @@
           </strong>
         </div>
       </div>
+      <Stats/>
     </section>
 
     <!-- Publications section --------------------------------------------->
