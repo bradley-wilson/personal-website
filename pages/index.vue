@@ -184,6 +184,68 @@
     </section>
 
     <!-- Stats section ---------------------------------------------------->
+    <section class="section-stats">
+      <div class="container">
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Readers
+          </h3>
+          <strong id="readers">
+            729
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Highly Engaged Readers
+          </h3>
+          <strong id="highReaders">
+            187
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Citations
+          </h3>
+          <strong id="citations">
+            328
+          </strong>
+        </div>
+        <div class="liveKeywords">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Keywords
+          </h3>
+          <div class="keyword-grid">
+            <span
+              v-for="word in appear"
+              :key="word.index"
+            >
+              {{ word.word }}
+            </span>
+          </div>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Universities
+          </h3>
+          <strong class="">
+            Universidad de los Andes,<br>Bogotá, Colombia
+          </strong>
+          <strong>
+            Universtat of Bayreuth,<br>Bayreuth, Germany
+          </strong>
+          <strong>
+            Munich Business School,<br>München, Germany
+          </strong>
+          <strong>
+            RMIT University,<br>Melbourne, Australia
+          </strong>
+          <strong>
+            Saint Petersburg State University,<br>St. Petersburg, Russia
+          </strong>
+        </div>
+      </div>
+      <Stats/>
+    </section>
 
     <!-- Publications section --------------------------------------------->
     <section
@@ -288,7 +350,6 @@ export default {
       `${env.publicationsUrl}&sort[year]=-1`
     )
     let contactsRes = await $axios.$get(env.contactsUrl)
-    let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     return {
       events: eventsRes.entries,
@@ -296,31 +357,6 @@ export default {
       publications: publicationsRes.entries,
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
-      stats: {
-        labels: statsRes.entries.map(stat => stat.week),
-        datasets: [
-          {
-            label: 'Reads',
-            data: statsRes.entries.map(stat => stat.reads),
-            borderColor: 'rgb(50, 164, 123)',
-            backgroundColor: 'rgba(50, 164, 123, 0.2)',
-            pointBackgroundColor: 'rgb(50, 164, 123)',
-            lineTension: 0.2,
-            pointHitRadius: 20,
-            borderWidth: 2
-          },
-          {
-            label: 'Citations',
-            data: statsRes.entries.map(stat => stat.citations),
-            borderColor: 'rgb(66, 75, 175)',
-            backgroundColor: 'rgba(66, 75, 175, 0.2)',
-            pointBackgroundColor: 'rgb(66, 75, 175)',
-            lineTension: 0.2,
-            pointHitRadius: 20,
-            borderWidth: 2
-          }
-        ]
-      }
     }
   },
   components: {
