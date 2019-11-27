@@ -336,7 +336,6 @@ import TheContacts from '@/components/TheContacts'
 import Carousel from '@/components/Carousel'
 import RecentPublications from '@/components/RecentPublications'
 import Contact from '@/components/Contact'
-import Stats from '@/components/Stats'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
@@ -392,7 +391,6 @@ export default {
     Contact,
     BookingModal,
     HotSaleModal,
-    Stats,
     Award
   },
   data() {
