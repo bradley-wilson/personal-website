@@ -341,6 +341,7 @@ import Stats from '@/components/Stats'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
+import VueApexCharts from 'vue-apexcharts'
 
 export default {
   async asyncData({ $axios, env }) {
