@@ -184,68 +184,6 @@
     </section>
 
     <!-- Stats section ---------------------------------------------------->
-    <section class="section-stats">
-      <div class="container">
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Readers
-          </h3>
-          <strong id="readers">
-            729
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Highly Engaged Readers
-          </h3>
-          <strong id="highReaders">
-            187
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Citations
-          </h3>
-          <strong id="citations">
-            328
-          </strong>
-        </div>
-        <div class="liveKeywords">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Keywords
-          </h3>
-          <div class="keyword-grid">
-            <span
-              v-for="word in appear"
-              :key="word.index"
-            >
-              {{ word.word }}
-            </span>
-          </div>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Universities
-          </h3>
-          <strong class="">
-            Universidad de los Andes,<br>Bogotá, Colombia
-          </strong>
-          <strong>
-            Universtat of Bayreuth,<br>Bayreuth, Germany
-          </strong>
-          <strong>
-            Munich Business School,<br>München, Germany
-          </strong>
-          <strong>
-            RMIT University,<br>Melbourne, Australia
-          </strong>
-          <strong>
-            Saint Petersburg State University,<br>St. Petersburg, Russia
-          </strong>
-        </div>
-      </div>
-      <Stats/>
-    </section>
 
     <!-- Publications section --------------------------------------------->
     <section
@@ -341,7 +279,6 @@ import Stats from '@/components/Stats'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
-import VueApexCharts from 'vue-apexcharts'
 
 export default {
   async asyncData({ $axios, env }) {
