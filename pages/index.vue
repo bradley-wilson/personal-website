@@ -348,6 +348,7 @@ export default {
       `${env.publicationsUrl}&sort[year]=-1`
     )
     let contactsRes = await $axios.$get(env.contactsUrl)
+    let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     return {
       events: eventsRes.entries,
