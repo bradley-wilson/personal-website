@@ -357,6 +357,31 @@ export default {
       publications: publicationsRes.entries,
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
+      stats: {
+        labels: statsRes.entries.map(stat => stat.week),
+        datasets: [
+          {
+            label: 'Reads',
+            data: statsRes.entries.map(stat => stat.reads),
+            borderColor: 'rgb(50, 164, 123)',
+            backgroundColor: 'rgba(50, 164, 123, 0.2)',
+            pointBackgroundColor: 'rgb(50, 164, 123)',
+            lineTension: 0.2,
+            pointHitRadius: 20,
+            borderWidth: 2
+          },
+          {
+            label: 'Citations',
+            data: statsRes.entries.map(stat => stat.citations),
+            borderColor: 'rgb(66, 75, 175)',
+            backgroundColor: 'rgba(66, 75, 175, 0.2)',
+            pointBackgroundColor: 'rgb(66, 75, 175)',
+            lineTension: 0.2,
+            pointHitRadius: 20,
+            borderWidth: 2
+          }
+        ]
+      }
     }
   },
   components: {
