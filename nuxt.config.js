@@ -37,8 +37,8 @@ module.exports = {
   */
   plugins: [
     {
-      src: '@/plugins/vue-apexcharts.js',
-      ssr: false
+      src: '~/plugins/vue-apexcharts.js',
+      mode: 'client'
     }
   ],
 
