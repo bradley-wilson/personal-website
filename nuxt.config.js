@@ -104,7 +104,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['vue-apexcharts'],
     /*
     ** You can extend webpack config here
     */
