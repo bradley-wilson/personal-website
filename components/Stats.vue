@@ -9,13 +9,7 @@
   </div>
 </template>
 <script>
-import VueApexCharts from 'vue-apexcharts'
-
 export default {
-  name: 'Chart',
-  components: {
-    apexcharts: VueApexCharts
-  },
   data: function() {
     return {
       chartOptions: {
