@@ -244,6 +244,7 @@
           </strong>
         </div>
       </div>
+      <Stats/>
     </section>
 
     <!-- Publications section --------------------------------------------->
@@ -334,6 +335,7 @@ import BGVideo from '@/components/BGVideo'
 import Events from '@/components/Events'
 import TheContacts from '@/components/TheContacts'
 import Carousel from '@/components/Carousel'
+import Stats from '@/components/Stats'
 import RecentPublications from '@/components/RecentPublications'
 import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
@@ -388,6 +390,7 @@ export default {
     Events,
     TheContacts,
     Carousel,
+    Stats,
     RecentPublications,
     Contact,
     BookingModal,

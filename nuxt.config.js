@@ -96,10 +96,16 @@ module.exports = {
   '@/api/contact'
   ],
 
+  {
+    src: '@/plugins/vue-apexcharts.js',
+    ssr: false
+  }
+
   /*
   ** Build configuration
   */
   build: {
+    vendor: ['vue-apexcharts'],
     /*
     ** You can extend webpack config here
     */
