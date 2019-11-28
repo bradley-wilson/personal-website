@@ -99,7 +99,7 @@ module.exports = {
   {
     src: '@/plugins/vue-apexcharts.js',
     ssr: false
-  }
+  },
 
   /*
   ** Build configuration
