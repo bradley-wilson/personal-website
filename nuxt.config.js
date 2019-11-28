@@ -36,6 +36,10 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: '@/plugins/vue-apexcharts.js',
+      ssr: false
+    }
   ],
 
   /*
@@ -95,11 +99,6 @@ module.exports = {
   serverMiddleware: [
   '@/api/contact'
   ],
-
-  {
-    src: '@/plugins/vue-apexcharts.js',
-    ssr: false
-  },
 
   /*
   ** Build configuration
