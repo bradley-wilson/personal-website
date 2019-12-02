@@ -615,49 +615,6 @@ export default {
   @include screen(desktop) {
     padding: $section-padding-desktop;
   }
-
-  .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    .stat {
-      width: calc(100% / 3);
-      display: flex;
-      justify-content: center;
-      margin: 5vh 0;
-      flex-direction: column;
-      h3 {
-        text-align: center !important;
-      }
-      strong {
-        text-align: center;
-        font-size: 1.4vw;
-        margin: 2vh 0;
-        display: block;
-      }
-    }
-    .liveKeywords {
-      width: 100%;
-      h3 {
-        text-align: center !important;
-      }
-      .keyword-grid {
-        display: flex;
-        min-height: 3vh;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        span {
-          font-size: 1.5vw;
-          display: block;
-          text-transform: uppercase;
-          padding: 2vh 1vw;
-          font-weight: bolder;
-        }
-      }
-    }
-  }
 }
 
 .clustrmaps {
