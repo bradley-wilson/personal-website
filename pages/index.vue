@@ -214,7 +214,8 @@
         </div>
         <Stats
           :styles="lineChartStyles"
-          :chartdata="stats"/>
+          :chartdata="stats"
+          class="stats__graph"/>
         <div class="liveKeywords">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
@@ -248,12 +249,12 @@
             Saint Petersburg State University,<br>St. Petersburg, Russia
           </strong>
         </div>
-      </div>
-      <div class="clustrmaps">
-        <script
-          id="clustrmaps"
-          type="text/javascript"
-          src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+        <div class="clustrmaps">
+          <script
+            id="clustrmaps"
+            type="text/javascript"
+            src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+        </div>
       </div>
     </section>
 
@@ -614,6 +615,62 @@ export default {
   }
   @include screen(desktop) {
     padding: $section-padding-desktop;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .stat {
+      width: calc(100% / 3);
+      display: flex;
+      justify-content: center;
+      margin: 5vh 0;
+      flex-direction: column;
+
+      h3 {
+        text-align: center !important;
+      }
+
+      strong {
+        text-align: center;
+        font-size: 1.4vw;
+        margin: 2vh 0;
+        display: block;
+      }
+    }
+
+    .liveKeywords {
+      width: 100%;
+
+      h3 {
+        text-align: center !important;
+      }
+
+      .keyword-grid {
+        display: flex;
+        min-height: 3vh;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        span {
+          font-size: 1.5vw;
+          display: block;
+          text-transform: uppercase;
+          padding: 2vh 1vw;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+.stats {
+  &__graph {
+    width: 100%;
   }
 }
 
