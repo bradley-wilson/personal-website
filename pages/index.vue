@@ -94,11 +94,13 @@
             </div>
             <div class="col--phone-6">
               <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/presentation-icon.svg"
-                  alt="Presentation icon">
-                Invited presentations
+                <nuxt-link to="/connections">
+                  <img
+                    class="service-item__icon"
+                    src="/img/presentation-icon.svg"
+                    alt="Presentation icon">
+                  Invited presentations
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -210,6 +212,9 @@
             328
           </strong>
         </div>
+        <Stats
+          :styles="lineChartStyles"
+          :chartdata="stats"/>
         <div class="liveKeywords">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
@@ -244,7 +249,12 @@
           </strong>
         </div>
       </div>
-      <Stats/>
+      <div class="clustrmaps">
+        <script
+          id="clustrmaps"
+          type="text/javascript"
+          src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+      </div>
     </section>
 
     <!-- Publications section --------------------------------------------->
