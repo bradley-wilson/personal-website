@@ -636,7 +636,7 @@ export default {
 
       strong {
         text-align: center;
-        font-size: 1.4vw;
+        font-size: 1.6rem;
         margin: 2vh 0;
         display: block;
       }
