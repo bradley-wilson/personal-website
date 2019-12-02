@@ -608,6 +608,14 @@ export default {
   padding: $section-padding;
   background-image: $gradient-light;
   position: relative;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+
   .container {
     display: flex;
     justify-content: center;
