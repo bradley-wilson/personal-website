@@ -190,18 +190,18 @@
       <div class="container">
         <div class="stat">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Readers
+            Reads
           </h3>
           <strong id="readers">
-            729
+           55613 
           </strong>
         </div>
         <div class="stat">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Highly Engaged Readers
+            Research Interest
           </h3>
           <strong id="highReaders">
-            187
+            789
           </strong>
         </div>
         <div class="stat">
@@ -209,7 +209,7 @@
             Citations
           </h3>
           <strong id="citations">
-            328
+            602
           </strong>
         </div>
         <Stats
@@ -234,19 +234,119 @@
             Universities
           </h3>
           <strong class="">
-            Universidad de los Andes,<br>Bogotá, Colombia
+            Coastal Carolina University
           </strong>
           <strong>
-            Universtat of Bayreuth,<br>Bayreuth, Germany
+            University of Connecticut
           </strong>
           <strong>
-            Munich Business School,<br>München, Germany
+            Szabist Islamabad
           </strong>
           <strong>
-            RMIT University,<br>Melbourne, Australia
+            Bournemouth University
           </strong>
           <strong>
-            Saint Petersburg State University,<br>St. Petersburg, Russia
+            GD Goenka University
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Countries
+          </h3>
+          <strong class="">
+            United States
+          </strong>
+          <strong>
+            India
+          </strong>
+          <strong>
+            Pakistan
+          </strong>
+          <strong>
+            United Kingdom
+          </strong>
+          <strong>
+            Portugal
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Countries
+          </h3>
+          <strong class="">
+            Colombia
+          </strong>
+          <strong>
+            Germany
+          </strong>
+          <strong>
+            Australia
+          </strong>
+          <strong>
+            United States
+          </strong>
+          <strong>
+            Russia
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Cities
+          </h3>
+          <strong class="">
+            Philadelphia
+          </strong>
+          <strong>
+            Rawalpindi
+          </strong>
+          <strong>
+            Cairo
+          </strong>
+          <strong>
+            New Orleans
+          </strong>
+          <strong>
+            Mumbai
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Research Fields
+          </h3>
+          <strong class="">
+            Marketing
+          </strong>
+          <strong>
+            Sport Management
+          </strong>
+          <strong>
+            Sponsorship
+          </strong>
+          <strong>
+            Brand Personality
+          </strong>
+          <strong>
+            Human Resources
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Job Titles
+          </h3>
+          <strong class="">
+            Faculty Member
+          </strong>
+          <strong>
+            Undergraduate
+          </strong>
+          <strong>
+            Graduate Student
+          </strong>
+          <strong>
+            Alumnus
+          </strong>
+          <strong>
+            Sports Marketing Manager
           </strong>
         </div>
         <div class="clustrmaps">
@@ -431,9 +531,9 @@ export default {
     }
   },
   mounted: function() {
-    this.animateValue('readers', 0, 729, 8000)
-    this.animateValue('highReaders', 0, 187, 8000)
-    this.animateValue('citations', 0, 328, 8000)
+    this.animateValue('readers', 0, 55613, 8000)
+    this.animateValue('highReaders', 0, 789, 8000)
+    this.animateValue('citations', 0, 602, 8000)
     this.appearWords(this.keywords, this.appear)
   },
   methods: {
@@ -646,6 +746,7 @@ export default {
 
     .liveKeywords {
       width: 100%;
+      margin-top: 2rem;
 
       h3 {
         text-align: center !important;
