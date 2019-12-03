@@ -496,8 +496,7 @@ export default {
         { word: 'Sports Management' },
         { word: 'Brand identiry' },
         { word: 'Product placement' },
-        { word: 'Advertising' },
-        { word: 'Future crisis' }
+        { word: 'Advertising' }
       ],
       lineChartStyles: {
         height: '50vh',
@@ -708,7 +707,7 @@ export default {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      margin-bottom: 3rem;
+      margin: 3rem 0;
 
       &--group {
         padding: 15px;
