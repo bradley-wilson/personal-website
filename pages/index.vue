@@ -729,16 +729,19 @@ export default {
       width: calc(100% / 3);
       display: flex;
       justify-content: center;
-      margin: 5vh 0;
+      // margin: 5vh 0;
       flex-direction: column;
+      padding: 15px;
+      border-radius: 10px;
+      border: white 2px solid;
 
       &--group {
         width: calc(100% / 3.5);
-        padding: 15px;
-        // background-color: $black;
-        border-radius: 10px;
-        border: white 2px solid;
         margin-right: 15px;
+
+        @include screen(tablet) {
+          width: 100%;
+        }
       }
 
       h3 {
