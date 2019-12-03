@@ -662,7 +662,7 @@ export default {
         }
 
         span {
-          font-size: 1.5vw;
+          font-size: 1.4rem;
           display: block;
           text-transform: uppercase;
           padding: 2vh 1vw;
