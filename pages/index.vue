@@ -655,6 +655,11 @@ export default {
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        flex-direction: column;
+
+        @include screen(desktop) {
+          flex-direction: row;
+        }
 
         span {
           font-size: 1.5vw;
