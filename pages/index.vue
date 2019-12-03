@@ -701,6 +701,11 @@ export default {
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
+
+    @include screen(tablet) {
+      flex-direction: row;
+    }
 
     .stat {
       width: calc(100% / 3);
