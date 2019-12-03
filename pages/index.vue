@@ -309,7 +309,7 @@
             Mumbai
           </strong>
         </div>
-        <div class="stat stat-group">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Research Fields
           </h3>
@@ -733,9 +733,12 @@ export default {
       flex-direction: column;
 
       &--group {
+        width: calc(100% / 3.5);
         padding: 15px;
-        background-color: $black;
+        // background-color: $black;
         border-radius: 10px;
+        border: white 2px solid;
+        margin-right: 15px;
       }
 
       h3 {
