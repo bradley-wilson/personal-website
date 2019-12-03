@@ -220,13 +220,12 @@
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
           </h3>
-            <strong
-              v-for="word in appear"
-              :key="word.index"
-            >
-              {{ word.word }}
-            </strong>
-          </div>
+          <strong
+            v-for="word in appear"
+            :key="word.index"
+          >
+            {{ word.word }}
+          </strong>
         </div>
         <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
