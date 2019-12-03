@@ -229,7 +229,7 @@
             </span>
           </div>
         </div>
-        <div class="stat">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Universities
           </h3>
@@ -249,7 +249,7 @@
             GD Goenka University
           </strong>
         </div>
-        <div class="stat">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Countries
           </h3>
@@ -269,7 +269,7 @@
             Portugal
           </strong>
         </div>
-        <div class="stat">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Countries
           </h3>
@@ -289,7 +289,7 @@
             Russia
           </strong>
         </div>
-        <div class="stat">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Cities
           </h3>
@@ -309,7 +309,7 @@
             Mumbai
           </strong>
         </div>
-        <div class="stat">
+        <div class="stat stat-group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Research Fields
           </h3>
@@ -329,7 +329,7 @@
             Human Resources
           </strong>
         </div>
-        <div class="stat">
+        <div class="stat stat--group">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Job Titles
           </h3>
@@ -731,6 +731,12 @@ export default {
       justify-content: center;
       margin: 5vh 0;
       flex-direction: column;
+
+      &--group {
+        margin: 5px;
+        background-color: $black;
+        border-radius: 4px;
+      }
 
       h3 {
         text-align: center !important;
