@@ -734,13 +734,13 @@ export default {
       flex-direction: column;
       margin-bottom: 3rem;
 
-      &--list {
+      &--group {
         padding: 15px;
         border-radius: 10px;
         border: white 2px solid;
       }
 
-      &--group {
+      &--list {
         width: 100%;
         margin-right: 15px;
 
