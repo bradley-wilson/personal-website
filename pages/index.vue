@@ -188,29 +188,31 @@
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
       <div class="container">
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Reads
-          </h3>
-          <strong id="readers">
-           55613 
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Research Interest
-          </h3>
-          <strong id="highReaders">
-            789
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Citations
-          </h3>
-          <strong id="citations">
-            602
-          </strong>
+        <div class="stat--group">
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Reads
+            </h3>
+            <strong id="readers">
+             55613 
+            </strong>
+          </div>
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Research Interest
+            </h3>
+            <strong id="highReaders">
+              789
+            </strong>
+          </div>
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Citations
+            </h3>
+            <strong id="citations">
+              602
+            </strong>
+          </div>
         </div>
         <Stats
           :styles="lineChartStyles"
@@ -229,7 +231,7 @@
             </span>
           </div>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Universities
           </h3>
@@ -249,7 +251,7 @@
             GD Goenka University
           </strong>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Countries
           </h3>
@@ -269,7 +271,7 @@
             Portugal
           </strong>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Countries
           </h3>
@@ -289,7 +291,7 @@
             Russia
           </strong>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Cities
           </h3>
@@ -309,7 +311,7 @@
             Mumbai
           </strong>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Research Fields
           </h3>
@@ -329,7 +331,7 @@
             Human Resources
           </strong>
         </div>
-        <div class="stat stat--group">
+        <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Job Titles
           </h3>
@@ -729,18 +731,21 @@ export default {
       width: calc(100% / 3);
       display: flex;
       justify-content: center;
-      // margin: 5vh 0;
       flex-direction: column;
-      padding: 15px;
-      border-radius: 10px;
-      border: white 2px solid;
+      margin-bottom: 3rem;
+
+      &--list {
+        padding: 15px;
+        border-radius: 10px;
+        border: white 2px solid;
+      }
 
       &--group {
-        width: calc(100% / 3.5);
+        width: 100%;
         margin-right: 15px;
 
         @include screen(tablet) {
-          width: 100%;
+          width: calc(100% / 3.5);
         }
       }
 
