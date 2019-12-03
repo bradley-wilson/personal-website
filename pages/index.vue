@@ -188,47 +188,44 @@
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
       <div class="container">
-        <div class="stat--group">
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Reads
-            </h3>
-            <strong id="readers">
-             55613 
-            </strong>
-          </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Research Interest
-            </h3>
-            <strong id="highReaders">
-              789
-            </strong>
-          </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Citations
-            </h3>
-            <strong id="citations">
-              602
-            </strong>
-          </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Reads
+          </h3>
+          <strong id="readers">
+           55613 
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Research Interest
+          </h3>
+          <strong id="highReaders">
+            789
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Citations
+          </h3>
+          <strong id="citations">
+            602
+          </strong>
         </div>
         <Stats
           :styles="lineChartStyles"
           :chartdata="stats"
           class="stats__graph"/>
-        <div class="liveKeywords">
+        <div class="liveKeywords stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
           </h3>
-          <div class="keyword-grid">
-            <span
+            <strong
               v-for="word in appear"
               :key="word.index"
             >
               {{ word.word }}
-            </span>
+            </strong>
           </div>
         </div>
         <div class="stat stat--group stat--list">
@@ -239,16 +236,16 @@
             Coastal Carolina University
           </strong>
           <strong>
-            University of Connecticut
+            RMIT University
           </strong>
           <strong>
-            Szabist Islamabad
+            New York University
+          </strong>
+          <strong>
+            University of Exeter
           </strong>
           <strong>
             Bournemouth University
-          </strong>
-          <strong>
-            GD Goenka University
           </strong>
         </div>
         <div class="stat stat--group stat--list">
@@ -262,33 +259,13 @@
             India
           </strong>
           <strong>
-            Pakistan
-          </strong>
-          <strong>
             United Kingdom
-          </strong>
-          <strong>
-            Portugal
-          </strong>
-        </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Countries
-          </h3>
-          <strong class="">
-            Colombia
-          </strong>
-          <strong>
-            Germany
           </strong>
           <strong>
             Australia
           </strong>
           <strong>
-            United States
-          </strong>
-          <strong>
-            Russia
+            Germany
           </strong>
         </div>
         <div class="stat stat--group stat--list">
@@ -296,19 +273,19 @@
             Cities
           </h3>
           <strong class="">
+            Boardman
+          </strong>
+          <strong>
+            Bogota
+          </strong>
+          <strong>
             Philadelphia
           </strong>
           <strong>
-            Rawalpindi
+            Medellin
           </strong>
           <strong>
-            Cairo
-          </strong>
-          <strong>
-            New Orleans
-          </strong>
-          <strong>
-            Mumbai
+            Bangkok
           </strong>
         </div>
         <div class="stat stat--group stat--list">
@@ -325,10 +302,10 @@
             Sponsorship
           </strong>
           <strong>
-            Brand Personality
+            Education
           </strong>
           <strong>
-            Human Resources
+            Social Sciences
           </strong>
         </div>
         <div class="stat stat--group stat--list">
@@ -517,11 +494,11 @@ export default {
       appear: [],
       keywords: [
         { word: 'Marketing' },
-        { word: 'Marketing' },
-        { word: 'Marketing' },
-        { word: 'Marketing' },
-        { word: 'Marketing' },
-        { word: 'Marketing' }
+        { word: 'Sports Management' },
+        { word: 'Brand identiry' },
+        { word: 'Product placement' },
+        { word: 'Advertising' },
+        { word: 'Future crisis' }
       ],
       lineChartStyles: {
         height: '50vh',
