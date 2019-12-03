@@ -738,32 +738,11 @@ export default {
     }
 
     .liveKeywords {
-      width: 100%;
-      margin-top: 2rem;
-
       h3 {
         text-align: center !important;
       }
 
       .keyword-grid {
-        display: flex;
-        min-height: 3vh;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: column;
-
-        @include screen(desktop) {
-          flex-direction: row;
-        }
-
-        span {
-          font-size: 1.4rem;
-          display: block;
-          text-transform: uppercase;
-          padding: 2vh 1vw;
-          font-weight: bolder;
-        }
       }
     }
   }
