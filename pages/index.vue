@@ -733,9 +733,9 @@ export default {
       flex-direction: column;
 
       &--group {
-        margin: 5px;
+        padding: 15px;
         background-color: $black;
-        border-radius: 4px;
+        border-radius: 10px;
       }
 
       h3 {
