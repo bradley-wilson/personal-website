@@ -763,6 +763,7 @@ export default {
   overflow: hidden;
   // padding-top: 56.25%;
   position: relative;
+  max-width: 100%;
 
   & iframe {
     // border: 0;
