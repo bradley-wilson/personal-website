@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- Hero banner ----------------------------------------------------->
+    <!-- Hero banner ---------------------------------------------------->
     <section class="section-banner">
       <BGVideo
         poster="img/banner-video.jpg"
@@ -24,7 +24,7 @@
       </div>
     </section>
 
-    <!-- About section --------------------------------------------------->
+    <!-- About section -------------------------------------------------->
     <section
       id="section-about"
       class="section-about">
@@ -42,7 +42,7 @@
           </p>
         </div>
 
-        <!-- Background Van-de-Graff videos --------------------------------->
+        <!-- Background Van-de-Graff videos -------------------------------->
         <video
           autoplay
           muted
@@ -74,7 +74,7 @@
       </div>
     </section>
 
-    <!-- Services section ------------------------------------------------>
+    <!-- Services section ---------------------------------------------->
     <section
       id="section-services"
       class="section-services">
@@ -173,7 +173,7 @@
       </div>
     </section>
 
-    <!-- Connections section --------------------------------------------->
+    <!-- Connections section -------------------------------------------->
     <section
       id="section-connections"
       class="section-connections">
