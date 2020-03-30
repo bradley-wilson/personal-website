@@ -29,18 +29,9 @@
       id="section-about"
       class="section-about">
       <div class="container container--narrow">
-        <div class="section-about__content">
-          <h3>He has multiple affiliations as: Associate Professor of Communication, Branding and Urban Creative Cultures.</h3>
-          <p class="text--body">
-            Facultad de Administración, <a href="http://administracion.uniandes.edu.co/index/es/">Universidad de Los Andes</a>, Bogota, Colombia and Visiting Professor of Sponsorship and Services at Department of Services Management, <a href="https://www.dlm.uni-bayreuth.de/en/team/woratschek_herber/index.php">Universität Bayreuth</a>, Germany. He also has a frequent association with <a href="http://www.en.bwl.uni-muenchen.de/index.html">LMU Munich Business School</a> in Munich, Germany being a Visiting Professor of Communication at the Institute of Market-based Management. <a href="https://www.en.imm.bwl.uni-muenchen.de/06_persons/professoren/schwaiger/index.html">Munich Business School. Ludwig Maximilan Universitat (LMU).</a> He is a former Visiting Professor at <a href="http://gsom.spbru.ru/en/">Graduate School of Management (GSOM)</a> <a href="http://english.spbu.ru">St. Petersburg State University</a> in Russia.
-          </p>
-          <p class="text--body">
-            Brad is a former Postgraduate Director and Senior Lecturer in Advertising at <a href="https://www.rmit.edu.au/about/our-education/academic-school/media-and-communication">"RMIT University in the School of Media and Communication</a>, Melbourne, Australia. This is the largest Media, Communication and Design School in the Southern Hemisphere. Brad is quite unique in his experience by spending half of his career in Arts, Design and Communications Faculties and also the other half in Business Faculties over a 20 year period.
-          </p>
-          <p class="text--body">
-            Brad is on six Editorial Advisory Boards including Journal of Advertising Research, International Journal of Advertising, Corporate Reputation Review, International Journal of Sports Marketing and Sponsorship, Human Communication Research and a new predominantly Spanish language journal Revista Cientifica Internacional de Comunicacion y Publicidad (International Journal of Advertising and Communication). He used to work as a marketing research consultant in Advertising and Brand Evaluation at the previously named company <a href="http://www.addimpact.net">Advertising Development Solutions and ADD+Impact</a> (now <a href="http://www.lumaresearch.com">Luma Research</a>) in Melbourne, Australia.
-          </p>
-        </div>
+        <div
+          class="section-about__content"
+          v-html="$md.render(bio)"/>
 
         <!-- Background Van-de-Graff videos -------------------------------->
         <video
@@ -430,9 +421,11 @@ import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
+import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
+    let bioRes = await $axios.$get(env.barUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
     let publicationsRes = await $axios.$get(
@@ -442,6 +435,7 @@ export default {
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     return {
+      bio: bioRes.content,
       events: eventsRes.entries,
       quotes: quotesRes.entries,
       publications: publicationsRes.entries,
