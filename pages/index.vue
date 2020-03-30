@@ -425,7 +425,7 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
-    let bioRes = await $axios.$get(env.barUrl)
+    let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
     let publicationsRes = await $axios.$get(
