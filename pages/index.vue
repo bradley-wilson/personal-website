@@ -564,7 +564,7 @@ export default {
     position: relative;
 
     p {
-      margin-bottom: .5rem;
+      margin-bottom: 3rem;
       &:last-of-type {
         margin-bottom: 0;
       }
