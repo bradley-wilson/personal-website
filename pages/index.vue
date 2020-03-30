@@ -562,6 +562,13 @@ export default {
   &__content {
     z-index: 10;
     position: relative;
+
+    p {
+      margin-bottom: .5rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   @include screen(tablet) {
