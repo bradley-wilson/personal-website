@@ -2742,8 +2742,8 @@ export default {
   head() {
     return {
       script: [
-        { src: '/scripts/svg-pan-zoom.min.js', defer: '' },
-        { src: '/scripts/hammer.js', defer: '' },
+        { src: '/scripts/svg-pan-zoom.min.js', body: true, defer: '' },
+        { src: '/scripts/hammer.js', body: true, defer: '' },
         { src: '/scripts/map.js', body: true, defer: '' },
         { src: '/scripts/sidebar.js', body: true, defer: '' }
       ],
@@ -2751,7 +2751,6 @@ export default {
   },
   data(){
     return{
-      reloaded: false,
       countries: [
         {name:'United States'},
         {name:'Colombia'},
@@ -2838,7 +2837,6 @@ export default {
     }
   },
   mounted() {
-    this.pageReload()
   },
   methods: {
     sortCountries: function(){
