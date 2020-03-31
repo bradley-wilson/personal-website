@@ -2836,6 +2836,9 @@ export default {
       ],
     }
   },
+  mounted() {
+    location.reload()
+  },
   methods: {
     sortCountries: function(){
 
