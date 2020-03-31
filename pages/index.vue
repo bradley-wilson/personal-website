@@ -170,9 +170,9 @@
       class="section-connections">
       <div class="container">
         <h1 class="heading heading--primary">Connections</h1>
-        <nuxt-link
+        <a
           class="connections-thumbnail heading heading--secondary"
-          to="/connections">View map!</nuxt-link>
+          href="/connections">View map!</a>
       </div>
     </section>
 
