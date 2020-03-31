@@ -2751,6 +2751,7 @@ export default {
   },
   data(){
     return{
+      reloaded: false,
       countries: [
         {name:'United States'},
         {name:'Colombia'},
@@ -2837,7 +2838,7 @@ export default {
     }
   },
   mounted() {
-    location.reload()
+    pageReload()
   },
   methods: {
     sortCountries: function(){
@@ -2849,6 +2850,12 @@ export default {
           this.countries.unshift(country[0]);
         }, 1400);
 
+    },
+    pageReload: function() {
+      if (this.reloaded == false) {
+        this.reloaded = true
+        location.reload()
+      }
     }
   },
   layout: 'map'
