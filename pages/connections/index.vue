@@ -2838,7 +2838,7 @@ export default {
     }
   },
   mounted() {
-    pageReload()
+    this.pageReload()
   },
   methods: {
     sortCountries: function(){
