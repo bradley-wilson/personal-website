@@ -2742,8 +2742,8 @@ export default {
   head() {
     return {
       script: [
-        { src: '/scripts/svg-pan-zoom.min.js', body: true, defer: '' },
-        { src: '/scripts/hammer.js', body: true, defer: '' },
+        { src: '/scripts/svg-pan-zoom.min.js'},
+        { src: '/scripts/hammer.js'},
         { src: '/scripts/map.js', body: true, defer: '' },
         { src: '/scripts/sidebar.js', body: true, defer: '' }
       ],
