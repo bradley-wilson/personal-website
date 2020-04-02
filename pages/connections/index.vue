@@ -23,6 +23,9 @@
         <button
           class="button button--tab side-bar__button"
           onclick="togglePresentations(this, 'map__side-bar')">Invited Presentations</button>
+        <button
+          class="button button--tab side-bar__button"
+          onclick="toggleVisited(this, 'map__side-bar');">Countries Visited</button>
       </div>
       <div class="map">
         <svg
@@ -2731,6 +2734,22 @@
             </div>
 
         </div>
+        <div id="countries-visited" class="countries-visited map__info">
+          <h2 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Where Brad has been
+          </h2>
+            <div class="list">
+              <div
+                v-for="(country, index) in countriesVisited"
+                :key="index"
+                class="countries-visited__country"
+              >
+                {{index + 1}}. {{country.name}}
+
+              </div>
+            </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -2834,6 +2853,21 @@ export default {
         {name:'Argentina'},
         {name:'Albania'}
       ],
+      countriesVisited: [
+        'Australia',
+        'United States',
+        'Germany',
+        'Netherlands',
+        'Colombia',
+        'Japan',
+        'France',
+        'Italy',
+        'Spain',
+        'United Kingdom',
+        'Canada',
+        'Austria',
+        'Denmark'
+      ]
     }
   },
   mounted() {
@@ -2905,8 +2939,8 @@ export default {
 
   &-info {
     &__icon {
-      width: 5rem;
-      height: 5rem;
+      width: 7rem;
+      height: 7rem;
       display: none;
       background-size: cover;
       background-position: center;

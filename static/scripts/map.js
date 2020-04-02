@@ -173,6 +173,18 @@ function toggleWork(button, id) {
     mapPresentations.style.display = 'none';
 }
 
+function toggleVisited(button, id) {
+    var mapInfo = document.getElementById('map__info');
+    var countriesVisited = document.getElementById('countries-visited');
+    countriesVisited.style.display = 'block';
+    toggleButton(button, id);
+    // toggleMapColors();
+    map.style.visibility = 'hidden';
+    mapPresentations.style.display = 'none';
+    mapWork.style.display = 'none';
+    mapInfo.style.display = 'none';
+}
+
 function toggleEngagement(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
