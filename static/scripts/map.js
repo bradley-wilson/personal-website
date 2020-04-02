@@ -178,8 +178,8 @@ function toggleVisited(button, id) {
     var countriesVisited = document.getElementById('countries-visited');
     countriesVisited.style.display = 'block';
     toggleButton(button, id);
-    // toggleMapColors();
-    map.style.visibility = 'hidden';
+    toggleMapColors();
+    map.style.visibility = 'visible';
     mapPresentations.style.display = 'none';
     mapWork.style.display = 'none';
     mapInfo.style.display = 'none';
