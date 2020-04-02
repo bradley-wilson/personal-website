@@ -177,6 +177,7 @@ function toggleVisited(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countriesVisited = document.getElementById('countries-visited');
     countriesVisited.style.display = 'block';
+    countryRankings.style.display = 'none';
     toggleButton(button, id);
     toggleMapColors();
     map.style.visibility = 'visible';
@@ -189,6 +190,7 @@ function toggleEngagement(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
     countryRankings.style.display = 'block';
+    countriesVisited.style.display = 'none';
     toggleButton(button, id);
     toggleMapColors();
     map.style.visibility = 'visible';

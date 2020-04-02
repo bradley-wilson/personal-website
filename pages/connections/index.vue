@@ -2982,7 +2982,7 @@ export default {
 .countries-visited {
   display: none;
   overflow: auto;
-  height: 25rem;
+  height: 50rem;
   /*position: relative;*/
   // max-width: 40rem;
   .list{
