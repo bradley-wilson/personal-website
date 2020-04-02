@@ -2732,8 +2732,8 @@
 
               </div>
             </div>
-
         </div>
+
         <div id="countries-visited" class="countries-visited map__info">
           <h2 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Where Brad has been
@@ -2954,6 +2954,32 @@ export default {
 
 }
 .country-rankings {
+  display: none;
+  overflow: auto;
+  height: 25rem;
+  /*position: relative;*/
+  // max-width: 40rem;
+  .list{
+  width: 100%;
+    max-width: initial;
+}
+
+  &__country {
+    font-size: 1.4rem;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid white;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+#countries-visited{
+
+}
+.countries-visited {
   display: none;
   overflow: auto;
   height: 25rem;
