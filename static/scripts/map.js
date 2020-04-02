@@ -171,32 +171,33 @@ function toggleWork(button, id) {
     map.style.visibility = 'visible';
     mapWork.style.display = 'initial';
     mapPresentations.style.display = 'none';
+    countriesVisited.style.display = 'none';
 }
 
 function toggleVisited(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countriesVisited = document.getElementById('countries-visited');
     countriesVisited.style.display = 'block';
-    countryRankings.style.display = 'none';
     toggleButton(button, id);
     toggleMapColors();
     map.style.visibility = 'visible';
     mapPresentations.style.display = 'none';
     mapWork.style.display = 'none';
     mapInfo.style.display = 'none';
+    countryRankings.style.display = 'none';
 }
 
 function toggleEngagement(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
     countryRankings.style.display = 'block';
-    countriesVisited.style.display = 'none';
     toggleButton(button, id);
     toggleMapColors();
     map.style.visibility = 'visible';
     mapPresentations.style.display = 'none';
     mapWork.style.display = 'none';
     mapInfo.style.display = 'none';
+    countriesVisited.style.display = 'none';
 }
 
 // Set map colors in Global Engagement mode
@@ -278,6 +279,7 @@ function togglePresentations(button, id) {
     map.style.visibility = 'visible';
     mapPresentations.style.display = 'initial';
     mapWork.style.display = 'none';
+    countriesVisited.style.display = 'none';
 }
 
 // Performs AJAX JSON request from server
