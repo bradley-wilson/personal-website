@@ -164,6 +164,7 @@ function toggleButton(button, id) {
 function toggleWork(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
+    var countriesVisited = document.getElementById('countries-visited');
     countryRankings.style.display = 'none';
     mapInfo.style.display = 'block';
     toggleButton(button, id);
@@ -190,6 +191,7 @@ function toggleVisited(button, id) {
 function toggleEngagement(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
+    var countriesVisited = document.getElementById('countries-visited');
     countryRankings.style.display = 'block';
     toggleButton(button, id);
     toggleMapColors();
@@ -272,6 +274,7 @@ function resetMapColors() {
 function togglePresentations(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
+    var countriesVisited = document.getElementById('countries-visited');
     countryRankings.style.display = 'none';
     mapInfo.style.display = 'block';
     toggleButton(button, id);
