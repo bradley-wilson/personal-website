@@ -177,6 +177,7 @@ function toggleWork(button, id) {
 
 function toggleVisited(button, id) {
     var mapInfo = document.getElementById('map__info');
+    var countryRankings = document.getElementById('country-rankings');
     var countriesVisited = document.getElementById('countries-visited');
     countriesVisited.style.display = 'block';
     toggleButton(button, id);
