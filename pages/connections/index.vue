@@ -2744,7 +2744,7 @@
                 :key="index"
                 class="countries-visited__country"
               >
-                {{index + 1}}. {{country.name}}
+                {{index + 1}}. {{country}}
 
               </div>
             </div>
