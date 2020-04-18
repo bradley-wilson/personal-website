@@ -27,7 +27,7 @@ export default {
 <style lang="scss" scoped>
 .announcement-bar {
   text-align: center;
-  background-color: $color-primary;
+  background-color: $dark-blue;
   position: relative;
   z-index: 10;
 
