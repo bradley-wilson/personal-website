@@ -179,6 +179,7 @@
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
       <div class="container">
+        <h1 class="heading heading--primary">Research Impact</h1>
         <div class="stat">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Reads
@@ -200,7 +201,7 @@
             Citations
           </h3>
           <strong id="citations">
-            602
+            1330
           </strong>
         </div>
         <Stats
@@ -504,7 +505,7 @@ export default {
   mounted: function() {
     this.animateValue('readers', 0, 55613, 8000)
     this.animateValue('highReaders', 0, 789, 8000)
-    this.animateValue('citations', 0, 602, 8000)
+    this.animateValue('citations', 0, 1330, 8000)
     this.appearWords(this.keywords, this.appear)
   },
   methods: {
