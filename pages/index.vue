@@ -179,32 +179,30 @@
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
       <div class="container">
-        <h1 class="heading heading--primary">Research Impact</h1>
-        <div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Reads
-            </h3>
-            <strong id="readers">
-             55613 
-            </strong>
-          </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Research Interest
-            </h3>
-            <strong id="highReaders">
-              789
-            </strong>
-          </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Citations
-            </h3>
-            <strong id="citations">
-              1330
-            </strong>
-          </div>
+        <h1 class="heading heading--primary u-block">Research Impact</h1>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Reads
+          </h3>
+          <strong id="readers">
+           55613 
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Research Interest
+          </h3>
+          <strong id="highReaders">
+            789
+          </strong>
+        </div>
+        <div class="stat">
+          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+            Citations
+          </h3>
+          <strong id="citations">
+            1330
+          </strong>
         </div>
         <Stats
           :styles="lineChartStyles"
