@@ -223,100 +223,55 @@
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Universities
           </h3>
-          <strong class="">
-            Coastal Carolina University
-          </strong>
-          <strong>
-            RMIT University
-          </strong>
-          <strong>
-            New York University
-          </strong>
-          <strong>
-            University of Exeter
-          </strong>
-          <strong>
-            Bournemouth University
+          <strong
+            v-for="search in searches.universities"
+            :key="search.index"
+          >
+            {{ search.value }}
           </strong>
         </div>
         <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Countries
           </h3>
-          <strong class="">
-            United States
-          </strong>
-          <strong>
-            India
-          </strong>
-          <strong>
-            United Kingdom
-          </strong>
-          <strong>
-            Australia
-          </strong>
-          <strong>
-            Germany
+          <strong
+            v-for="search in searches.countries"
+            :key="search.index"
+          >
+            {{ search.value }}
           </strong>
         </div>
         <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Cities
           </h3>
-          <strong class="">
-            Boardman
-          </strong>
-          <strong>
-            Bogota
-          </strong>
-          <strong>
-            Philadelphia
-          </strong>
-          <strong>
-            Medellin
-          </strong>
-          <strong>
-            Bangkok
+          <strong
+            v-for="search in searches.cities"
+            :key="search.index"
+          >
+            {{ search.value }}
           </strong>
         </div>
         <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Research Fields
           </h3>
-          <strong class="">
-            Marketing
-          </strong>
-          <strong>
-            Sport Management
-          </strong>
-          <strong>
-            Sponsorship
-          </strong>
-          <strong>
-            Education
-          </strong>
-          <strong>
-            Social Sciences
+          <strong
+            v-for="search in searches.fields"
+            :key="search.index"
+          >
+            {{ search.value }}
           </strong>
         </div>
         <div class="stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Job Titles
           </h3>
-          <strong class="">
-            Faculty Member
-          </strong>
-          <strong>
-            Undergraduate
-          </strong>
-          <strong>
-            Graduate Student
-          </strong>
-          <strong>
-            Alumnus
-          </strong>
-          <strong>
-            Sports Marketing Manager
+          <strong
+            v-for="search in searches.jobs"
+            :key="search.index"
+          >
+            {{ search.value }}
           </strong>
         </div>
         <div class="clustrmaps">
