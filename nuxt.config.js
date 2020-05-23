@@ -79,7 +79,8 @@ module.exports = {
     statsUrl: process.env.STATS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
     awardsUrl: process.env.AWARDS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/award?token=4458f0a2d0d2793a50fe20d0e9c519',
     biosUrl: process.env.BIOS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
-    postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519'
+    postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519',
+    searchesUrl: process.env.SEARCHES_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519'
   },
 
   generate: {

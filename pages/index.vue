@@ -213,10 +213,10 @@
             Keywords
           </h3>
           <strong
-            v-for="word in appear"
-            :key="word.index"
+            v-for="search in searches.keywords"
+            :key="search.index"
           >
-            {{ word.word }}
+            {{ search.value }}
           </strong>
         </div>
         <div class="stat stat--group stat--list">
@@ -435,6 +435,7 @@ export default {
     let contactsRes = await $axios.$get(env.contactsUrl)
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
+    let searchesRes = await $axios.$get(env.searchesUrl)
     return {
       bio: bioRes.content,
       events: eventsRes.entries,
@@ -442,6 +443,7 @@ export default {
       publications: publicationsRes.entries,
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
+      searches: searchesRes.entries[0],
       stats: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
