@@ -2734,7 +2734,7 @@
             </div>
         </div>
 
-        <div id="countries-visited" class="countries-visited map__info">
+        <div id="countries-visited" class="countries-visited map__info u-center">
           <h2 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Where Brad has been
           </h2>
@@ -2744,7 +2744,7 @@
                 :key="index"
                 class="countries-visited__country"
               >
-                <img :src="country.icon" alt="Flag"> {{country.name}}
+                <img class ="countries-visited__flag" :src="country.icon" alt="Flag"> {{country.name}}
 
               </div>
             </div>
@@ -3132,9 +3132,7 @@ export default {
     }
   }
 }
-#country-rankings{
 
-}
 .country-rankings {
   display: none;
   overflow: auto;
@@ -3158,13 +3156,11 @@ export default {
     }
   }
 }
-#countries-visited{
 
-}
 .countries-visited {
   display: none;
   overflow: auto;
-  height: 25rem;
+  height: 50vh;
   /*position: relative;*/
   // max-width: 40rem;
   .list{
@@ -3182,6 +3178,10 @@ export default {
     &:last-of-type {
       border-bottom: none;
     }
+  }
+
+  &__flag {
+    width: 16px;
   }
 }
 .side-bar {
