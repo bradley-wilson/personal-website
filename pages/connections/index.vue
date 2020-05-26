@@ -2734,7 +2734,7 @@
             </div>
         </div>
 
-        <div id="countries-visited" class="countries-visited map__info u-center">
+        <div id="countries-visited" class="countries-visited map__info">
           <h2 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Where Brad has been
           </h2>
@@ -3161,6 +3161,7 @@ export default {
   display: none;
   overflow: auto;
   height: 50vh;
+  bottom: 25%;
   /*position: relative;*/
   // max-width: 40rem;
   .list{
