@@ -34,34 +34,6 @@
           v-html="$md.render(bio)"/>
 
         <!-- Background Van-de-Graff videos -------------------------------->
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          webkit-playsinline
-          class="van-de-graaff-generator van-de-graaff-generator--left">
-          <source
-            src="/videos/van-de-graaff-left.mp4"
-            type="video/mp4">
-          <source
-            src="/videos/van-de-graaff-left.webm"
-            type="video/webm">
-        </video>
-        <video
-          autoplay
-          muted
-          loop
-          playsinline
-          webkit-playsinline
-          class="van-de-graaff-generator van-de-graaff-generator--right">
-          <source
-            src="/videos/van-de-graaff-right.mp4"
-            type="video/mp4">
-          <source
-            src="/videos/van-de-graaff-right.webm"
-            type="video/webm">
-        </video>
       </div>
     </section>
 
