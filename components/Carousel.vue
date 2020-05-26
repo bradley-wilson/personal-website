@@ -98,7 +98,7 @@ export default {
 <style scoped lang="scss">
 .carousel {
   position: relative;
-  min-height: 20vh;
+  height: 40vh;
 
   &__chevron-left {
     left: 0;
