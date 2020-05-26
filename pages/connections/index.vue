@@ -2744,7 +2744,7 @@
                 :key="index"
                 class="countries-visited__country"
               >
-                {{index + 1}}. {{country}}
+                {{country.icon}}. {{country.name}}
 
               </div>
             </div>
@@ -2854,19 +2854,201 @@ export default {
         {name:'Albania'}
       ],
       countriesVisited: [
-        'Australia',
-        'United States',
-        'Germany',
-        'Netherlands',
-        'Colombia',
-        'Japan',
-        'France',
-        'Italy',
-        'Spain',
-        'United Kingdom',
-        'Canada',
-        'Austria',
-        'Denmark'
+        {
+          name: 'Australia',
+          icon: 'img/flags/Australia.png'
+        },
+        {
+          name: 'Austria',
+          icon: 'img/flags/Austria.png'
+        },
+        {
+          name: 'Belgium',
+          icon: 'img/flags/Belgium.png'
+        },
+        {
+          name: 'Belize',
+          icon: 'img/flags/Belize.png'
+        },
+        {
+          name: 'Chile',
+          icon: 'img/flags/Chile.png'
+        },
+        {
+          name: 'China',
+          icon: 'img/flags/China.png'
+        },
+        {
+          name: 'Colombia',
+          icon: 'img/flags/Colombia.png'
+        },
+        {
+          name: 'Costa Rica',
+          icon: 'img/flags/Costa-Rica.png'
+        },
+        {
+          name: 'Czech Republic',
+          icon: 'img/flags/Czech-Republic.png'
+        },
+        {
+          name: 'Denmark',
+          icon: 'img/flags/Denmark.png'
+        },
+        {
+          name: 'Ecuador',
+          icon: 'img/flags/Ecuador.png'
+        },
+        {
+          name: 'El Salvador',
+          icon: 'img/flags/El-Salvador.png'
+        }, {
+          name: 'France',
+          icon: 'img/flags/France.png'
+        },
+        {
+          name: 'Georgia',
+          icon: 'img/flags/Georgia.png'
+        },
+        {
+          name: 'Hong Kong',
+          icon: 'img/flags/Hong-Kong.png'
+        },
+        {
+          name: 'Indonesia',
+          icon: 'img/flags/Indonesia.png'
+        },
+        {
+          name: 'Japan',
+          icon: 'img/flags/Japan.png'
+        },
+        {
+          name: 'Latvia',
+          icon: 'img/flags/Latvia.png'
+        },
+        {
+          name: 'Luxembourg',
+          icon: 'img/flags/Luxembourg.png'
+        },
+        {
+          name: 'Macao',
+          icon: 'img/flags/Macao.png'
+        },
+        {
+          name: 'Malaysia',
+          icon: 'img/flags/Malaysia.png'
+        },
+        {
+          name: 'Mexico',
+          icon: 'img/flags/Mexico.png'
+        },
+        {
+          name: 'Netherlands',
+          icon: 'img/flags/Netherlands.png'
+        },
+        {
+          name: 'New Zealand',
+          icon: 'img/flags/New-Zealand.png'
+        },
+        {
+          name: 'Norway',
+          icon: 'img/flags/Norway.png'
+        },
+        {
+          name: 'Panama',
+          icon: 'img/flags/Panama.png'
+        },
+        {
+          name: 'Peru',
+          icon: 'img/flags/Peru.png'
+        },
+        {
+          name: 'Poland',
+          icon: 'img/flags/Poland.png'
+        },
+        {
+          name: 'Portugal',
+          icon: 'img/flags/Portugal.png'
+        },
+        {
+          name: 'Puerto Rico',
+          icon: 'img/flags/Puerto-Rico.png'
+        },
+        {
+          name: 'Qatar',
+          icon: 'img/flags/Qatar.png'
+        },
+        {
+          name: 'Romania',
+          icon: 'img/flags/Romania.png'
+        },
+        {
+          name: 'Russia',
+          icon: 'img/flags/Russia.png'
+        },
+        {
+          name: 'Singapore',
+          icon: 'img/flags/Singapore.png'
+        },
+        {
+          name: 'Slovenia',
+          icon: 'img/flags/Slovenia.png'
+        },
+        {
+          name: 'South Korea',
+          icon: 'img/flags/South-Korea.png'
+        },
+        {
+          name: 'Spain',
+          icon: 'img/flags/Spain.png'
+        },
+        {
+          name: 'Sweden',
+          icon: 'img/flags/Sweden.png'
+        },
+        {
+          name: 'Switzerland',
+          icon: 'img/flags/Switzerland.png'
+        },
+        {
+          name: 'Thailand',
+          icon: 'img/flags/Thailand.png'
+        },
+        {
+          name: 'Turkey',
+          icon: 'img/flags/Turkey.png'
+        },
+        {
+          name: 'United Arab Emirates',
+          icon: 'img/flags/United-Arab-Emirates.png'
+        },
+        {
+          name: 'United Kingdom',
+          icon: 'img/flags/United-Kingdom.png'
+        },
+        {
+          name: 'Ukraine',
+          icon: 'img/flags/Ukraine.png'
+        },
+        {
+          name: 'United States of America',
+          icon: 'img/flags/United-States.png'
+        },
+        {
+          name: 'Bali',
+          icon: 'img/flags/Bali.png'
+        },
+        {
+          name: 'Canada',
+          icon: 'img/flags/Canada.png'
+        },
+        {
+          name: 'Germany',
+          icon: 'img/flags/Germany.png'
+        },
+        {
+          name: 'Scotland',
+          icon: 'img/flags/Scotland.png'
+        }
       ]
     }
   },
