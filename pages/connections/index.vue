@@ -2744,7 +2744,7 @@
                 :key="index"
                 class="countries-visited__country"
               >
-                {{country.icon}}. {{country.name}}
+                <img :src="country.icon" alt="Flag"> {{country.name}}
 
               </div>
             </div>
