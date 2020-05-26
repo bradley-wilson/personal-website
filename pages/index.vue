@@ -180,10 +180,10 @@
           :styles="lineChartStyles"
           :chartdata="stats"
           class="stats__graph"/>
-        <BGVideo
+        <!-- <BGVideo
           poster="img/map-line-connection.png"
           mp4-src="/videos/map-line-connection.mp4"
-          webm-src="/videos/map-line-connection.webm" />
+          webm-src="/videos/map-line-connection.webm" /> -->
         <div class="liveKeywords stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
@@ -300,6 +300,7 @@
         webm-src="/videos/bg_lights_low.webm"/>
 
       <div class="container">
+        <Carousel :quotes="quotes"/>
         <Carousel :quotes="quotes"/>
       </div>
     </section>
