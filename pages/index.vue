@@ -2,11 +2,14 @@
   <div>
     <!-- Hero banner ---------------------------------------------------->
     <section class="section-banner">
-      <BGVideo
+      <!-- <BGVideo
         poster="img/banner-video.jpg"
         mp4-src="/videos/bg_banner.mp4"
-        webm-src="/videos/bg_banner.webm" />
-
+        webm-src="/videos/bg_banner.webm" /> -->
+      <BGVideo
+        poster="img/map-line-connection.ong"
+        mp4-src="/videos/map-line-connection.mp4"
+        webm-src="/videos/map-line-connection.webm" />
       <div class="container u-center">
         <h1 class="heading heading--title">Bradley Wilson</h1>
         <p class="subheading">
