@@ -52,7 +52,7 @@ export default {
   computed: {
     sortedQuotes: function() {
       var sorted = []
-      for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 10; i++) {
         sorted.push(this.quotes[Math.floor(Math.random() * this.quotes.length)])
       }
 
