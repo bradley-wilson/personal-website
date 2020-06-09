@@ -642,39 +642,40 @@ export default {
     align-items: center;
     flex-direction: column;
 
-    .stat {
-      width: calc(100% / 3);
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      margin: 3rem 0;
+  }
+}
 
-      &--group {
-        padding: 15px;
-        border-radius: 10px;
-        border: white 2px solid;
-      }
+.stat {
+  width: calc(100% / 3);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem 0;
 
-      &--list {
-        width: 100%;
-        margin-right: 15px;
+  &--group {
+    padding: 15px;
+    border-radius: 10px;
+    border: white 2px solid;
+  }
 
-        @include screen(tablet) {
-          width: calc(100% / 3.5);
-        }
-      }
+  &--list {
+    width: 100%;
+    margin-right: 15px;
 
-      h3 {
-        text-align: center !important;
-      }
-
-      strong {
-        text-align: center;
-        font-size: 1.6rem;
-        margin: 2vh 0;
-        display: block;
-      }
+    @include screen(tablet) {
+      width: calc(100% / 3.5);
     }
+  }
+
+  h3 {
+    text-align: center !important;
+  }
+
+  strong {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 2vh 0;
+    display: block;
   }
 }
 
