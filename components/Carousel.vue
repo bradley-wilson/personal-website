@@ -21,7 +21,7 @@
               class="quote__by heading--tertiary"> {{ quote.author }} </div>
             <div
               v-if="quote.country && quote.role"
-              class="quote__place text--description"> {{ quote.country }}, {{ quote.role }} </div>
+              class="quote__place text--description"> {{ quote.role }}, {{ quote.country }} </div>
           </div>
         </div>
       </div>
@@ -98,7 +98,7 @@ export default {
 <style scoped lang="scss">
 .carousel {
   position: relative;
-  height: 40vh;
+  height: 30vh;
 
   &__chevron-left {
     left: 0;
