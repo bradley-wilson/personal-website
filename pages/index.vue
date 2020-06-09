@@ -642,6 +642,9 @@ export default {
     align-items: center;
     flex-direction: column;
 
+    @include screen(tablet) {
+      flex-direction: row;
+    }
   }
 }
 
