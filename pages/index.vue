@@ -636,32 +636,11 @@ export default {
 
 .graph {
   &__overview {
-    display: flexbox;
-  }
-}
-
-.section-stats {
-  padding: $section-padding;
-  background-image: $gradient-light;
-  position: relative;
-
-  @include screen(tablet) {
-    padding: $section-padding-tablet;
-  }
-  @include screen(desktop) {
-    padding: $section-padding-desktop;
-  }
-
-  .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
-
-    @include screen(tablet) {
-      flex-direction: row;
-    }
 
     .stat {
       width: calc(100% / 3);
@@ -695,6 +674,31 @@ export default {
         margin: 2vh 0;
         display: block;
       }
+    }
+  }
+}
+
+.section-stats {
+  padding: $section-padding;
+  background-image: $gradient-light;
+  position: relative;
+
+  @include screen(tablet) {
+    padding: $section-padding-tablet;
+  }
+  @include screen(desktop) {
+    padding: $section-padding-desktop;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+
+    @include screen(tablet) {
+      flex-direction: row;
     }
 
     .liveKeywords {
