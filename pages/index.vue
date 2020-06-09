@@ -153,7 +153,7 @@
 
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
-      <div class="section-stats__graph">
+      <section class="section-graph">
         <BGVideo
           poster="img/map-line-connection.ong"
           mp4-src="/videos/map-line-connection.mp4"
@@ -189,7 +189,7 @@
             :chartdata="stats"
             class="stats__graph"/>
         </div>
-      </div>
+      </section>
       <div class="container">
         <div class="liveKeywords stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
