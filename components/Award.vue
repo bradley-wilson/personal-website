@@ -1,17 +1,17 @@
 <template>
   <div class="award">
     <img
-      :if="award.type === 'Normal'"
+      v-if="award.type === 'Normal'"
       src="/img/laurel.svg"
       alt="Laurel icon"
       class="award__icon">
     <img
-      :if="award.type === 'Financial'"
+      v-if="award.type === 'Financial'"
       src="/img/laurel-money.svg"
       alt="Laurel icon"
       class="award__icon">
     <img
-      :if="award.type === 'Academic'"
+      v-if="award.type === 'Academic'"
       src="/img/laurel-hat.svg"
       alt="Laurel icon"
       class="award__icon">
