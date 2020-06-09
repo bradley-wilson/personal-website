@@ -153,44 +153,44 @@
 
     <!-- Stats section ---------------------------------------------------->
     <section class="section-stats">
-      <BGVideo
-        poster="img/map-line-connection.ong"
-        mp4-src="/videos/map-line-connection.mp4"
-        webm-src="/videos/map-line-connection.webm" />
-      <div class="container">
-        <h1 class="heading heading--primary u-block">Research Impact</h1>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Reads
-          </h3>
-          <strong id="readers">
-           55613 
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Research Interest
-          </h3>
-          <strong id="highReaders">
-            789
-          </strong>
-        </div>
-        <div class="stat">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Citations
-          </h3>
-          <strong id="citations">
-            1330
-          </strong>
-        </div>
-        <Stats
-          :styles="lineChartStyles"
-          :chartdata="stats"
-          class="stats__graph"/>
-        <!-- <BGVideo
-          poster="img/map-line-connection.png"
+      <div class="section-stats__graph">
+        <BGVideo
+          poster="img/map-line-connection.ong"
           mp4-src="/videos/map-line-connection.mp4"
-          webm-src="/videos/map-line-connection.webm" /> -->
+          webm-src="/videos/map-line-connection.webm" />
+        <div class="container">
+          <h1 class="heading heading--primary u-block">Research Impact</h1>
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Reads
+            </h3>
+            <strong id="readers">
+            55613 
+            </strong>
+          </div>
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Research Interest
+            </h3>
+            <strong id="highReaders">
+              789
+            </strong>
+          </div>
+          <div class="stat">
+            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+              Citations
+            </h3>
+            <strong id="citations">
+              1330
+            </strong>
+          </div>
+          <Stats
+            :styles="lineChartStyles"
+            :chartdata="stats"
+            class="stats__graph"/>
+        </div>
+      </div>
+      <div class="container">
         <div class="liveKeywords stat stat--group stat--list">
           <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
             Keywords
