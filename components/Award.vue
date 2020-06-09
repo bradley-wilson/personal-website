@@ -12,7 +12,7 @@
       class="award__icon">
     <img
       :if="award.type === 'Academic'"
-      src="/img/laurel-money.svg"
+      src="/img/laurel-hat.svg"
       alt="Laurel icon"
       class="award__icon">
     <div class="award__title heading--tertiary"> {{ award.title }} </div>
