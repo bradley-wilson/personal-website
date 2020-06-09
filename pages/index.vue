@@ -627,6 +627,11 @@ export default {
 }
 
 // STATS -----------------------------------------------------
+.section-graph {
+  position: relative;
+  padding: $section-padding;
+}
+
 .section-stats {
   padding: $section-padding;
   background-image: $gradient-light;
