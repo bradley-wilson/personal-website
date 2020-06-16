@@ -146,16 +146,16 @@
       <div class="container">
         <h1 class="heading heading--primary">Connections</h1>
         <nuxt-link
-          to="/connections"
+          to="/work-connections"
           class="button button--primary">Work connections</nuxt-link>
         <nuxt-link
-          to="/connections"
+          to="/global-readership"
           class="button button--primary">Global readership</nuxt-link>
         <nuxt-link
-          to="/connections"
+          to="/invited-presentations"
           class="button button--primary">Invited presentations</nuxt-link>
         <nuxt-link
-          to="/connections"
+          to="/countries-visited"
           class="button button--primary">Countries visited</nuxt-link>
         <div class="connections-thumbnail heading heading--secondary"></div>
       </div>

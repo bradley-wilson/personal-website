@@ -10,7 +10,6 @@
       <a
         class="button button--tab side-bar__button"
         href="/#section-connections">&lt; Go back</a>
-      </div>
       <div class="map">
         <svg
           class="map__content"
