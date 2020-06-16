@@ -260,6 +260,7 @@
           </strong>
         </div>
         <div class="clustrmaps">
+          <h1 class="heading heading--primary u-block">Online Visitors</h1>
           <script
             id="clustrmaps"
             type="text/javascript"
