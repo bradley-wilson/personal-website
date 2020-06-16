@@ -158,7 +158,7 @@
         mp4-src="/videos/map-line-connection.mp4"
         webm-src="/videos/map-line-connection.webm" />
       <div class="container">
-        <h1 class="heading heading--primary u-block">Research Impact</h1>
+        <h1 class="heading heading--primary u-block">Research Impact and Audience Engagement</h1>
         <div class="graph__overview">
           <div class="stat">
             <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
