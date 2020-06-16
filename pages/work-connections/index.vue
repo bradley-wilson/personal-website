@@ -7,25 +7,9 @@
         <span class="nav-icon__bar"/>
         <span class="nav-icon__bar"/>
       </div>
-      <div
-        id="map__side-bar"
-        class="side-bar map__side-bar">
-        <a
-          class="button button--tab side-bar__button"
-          href="/#section-connections">&lt; Go back</a>
-        <button
-          class="button button--tab side-bar__button button--active"
-          onclick="toggleWork(this, 'map__side-bar')">Work connections</button>
-        <button
-          class="button button--tab side-bar__button"
-          @click="sortCountries"
-          onclick="toggleEngagement(this, 'map__side-bar');">Global readership</button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="togglePresentations(this, 'map__side-bar')">Invited Presentations</button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="toggleVisited(this, 'map__side-bar');">Countries Visited</button>
+      <a
+        class="button button--tab side-bar__button"
+        href="/#section-connections">&lt; Go back</a>
       </div>
       <div class="map">
         <svg
@@ -2602,7 +2586,7 @@
             </g>
           </g>
           
-          <g id="map__presentations" style="display: none">
+          <g id="map__presentations">
             <g id="map__presentations-lines">
               <path class="map__line" d="M309.461,397.997c49.331,-55.415 105.84,-102.425 202.209,-134.274" style="fill:none;stroke:#09a47c;stroke-width:1.3px;"/>
               <path class="map__line" d="M309.461,397.997c-21.887,-77.667 -123.194,-159.741 -167.315,-162.294" style="fill:none;stroke:#09a47c;stroke-width:1.3px;"/>
@@ -2764,7 +2748,6 @@ export default {
         { src: '/scripts/svg-pan-zoom.min.js'},
         { src: '/scripts/hammer.js'},
         { src: '/scripts/map.js', body: true, defer: '' },
-        { src: '/scripts/sidebar.js', body: true, defer: '' }
       ],
     }
   },
@@ -3130,6 +3113,16 @@ export default {
       margin-bottom: 1rem;
       border-radius: 50%;
     }
+  }
+}
+
+#map {
+  &__work {
+    display: initial;
+  }
+
+  &__presentations {
+    display: none;
   }
 }
 

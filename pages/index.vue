@@ -145,6 +145,18 @@
       class="section-connections">
       <div class="container">
         <h1 class="heading heading--primary">Connections</h1>
+        <nuxt-link
+          to="/connections"
+          class="button button--primary">Work connections</nuxt-link>
+        <nuxt-link
+          to="/connections"
+          class="button button--primary">Global readership</nuxt-link>
+        <nuxt-link
+          to="/connections"
+          class="button button--primary">Invited presentations</nuxt-link>
+        <nuxt-link
+          to="/connections"
+          class="button button--primary">Countries visited</nuxt-link>
         <div class="connections-thumbnail heading heading--secondary"></div>
       </div>
     </section>
