@@ -145,9 +145,7 @@
       class="section-connections">
       <div class="container">
         <h1 class="heading heading--primary">Connections</h1>
-        <a
-          class="connections-thumbnail heading heading--secondary"
-          href="/connections">Touch to view!</a>
+        <div class="connections-thumbnail heading heading--secondary"></div>
       </div>
     </section>
 
