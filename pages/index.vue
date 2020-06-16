@@ -147,7 +147,7 @@
         <h1 class="heading heading--primary">Connections</h1>
         <a
           class="connections-thumbnail heading heading--secondary"
-          href="/connections">View map!</a>
+          href="/connections">Touch to view!</a>
       </div>
     </section>
 
