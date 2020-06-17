@@ -2678,6 +2678,222 @@
             <circle class="map__marker" id="uni-munich" cx="576.571" cy="235.272" r="7" style="fill:#09a47c;"/>
             <circle class="map__marker" id="uni-rmit" cx="1019.28" cy="553.859" r="7" style="fill:#09a47c;"/>
           </g>
+
+          <g id="map__visited">
+            <g id="map__visited-lines">
+              <path d="M306.368,396.323C353.967,336.128 512.777,245.357 598.119,233.496" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M306.368,396.323C351.957,328.272 483.394,230.299 571.647,214.309" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C319.449,191.258 471.964,192.867 571.647,214.309" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C319.449,191.258 443.656,185.257 543.339,206.699" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C319.449,191.258 430.865,157.802 530.548,179.244" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M541.771,206.699C543.028,193.653 538.612,182.114 530.548,179.244" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M541.771,206.699C544.385,189.777 558.729,164.253 572.16,157.622" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M541.771,206.699C544.385,189.777 580.1,160.401 594.33,157.622" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M541.771,206.699C548.601,193.604 565.874,194.196 574.2,197.995" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M541.771,206.699C549.937,200.952 567.628,205.336 571.602,213.242" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M587.787,205.248C583.525,203.634 572.587,207.459 571.602,213.242" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M587.787,205.248C589.136,202.504 602.54,199.376 606.424,203.727" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M597.695,215.828C596.896,210.797 600.296,203.484 606.424,203.727" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M597.695,215.828C602.777,212.518 610.63,214.84 613.256,221.508" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M597.695,233.023C599.85,225.362 605.804,218.451 613.256,221.508" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M597.695,233.023C600.844,233.877 607.727,238.325 607.729,243.976" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M621.425,242.404C624.574,243.259 612.271,240.129 607.729,243.976" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M613.256,221.508C609.669,226.999 607.238,234.573 607.729,243.976" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M683.308,248.358C679.331,247.237 663.312,253.096 655.525,261.444" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M620.793,242.404C634.203,237.9 657.084,252.733 655.525,261.444" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M706.261,324.018C706.098,298.8 673.354,260.834 655.525,261.444" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M706.261,324.018C711.19,316.363 723.454,322.733 722.057,329.459" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M706.261,324.018C708.84,280.854 803.241,164.948 829.723,163.399" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M594.33,157.622C669.898,129.51 796.443,143.003 829.723,163.399" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M587.832,205.248C654.027,156.094 796.443,143.003 829.723,163.399" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M899.069,288.428C899.027,222.942 853.829,166.443 829.723,163.399" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M899.069,288.428C911.854,262.17 954.158,264.782 962.585,278.738" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M998.459,278.406C991.195,260.186 964.223,266.525 962.585,278.738" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M932.903,327.076C929.288,308.6 951.376,278.28 962.585,278.738" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M932.903,327.076C926.595,322.852 921.662,329.212 921.594,333.619" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M898.673,288.428C909.036,292.794 922.284,325.686 921.594,333.619" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M898.673,288.428C909.036,292.794 933.12,318.844 932.43,326.777" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M898.673,288.428C887.401,303.004 875.406,338.939 874.573,361.105" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M876.751,410.176C884.093,393.552 888.175,378.924 874.573,361.105" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M876.751,410.176C883.784,409.811 886.46,421.677 883.532,425.72" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M876.751,410.176C888.053,400.904 927.029,408.678 936.188,424.446" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M986.611,511.146C983.338,480.798 958.326,430.801 936.188,424.446" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M986.611,511.146C983.338,480.798 907.511,416.021 883.532,424.506" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M986.611,511.146C983.338,480.798 973.303,367.006 932.903,327.076" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M986.611,511.146C1031.87,502.017 1096.16,548.861 1109.5,579.191" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M998.459,277.071C1103.09,325.878 1096.16,548.861 1109.5,579.191" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M585.573,223.39C585.8,218.261 590.459,212.981 597.291,214.965" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M571.647,214.309C571.367,206.363 572.42,200.123 574.2,197.995" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M571.647,214.309C563.57,216.75 556.874,223.944 556.195,232.029" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M573.412,230.327C568.959,226.185 558.936,229.371 556.195,232.029" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M534.648,259.99C535.504,249.322 546.885,234.715 556.195,232.029" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M534.648,259.99C530.601,253.823 516.695,254.521 513.627,259.99" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C235.917,242.876 228.69,193.305 213.998,187.9" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C232.369,277.524 232.614,314.497 211.336,333.32" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C238.018,278.926 269.774,321.743 259.683,352.956" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M262.699,380.831C254.761,377.35 249.499,363.547 259.683,352.956" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M262.699,380.831C261.846,372.699 264.782,369.103 268.834,368.232" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M262.699,380.831C269.407,377.709 276.778,380.635 279.27,384.86" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M220.856,268.097C248.754,265.666 314.527,354.349 306.368,396.323" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M279.896,384.86C290.369,375.713 306.41,383.253 306.368,396.323" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M319.153,349.163C315.822,352.616 306.181,385.714 306.368,396.323" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M319.153,349.163C309.773,323.87 257.76,264.995 220.919,268.048" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M286.894,416.719C288.531,405.074 299.282,395.536 306.368,396.323" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M292.045,440.895C292.949,421.438 295.339,404.859 306.368,396.323" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M292.045,440.895C293.573,433.759 289.611,422.453 286.551,416.719" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M598.119,232.551C589.755,221.692 581.39,216.783 573.026,214.309" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M571.647,214.309C579.61,202.965 589.521,189.304 613.04,183.706" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M571.647,214.309C576.166,203.335 578.382,196.734 587.787,189.605" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M573.818,197.826C576.475,192.921 582.292,189.378 587.787,189.605" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M683.308,248.947C841.534,335.334 880.141,349.882 986.611,511.146" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M598.119,233.496C696.727,263.307 880.141,349.882 986.611,511.146" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M306.368,396.323C324.047,437.955 315.138,520.998 303.511,570.471" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+              <path d="M292.045,440.895C312.636,467.564 310.011,523.449 303.511,570.471" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
+            </g>
+
+            <g id="russia" transform="matrix(1,0,0,1,187.908,-17.9161)">
+                <circle cx="641.348" cy="181.681" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <circle id="colombia" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            <g id="ecuador" transform="matrix(1,0,0,1,-19.474,20.8148)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="peru" transform="matrix(1,0,0,1,-14.7197,44.5716)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="el-salvador" transform="matrix(1,0,0,1,-43.6695,-15.5488)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="panama" transform="matrix(1,0,0,1,-26.3601,-11.4631)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="puerto-rico" transform="matrix(1,0,0,1,12.7851,-46.5465)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="france" transform="matrix(1,0,0,1,250.382,-164.748)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="switzerland" transform="matrix(1,0,0,1,267.044,-165.465)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="portugal" transform="matrix(1,0,0,1,207.259,-135.833)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="spain" transform="matrix(1,0,0,1,228.86,-136.83)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="georgia" transform="matrix(1,0,0,1,376.94,-147.965)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="turkey" transform="matrix(1,0,0,1,349.157,-134.879)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="costa-rica" transform="matrix(1,0,0,1,-37.0649,-28.675)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="belize" transform="matrix(1,0,0,1,-46.6845,-43.3666)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="mexico" transform="matrix(1,0,0,1,-95.0321,-63.0029)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="usa" transform="matrix(1,0,0,1,-85.5122,-128.226)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="canada" transform="matrix(1,0,0,1,-92.3705,-209.207)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="chile" transform="matrix(1,0,0,1,-2.85702,174.148)">
+                <circle cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="belgium" transform="matrix(1,0,0,1,-4.92401,-2.75189)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="uk" transform="matrix(1,0,0,1,-34.0947,-9.29489)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="scotland" transform="matrix(1,0,0,1,-46.0232,-36.7499)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="netherlands" transform="matrix(1,0,0,1,-2.37135,-17.8057)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="norway" transform="matrix(1,0,0,1,-4.41149,-58.3722)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="sweden" transform="matrix(1,0,0,1,17.7591,-59.1383)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="luxembourg" transform="matrix(1,0,0,1,9.0017,7.43592)">
+                <circle cx="576.571" cy="215.994" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="austria" transform="matrix(1,0,0,1,21.1245,-2.7213)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="slovenia" transform="matrix(1,0,0,1,30.7224,8.20736)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="romania" transform="matrix(1,0,0,1,44.8544,7.1325)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="qatar" transform="matrix(1,0,0,1,129.69,88.7464)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="united-arab-emirates" transform="matrix(1,0,0,1,145.486,93.592)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="czech-republic" transform="matrix(1,0,0,1,21.1245,-20.3075)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="germany" transform="matrix(1,0,0,1,11.0975,-30.0236)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="poland" transform="matrix(1,0,0,1,29.9265,-31.545)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="ukraine" transform="matrix(1,0,0,1,36.6854,-13.7645)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="denmark" transform="matrix(1,0,0,1,10.7147,-45.6673)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="latvia" transform="matrix(1,0,0,1,35.897,-51.0332)">
+                <circle cx="576.571" cy="235.272" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="australia" transform="matrix(1,0,0,1,-2.80311,-26.9101)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="new-zealand" transform="matrix(1,0,0,1,120.082,41.1352)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="indonesia" transform="matrix(1,0,0,1,-53.2261,-113.61)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="malaysia" transform="matrix(1,0,0,1,-112.663,-127.88)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="thailand" transform="matrix(1,0,0,1,-114.841,-176.367)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="singapore" transform="matrix(1,0,0,1,-105.959,-113.55)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="japan" transform="matrix(1,0,0,1,8.41366,-260.985)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="south-korea" transform="matrix(1,0,0,1,-26.8291,-259.318)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="china" transform="matrix(1,0,0,1,-90.3446,-249.628)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="hong-kong" transform="matrix(1,0,0,1,-56.5111,-211.191)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+            <g id="macao" transform="matrix(1,0,0,1,-67.8197,-204.437)">
+                <circle cx="989.414" cy="538.056" r="6.543" style="fill:rgb(9,164,124);"/>
+            </g>
+          </g>
         </svg>
 
         <div
