@@ -1,12 +1,6 @@
 <template>
   <div>
     <div class="u-view u-view--scroll">
-      <div
-        class="nav-icon side-bar__icon"
-        onclick="showSideBar()">
-        <span class="nav-icon__bar"/>
-        <span class="nav-icon__bar"/>
-      </div>
       <a
         class="button button--tab side-bar__button"
         href="/#section-connections">&lt; Go back</a>

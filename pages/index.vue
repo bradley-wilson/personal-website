@@ -629,6 +629,11 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 5rem;
+    flex-direction: column;
+
+    @include screen(tablet) {
+      flex-direction: row;
+    }
   }
 }
 
