@@ -633,6 +633,7 @@ export default {
 
     @include screen(tablet) {
       flex-direction: row;
+      align-items: center;
     }
   }
 }

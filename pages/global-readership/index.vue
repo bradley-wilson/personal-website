@@ -2,7 +2,7 @@
   <div>
     <div class="u-view u-view--scroll">
       <a
-        class="button button--tab side-bar__button"
+        class="button button--primary back-button"
         href="/#section-connections">&lt; Go back</a>
       <div class="map">
         <svg
@@ -3129,6 +3129,12 @@ export default {
   &__highlight--5 {
     fill: #36648E;
   }
+}
+
+.back-button {
+  width: fit-content;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 #map {
