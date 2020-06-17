@@ -3109,6 +3109,10 @@ export default {
   }
 }
 
+.back-button {
+  width: fit-content
+}
+
 #map {
   &__work {
     display: initial;
