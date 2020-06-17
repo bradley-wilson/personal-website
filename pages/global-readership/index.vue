@@ -3132,9 +3132,9 @@ export default {
 }
 
 .back-button {
-  width: fit-content;
-  margin-top: 10rem;
-  margin-left: 1rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
 }
 
 #map {
