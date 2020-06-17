@@ -59,7 +59,7 @@ export default {
           url: '/#section-services',
           target: '#section-services'
         },
-        { title: 'Connections', url: '/connections' },
+        { title: 'Connections', url: '/#section-connections' },
         { title: 'Publications', url: '/publications' },
         { title: 'Team', url: '/team' },
         { title: 'Blog', url: '/blog' },

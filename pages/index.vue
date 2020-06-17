@@ -145,21 +145,23 @@
       class="section-connections">
       <div class="container section-connections__container">
         <h1 class="heading heading--primary">Connections</h1>
-        <div class="connections__buttons">
-          <a
-            to="/work-connections"
-            class="button button--tab">Work connections</a>
-          <a
-            to="/global-readership"
-            class="button button--tab">Global readership</a>
-          <a
-            to="/invited-presentations"
-            class="button button--tab">Invited presentations</a>
-          <a
-            to="/countries-visited"
-            class="button button--tab">Countries visited</a>
+        <div class="connections">
+          <div class="connections__buttons">
+            <a
+              href="/work-connections"
+              class="button button--tab">Work connections</a>
+            <a
+              href="/global-readership"
+              class="button button--tab">Global readership</a>
+            <a
+              href="/invited-presentations"
+              class="button button--tab">Invited presentations</a>
+            <a
+              href="/countries-visited"
+              class="button button--tab">Countries visited</a>
+          </div>
+          <div class="connections-thumbnail heading heading--secondary"></div>
         </div>
-        <div class="connections-thumbnail heading heading--secondary"></div>
       </div>
     </section>
 
@@ -616,6 +618,15 @@ export default {
   }
   @include screen(desktop) {
     padding: $section-padding-desktop;
+  }
+}
+
+.connections {
+  display: flex;
+
+  &__buttons {
+    display: flex;
+    justify-items: center;
   }
 }
 
