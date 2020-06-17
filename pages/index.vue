@@ -623,10 +623,12 @@ export default {
 
 .connections {
   display: flex;
+  flex-direction: column;
 
   &__buttons {
     display: flex;
-    justify-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
   }
 }
 
