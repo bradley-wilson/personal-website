@@ -3094,7 +3094,7 @@ export default {
 
 .back-button {
   width: fit-content;
-  margin-top: 1rem;
+  margin-top: 10rem;
   margin-left: 1rem;
 }
 
