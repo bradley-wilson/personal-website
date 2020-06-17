@@ -143,20 +143,22 @@
     <section
       id="section-connections"
       class="section-connections">
-      <div class="container">
+      <div class="container section-connections__container">
         <h1 class="heading heading--primary">Connections</h1>
-        <nuxt-link
-          to="/work-connections"
-          class="button button--primary">Work connections</nuxt-link>
-        <nuxt-link
-          to="/global-readership"
-          class="button button--primary">Global readership</nuxt-link>
-        <nuxt-link
-          to="/invited-presentations"
-          class="button button--primary">Invited presentations</nuxt-link>
-        <nuxt-link
-          to="/countries-visited"
-          class="button button--primary">Countries visited</nuxt-link>
+        <div class="connections__buttons">
+          <a
+            to="/work-connections"
+            class="button button--tab">Work connections</a>
+          <a
+            to="/global-readership"
+            class="button button--tab">Global readership</a>
+          <a
+            to="/invited-presentations"
+            class="button button--tab">Invited presentations</a>
+          <a
+            to="/countries-visited"
+            class="button button--tab">Countries visited</a>
+        </div>
         <div class="connections-thumbnail heading heading--secondary"></div>
       </div>
     </section>
@@ -627,15 +629,10 @@ export default {
   background-image: url('/img/map-thumbnail.jpg');
   background-size: cover;
   background-position: center;
-  transition: all 0.2s;
   text-align: center;
 
   @include screen(tablet) {
     padding: 20rem 0;
-  }
-
-  &:hover {
-    transform: scale(1.05);
   }
 }
 
