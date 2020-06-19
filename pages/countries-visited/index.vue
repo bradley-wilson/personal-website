@@ -2754,7 +2754,7 @@
             <g transform="matrix(1,0,0,1,187.908,-17.9161)">
                 <circle id="russia" class="map__marker" cx="641.348" cy="181.681" r="6.543" style="fill:rgb(9,164,124);"/>
             </g>
-            <circle id="colombia" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+            <circle id="colombia" class="map__marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
             <g transform="matrix(1,0,0,1,-19.474,20.8148)">
                 <circle id="ecuador" class="map__marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
             </g>
@@ -2768,7 +2768,7 @@
                 <circle id="panama" class="map__marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
             </g>
             <g transform="matrix(1,0,0,1,12.7851,-46.5465)">
-                <circle id="puerto-rico" class="map_marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
+                <circle id="puerto-rico" class="map__marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
             </g>
             <g transform="matrix(1,0,0,1,250.382,-164.748)">
                 <circle id="france" class="map__marker" cx="306.368" cy="396.323" r="6.543" style="fill:rgb(9,164,124);"/>
