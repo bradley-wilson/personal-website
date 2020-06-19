@@ -280,384 +280,384 @@
         "id": "pres-puerto-rico-2018"
     },
     {
-        "description": "Russia",
-        "title": "",
+        "title": "Russia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/russia.png",
         "id": "russia"
     },
     {
-        "description": "Colombia",
-        "title": "",
+        "title": "Colombia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/colombia.png",
         "id": "colombia"
     },
     {
-        "description": "Ecuador",
-        "title": "",
+        "title": "Ecuador",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/ecuador.png",
         "id": "ecuador"
     },
     {
-        "description": "Peru",
-        "title": "",
+        "title": "Peru",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/peru.png",
         "id": "peru"
     },
     {
-        "description": "El Salvador",
-        "title": "",
+        "title": "El Salvador",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/el-salvador.png",
         "id": "el-salvador"
     },
     {
-        "description": "Panama",
-        "title": "",
+        "title": "Panama",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/panama.png",
         "id": "panama"
     },
     {
-        "description": "Puerto Rico",
-        "title" : "",
+        "title": "Puerto Rico",
+        "description" : "",
         "country": "",
         "date": "",
         "icon": "/img/flags/puerto-rico.png",
         "id": "puerto-rico"
     },
     {
-        "description": "France",
-        "title": "",
+        "title": "France",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/france.png",
         "id": "france"
     },
     {
-        "description": "Switzerland",
-        "title": "",
+        "title": "Switzerland",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/switzerland.png",
         "id": "switzerland"
     },
     {
-        "description": "Portugal",
-        "title": "",
+        "title": "Portugal",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/portugal.png",
         "id": "portugal"
     },
     {
-        "description": "Spain",
-        "title": "",
+        "title": "Spain",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/spain.png",
         "id": "spain"
     },
     {
-        "description": "Georgia",
-        "title": "",
+        "title": "Georgia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/georgia.png",
         "id": "georgia"
     },
     {
-        "description": "Turkey",
-        "title": "",
+        "title": "Turkey",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/turkey.png",
         "id": "turkey"
     },
     {
-        "description": "Costa Rica",
-        "title": "",
+        "title": "Costa Rica",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/costa-rica.png",
         "id": "costa-rica"
     },
     {
-        "description": "Belize",
-        "title": "",
+        "title": "Belize",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/belize.png",
         "id": "belize"
     },
     {
-        "description": "Mexico",
-        "title": "",
+        "title": "Mexico",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/mexico.png",
         "id": "mexico"
     },
     {
-        "description": "United States of America",
-        "title": "",
+        "title": "United States of America",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/united-states-of-america.png",
         "id": "usa"
     },
     {
-        "description": "Canada",
-        "title": "",
+        "title": "Canada",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/canada.png",
         "id": "canada"
     },
     {
-        "description": "Chile",
-        "title": "",
+        "title": "Chile",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/chile.png",
         "id": "chile"
     },
     {
-        "description": "Belgium",
-        "title": "",
+        "title": "Belgium",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/belgium.png",
         "id": "belgium"
     },
     {
-        "description": "United Kingdom",
-        "title": "",
+        "title": "United Kingdom",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/uk.png",
         "id": "uk"
     },
     {
-        "description": "Scotland",
-        "title": "",
+        "title": "Scotland",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/scotland.png",
         "id": "scotland"
     },
     {
-        "description": "Netherlands",
-        "title": "",
+        "title": "Netherlands",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/netherlands.png",
         "id": "netherlands"
     },
     {
-        "description": "Norway",
-        "title": "",
+        "title": "Norway",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/norway.png",
         "id": "norway"
     },
     {
-        "description": "Sweden",
-        "title": "",
+        "title": "Sweden",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/sweden.png",
         "id": "sweden"
     },
     {
-        "description": "Luxembourg",
-        "title": "",
+        "title": "Luxembourg",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/luxembourg.png",
         "id": "luxembourg"
     },
     {
-        "description": "Austria",
-        "title": "",
+        "title": "Austria",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/austria.png",
         "id": "austria"
     },
     {
-        "description": "Slovenia",
-        "title": "",
+        "title": "Slovenia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/slovenia.png",
         "id": "slovenia"
     },
     {
-        "description": "Romania",
-        "title": "",
+        "title": "Romania",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/romania.png",
         "id": "romania"
     },
     {
-        "description": "Qatar",
-        "title": "",
+        "title": "Qatar",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/qatar.png",
         "id": "qatar"
     },
     {
-        "description": "United Arab Emirates",
-        "title": "",
+        "title": "United Arab Emirates",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/united-arab-emirates.png",
         "id": "united-arab-emirates"
     },
     {
-        "description": "Czech Republic",
-        "title": "",
+        "title": "Czech Republic",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/czech-republic.png",
         "id": "czech-republic"
     },
     {
-        "description": "Germany",
-        "title": "",
+        "title": "Germany",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/germany.png",
         "id": "germany"
     },
     {
-        "description": "Poland",
-        "title": "",
+        "title": "Poland",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/poland.png",
         "id": "poland"
     },
     {
-        "description": "Ukraine",
-        "title": "",
+        "title": "Ukraine",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/ukraine.png",
         "id": "ukraine"
     },
     {
-        "description": "Denmark",
-        "title": "",
+        "title": "Denmark",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/denmark.png",
         "id": "denmark"
     },
     {
-        "description": "Latvia",
-        "title": "",
+        "title": "Latvia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/latvia.png",
         "id": "latvia"
     },
     {
-        "description": "Australia",
-        "title": "",
+        "title": "Australia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/australia.png",
         "id": "australia"
     },
     {
-        "description": "New Zealand",
-        "title": "",
+        "title": "New Zealand",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/new-zealand.png",
         "id": "new-zealand"
     },
     {
-        "description": "Indonesia",
-        "title": "",
+        "title": "Indonesia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/indonesia.png",
         "id": "indonesia"
     },
     {
-        "description": "Malaysia",
-        "title": "",
+        "title": "Malaysia",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/malaysia.png",
         "id": "malaysia"
     },
     {
-        "description": "Thailand",
-        "title": "",
+        "title": "Thailand",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/thailand.png",
         "id": "thailand"
     },
     {
-        "description": "Singapore",
-        "title": "",
+        "title": "Singapore",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/singapore.png",
         "id": "singapore"
     },
     {
-        "description": "Japan",
-        "title": "",
+        "title": "Japan",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/japan.png",
         "id": "japan"
     },
     { 
-        "description": "South Korea",
-        "title": "",
+        "title": "South Korea",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/south-korea.png",
         "id": "south-korea"
     },
     {
-        "description": "China",
-        "title": "",
+        "title": "China",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/china.png",
         "id": "china"
     },
     {
-        "description": "Hong Kong",
-        "title": "",
+        "title": "Hong Kong",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/hong-kong.png",
         "id": "hong-kong"
     },
     {
-        "description": "Macao",
-        "title": "",
+        "title": "Macao",
+        "description": "",
         "country": "",
         "date": "",
         "icon": "/img/flags/macao.png",

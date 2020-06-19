@@ -2902,7 +2902,7 @@
           <div class="map__column">
             <div class="map-info__icon"></div>
           </div>
-          <div class="map__column">
+          <div class="map__column map__column--text">
             <div class="map-info__title heading heading--tertiary"></div>
             <div class="map-info__description text--description">Select a point on the map to get started.</div>
             <div class="map-info__meta text--metadata"></div>
@@ -3292,6 +3292,11 @@ export default {
 
   &__column {
     float: left;
+
+    &--text {
+      display: flex;
+      align-self: center;
+    }
   }
 
   &-info {
