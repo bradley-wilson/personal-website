@@ -207,71 +207,49 @@
     </section>
     <section class="section-stats">
       <div class="container">
-        <div class="liveKeywords stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Keywords
-          </h3>
-          <strong
-            v-for="search in searches.keywords"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
+        <div class="keywords__row">
+          <div class="keywords__carousel keywords__carousel--1">
+            <strong
+              v-for="search in searches.keywords"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+            <strong
+              v-for="search in searches.universities"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+            <strong
+              v-for="search in searches.countries"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+          </div>
         </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Universities
-          </h3>
-          <strong
-            v-for="search in searches.universities"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
-        </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Countries
-          </h3>
-          <strong
-            v-for="search in searches.countries"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
-        </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Cities
-          </h3>
-          <strong
-            v-for="search in searches.cities"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
-        </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Research Fields
-          </h3>
-          <strong
-            v-for="search in searches.fields"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
-        </div>
-        <div class="stat stat--group stat--list">
-          <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-            Job Titles
-          </h3>
-          <strong
-            v-for="search in searches.jobs"
-            :key="search.index"
-          >
-            {{ search.value }}
-          </strong>
+        <div class="keywords__row">
+          <div class="keywords__carousel keywords__carousel--2">
+            <strong
+              v-for="search in searches.cities"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+            <strong
+              v-for="search in searches.fields"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+            <strong
+              v-for="search in searches.jobs"
+              :key="search.index"
+            >
+              {{ search.value }}
+            </strong>
+          </div>
         </div>
         <div class="clustrmaps">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
