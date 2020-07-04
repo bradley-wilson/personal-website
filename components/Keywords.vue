@@ -57,7 +57,7 @@ export default {
   &__track {
     width: max-content;
     transform: translateX(0%);
-
+    transition: transform 15s;
   }
 }
 </style>
