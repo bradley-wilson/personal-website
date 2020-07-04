@@ -11,6 +11,13 @@
         >
           {{ search.keyword }}
         </strong>
+        <strong
+          v-for="search in searches"
+          ref="searches"
+          :key="search.index"
+        >
+          {{ search.keyword }}
+        </strong>
       </div>
     </div>
   </div>
@@ -27,8 +34,14 @@ export default {
     }
   },
   mounted: function() {
+    this.moveSlider()
   },
   methods: {
+    moveSlider() {
+      this.$refs.carousel.style.transform = 'translateX(200%)'
+      setTimeout(this.$refs.carousel.style.transform = 'translateX(0%)', 15000)
+      moveSlider()
+    }
   }
 }
 </script>
@@ -37,9 +50,14 @@ export default {
 .carousel {
 
   &__content {
+    overflow-x: hidden;
+    width: 100vw;
   }
 
   &__track {
+    width: max-content;
+    transform: translateX(0%);
+
   }
 }
 </style>
