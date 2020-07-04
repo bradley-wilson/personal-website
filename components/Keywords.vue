@@ -39,7 +39,7 @@ export default {
   methods: {
     moveSlider: function() {
       this.$refs.carousel.style.transition = 'transform 40s'
-      this.$refs.carousel.style.transform = 'translateX(-100%)'
+      this.$refs.carousel.style.transform = 'translateX(-50%)'
       setTimeout(function() { this.$refs.carousel.style.transition = 'transform 0s' }, 39999)
       setTimeout(function() { this.$refs.carousel.style.transform = 'translateX(0%)' }, 40000)
     }
