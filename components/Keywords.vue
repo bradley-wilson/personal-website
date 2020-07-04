@@ -35,7 +35,7 @@ export default {
   },
   mounted: function() {
     this.moveSlider()
-    setInterval(this.moveSlider, 40001)
+    // setInterval(this.moveSlider, 40001)
   },
   methods: {
     moveSlider: function() {
@@ -43,7 +43,7 @@ export default {
       this.$refs.carousel.style.transform = 'translateX(-50%)'
       // this.resetSlider()
       setTimeout(this.resetSlider, 40000)
-      clearTimeout()
+      // clearTimeout()
     },
     resetSlider: function() {
       this.$refs.carousel.style.transition = 'transform 0s linear'
