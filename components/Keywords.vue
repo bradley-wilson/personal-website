@@ -35,7 +35,7 @@ export default {
   },
   mounted: function() {
     this.moveSlider()
-    setInterval(this.moveSlider, 40010)
+    setInterval(this.moveSlider, 40050)
   },
   methods: {
     moveSlider: function() {
