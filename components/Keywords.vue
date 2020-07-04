@@ -40,7 +40,7 @@ export default {
     moveSlider: function() {
       this.$refs.carousel.style.transform = 'translateX(200%)'
       setTimeout(this.$refs.carousel.style.transform = 'translateX(0%)', 15000)
-      this.moveSlider()
+      // this.moveSlider()
     }
   }
 }
