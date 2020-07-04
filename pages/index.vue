@@ -207,50 +207,9 @@
     </section>
     <section class="section-stats">
       <div class="container">
-        <div class="keywords__row">
-          <div class="keywords__carousel keywords__carousel--1">
-            <strong
-              v-for="search in searches.keywords"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-            <strong
-              v-for="search in searches.universities"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-            <strong
-              v-for="search in searches.countries"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-          </div>
-        </div>
-        <div class="keywords__row">
-          <div class="keywords__carousel keywords__carousel--2">
-            <strong
-              v-for="search in searches.cities"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-            <strong
-              v-for="search in searches.fields"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-            <strong
-              v-for="search in searches.jobs"
-              :key="search.index"
-            >
-              {{ search.value }}
-            </strong>
-          </div>
-        </div>
+
+        <Keywords :searches="searches"/>
+
         <div class="clustrmaps">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
           <script
@@ -356,6 +315,7 @@ import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
+import Keywords from '@/components/Keywords'
 import markdownIt from 'markdown-it'
 
 export default {
@@ -377,7 +337,7 @@ export default {
       publications: publicationsRes.entries,
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
-      searches: searchesRes.entries[0],
+      searches: searchesRes.entries,
       stats: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -417,7 +377,8 @@ export default {
     Contact,
     BookingModal,
     HotSaleModal,
-    Award
+    Award,
+    Keywords
   },
   data() {
     return {
@@ -713,9 +674,6 @@ export default {
     .liveKeywords {
       h3 {
         text-align: center !important;
-      }
-
-      .keyword-grid {
       }
     }
   }
