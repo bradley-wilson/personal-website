@@ -34,12 +34,14 @@ export default {
     }
   },
   mounted: function() {
-    this.moveSlider()
+    setInterval(this.moveSlider(), 40000)
   },
   methods: {
     moveSlider: function() {
-      this.$refs.carousel.style.transform = 'translateX(-200%)'
-      // setTimeout(this.$refs.carousel.style.transform = 'translateX(0%)', 15000)
+      this.$refs.carousel.style.transition = 'transform 40s'
+      this.$refs.carousel.style.transform = 'translateX(-100%)'
+      setTimeout(this.$refs.carousel.style.transition = 'transform 0s', 39999)
+      setTimeout(this.$refs.carousel.style.transform = 'translateX(0%)', 40000)
       // this.moveSlider()
     }
   }
