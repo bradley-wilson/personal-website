@@ -43,6 +43,7 @@ export default {
       this.$refs.carousel.style.transform = 'translateX(-50%)'
       // this.resetSlider()
       setTimeout(this.resetSlider, 40000)
+      clearTimeout()
     },
     resetSlider: function() {
       this.$refs.carousel.style.transition = 'transform 0s linear'
