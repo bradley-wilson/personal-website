@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     moveSlider: function() {
-      this.$refs.carousel.style.transform = 'translateX(200%)'
+      this.$refs.carousel.style.transform = 'translateX(-200%)'
       // setTimeout(this.$refs.carousel.style.transform = 'translateX(0%)', 15000)
       // this.moveSlider()
     }
@@ -57,7 +57,7 @@ export default {
   &__track {
     width: max-content;
     transform: translateX(0%);
-    transition: transform 15s;
+    transition: transform 40s;
   }
 }
 </style>
