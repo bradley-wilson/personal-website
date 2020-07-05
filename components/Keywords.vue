@@ -71,5 +71,9 @@ export default {
     transform: translateX(0%);
     transition: transform 40s linear;
   }
+
+  strong {
+    margin: 0 1.5rem;
+  }
 }
 </style>
