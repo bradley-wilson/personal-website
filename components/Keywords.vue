@@ -63,7 +63,7 @@ export default {
     overflow-x: hidden;
     width: 100vw;
     background-color: $black;
-    padding: 1.5rem 0;
+    padding: .5rem 0;
   }
 
   &__track {

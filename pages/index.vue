@@ -208,6 +208,7 @@
     <section class="section-stats">
       <div class="container">
 
+        <h1 class="heading heading--primary">Keywords</h1>
         <Keywords :searches="searches"/>
 
         <div class="clustrmaps">
