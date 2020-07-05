@@ -56,12 +56,14 @@ export default {
 <style scoped lang="scss">
 .carousel {
   font-family: 'Ledsitex';
-  font-size: 2.4rem;
-  color: $color-secondary;
+  font-size: 4.2rem;
+  color: #2597f5;
 
   &__content {
     overflow-x: hidden;
     width: 100vw;
+    background-color: $black;
+    padding: 1.5rem 0;
   }
 
   &__track {
