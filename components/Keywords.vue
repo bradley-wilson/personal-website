@@ -57,6 +57,7 @@ export default {
 .carousel {
   font-family: 'Ledsitex';
   font-size: 2.4rem;
+  color: $color-secondary;
 
   &__content {
     overflow-x: hidden;
