@@ -55,6 +55,8 @@ export default {
 
 <style scoped lang="scss">
 .carousel {
+  font-family: 'Ledsitex';
+  font-size: 2.4rem;
 
   &__content {
     overflow-x: hidden;
