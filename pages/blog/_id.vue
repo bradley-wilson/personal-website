@@ -4,7 +4,7 @@
       <h1 class="heading heading--primary article__title"> {{ post.title }} </h1>
       <div class="article__author text--body"> {{ post.author }}</div>
       <img
-        :src="post.image.path"
+        :src="'https://bradwilsonphd.com/' + post.image.path"
         alt="Thumbnail"
         class="article__image">
       <div
