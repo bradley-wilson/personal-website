@@ -22,7 +22,7 @@
           :href="publication.url"
           target="_blank">
           <div
-            :style="[ publication.image.path ? { backgroundImage: 'url(' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
+            :style="[ publication.image.path ? { backgroundImage: 'url(https://bradwilsonphd.com/' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
             class="publication__thumbnail"/>
           <div class="publication__info">
             <div class="publication__title heading heading--tertiary"> {{ publication.title }} </div>

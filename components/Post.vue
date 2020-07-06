@@ -1,7 +1,7 @@
 <template>
   <article class="blog-post">
     <div 
-      :style="{ backgroundImage: `url(${post.image.path})` }"
+      :style="{ backgroundImage: `url(${env.Url + '/' + post.image.path})` }"
       class="blog-post__image"/>
     <h2 class="blog-post__title heading--secondary"> {{ post.title }}</h2>
     <p class="blog-post__excerpt text--description"> {{ post.excerpt }} </p>

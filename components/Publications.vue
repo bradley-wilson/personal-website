@@ -9,7 +9,7 @@
         target="_blank">
         <div class="col--phone-12 col--desktop-8">
           <div
-            :style="[ publication.image.path ? { backgroundImage: 'url(' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
+            :style="[ publication.image.path ? { backgroundImage: 'url(https://bradwilsonphd.com/' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
             class="publication__thumbnail"/>
           <!-- <div class="publication__info"> -->
           <div class="publication__title heading heading--tertiary"> {{ publication.title }} </div>

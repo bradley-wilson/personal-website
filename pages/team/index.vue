@@ -9,7 +9,7 @@
       class="bio"
     >
       <div
-        :style="{backgroundImage: `url(${bio.image.path})`}"
+        :style="{backgroundImage: `url(https://bradwilsonphd.com/${bio.image.path})`}"
         class="bio__image"/>
       <h2 class="bio__name"> {{ bio.name }} </h2>
       <p class="bio__description"> {{ bio.bio }} </p>
@@ -22,7 +22,7 @@
       class="bio"
     >
       <div
-        :style="{backgroundImage: `url(${bio.image.path})`}"
+        :style="{backgroundImage: `url(https://bradwilsonphd.com/${bio.image.path})`}"
         class="bio__image"/>
       <h2 class="bio__name"> {{ bio.name }} </h2>
       <p class="bio__description"> {{ bio.bio }} </p>

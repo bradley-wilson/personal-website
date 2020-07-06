@@ -8,7 +8,7 @@
         :href="contact.url"
         target="_blank">
         <div
-          :style="{backgroundImage: 'url(' + contact.image.path + ')'}"
+          :style="{backgroundImage: 'url(https://bradwilsonphd.com/' + contact.image.path + ')'}"
           class="contact__picture"/>
         <div class="contact__name heading--tertiary"> {{ contact.name }} </div>
       </a> 
