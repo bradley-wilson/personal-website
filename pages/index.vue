@@ -405,12 +405,6 @@ export default {
       }
     }
   },
-  mounted: function() {
-    this.animateValue('readers', 0, 55613, 8000)
-    this.animateValue('highReaders', 0, 789, 8000)
-    this.animateValue('citations', 0, 1330, 8000)
-    this.appearWords(this.keywords, this.appear)
-  },
   methods: {
     toTarget: function(target) {
       if (target) {
@@ -418,32 +412,6 @@ export default {
         this.$emit('hash-clicked', target)
       }
     },
-    relaunch: function(id, start, end, duration) {
-      this.animateValue(id, start, end, duration)
-    },
-    animateValue: function(id, start, end, duration) {
-      var range = end - start
-      var current = start
-      var increment = end > start ? 1 : -1
-      var stepTime = Math.abs(Math.floor(duration / range))
-      var obj = document.getElementById(id)
-      var timer = setInterval(function() {
-        current += increment
-        obj.innerHTML = current
-        if (current == end) {
-          clearInterval(timer)
-        }
-      }, stepTime)
-    },
-    appearWords: function(first, second) {
-      let timer = setInterval(function() {
-        if (first.length == 1) {
-          clearInterval(timer)
-        }
-        let currentW = first.splice(0, 1)
-        second.push(currentW[0])
-      }, 1400)
-    }
   },
   layout: 'landing-page'
 }
