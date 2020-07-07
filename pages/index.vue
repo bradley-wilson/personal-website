@@ -668,6 +668,9 @@ export default {
     border-radius: 10rem;
     width: 25rem;
     text-align: center;
+    font-family: $Bebas;
+    text-transform: uppercase;
+    font-size: 1.8rem;
     
     &::after {
       content: '';
