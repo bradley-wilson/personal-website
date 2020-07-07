@@ -173,30 +173,26 @@
         webm-src="/videos/map-line-connection.webm" />
       <div class="container">
         <h1 class="heading heading--primary u-block">Research Impact and Audience Engagement</h1>
-        <div class="graph__overview">
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Reads
-            </h3>
-            <strong id="readers">
-            55613 
-            </strong>
+        <div class="scoreboard">
+          <div class="scoreboard__header">
+            Scoreboard
           </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
-              Research Interest
-            </h3>
-            <strong id="highReaders">
-              789
-            </strong>
-          </div>
-          <div class="stat">
-            <h3 class="heading heading--secondary u-margin-bottom u-margin-bottom--none">
+          <div class="scoreboard__data">
+            <div class="scoreboard-data__item">
+              <span class="scoreboard-item__color scoreboard-item__color--1"></span>
               Citations
-            </h3>
-            <strong id="citations">
-              1330
-            </strong>
+              <span class="scoreboard-item__value"> {{ scoreboard.citations }} </span>
+            </div>
+            <div class="scoreboard-data__item">
+              <span class="scoreboard-item__color scoreboard-item__color--2"></span>
+              H-Index
+              <span class="scoreboard-item__value"> {{ scoreboard.hIndex }} </span>
+            </div>
+            <div class="scoreboard-data__item">
+              <span class="scoreboard-item__color scoreboard-item__color--3"></span>
+              I10-Index
+              <span class="scoreboard-item__value"> {{ scoreboard.i10Index }} </span>
+            </div>
           </div>
         </div>
         <Stats
@@ -395,13 +391,11 @@ export default {
   data() {
     return {
       appear: [],
-      keywords: [
-        { word: 'Marketing' },
-        { word: 'Sports Management' },
-        { word: 'Brand identiry' },
-        { word: 'Product placement' },
-        { word: 'Advertising' }
-      ],
+      scoreboard: {
+        citations: 853,
+        hIndex: 14,
+        i10Index: 17
+      },
       lineChartStyles: {
         height: '50vh',
         width: '`100%',
@@ -626,40 +620,6 @@ export default {
   }
 }
 
-.stat {
-  width: calc(100% / 3);
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin: 3rem 0;
-
-  &--group {
-    padding: 15px;
-    border-radius: 10px;
-    border: white 2px solid;
-  }
-
-  &--list {
-    width: 100%;
-    margin-right: 15px;
-
-    @include screen(tablet) {
-      width: calc(100% / 3.5);
-    }
-  }
-
-  h3 {
-    text-align: center !important;
-  }
-
-  strong {
-    text-align: center;
-    font-size: 1.6rem;
-    margin: 2vh 0;
-    display: block;
-  }
-}
-
 .section-stats {
   padding: $section-padding;
   background-image: $gradient-light;
@@ -721,6 +681,21 @@ export default {
 
   @include screen(tablet) {
     flex-direction: row;
+  }
+}
+
+.scoreboard {
+  &__header {
+    padding: 1rem 5rem;
+    background: #177ba6;
+    border-radius: 10rem;
+    
+    &::after {
+      content: "";
+      background-color: #0d5978;
+      border-radius: 10rem;
+      margin-top: .5rem;
+    }
   }
 }
 
