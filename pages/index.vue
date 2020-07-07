@@ -657,11 +657,12 @@ export default {
 .scoreboard {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-items: center;
 
   &__container {
     display: flex;
-    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
   }
 
   &__header {
@@ -696,12 +697,13 @@ export default {
     border-bottom-right-radius: 4rem;
     display: flex;
     flex-direction: column;
+    z-index: -2;
   }
 
   &-data__item {
     justify-content: center;
     margin-bottom: 1rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
 
     &::last-of-type {
@@ -711,6 +713,7 @@ export default {
 
   &-data__color {
     width: .7rem;
+    height: 100%;
     margin-right: .7rem;
     border-radius: 1rem;
 
