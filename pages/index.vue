@@ -685,10 +685,13 @@ export default {
 }
 
 .scoreboard {
+  position: relative;
+
   &__header {
     padding: 1rem 5rem;
     background: #177ba6;
     border-radius: 10rem;
+    width: 15rem;
     
     &::after {
       content: '';
@@ -696,6 +699,7 @@ export default {
       border-radius: 10rem;
       z-index: -1;
       height: 5rem;
+      width: 15rem;
       display: block;
       position: absolute;
       top: 4rem;
