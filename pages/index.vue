@@ -691,15 +691,14 @@ export default {
     padding: 1rem 5rem;
     background: #177ba6;
     border-radius: 10rem;
-    width: 15rem;
+    width: 25rem;
     
     &::after {
       content: '';
       background-color: #0d5978;
       border-radius: 10rem;
       z-index: -1;
-      height: 100%;
-      width: 100%;
+      width: 25rem;
       display: block;
       position: absolute;
       top: 4rem;
