@@ -658,6 +658,7 @@ export default {
   position: relative;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
 
   &__container {
@@ -711,7 +712,7 @@ export default {
     }
   }
 
-  &-data__color {
+  &-item__color {
     width: .7rem;
     height: 100%;
     margin-right: .7rem;
