@@ -698,8 +698,8 @@ export default {
       background-color: #0d5978;
       border-radius: 10rem;
       z-index: -1;
-      height: 5rem;
-      width: 15rem;
+      height: 100%;
+      width: 100%;
       display: block;
       position: absolute;
       top: 4rem;
