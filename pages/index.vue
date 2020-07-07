@@ -657,12 +657,12 @@ export default {
 .scoreboard {
   position: relative;
   display: flex;
-  justify-items: center;
+  flex-direction: column;
+
 
   &__container {
     display: flex;
-    justify-items: center;
-    flex-direction: column;
+    justify-content: center;
   }
 
   &__header {
