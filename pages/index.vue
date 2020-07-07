@@ -173,25 +173,27 @@
         webm-src="/videos/map-line-connection.webm" />
       <div class="container">
         <h1 class="heading heading--primary u-block">Research Impact and Audience Engagement</h1>
-        <div class="scoreboard">
-          <div class="scoreboard__header">
-            Scoreboard
-          </div>
-          <div class="scoreboard__data">
-            <div class="scoreboard-data__item">
-              <span class="scoreboard-item__color scoreboard-item__color--1"></span>
-              Citations
-              <span class="scoreboard-item__value"> {{ scoreboard.citations }} </span>
+        <div class="scoreboard__container">
+          <div class="scoreboard">
+            <div class="scoreboard__header">
+              Scoreboard
             </div>
-            <div class="scoreboard-data__item">
-              <span class="scoreboard-item__color scoreboard-item__color--2"></span>
-              H-Index
-              <span class="scoreboard-item__value"> {{ scoreboard.hIndex }} </span>
-            </div>
-            <div class="scoreboard-data__item">
-              <span class="scoreboard-item__color scoreboard-item__color--3"></span>
-              I10-Index
-              <span class="scoreboard-item__value"> {{ scoreboard.i10Index }} </span>
+            <div class="scoreboard__data">
+              <div class="scoreboard-data__item">
+                <span class="scoreboard-item__color scoreboard-item__color--1"></span>
+                Citations
+                <span class="scoreboard-item__value"> {{ scoreboard.citations }} </span>
+              </div>
+              <div class="scoreboard-data__item">
+                <span class="scoreboard-item__color scoreboard-item__color--2"></span>
+                H-Index
+                <span class="scoreboard-item__value"> {{ scoreboard.hIndex }} </span>
+              </div>
+              <div class="scoreboard-data__item">
+                <span class="scoreboard-item__color scoreboard-item__color--3"></span>
+                I10-Index
+                <span class="scoreboard-item__value"> {{ scoreboard.i10Index }} </span>
+              </div>
             </div>
           </div>
         </div>
@@ -655,11 +657,17 @@ export default {
 .scoreboard {
   position: relative;
 
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__header {
     padding: 1rem 5rem;
     background: #177ba6;
     border-radius: 10rem;
     width: 25rem;
+    text-align: center;
     
     &::after {
       content: '';
@@ -667,9 +675,11 @@ export default {
       border-radius: 10rem;
       z-index: -1;
       width: 25rem;
+      height: 3rem;
       display: block;
       position: absolute;
-      top: 4rem;
+      top: 1rem;
+      left: 0;
     }
   }
 }
