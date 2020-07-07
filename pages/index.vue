@@ -210,7 +210,7 @@
         <div class="badges">
           <Badge
             v-for="badge in badges"
-            :key="award.id"
+            :key="badge.id"
             :badge="badge"/>
         </div>
 
