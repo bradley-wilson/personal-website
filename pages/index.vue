@@ -685,6 +685,19 @@ export default {
       left: 0;
     }
   }
+
+  &__data {
+    background-color: #002f3a;
+    padding: 3rem 5rem;
+    width: 20rem;
+    border-bottom-left-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+    display: flex;
+  }
+
+  &-data__item {
+    justify-content: center;
+  }
 }
 
 // PUBLICATIONS --------------------------------------------
