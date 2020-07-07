@@ -207,6 +207,12 @@
     </section>
     <section class="section-stats">
       <div class="container">
+        <div class="badges">
+          <Badge
+            v-for="badge in badges"
+            :key="award.id"
+            :badge="badge"/>
+        </div>
 
         <h1 class="heading heading--primary">Keywords</h1>
         <Keywords :searches="searches"/>
@@ -331,6 +337,8 @@ export default {
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     let searchesRes = await $axios.$get(env.searchesUrl)
+    // let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+    let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
     return {
       bio: bioRes.content,
       events: eventsRes.entries,
@@ -339,6 +347,7 @@ export default {
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
       searches: searchesRes.entries,
+      badges: impactStoryRes.badges,
       stats: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -700,6 +709,16 @@ export default {
     position: absolute;
     top: 0;
     width: 100%;
+  }
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @include screen(tablet) {
+    flex-direction: row;
   }
 }
 
