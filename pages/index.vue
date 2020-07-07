@@ -678,7 +678,7 @@ export default {
       border-radius: 10rem;
       z-index: -1;
       width: 25rem;
-      height: 3rem;
+      height: 4rem;
       display: block;
       position: absolute;
       top: 1rem;
