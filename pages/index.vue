@@ -659,6 +659,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 35rem;
 
 
   &__container {
@@ -670,7 +671,7 @@ export default {
     padding: 1rem 5rem;
     background: #177ba6;
     border-radius: 10rem;
-    width: 25rem;
+    width: 100%;
     text-align: center;
     font-family: $Bebas;
     text-transform: uppercase;
@@ -681,7 +682,7 @@ export default {
       background-color: #0d5978;
       border-radius: 10rem;
       z-index: -1;
-      width: 25rem;
+      width: 100%;
       height: 4rem;
       display: block;
       position: absolute;
@@ -693,7 +694,7 @@ export default {
   &__data {
     background-color: #002f3a;
     padding: 3rem 5rem;
-    width: 20rem;
+    width: 90%;
     border-bottom-left-radius: 4rem;
     border-bottom-right-radius: 4rem;
     display: flex;
@@ -717,6 +718,7 @@ export default {
     height: 100%;
     margin-right: .7rem;
     border-radius: 1rem;
+    display: inline-block;
 
     &--1 {
       background: #2ee49b;
