@@ -656,6 +656,8 @@ export default {
 
 .scoreboard {
   position: relative;
+  display: flex;
+  justify-content: center;
 
   &__container {
     display: flex;
@@ -690,13 +692,37 @@ export default {
     background-color: #002f3a;
     padding: 3rem 5rem;
     width: 20rem;
-    border-bottom-left-radius: 10rem;
-    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
     display: flex;
+    flex-direction: column;
   }
 
   &-data__item {
     justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+
+    &::last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  &-data__color {
+    width: .7rem;
+    margin-right: .7rem;
+    border-radius: 1rem;
+
+    &--1 {
+      background: #2ee49b;
+    }
+    &--2 {
+      background-color: #460fa6;
+    }
+    &--3 {
+      background-color: #1244e5;
+    }
   }
 }
 
