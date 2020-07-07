@@ -691,10 +691,14 @@ export default {
     border-radius: 10rem;
     
     &::after {
-      content: "";
+      content: '';
       background-color: #0d5978;
       border-radius: 10rem;
-      margin-top: .5rem;
+      z-index: -1;
+      height: 5rem;
+      display: block;
+      position: absolute;
+      top: 4rem;
     }
   }
 }
