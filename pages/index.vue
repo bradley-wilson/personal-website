@@ -714,9 +714,9 @@ export default {
   }
 
   &-item__color {
-    width: .7rem;
-    height: 100%;
-    margin-right: .7rem;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 1rem;
     border-radius: 1rem;
     display: inline-block;
 
