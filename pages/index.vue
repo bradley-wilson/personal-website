@@ -322,6 +322,7 @@ import Contact from '@/components/Contact'
 import BookingModal from '@/components/BookingModal'
 import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
+import Badge from '@/components/Badge'
 import Keywords from '@/components/Keywords'
 import markdownIt from 'markdown-it'
 
@@ -388,6 +389,7 @@ export default {
     BookingModal,
     HotSaleModal,
     Award,
+    Badge,
     Keywords
   },
   data() {
