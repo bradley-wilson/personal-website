@@ -470,7 +470,7 @@ export default {
     },
     statsMoveForward: function() {
       let statsOffset  = -100 * this.statsCounter
-      let track = getElementById('stats__track')
+      let track = document.getElementById('stats__track')
       if (this.statsCounter == 2) {
         track.transform = 'translateX(0%)'
         this.statsCounter = 0
