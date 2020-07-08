@@ -661,7 +661,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 35rem;
-  margin-bottom: 15rem;
+  margin-bottom: 1rem;
 
 
   &__container {
