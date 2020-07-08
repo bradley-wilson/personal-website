@@ -447,7 +447,7 @@ export default {
         i10Index: 17
       },
       lineChartStyles: {
-        height: '50vh',
+        height: '40vh',
         width: '`100%',
         position: 'relative',
         backgroundColor: '#011a2a',
@@ -693,22 +693,30 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 15rem;
   }
 
   &__value {
     padding: 15rem;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
+    font-size: 4.2rem;
+    font-family: $Bebas;
 
     &--reads {
       background-image: url(/img/reads-circle.svg);
     }
     &--citations {
-      background-image: url(/img/reads-citations.svg);
+      background-image: url(/img/citations-circle.svg);
     }
     &--interest {
-      background-image: url(/img/reads-interest.svg);
+      background-image: url(/img/interest-circle.svg);
     }
+  }
+
+  &__description {
+    font-size: 2.4rem;
+    font-family: $Bebas;
   }
 }
 
