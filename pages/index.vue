@@ -700,6 +700,7 @@ export default {
     display: flex;
     flex-direction: column;
     z-index: -2;
+    justify-content: space-between;
   }
 
   &-data__item {
@@ -722,7 +723,6 @@ export default {
   &-item__color {
     width: 1rem;
     height: 1.5rem;
-    margin-right: 1.5rem;
     border-radius: .5rem;
     display: inline-block;
 
