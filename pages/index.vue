@@ -471,7 +471,7 @@ export default {
     statsMoveForward: function() {
       let statsOffset  = -100 * this.statsCounter
       let track = document.getElementById('stats__track')
-      if (this.statsCounter == 2) {
+      if (this.statsCounter == 3) {
         track.style.transform = 'translateX(0%)'
         this.statsCounter = 0
       } else {
