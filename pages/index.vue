@@ -442,7 +442,7 @@ export default {
   },
   data() {
     return {
-      statsCounter: 0,
+      statsCounter: 1,
       appear: [],
       scoreboard: {
         citations: 853,
@@ -475,8 +475,6 @@ export default {
         track.style.transform = 'translateX(0%)'
         this.statsCounter = 0
       } else {
-        console.log('This is being run')
-        console.log(this.statsCounter)
         track.style.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
