@@ -720,6 +720,7 @@ export default {
   &__description {
     font-size: 2.4rem;
     font-family: $Bebas;
+    text-align: center;
   }
 }
 
