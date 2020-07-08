@@ -693,6 +693,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 3rem;
     // width: 15rem;
   }
 
