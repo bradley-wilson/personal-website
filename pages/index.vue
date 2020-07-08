@@ -233,6 +233,26 @@
             </div>
           </div>
         </div>
+        <div class="graph__buttons">
+          <span
+            id="button-reads"
+            class="graph__button">
+            <span class="graph__button--icon graph__button--icon-reads"></span>
+            Reads
+          </span>
+          <span
+            id="button-citations"
+            class="graph__button">
+            <span class="graph__button--icon graph__button--icon-citations"></span>
+            Citations
+          </span>
+          <span
+            id="button-interest"
+            class="graph__button">
+            <span class="graph__button--icon graph__button--icon-interest"></span>
+            Research Interest
+          </span>
+        </div>
       </div>
     </section>
     <section class="section-stats">
@@ -368,7 +388,7 @@ export default {
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     let searchesRes = await $axios.$get(env.searchesUrl)
-    // let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+    let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
     let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
     return {
       bio: bioRes.content,
@@ -642,6 +662,36 @@ export default {
 }
 
 .graph {
+  &__buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 2.4rem;
+  }
+
+  &__button {
+    &--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 1.5rem;
+      margin-right: 2.5rem;
+
+      &::last-of-type {
+        margin-right: 0;
+      }
+
+      &-reads {
+        background-color: rgb(255, 139, 14);
+      }
+      &-citations {
+        background-color: rgb(0, 172, 246);
+      }
+      &-interest {
+        background-color: rgb(0, 240, 170);
+      }
+    }
+  }
+
   &__overview {
     display: flex;
     justify-content: center;
