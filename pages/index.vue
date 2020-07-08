@@ -442,7 +442,7 @@ export default {
   },
   data() {
     return {
-      statsCounter: 1;
+      statsCounter: 1,
       appear: [],
       scoreboard: {
         citations: 853,
