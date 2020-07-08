@@ -361,7 +361,6 @@ export default {
           {
             label: 'Reads',
             data: statsRes.entries.map(stat => stat.reads),
-            yAxisID: 'Reads',
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(255, 139, 14)',
@@ -377,7 +376,6 @@ export default {
           {
             label: 'Citations',
             data: statsRes.entries.map(stat => stat.citations),
-            yAxisID: 'Citations',
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
@@ -393,7 +391,6 @@ export default {
           {
             label: 'Research Interest',
             data: statsRes.entries.map(stat => stat.reads),
-            yAxisID: 'ResearchInterest',
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(0, 240, 170)',

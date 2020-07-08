@@ -19,20 +19,6 @@ export default {
         tooltips: {
           mode: 'point'
         },
-        scales: {
-          yAxes: [{
-            id: 'Reads',
-            type: 'linear',
-          },
-          {
-            id: 'Citations',
-            type: 'linear',
-          },
-          {
-            id: 'ResearchInterest',
-            type: 'linear',
-          }]
-        },
         layout: {
           padding: {
             top: 30,
