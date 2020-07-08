@@ -703,6 +703,7 @@ export default {
     background-repeat: no-repeat;
     font-size: 4.2rem;
     font-family: $Bebas;
+    margin-bottom: 2rem;
 
     &--reads {
       background-image: url(/img/reads-circle.svg);
