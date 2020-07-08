@@ -648,7 +648,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 20rem;
+  margin-bottom: 15rem;
 
   @include screen(tablet) {
     flex-direction: row;
@@ -660,7 +660,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35rem;
+  width: 15rem;
   margin-bottom: 30rem;
 
 
