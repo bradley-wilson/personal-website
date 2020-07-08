@@ -700,7 +700,6 @@ export default {
     display: flex;
     flex-direction: column;
     z-index: -2;
-    align-content: space-between;
   }
 
   &-data__item {
@@ -708,6 +707,8 @@ export default {
     margin-bottom: 1rem;
     font-size: 1.4rem;
     font-weight: 700;
+    display: flex;
+    justify-content: space-between;
 
     &::last-of-type {
       margin-bottom: 0;
@@ -724,7 +725,7 @@ export default {
     width: 1rem;
     height: 1.5rem;
     border-radius: .5rem;
-    display: inline-block;
+    display: block;
 
     &--1 {
       background: #2ee49b;
