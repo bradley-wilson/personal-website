@@ -197,18 +197,40 @@
             </div>
           </div>
         </div>
-        <Stats
-          :styles="lineChartStyles"
-          :chartdata="readsData"
-          class="stats__graph"/>
-        <Stats
-          :styles="lineChartStyles"
-          :chartdata="citationsData"
-          class="stats__graph"/>
-        <Stats
-          :styles="lineChartStyles"
-          :chartdata="interestData"
-          class="stats__graph"/>
+        <div class="stats__carousel">
+          <div class="stats__track">
+            <div class="stats__slide">
+              <Stats
+                :styles="lineChartStyles"
+                :chartdata="readsData"
+                class="stats__graph"/>
+              <div class="stats__circle">
+                <span class="stats__value stats__value--reads">+250</span>
+                <span class="stats__description">Reads this week</span>
+              </div>
+            </div>
+            <div class="stats__slide">
+              <Stats
+                :styles="lineChartStyles"
+                :chartdata="citationsData"
+                class="stats__graph"/>
+              <div class="stats__circle">
+                <span class="stats__value stats__value--citations">+320</span>
+                <span class="stats__description">Citations this year</span>
+              </div>
+            </div>
+            <div class="stats__slide">
+              <Stats
+                :styles="lineChartStyles"
+                :chartdata="interestData"
+                class="stats__graph"/>
+              <div class="stats__circle">
+                <span class="stats__value stats__value--interest">+35%</span>
+                <span class="stats__description">Research interest this year</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section-stats">
@@ -650,6 +672,43 @@ export default {
 .stats {
   &__graph {
     width: 100%;
+
+    @include screen(tablet) {
+      width: 80%;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @include screen(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__value {
+    padding: 15rem;
+    background-size: cover;
+    background-position: center;
+
+    &--reads {
+      background-image: url(/img/reads-circle.svg);
+    }
+    &--citations {
+      background-image: url(/img/reads-citations.svg);
+    }
+    &--interest {
+      background-image: url(/img/reads-interest.svg);
+    }
   }
 }
 
