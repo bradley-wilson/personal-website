@@ -19,13 +19,6 @@ export default {
         tooltips: {
           mode: 'point'
         },
-        scales: {
-          yAxes: [{
-            id: 'Reads',
-            type: 'linear',
-            position: 'left'
-          }]
-        },
         layout: {
           padding: {
             top: 30,
