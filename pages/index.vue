@@ -251,7 +251,7 @@
           <span
             id="button-interest"
             class="graph__button"
-            @click="goToStat(3)">
+            @click="goToStat(2)">
             <span class="graph__button--icon graph__button--icon-interest"></span>
             Research Interest
           </span>
