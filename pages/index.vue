@@ -676,6 +676,11 @@ export default {
     width: 100%;
     justify-content: center;
     font-size: 1.8rem;
+    margin-right: 2.5rem;
+
+    &::last-of-type {
+      margin-right: 0;
+    }
   }
 
   &__button {
@@ -684,11 +689,7 @@ export default {
       height: 1.5rem;
       display: inline-block;
       border-radius: 1.5rem;
-      margin-right: 4rem;
-
-      &::last-of-type {
-        margin-right: 0;
-      }
+      margin-right: 1.5rem;
 
       &-reads {
         background-color: rgb(255, 139, 14);
