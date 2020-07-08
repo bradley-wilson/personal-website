@@ -442,7 +442,7 @@ export default {
   },
   data() {
     return {
-      statsCounter: 1,
+      statsCounter: 0,
       appear: [],
       scoreboard: {
         citations: 853,
@@ -469,12 +469,12 @@ export default {
       }
     },
     statsMoveForward: function() {
-      let slideOffset  = -100 * this.statsCounter
-      if (this.statsCounter == 3) {
+      let statsOffset  = -100 * this.statsCounter
+      if (this.statsCounter == 2) {
         this.$refs.stats.transform = 'translateX(0%)'
-        this.statsCounter = 1
+        this.statsCounter = 0
       } else {
-        this.$refs.stats.transform = 'translateX(' + slideOffset + '%)'
+        this.$refs.stats.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
     }
