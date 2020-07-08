@@ -678,11 +678,11 @@ export default {
     font-size: 1.8rem;
     margin-right: 2.5rem;
 
-    &::last-of-type {
+    &:last-of-type {
       margin-right: 0;
     }
 
-    &::hover {
+    &:hover {
       cursor: pointer;
     }
   }
