@@ -199,7 +199,15 @@
         </div>
         <Stats
           :styles="lineChartStyles"
-          :chartdata="stats"
+          :chartdata="readsData"
+          class="stats__graph"/>
+        <Stats
+          :styles="lineChartStyles"
+          :chartdata="citationsData"
+          class="stats__graph"/>
+        <Stats
+          :styles="lineChartStyles"
+          :chartdata="interestData"
           class="stats__graph"/>
       </div>
     </section>
@@ -347,27 +355,48 @@ export default {
       awards: awardsRes.entries,
       searches: searchesRes.entries,
       badges: impactStoryRes.badges,
-      stats: {
+      readsData: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
           {
             label: 'Reads',
             data: statsRes.entries.map(stat => stat.reads),
             yAxisID: 'Reads',
-            borderColor: 'rgb(50, 164, 123)',
-            backgroundColor: 'rgba(50, 164, 123, 0.2)',
-            pointBackgroundColor: 'rgb(50, 164, 123)',
+            borderColor: 'rgb(102, 113, 124)',
+            // backgroundColor: 'rgba(50, 164, 123, 0.2)',
+            pointBackgroundColor: 'rgb(255, 139, 14)',
             lineTension: 0.2,
             pointHitRadius: 20,
             borderWidth: 2
-          },
+          }
+        ]
+      },
+      citationsData: {
+        labels: statsRes.entries.map(stat => stat.week),
+        datasets: [
           {
             label: 'Citations',
             data: statsRes.entries.map(stat => stat.citations),
             yAxisID: 'Citations',
-            borderColor: 'rgb(66, 75, 175)',
-            backgroundColor: 'rgba(66, 75, 175, 0.2)',
-            pointBackgroundColor: 'rgb(66, 75, 175)',
+            borderColor: 'rgb(102, 113, 124)',
+            // backgroundColor: 'rgba(66, 75, 175, 0.2)',
+            pointBackgroundColor: 'rgb(0, 172, 246)',
+            lineTension: 0.2,
+            pointHitRadius: 20,
+            borderWidth: 2
+          }
+        ]
+      },
+      interestData: {
+        labels: statsRes.entries.map(stat => stat.week),
+        datasets: [
+          {
+            label: 'Research Interest',
+            data: statsRes.entries.map(stat => stat.reads),
+            yAxisID: 'Research Interest',
+            borderColor: 'rgb(102, 113, 124)',
+            // backgroundColor: 'rgba(50, 164, 123, 0.2)',
+            pointBackgroundColor: 'rgb(0, 240, 170)',
             lineTension: 0.2,
             pointHitRadius: 20,
             borderWidth: 2
@@ -402,7 +431,7 @@ export default {
         height: '50vh',
         width: '`100%',
         position: 'relative',
-        backgroundColor: '#dddddd',
+        backgroundColor: '#011a2a',
         borderRadius: '4px'
       }
     }
