@@ -697,7 +697,7 @@ export default {
   }
 
   &__value {
-    padding: 10rem;
+    padding: 7rem;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
