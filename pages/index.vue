@@ -472,12 +472,12 @@ export default {
       let statsOffset  = -100 * this.statsCounter
       let track = document.getElementById('stats__track')
       if (this.statsCounter == 2) {
-        track.transform = 'translateX(0%)'
+        track.style.transform = 'translateX(0%)'
         this.statsCounter = 0
       } else {
         console.log('This is being run')
         console.log(this.statsCounter)
-        track.transform = 'translateX(' + statsOffset + '%)'
+        track.style.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
     }
