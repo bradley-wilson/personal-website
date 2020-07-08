@@ -236,19 +236,22 @@
         <div class="graph__buttons">
           <span
             id="button-reads"
-            class="graph__button">
+            class="graph__button"
+            @click="goToStat(0)">
             <span class="graph__button--icon graph__button--icon-reads"></span>
             Reads
           </span>
           <span
             id="button-citations"
-            class="graph__button">
+            class="graph__button"
+            @click="goToStat(1)">
             <span class="graph__button--icon graph__button--icon-citations"></span>
             Citations
           </span>
           <span
             id="button-interest"
-            class="graph__button">
+            class="graph__button"
+            @click="goToStat(3)">
             <span class="graph__button--icon graph__button--icon-interest"></span>
             Research Interest
           </span>
@@ -498,6 +501,12 @@ export default {
         track.style.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
+    },
+    goToStat: function(target) {
+      let statsOffset = -100 * target
+      let track = document.getElementById('stats__track')
+      track.style.transform = 'translateX(' + statsOffset + '%)'
+      this.statsCounter = target + 1
     }
   },
   layout: 'landing-page'
@@ -666,7 +675,7 @@ export default {
     display: flex;
     width: 100%;
     justify-content: center;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
   }
 
   &__button {
