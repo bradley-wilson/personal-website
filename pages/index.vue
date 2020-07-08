@@ -475,6 +475,7 @@ export default {
         track.transform = 'translateX(0%)'
         this.statsCounter = 0
       } else {
+        console.log('This is being run')
         track.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
