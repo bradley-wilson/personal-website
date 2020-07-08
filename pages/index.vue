@@ -700,7 +700,7 @@ export default {
     display: flex;
     flex-direction: column;
     z-index: -2;
-    justify-content: space-between;
+    align-content: space-between;
   }
 
   &-data__item {
