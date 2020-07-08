@@ -648,6 +648,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-bottom: 20rem;
 
   @include screen(tablet) {
     flex-direction: row;
