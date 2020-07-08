@@ -660,6 +660,7 @@ export default {
   flex-direction: column;
   align-items: center;
   width: 35rem;
+  margin-bottom: 30rem;
 
 
   &__container {
