@@ -693,11 +693,11 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 15rem;
+    // width: 15rem;
   }
 
   &__value {
-    padding: 15rem;
+    padding: 10rem;
     background-size: contain;
     background-position: center;
     font-size: 4.2rem;
