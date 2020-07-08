@@ -673,6 +673,7 @@ export default {
     &--icon {
       width: 1.5rem;
       height: 1.5rem;
+      display: inline-block;
       border-radius: 1.5rem;
       margin-right: 2.5rem;
 
