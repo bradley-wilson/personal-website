@@ -393,7 +393,7 @@ export default {
           {
             label: 'Research Interest',
             data: statsRes.entries.map(stat => stat.reads),
-            yAxisID: 'Research Interest',
+            yAxisID: 'ResearchInterest',
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(0, 240, 170)',
