@@ -700,6 +700,7 @@ export default {
     padding: 10rem;
     background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     font-size: 4.2rem;
     font-family: $Bebas;
 
