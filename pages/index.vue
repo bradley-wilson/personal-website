@@ -676,6 +676,9 @@ export default {
     width: 100%;
     justify-content: center;
     font-size: 1.8rem;
+  }
+
+  &__button {
     margin-right: 2.5rem;
 
     &:last-of-type {
@@ -685,9 +688,7 @@ export default {
     &:hover {
       cursor: pointer;
     }
-  }
 
-  &__button {
     &--icon {
       width: 1.5rem;
       height: 1.5rem;
