@@ -199,7 +199,7 @@
         </div>
         <div class="stats__carousel">
           <div
-            ref="stats"
+            id="stats__track"
             class="stats__track">
             <div class="stats__slide stats__slide--1">
               <Stats
@@ -470,11 +470,12 @@ export default {
     },
     statsMoveForward: function() {
       let statsOffset  = -100 * this.statsCounter
+      let track = getElementById('stats__track')
       if (this.statsCounter == 2) {
-        this.$refs.stats.transform = 'translateX(0%)'
+        track.transform = 'translateX(0%)'
         this.statsCounter = 0
       } else {
-        this.$refs.stats.transform = 'translateX(' + statsOffset + '%)'
+        track.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
     }
