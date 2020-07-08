@@ -198,8 +198,10 @@
           </div>
         </div>
         <div class="stats__carousel">
-          <div class="stats__track">
-            <div class="stats__slide">
+          <div
+            ref="stats__track"
+            class="stats__track">
+            <div class="stats__slide stats__slide--1">
               <Stats
                 :styles="lineChartStyles"
                 :chartdata="readsData"
@@ -209,7 +211,7 @@
                 <span class="stats__description">Reads this week</span>
               </div>
             </div>
-            <div class="stats__slide">
+            <div class="stats__slide stats__slide--2">
               <Stats
                 :styles="lineChartStyles"
                 :chartdata="citationsData"
@@ -219,7 +221,7 @@
                 <span class="stats__description">Citations this year</span>
               </div>
             </div>
-            <div class="stats__slide">
+            <div class="stats__slide stats__slide--3">
               <Stats
                 :styles="lineChartStyles"
                 :chartdata="interestData"
@@ -440,6 +442,7 @@ export default {
   },
   data() {
     return {
+      statsCounter: 1;
       appear: [],
       scoreboard: {
         citations: 853,
@@ -455,6 +458,9 @@ export default {
       }
     }
   },
+  mounted: function() {
+    setInterval(this.statsMoveForward, 10000)
+  },
   methods: {
     toTarget: function(target) {
       if (target) {
@@ -462,6 +468,16 @@ export default {
         this.$emit('hash-clicked', target)
       }
     },
+    statsMoveForward: function() {
+      let slideOffset  = -100 * this.statsCounter
+      if (this.statsCounter == 3) {
+        this.$refs.stats__track.transform = 'translateX(0%)'
+        this.statsCounter = 1
+      } else {
+        this.$refs.stats__track.transform = 'translateX(' + slideOffset + '%)'
+        this.statsCounter++
+      }
+    }
   },
   layout: 'landing-page'
 }
@@ -670,6 +686,21 @@ export default {
 }
 
 .stats {
+  &__carousel {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__track {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: transform 0.5s ease 0s;
+  }
+
   &__graph {
     width: 100%;
 
@@ -683,9 +714,24 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    // height: 100%;
 
     @include screen(tablet) {
       flex-direction: row;
+    }
+
+    &--1 {
+      transform: translateX(0%);
+    }
+    &--2 {
+      transform: translateX(100%);
+    }
+    &--2 {
+      transform: translateX(200%);
     }
   }
 
