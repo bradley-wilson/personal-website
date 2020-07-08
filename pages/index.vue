@@ -688,7 +688,7 @@ export default {
 .stats {
   &__carousel {
     position: relative;
-    height: 100%;
+    height: 40rem;
     overflow: hidden;
   }
 
@@ -698,6 +698,7 @@ export default {
     left: 0;
     bottom: 0;
     right: 0;
+    transform: translateX(0%);
     transition: transform 0.5s ease 0s;
   }
 
@@ -730,7 +731,7 @@ export default {
     &--2 {
       transform: translateX(100%);
     }
-    &--2 {
+    &--3 {
       transform: translateX(200%);
     }
   }
