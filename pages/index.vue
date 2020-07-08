@@ -660,8 +660,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 15rem;
-  margin-bottom: 30rem;
+  width: 35rem;
+  margin-bottom: 15rem;
 
 
   &__container {
