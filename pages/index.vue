@@ -669,7 +669,7 @@ export default {
 
   &__header {
     padding: 1rem 5rem;
-    background: #177ba6;
+    background-color: #177ba6;
     border-radius: 10rem;
     width: 100%;
     text-align: center;
@@ -713,11 +713,17 @@ export default {
     }
   }
 
+  &-item__value {
+    padding: .4rem;
+    background-color: #177ba6;
+    border-radius: .5rem;
+  }
+
   &-item__color {
     width: 1rem;
-    height: 1rem;
-    margin-right: 1rem;
-    border-radius: 1rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    border-radius: .5rem;
     display: inline-block;
 
     &--1 {
