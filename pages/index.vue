@@ -681,6 +681,10 @@ export default {
     &::last-of-type {
       margin-right: 0;
     }
+
+    &::hover {
+      cursor: pointer;
+    }
   }
 
   &__button {
