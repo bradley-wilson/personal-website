@@ -411,6 +411,10 @@ export default {
 
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let citationYears = Object.getOwnPropertyNames(scrappedData.GoogleScholar.Total)
+    let citationValues = []
+    for (let key in scrappedData.GoogleScholar.Total) {
+      citationValues.push(scrappedData.GoogleScholar.Total[key])
+    }
 
     return {
       bio: bioRes.content,
@@ -441,7 +445,7 @@ export default {
         datasets: [
           {
             label: 'Citations',
-            data: scrappedData.GoogleScholar.Total.map(stat => stat),
+            data: citationValues,
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
