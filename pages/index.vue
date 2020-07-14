@@ -405,7 +405,7 @@ export default {
       [scrappedData.Researchgate.weekdate]: weekInterest
     }
 
-    this.$axios.$post(env.weekUrl, {
+    $axios.$post(env.weekUrl, {
       statsData
     })
 
