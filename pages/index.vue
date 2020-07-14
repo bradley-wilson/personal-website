@@ -410,7 +410,7 @@ export default {
     })
 
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
-    let citationYears = Object.getOwnProperties(scrappedData.GoogleScholar.Total)
+    let citationYears = Object.getOwnPropertyNames(scrappedData.GoogleScholar.Total)
 
     return {
       bio: bioRes.content,
