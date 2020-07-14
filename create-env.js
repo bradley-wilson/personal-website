@@ -10,5 +10,6 @@ AWARDS_URL=${process.env.AWARDS_URL}\n
 BIOS_URL=${process.env.BIOS_URL}\n
 POSTS_URL=${process.env.POSTS_URL}\n
 URL=${process.env.URL}\n
-SEARCHES_URL=${process.env.SEARCHES_URL}
+SEARCHES_URL=${process.env.SEARCHES_URL}\n
+WEEK_URL=${process.env.WEEK_URL}
 `)

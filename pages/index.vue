@@ -381,6 +381,7 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
+    let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
@@ -388,11 +389,29 @@ export default {
       `${env.publicationsUrl}&sort[year]=-1`
     )
     let contactsRes = await $axios.$get(env.contactsUrl)
-    let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let awardsRes = await $axios.$get(env.awardsUrl)
     let searchesRes = await $axios.$get(env.searchesUrl)
-    let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
     let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
+
+    let weekReads = scrappedData.Researchgate['C4_Weekly change']
+    let weekInterest = scrappedData.Researchgate['C1_Weekly change']
+
+    weekInterest.split('+').pop()
+    weekReads.split('+').pop()
+
+    var statsData = {
+      week: scrappedData.Researchgate.weekday,
+      [scrappedData.Researchgate.weekdate]: weekReads,
+      [scrappedData.Researchgate.weekdate]: weekInterest
+    }
+
+    this.$axios.$post(env.weekUrl, {
+      statsData
+    })
+
+    let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
+    let citationYears = Object.getOwnProperties(scrappedData.GoogleScholar.Total)
+
     return {
       bio: bioRes.content,
       events: eventsRes.entries,
@@ -418,11 +437,11 @@ export default {
         ]
       },
       citationsData: {
-        labels: statsRes.entries.map(stat => stat.week),
+        labels: citationYears,
         datasets: [
           {
             label: 'Citations',
-            data: statsRes.entries.map(stat => stat.citations),
+            data: scrappedData.GoogleScholar.Total.map(stat => stat),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
@@ -437,7 +456,7 @@ export default {
         datasets: [
           {
             label: 'Research Interest',
-            data: statsRes.entries.map(stat => stat.reads),
+            data: statsRes.entries.map(stat => stat.interest),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(0, 240, 170)',
