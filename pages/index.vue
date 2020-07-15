@@ -526,8 +526,8 @@ export default {
 
       let statsData = {
         week: this.scrappedData.Researchgate.weekdate,
-        reads: weekReads,
-        interest: weekInterest
+        reads: weekReads.split('+').pop(),
+        interest: weekInterest.split('+').pop()
       }
 
       fetch('https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519', {
@@ -537,8 +537,8 @@ export default {
           data: statsData
         })
       })
-      .then(res=>res.json())
-      .then(entry => console.log(entry));
+      // .then(res=>res.json())
+      // .then(entry => console.log(entry));
     }
   },
   layout: 'landing-page'
