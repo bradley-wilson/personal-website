@@ -530,7 +530,7 @@ export default {
         [this.scrappedData.Researchgate.weekdate]: weekInterest
       }
 
-      if (this.readsData.datasets.data[this.readsData.datasets.data.length - 1].week != this.statsData.week) {
+      if (this.readsData.datasets[0].data[this.readsData.datasets[0].data.length - 1].week != this.statsData.week) {
       this.$axios.$post(
           env.weekUrl,
           JSON.stringify({
