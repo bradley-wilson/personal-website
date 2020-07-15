@@ -531,7 +531,7 @@ export default {
       }
 
       this.$axios.$post(
-        this.env.weekUrl,
+        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
         JSON.stringify({
           statsData
         }),
