@@ -381,7 +381,7 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
-    let scrappedData = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+    let scrappedRes = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
@@ -392,32 +392,8 @@ export default {
     let awardsRes = await $axios.$get(env.awardsUrl)
     let searchesRes = await $axios.$get(env.searchesUrl)
     let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
-
-    let weekReads = scrappedData.Researchgate['C4_Weekly change']
-    let weekInterest = scrappedData.Researchgate['C1_Weekly change']
-
-    weekInterest.split('+').pop()
-    weekReads.split('+').pop()
-
-    let statsData = {
-      week: scrappedData.Researchgate.weekday,
-      [scrappedData.Researchgate.weekdate]: weekReads,
-      [scrappedData.Researchgate.weekdate]: weekInterest
-    }
-
-    $axios.$post(
-      env.weekUrl,
-      JSON.stringify({
-        statsData
-      }),
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    )
-
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
+
     let citationYears = Object.getOwnPropertyNames(scrappedData.GoogleScholar.Total)
     let citationValues = []
     for (let key in scrappedData.GoogleScholar.Total) {
@@ -433,6 +409,7 @@ export default {
       awards: awardsRes.entries,
       searches: searchesRes.entries,
       badges: impactStoryRes.badges,
+      scrappedData: scrappedRes,
       readsData: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -514,6 +491,7 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
+    this.updateStats()
   },
   methods: {
     toTarget: function(target) {
@@ -538,6 +516,33 @@ export default {
       let track = document.getElementById('stats__track')
       track.style.transform = 'translateX(' + statsOffset + '%)'
       this.statsCounter = target + 1
+    },
+    updateStats: function() {
+      let weekReads = scrappedData.Researchgate['C4_Weekly change']
+      let weekInterest = scrappedData.Researchgate['C1_Weekly change']
+
+      weekInterest.split('+').pop()
+      weekReads.split('+').pop()
+
+      let statsData = {
+        week: scrappedData.Researchgate.weekday,
+        [scrappedData.Researchgate.weekdate]: weekReads,
+        [scrappedData.Researchgate.weekdate]: weekInterest
+      }
+
+      if (readsData.datasets.data[readsData.datasets.data.length - 1].week != statsData.week) {
+      this.$axios.$post(
+          env.weekUrl,
+          JSON.stringify({
+            statsData
+          }),
+          {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }
+        )
+      }
     }
   },
   layout: 'landing-page'
