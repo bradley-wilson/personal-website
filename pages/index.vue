@@ -399,15 +399,23 @@ export default {
     weekInterest.split('+').pop()
     weekReads.split('+').pop()
 
-    var statsData = {
+    let statsData = {
       week: scrappedData.Researchgate.weekday,
       [scrappedData.Researchgate.weekdate]: weekReads,
       [scrappedData.Researchgate.weekdate]: weekInterest
     }
 
-    $axios.$post(env.weekUrl, {
-      statsData
-    })
+    $axios.$post(
+      env.weekUrl,
+      JSON.stringify({
+        statsData
+      }),
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
 
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
     let citationYears = Object.getOwnPropertyNames(scrappedData.GoogleScholar.Total)
