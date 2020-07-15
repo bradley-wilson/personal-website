@@ -394,31 +394,6 @@ export default {
     let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
 
-    let weekReads = scrappedRes.Researchgate['C4_Weekly change']
-    let weekInterest = scrappedRes.Researchgate['C1_Weekly change']
-
-    weekInterest.split('+').pop()
-    weekReads.split('+').pop()
-
-    let statsData = {
-      week: scrappedRes.Researchgate.weekdate,
-      reads: weekReads.split('+').pop(),
-      interest: weekInterest.split('+').pop()
-    }
-
-    $axios.$post(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-      JSON.stringify({
-        statsData
-      }),
-      {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-    )
-
-
     let citationYears = Object.getOwnPropertyNames(scrappedRes.GoogleScholar.Total)
     let citationValues = []
     for (let key in scrappedRes.GoogleScholar.Total) {
@@ -516,6 +491,7 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
+    this.nextTick(this.updateStats)
     // this.updateStats()
   },
   methods: {
@@ -542,6 +518,31 @@ export default {
       track.style.transform = 'translateX(' + statsOffset + '%)'
       this.statsCounter = target + 1
     },
+    updateStats: function() {
+      let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
+      let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
+
+      weekInterest.split('+').pop()
+      weekReads.split('+').pop()
+
+      let statsData = {
+        week: this.scrappedData.Researchgate.weekdate,
+        reads: weekReads.split('+').pop(),
+        interest: weekInterest.split('+').pop()
+      }
+
+      this.$axios.$post(
+        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+        JSON.stringify({
+          statsData
+        }),
+        {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }
+      )
+    }
   },
   layout: 'landing-page'
 }
