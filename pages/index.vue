@@ -518,19 +518,19 @@ export default {
       this.statsCounter = target + 1
     },
     updateStats: function() {
-      let weekReads = scrappedData.Researchgate['C4_Weekly change']
-      let weekInterest = scrappedData.Researchgate['C1_Weekly change']
+      let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
+      let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
 
       weekInterest.split('+').pop()
       weekReads.split('+').pop()
 
       let statsData = {
-        week: scrappedData.Researchgate.weekday,
-        [scrappedData.Researchgate.weekdate]: weekReads,
-        [scrappedData.Researchgate.weekdate]: weekInterest
+        week: this.scrappedData.Researchgate.weekday,
+        [this.scrappedData.Researchgate.weekdate]: weekReads,
+        [this.scrappedData.Researchgate.weekdate]: weekInterest
       }
 
-      if (readsData.datasets.data[readsData.datasets.data.length - 1].week != statsData.week) {
+      if (this.readsData.datasets.data[this.readsData.datasets.data.length - 1].week != this.statsData.week) {
       this.$axios.$post(
           env.weekUrl,
           JSON.stringify({
