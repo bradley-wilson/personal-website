@@ -542,41 +542,6 @@ export default {
       track.style.transform = 'translateX(' + statsOffset + '%)'
       this.statsCounter = target + 1
     },
-    updateStats: function() {
-      let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
-      let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
-
-      weekInterest.split('+').pop()
-      weekReads.split('+').pop()
-
-      let statsData = {
-        week: this.scrappedData.Researchgate.weekdate,
-        reads: weekReads.split('+').pop(),
-        interest: weekInterest.split('+').pop()
-      }
-
-      this.$axios.$post(
-        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-        JSON.stringify({
-          statsData
-        }),
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      )
-
-    //   fetch('https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519', {
-    //     method: 'post',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({
-    //       data: statsData
-    //     })
-    //   })
-    //   // .then(res=>res.json())
-    //   // .then(entry => console.log(entry));
-    }
   },
   layout: 'landing-page'
 }
