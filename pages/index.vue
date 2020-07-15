@@ -531,7 +531,7 @@ export default {
       }
 
       this.$axios.$post(
-        env.weekUrl,
+        this.env.weekUrl,
         JSON.stringify({
           statsData
         }),
