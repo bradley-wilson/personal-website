@@ -394,10 +394,10 @@ export default {
     let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
 
-    let citationYears = Object.getOwnPropertyNames(scrappedData.GoogleScholar.Total)
+    let citationYears = Object.getOwnPropertyNames(scrappedRes.GoogleScholar.Total)
     let citationValues = []
-    for (let key in scrappedData.GoogleScholar.Total) {
-      citationValues.push(scrappedData.GoogleScholar.Total[key])
+    for (let key in scrappedRes.GoogleScholar.Total) {
+      citationValues.push(scrappedRes.GoogleScholar.Total[key])
     }
 
     return {
