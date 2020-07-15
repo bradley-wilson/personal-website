@@ -525,9 +525,9 @@ export default {
       weekReads.split('+').pop()
 
       let statsData = {
-        week: this.scrappedData.Researchgate.weekday,
-        [this.scrappedData.Researchgate.weekdate]: weekReads,
-        [this.scrappedData.Researchgate.weekdate]: weekInterest
+        week: this.scrappedData.Researchgate.weekdate,
+        reads: weekReads,
+        interest: weekInterest
       }
 
       fetch('https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519', {
