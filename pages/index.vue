@@ -530,17 +530,15 @@ export default {
         [this.scrappedData.Researchgate.weekdate]: weekInterest
       }
 
-      this.$axios.$post(
-        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-        JSON.stringify({
-          statsData
-        }),
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      )
+      fetch('https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          data: statsData
+        })
+      })
+      .then(res=>res.json())
+      .then(entry => console.log(entry));
     }
   },
   layout: 'landing-page'
