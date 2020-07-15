@@ -491,7 +491,7 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
-    this.nextTick(this.updateStats)
+    this.$nextTick(this.updateStats)
     // this.updateStats()
   },
   methods: {
