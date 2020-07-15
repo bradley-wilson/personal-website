@@ -576,7 +576,7 @@ export default {
     //   })
     //   // .then(res=>res.json())
     //   // .then(entry => console.log(entry));
-    // }
+    }
   },
   layout: 'landing-page'
 }
