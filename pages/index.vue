@@ -543,7 +543,7 @@ export default {
       let track = document.getElementById('stats__track')
       track.style.transform = 'translateX(' + statsOffset + '%)'
       this.statsCounter = target + 1
-    },
+    }
   },
   layout: 'landing-page'
 }
