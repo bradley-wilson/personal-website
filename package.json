@@ -24,7 +24,7 @@
     "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "nodemailer": "^5.0.0",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.13.3",
     "nuxt-sass-resources-loader": "^2.0.5",
     "validator": "^10.10.0",
     "vue-chartjs": "^3.4.0",
