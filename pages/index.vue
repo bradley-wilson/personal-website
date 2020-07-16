@@ -504,17 +504,19 @@ export default {
         interest: weekInterest.split('+').pop()
       }
 
-      this.$axios.$post(
-        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-        JSON.stringify({
-          statsData
-        }),
-        {
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        }
-      )
+      // this.$axios.$post(
+      //   'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+      //   JSON.stringify({
+      //     statsData
+      //   }),
+      //   {
+      //     headers: {
+      //       'Content-Type': 'application/json'
+      //     }
+      //   }
+      // )
+
+      console.log(statsData)
     })
     // this.updateStats()
   },
