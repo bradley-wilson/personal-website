@@ -2933,100 +2933,99 @@
 
 <script>
 export default {
-
   head() {
     return {
       script: [
-        { src: '/scripts/svg-pan-zoom.min.js'},
-        { src: '/scripts/hammer.js'},
-        { src: '/scripts/map.js', body: true, defer: '' },
-      ],
+        { src: '/scripts/svg-pan-zoom.min.js' },
+        { src: '/scripts/hammer.js' },
+        { src: '/scripts/map.js', body: true, defer: '' }
+      ]
     }
   },
-  data(){
-    return{
+  data() {
+    return {
       countries: [
-        {name:'United States'},
-        {name:'Colombia'},
-        {name:'Germany' },
-        {name:'United Kingdom'},
-        {name:'Australia'},
-        {name:'Indonesia'},
-        {name:'France'},
-        {name:'India'},
-        {name:'Malaysia'},
-        {name:'Austria'},
-        {name:'Republic of Korea'},
-        {name:'Netherlands'},
-        {name:'Denmark'},
-        {name:'Turkey'},
-        {name:'New Zealand'},
-        {name:'Greece'},
-        {name:'Canada'},
-        {name:'Poland'},
-        {name:'Peru'},
-        {name:'China'},
-        {name:'Italy'},
-        {name:'Vietnam'},
-        {name:'Pakistan'},
-        {name:'Hong Kong'},
-        {name:'Brazil'},
-        {name:'Sweden'},
-        {name:'Philippines'},
-        {name:'Spain'},
-        {name:'South Africa'},
-        {name:'Russian Federation'},
-        {name:'Switzerland'},
-        {name:'Islam Republic of Iran'},
-        {name:'Ireland'},
-        {name:'Venezuela'},
-        {name:'Taiwan'},
-        {name:'Singapore'},
-        {name:'Thailand'},
-        {name:'Romania'},
-        {name:'Portugal'},
-        {name:'Kenya'},
-        {name:'Japan'},
-        {name:'Jordan'},
-        {name:'United Arab Emirates'},
-        {name:'Mexico'},
-        {name:'Sri Lanka'},
-        {name:'Egypt'},
-        {name:'Czech Republic'},
-        {name:'Chile'},
-        {name:'Puerto Rico'},
-        {name:'Norway'},
-        {name:'Maldives'},
-        {name:'Mauritius'},
-        {name:'Malta'},
-        {name:'Kuwait'},
-        {name:'Israel'},
-        {name:'Hungary'},
-        {name:'Tunisia'},
-        {name:'Serbia'},
-        {name:'Nigeria'},
-        {name:'Morocco'},
-        {name:'Croatia'},
-        {name:'Finland'},
-        {name:'Belgium'},
-        {name:'Zambia'},
-        {name:'Uganda'},
-        {name:'Ukraine'},
-        {name:'Trinidad and Tobago'},
-        {name:'Slovakia'},
-        {name:'Slovenia'},
-        {name:'Panama'},
-        {name:'Oman'},
-        {name:'Nepal'},
-        {name:'MMacao'},
-        {name:'Lithuania'},
-        {name:'Guadeloupe'},
-        {name:'Estonia'},
-        {name:'Ecuador'},
-        {name:'Algeria'},
-        {name:'Cyprus'},
-        {name:'Argentina'},
-        {name:'Albania'}
+        { name: 'United States' },
+        { name: 'Colombia' },
+        { name: 'Germany' },
+        { name: 'United Kingdom' },
+        { name: 'Australia' },
+        { name: 'Indonesia' },
+        { name: 'France' },
+        { name: 'India' },
+        { name: 'Malaysia' },
+        { name: 'Austria' },
+        { name: 'Republic of Korea' },
+        { name: 'Netherlands' },
+        { name: 'Denmark' },
+        { name: 'Turkey' },
+        { name: 'New Zealand' },
+        { name: 'Greece' },
+        { name: 'Canada' },
+        { name: 'Poland' },
+        { name: 'Peru' },
+        { name: 'China' },
+        { name: 'Italy' },
+        { name: 'Vietnam' },
+        { name: 'Pakistan' },
+        { name: 'Hong Kong' },
+        { name: 'Brazil' },
+        { name: 'Sweden' },
+        { name: 'Philippines' },
+        { name: 'Spain' },
+        { name: 'South Africa' },
+        { name: 'Russian Federation' },
+        { name: 'Switzerland' },
+        { name: 'Islam Republic of Iran' },
+        { name: 'Ireland' },
+        { name: 'Venezuela' },
+        { name: 'Taiwan' },
+        { name: 'Singapore' },
+        { name: 'Thailand' },
+        { name: 'Romania' },
+        { name: 'Portugal' },
+        { name: 'Kenya' },
+        { name: 'Japan' },
+        { name: 'Jordan' },
+        { name: 'United Arab Emirates' },
+        { name: 'Mexico' },
+        { name: 'Sri Lanka' },
+        { name: 'Egypt' },
+        { name: 'Czech Republic' },
+        { name: 'Chile' },
+        { name: 'Puerto Rico' },
+        { name: 'Norway' },
+        { name: 'Maldives' },
+        { name: 'Mauritius' },
+        { name: 'Malta' },
+        { name: 'Kuwait' },
+        { name: 'Israel' },
+        { name: 'Hungary' },
+        { name: 'Tunisia' },
+        { name: 'Serbia' },
+        { name: 'Nigeria' },
+        { name: 'Morocco' },
+        { name: 'Croatia' },
+        { name: 'Finland' },
+        { name: 'Belgium' },
+        { name: 'Zambia' },
+        { name: 'Uganda' },
+        { name: 'Ukraine' },
+        { name: 'Trinidad and Tobago' },
+        { name: 'Slovakia' },
+        { name: 'Slovenia' },
+        { name: 'Panama' },
+        { name: 'Oman' },
+        { name: 'Nepal' },
+        { name: 'MMacao' },
+        { name: 'Lithuania' },
+        { name: 'Guadeloupe' },
+        { name: 'Estonia' },
+        { name: 'Ecuador' },
+        { name: 'Algeria' },
+        { name: 'Cyprus' },
+        { name: 'Argentina' },
+        { name: 'Albania' }
       ],
       countriesVisited: [
         {
@@ -3076,7 +3075,8 @@ export default {
         {
           name: 'El Salvador',
           icon: '/img/flags/El-Salvador.png'
-        }, {
+        },
+        {
           name: 'France',
           icon: '/img/flags/France.png'
         },
@@ -3227,18 +3227,15 @@ export default {
       ]
     }
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
-    sortCountries: function(){
-
-        setInterval(() => {
-          let rand = Math.round(Math.random() * 6);
-          let country = this.countries.splice(rand, 1);
-          // alert(country);
-          this.countries.unshift(country[0]);
-        }, 1400);
-
+    sortCountries: function() {
+      setInterval(() => {
+        let rand = Math.round(Math.random() * 6)
+        let country = this.countries.splice(rand, 1)
+        // alert(country);
+        this.countries.unshift(country[0])
+      }, 1400)
     },
     pageReload: function() {
       if (this.reloaded == false) {
@@ -3249,7 +3246,6 @@ export default {
   },
   layout: 'map'
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -3261,7 +3257,7 @@ export default {
 
   &__info {
     padding: 2rem;
-    background-color: rgba($black, .9);
+    background-color: rgba($black, 0.9);
     border-radius: 4px;
     border: 1px solid white;
     width: 90%;
@@ -3281,8 +3277,8 @@ export default {
   }
 
   &__marker {
-    filter: drop-shadow(-.5rem -.5rem .5rem black);
-    -webkit-filter: drop-shadow(-.5rem -.5rem .5rem black);
+    filter: drop-shadow(-0.5rem -0.5rem 0.5rem black);
+    -webkit-filter: drop-shadow(-0.5rem -0.5rem 0.5rem black);
   }
 
   &__tool-bar {
@@ -3339,10 +3335,10 @@ export default {
   height: 25rem;
   /*position: relative;*/
   // max-width: 40rem;
-  .list{
-  width: 100%;
+  .list {
+    width: 100%;
     max-width: initial;
-}
+  }
 
   &__country {
     font-size: 1.4rem;
@@ -3364,7 +3360,7 @@ export default {
   height: 100%;
   z-index: 100;
   transform: translateX(-100%);
-  transition: all .3s;
+  transition: all 0.3s;
 
   &__button {
     display: block;

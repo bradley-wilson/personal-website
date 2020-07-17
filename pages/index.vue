@@ -381,7 +381,9 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
-    let scrappedRes = await $axios.$get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+    let scrappedRes = await $axios.$get(
+      'http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json'
+    )
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
@@ -391,10 +393,14 @@ export default {
     let contactsRes = await $axios.$get(env.contactsUrl)
     let awardsRes = await $axios.$get(env.awardsUrl)
     let searchesRes = await $axios.$get(env.searchesUrl)
-    let impactStoryRes = await $axios.$get('https://profiles.impactstory.org/api/person/0000-0002-3730-6295')
+    let impactStoryRes = await $axios.$get(
+      'https://profiles.impactstory.org/api/person/0000-0002-3730-6295'
+    )
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
 
-    let citationYears = Object.getOwnPropertyNames(scrappedRes.GoogleScholar.Total)
+    let citationYears = Object.getOwnPropertyNames(
+      scrappedRes.GoogleScholar.Total
+    )
     let citationValues = []
     for (let key in scrappedRes.GoogleScholar.Total) {
       citationValues.push(scrappedRes.GoogleScholar.Total[key])
@@ -491,7 +497,7 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
-    this.$nextTick(function () {
+    this.$nextTick(function() {
       let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
       let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
 
@@ -528,7 +534,7 @@ export default {
       }
     },
     statsMoveForward: function() {
-      let statsOffset  = -100 * this.statsCounter
+      let statsOffset = -100 * this.statsCounter
       let track = document.getElementById('stats__track')
       if (this.statsCounter == 3) {
         track.style.transform = 'translateX(0%)'
@@ -910,7 +916,6 @@ export default {
   width: 35rem;
   margin-bottom: 1rem;
 
-
   &__container {
     display: flex;
     justify-content: center;
@@ -925,7 +930,7 @@ export default {
     font-family: $Bebas;
     text-transform: uppercase;
     font-size: 1.8rem;
-    
+
     &::after {
       content: '';
       background-color: #0d5978;
@@ -965,15 +970,15 @@ export default {
   }
 
   &-item__value {
-    padding: .4rem;
+    padding: 0.4rem;
     background-color: #177ba6;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   &-item__color {
     width: 1rem;
     height: 1.5rem;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     display: block;
 
     &--1 {
