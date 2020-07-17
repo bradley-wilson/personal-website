@@ -29,7 +29,7 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/sass/main.scss'
+    // '@/assets/sass/main.scss'
   ],
 
   /*
@@ -57,6 +57,10 @@ module.exports = {
     injected: true,
     breaks: true
   },
+
+  // buildModules: [
+  //   '@nuxtjs/style-resources',
+  // ],
 
   styleResources: {
     scss: [

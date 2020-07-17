@@ -5,7 +5,7 @@
       alt="Impact Story Badge"
       class="badge__icon">
     <div class="badge__title heading--tertiary"> {{ badge.display_name }} </div>
-    <div class="badge__description text--description"> {{ badge.description + ' ' }} <span v-html="badge.context"></span></div>
+    <div class="badge__description text--description"> {{ badge.description + ' ' }} <span v-html="badge.context" /></div>
   </div>
 </template>
 

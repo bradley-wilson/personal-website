@@ -13,20 +13,18 @@ import TheNavbar from '@/components/TheNavbar'
 import TheFooter from '@/components/TheFooter'
 
 export default {
-  data() {
-    return { announcementBar: '' }
-  },
-  mounted() {
-    this.$axios
-      .$get(`${process.env.barUrl}`)
-      .then(res => {
-        this.announcementBar = res.show
-      })
-  },
   components: {
     TheAnnouncementBar,
     TheNavbar,
     TheFooter
+  },
+  data() {
+    return { announcementBar: '' }
+  },
+  mounted() {
+    this.$axios.$get(`${process.env.barUrl}`).then(res => {
+      this.announcementBar = res.show
+    })
   },
   methods: {
     scrollToHash: function(target) {

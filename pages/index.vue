@@ -34,7 +34,8 @@
       <div class="container container--narrow">
         <div
           class="section-about__content"
-          v-html="$md.render(bio)"/>
+          v-html="$md.render(bio)"
+        />
 
         <!-- Background Van-de-Graff videos -------------------------------->
       </div>
@@ -160,7 +161,7 @@
               href="/countries-visited"
               class="button button--tab">Countries visited</a>
           </div>
-          <div class="connections-thumbnail heading heading--secondary"></div>
+          <div class="connections-thumbnail heading heading--secondary" />
         </div>
       </div>
     </section>
@@ -216,17 +217,17 @@
             </div>
             <div class="scoreboard__data">
               <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--1"></span>
+                <span class="scoreboard-item__color scoreboard-item__color--1" />
                 Citations
                 <span class="scoreboard-item__value"> {{ scoreboard.citations }} </span>
               </div>
               <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--2"></span>
+                <span class="scoreboard-item__color scoreboard-item__color--2" />
                 H-Index
                 <span class="scoreboard-item__value"> {{ scoreboard.hIndex }} </span>
               </div>
               <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--3"></span>
+                <span class="scoreboard-item__color scoreboard-item__color--3" />
                 I10-Index
                 <span class="scoreboard-item__value"> {{ scoreboard.i10Index }} </span>
               </div>
@@ -238,21 +239,21 @@
             id="button-reads"
             class="graph__button"
             @click="goToStat(0)">
-            <span class="graph__button--icon graph__button--icon-reads"></span>
+            <span class="graph__button--icon graph__button--icon-reads" />
             Reads
           </span>
           <span
             id="button-citations"
             class="graph__button"
             @click="goToStat(1)">
-            <span class="graph__button--icon graph__button--icon-citations"></span>
+            <span class="graph__button--icon graph__button--icon-citations" />
             Citations
           </span>
           <span
             id="button-interest"
             class="graph__button"
             @click="goToStat(2)">
-            <span class="graph__button--icon graph__button--icon-interest"></span>
+            <span class="graph__button--icon graph__button--icon-interest" />
             Research Interest
           </span>
         </div>
@@ -381,9 +382,9 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, env }) {
-    let scrappedRes = await $axios.$get(
-      'http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json'
-    )
+    // let scrappedRes = await $axios.$get(
+    //   'http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json'
+    // )
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
@@ -398,13 +399,13 @@ export default {
     )
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
 
-    let citationYears = Object.getOwnPropertyNames(
-      scrappedRes.GoogleScholar.Total
-    )
-    let citationValues = []
-    for (let key in scrappedRes.GoogleScholar.Total) {
-      citationValues.push(scrappedRes.GoogleScholar.Total[key])
-    }
+    // let citationYears = Object.getOwnPropertyNames(
+    //   scrappedRes.GoogleScholar.Total
+    // )
+    // let citationValues = []
+    // for (let key in scrappedRes.GoogleScholar.Total) {
+    //   citationValues.push(scrappedRes.GoogleScholar.Total[key])
+    // }
 
     return {
       bio: bioRes.content,
@@ -415,7 +416,7 @@ export default {
       awards: awardsRes.entries,
       searches: searchesRes.entries,
       badges: impactStoryRes.badges,
-      scrappedData: scrappedRes,
+      // scrappedData: scrappedRes,
       readsData: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -432,11 +433,13 @@ export default {
         ]
       },
       citationsData: {
-        labels: citationYears,
+        // labels: citationYears,
+        labels: [],
         datasets: [
           {
             label: 'Citations',
-            data: citationValues,
+            // data: citationValues,
+            data: [],
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
@@ -497,18 +500,18 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
-    this.$nextTick(function() {
-      let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
-      let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
+    // this.$nextTick(function() {
+    //   let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
+    //   let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
 
-      weekInterest.split('+').pop()
-      weekReads.split('+').pop()
+    //   weekInterest.split('+').pop()
+    //   weekReads.split('+').pop()
 
-      let statsData = {
-        week: this.scrappedData.Researchgate.weekdate,
-        reads: weekReads.split('+').pop(),
-        interest: weekInterest.split('+').pop()
-      }
+    //   let statsData = {
+    //     week: this.scrappedData.Researchgate.weekdate,
+    //     reads: weekReads.split('+').pop(),
+    //     interest: weekInterest.split('+').pop()
+    //   }
 
       // this.$axios.$post(
       //   'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
@@ -522,8 +525,8 @@ export default {
       //   }
       // )
 
-      console.log(statsData)
-    })
+      // console.log(statsData)
+    // })
     // this.updateStats()
   },
   methods: {
