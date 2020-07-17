@@ -1,0 +1,33 @@
+const fs = require('fs')
+const axios = require('axios')
+
+async function updateStats() {
+  const scrappedRes = await axios.get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+  const statsRes = await axios.get('https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519')
+
+  const currentStats = statsRes.data.entries
+  const scrappedStats = scrappedRes.data
+
+  const weekReads = scrappedStats.Researchgate['C4_Weekly change']
+  const weekInterest = scrappedStats.Researchgate['C1_Weekly change']
+
+  const statsData = {
+    week: scrappedStats.Researchgate.weekdate,
+    reads: weekReads.split('+').pop(),
+    interest: weekInterest.split('+').pop()
+  }
+
+  if (statsData.week !== currentStats[currentStats.length - 1].week) {
+    await axios.post(
+      'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+      {
+        data: statsData
+      }
+    )
+  }
+
+  let data = JSON.stringify(scrappedStats)
+  fs.writeFileSync('./assets/scrapped-data.json', data)
+}
+
+updateStats()

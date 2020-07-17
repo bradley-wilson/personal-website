@@ -379,12 +379,10 @@ import Award from '@/components/Award'
 import Badge from '@/components/Badge'
 import Keywords from '@/components/Keywords'
 import markdownIt from 'markdown-it'
+import scrappedData from '@/assets/scrapped-data'
 
 export default {
   async asyncData({ $axios, env }) {
-    // let scrappedRes = await $axios.$get(
-    //   'http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json'
-    // )
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
     let quotesRes = await $axios.$get(env.quotesUrl)
@@ -399,13 +397,13 @@ export default {
     )
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
 
-    // let citationYears = Object.getOwnPropertyNames(
-    //   scrappedRes.GoogleScholar.Total
-    // )
-    // let citationValues = []
-    // for (let key in scrappedRes.GoogleScholar.Total) {
-    //   citationValues.push(scrappedRes.GoogleScholar.Total[key])
-    // }
+    let citationYears = Object.getOwnPropertyNames(
+      scrappedData.GoogleScholar.Total
+    )
+    let citationValues = []
+    for (let key in scrappedData.GoogleScholar.Total) {
+      citationValues.push(scrappedData.GoogleScholar.Total[key])
+    }
 
     return {
       bio: bioRes.content,
@@ -416,7 +414,8 @@ export default {
       awards: awardsRes.entries,
       searches: searchesRes.entries,
       badges: impactStoryRes.badges,
-      // scrappedData: scrappedRes,
+      scrappedData,
+      stats: statsRes.entries,
       readsData: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -433,13 +432,11 @@ export default {
         ]
       },
       citationsData: {
-        // labels: citationYears,
-        labels: [],
+        labels: citationYears,
         datasets: [
           {
             label: 'Citations',
-            // data: citationValues,
-            data: [],
+            data: citationValues,
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
@@ -500,34 +497,6 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
-    // this.$nextTick(function() {
-    //   let weekReads = this.scrappedData.Researchgate['C4_Weekly change']
-    //   let weekInterest = this.scrappedData.Researchgate['C1_Weekly change']
-
-    //   weekInterest.split('+').pop()
-    //   weekReads.split('+').pop()
-
-    //   let statsData = {
-    //     week: this.scrappedData.Researchgate.weekdate,
-    //     reads: weekReads.split('+').pop(),
-    //     interest: weekInterest.split('+').pop()
-    //   }
-
-      // this.$axios.$post(
-      //   'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-      //   JSON.stringify({
-      //     statsData
-      //   }),
-      //   {
-      //     headers: {
-      //       'Content-Type': 'application/json'
-      //     }
-      //   }
-      // )
-
-      // console.log(statsData)
-    // })
-    // this.updateStats()
   },
   methods: {
     toTarget: function(target) {
