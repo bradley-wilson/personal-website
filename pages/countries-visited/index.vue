@@ -2936,9 +2936,9 @@ export default {
   head() {
     return {
       script: [
-        { src: '/scripts/svg-pan-zoom.min.js' },
-        { src: '/scripts/hammer.js' },
-        { src: '/scripts/map.js', body: true, defer: '' }
+        { src: '/scripts/svg-pan-zoom.min.js', defer: true },
+        { src: '/scripts/hammer.js', defer: true },
+        { src: '/scripts/map.js', body: true, defer: true }
       ]
     }
   },
@@ -3210,7 +3210,7 @@ export default {
         },
         {
           name: 'Bali',
-          icon: 'img/flags/Bali.png'
+          icon: '/img/flags/Indonesia.png'
         },
         {
           name: 'Canada',
@@ -3227,7 +3227,8 @@ export default {
       ]
     }
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
     sortCountries: function() {
       setInterval(() => {

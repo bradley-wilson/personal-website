@@ -210,6 +210,29 @@
             </div>
           </div>
         </div>
+        <div class="graph__buttons">
+          <span
+            id="button-reads"
+            class="graph__button"
+            @click="goToStat(0)">
+            <span class="graph__button--icon graph__button--icon-reads" />
+            Reads
+          </span>
+          <span
+            id="button-citations"
+            class="graph__button"
+            @click="goToStat(1)">
+            <span class="graph__button--icon graph__button--icon-citations" />
+            Citations
+          </span>
+          <span
+            id="button-interest"
+            class="graph__button"
+            @click="goToStat(2)">
+            <span class="graph__button--icon graph__button--icon-interest" />
+            Research Interest
+          </span>
+        </div>
         <div class="scoreboard__container">
           <div class="scoreboard">
             <div class="scoreboard__header">
@@ -233,29 +256,22 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="graph__buttons">
-          <span
-            id="button-reads"
-            class="graph__button"
-            @click="goToStat(0)">
-            <span class="graph__button--icon graph__button--icon-reads" />
-            Reads
-          </span>
-          <span
-            id="button-citations"
-            class="graph__button"
-            @click="goToStat(1)">
-            <span class="graph__button--icon graph__button--icon-citations" />
-            Citations
-          </span>
-          <span
-            id="button-interest"
-            class="graph__button"
-            @click="goToStat(2)">
-            <span class="graph__button--icon graph__button--icon-interest" />
-            Research Interest
-          </span>
+          <div class="scoreboard scoreboard--country">
+            <div class="scoreboard__header scoreboard__header--country">
+              Global visitors ranking
+            </div>
+            <div class="scoreboard__data scoreboard__data--country">
+              <div
+                v-for="(item, index) in 10"
+                :key="item.id"
+                class="scoreboard-data__item scoreboard-data__item--country"
+              >
+                <span class="scoreboard-item__color scoreboard-item__color--country"> {{ item }} </span>
+                {{ scrappedData.Academia.Country.Country[index] }}
+                <span class="scoreboard-item__value scoreboard-item__value--country"> {{ scrappedData.Academia.Country['All_Time_Views'][index] }} </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -405,6 +421,13 @@ export default {
       citationValues.push(scrappedData.GoogleScholar.Total[key])
     }
 
+    let badges = []
+    for (let badge of impactStoryRes.badges) {
+      if (badge.name === 'global_reach' || badge.name === 'global_south' || badge.name === 'big_hit' || badge.name === 'percent_fulltext') {
+        badges.push(badge)
+      }
+    }
+
     return {
       bio: bioRes.content,
       events: eventsRes.entries,
@@ -413,7 +436,7 @@ export default {
       contacts: contactsRes.entries,
       awards: awardsRes.entries,
       searches: searchesRes.entries,
-      badges: impactStoryRes.badges,
+      badges,
       scrappedData,
       citationValues,
       citationYears,
@@ -692,8 +715,12 @@ export default {
   &__buttons {
     display: flex;
     width: 100%;
-    justify-content: center;
+    // justify-content: center;
     font-size: 1.8rem;
+
+    @include screen(tablet) {
+      margin-left: 15rem;
+    }
   }
 
   &__button {
@@ -773,8 +800,12 @@ export default {
 .stats {
   &__carousel {
     position: relative;
-    height: 40rem;
+    height: 60rem;
     overflow: hidden;
+
+    @include screen(tablet) {
+      height: 40rem;
+    }
   }
 
   &__track {
@@ -891,10 +922,27 @@ export default {
   align-items: center;
   width: 35rem;
   margin-bottom: 1rem;
+  margin-right: 1.5rem;
+
+  &::last-of-type {
+    margin-right: 0;
+  }
+
+  &--country {
+    width: 100%;
+  }
 
   &__container {
     display: flex;
     justify-content: center;
+    margin-top: 4rem;
+    flex-direction: column;
+    align-items: center;
+
+    @include screen(tablet) {
+      flex-direction: row;
+      align-items: initial;
+    }
   }
 
   &__header {
@@ -930,6 +978,11 @@ export default {
     display: flex;
     flex-direction: column;
     z-index: -2;
+
+    &--country {
+      flex-wrap: wrap;
+      height: 25rem;
+    }
   }
 
   &-data__item {
@@ -943,12 +996,20 @@ export default {
     &::last-of-type {
       margin-bottom: 0;
     }
+
+    &--country {
+      margin-right: 1.5rem;
+    }
   }
 
   &-item__value {
     padding: 0.4rem;
     background-color: #177ba6;
     border-radius: 0.5rem;
+
+    &--country {
+      background-color: #4eefa1;
+    }
   }
 
   &-item__color {
@@ -956,6 +1017,15 @@ export default {
     height: 1.5rem;
     border-radius: 0.5rem;
     display: block;
+
+    &--country {
+      width: 2.5rem;
+      height: 2.5rem;
+      text-align: center;
+      border-radius: 2.5rem;
+      background-color: #258bb7;
+      padding: 0.2rem;
+    }
 
     &--1 {
       background: #2ee49b;
