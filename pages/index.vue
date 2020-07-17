@@ -184,7 +184,7 @@
                 :chartdata="readsData"
                 class="stats__graph"/>
               <div class="stats__circle">
-                <span class="stats__value stats__value--reads">+250</span>
+                <span class="stats__value stats__value--reads"> {{ scrappedData.Researchgate['C4_Weekly change'] }} </span>
                 <span class="stats__description">Reads this week</span>
               </div>
             </div>
@@ -194,7 +194,7 @@
                 :chartdata="citationsData"
                 class="stats__graph"/>
               <div class="stats__circle">
-                <span class="stats__value stats__value--citations">+320</span>
+                <span class="stats__value stats__value--citations"> {{ yearlyChange }}</span>
                 <span class="stats__description">Citations this year</span>
               </div>
             </div>
@@ -219,17 +219,17 @@
               <div class="scoreboard-data__item">
                 <span class="scoreboard-item__color scoreboard-item__color--1" />
                 Citations
-                <span class="scoreboard-item__value"> {{ scoreboard.citations }} </span>
+                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.CitasTotal }} </span>
               </div>
               <div class="scoreboard-data__item">
                 <span class="scoreboard-item__color scoreboard-item__color--2" />
                 H-Index
-                <span class="scoreboard-item__value"> {{ scoreboard.hIndex }} </span>
+                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.IndicehTotal }} </span>
               </div>
               <div class="scoreboard-data__item">
                 <span class="scoreboard-item__color scoreboard-item__color--3" />
                 I10-Index
-                <span class="scoreboard-item__value"> {{ scoreboard.i10Index }} </span>
+                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.Indicei10Total }} </span>
               </div>
             </div>
           </div>
@@ -415,6 +415,8 @@ export default {
       searches: searchesRes.entries,
       badges: impactStoryRes.badges,
       scrappedData,
+      citationValues,
+      citationYears,
       stats: statsRes.entries,
       readsData: {
         labels: statsRes.entries.map(stat => stat.week),
@@ -480,12 +482,6 @@ export default {
   data() {
     return {
       statsCounter: 1,
-      appear: [],
-      scoreboard: {
-        citations: 853,
-        hIndex: 14,
-        i10Index: 17
-      },
       lineChartStyles: {
         height: '40vh',
         width: '`100%',
@@ -497,6 +493,14 @@ export default {
   },
   mounted: function() {
     setInterval(this.statsMoveForward, 10000)
+  },
+  computed: {
+    yearlyChange: function () {
+      let thisYear = this.citationValues[this.citationValues.length - 1]
+      let lastYear = this.citationValues[this.citationValues.length - 2]
+
+      return thisYear - lastYear
+    }
   },
   methods: {
     toTarget: function(target) {
