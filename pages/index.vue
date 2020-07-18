@@ -194,7 +194,7 @@
                 :chartdata="citationsData"
                 class="stats__graph"/>
               <div class="stats__circle">
-                <span class="stats__value stats__value--citations"> {{ yearlyChange }}</span>
+                <span class="stats__value stats__value--citations"> {{ yearCitations }}</span>
                 <span class="stats__description">Citations this year</span>
               </div>
             </div>
@@ -290,9 +290,9 @@
         <div class="clustrmaps">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
           <script
-            id="clustrmaps"
             type="text/javascript"
-            src="//cdn.clustrmaps.com/map_v2.js?cl=164f75&w=500&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g&co=061017&cmo=09a47b&cmn=424baf&ct=dddddd"/>
+            id="clustrmaps"
+            src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g" />
         </div>
       </div>
     </section>
@@ -518,11 +518,15 @@ export default {
     setInterval(this.statsMoveForward, 10000)
   },
   computed: {
-    yearlyChange: function () {
+    citationsYearlyChange: function () {
       let thisYear = this.citationValues[this.citationValues.length - 1]
       let lastYear = this.citationValues[this.citationValues.length - 2]
 
       return thisYear - lastYear
+    },
+    yearCitations: function() {
+      let thisYear = this.citationValues[this.citationValues.length - 1]
+      return thisYear
     }
   },
   methods: {
@@ -715,12 +719,12 @@ export default {
   &__buttons {
     display: flex;
     width: 100%;
-    // justify-content: center;
+    justify-content: center;
     font-size: 1.8rem;
 
-    @include screen(tablet) {
-      margin-left: 15rem;
-    }
+    // @include screen(tablet) {
+    //   margin-left: 15rem;
+    // }
   }
 
   &__button {
