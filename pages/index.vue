@@ -174,38 +174,67 @@
         webm-src="/videos/map-line-connection.webm" />
       <div class="container">
         <h1 class="heading heading--primary u-block">Research Impact and Audience Engagement</h1>
-        <div class="stats__carousel">
-          <div
-            id="stats__track"
-            class="stats__track">
-            <div class="stats__slide stats__slide--1">
-              <Stats
-                :styles="lineChartStyles"
-                :chartdata="readsData"
-                class="stats__graph"/>
-              <div class="stats__circle">
-                <span class="stats__value stats__value--reads"> {{ scrappedData.Researchgate['C4_Weekly change'] }} </span>
-                <span class="stats__description">Reads this week</span>
+        <div class="stats__container">
+          <div class="scoreboard__container">
+            <div class="scoreboard">
+              <div class="scoreboard__header">
+                Scoreboard
+              </div>
+              <span class="scoreboard__header--shadow" />
+              <div class="scoreboard__data">
+                <div class="scoreboard-data__item">
+                  <span class="scoreboard-item__color scoreboard-item__color--1" />
+                  Citations
+                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.CitasTotal }} </span>
+                </div>
+                <div class="scoreboard-data__item">
+                  <span class="scoreboard-item__color scoreboard-item__color--2" />
+                  H-Index
+                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.IndicehTotal }} </span>
+                </div>
+                <div class="scoreboard-data__item">
+                  <span class="scoreboard-item__color scoreboard-item__color--3" />
+                  I10-Index
+                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.Indicei10Total }} </span>
+                </div>
               </div>
             </div>
-            <div class="stats__slide stats__slide--2">
-              <Stats
-                :styles="lineChartStyles"
-                :chartdata="citationsData"
-                class="stats__graph"/>
-              <div class="stats__circle">
-                <span class="stats__value stats__value--citations"> {{ yearCitations }}</span>
-                <span class="stats__description">Citations this year</span>
-              </div>
-            </div>
-            <div class="stats__slide stats__slide--3">
-              <Stats
-                :styles="lineChartStyles"
-                :chartdata="interestData"
-                class="stats__graph"/>
-              <div class="stats__circle">
-                <span class="stats__value stats__value--interest">+35%</span>
-                <span class="stats__description">Research interest this year</span>
+          </div>
+          <div class="stats__view">
+            <div class="stats__carousel">
+              <div
+                id="stats__track"
+                class="stats__track">
+                <div class="stats__slide stats__slide--1">
+                  <Stats
+                    :styles="lineChartStyles"
+                    :chartdata="readsData"
+                    class="stats__graph"/>
+                  <div class="stats__circle">
+                    <span class="stats__value stats__value--reads"> {{ scrappedData.Researchgate['C4_Weekly change'] }} </span>
+                    <span class="stats__description">Reads this week</span>
+                  </div>
+                </div>
+                <div class="stats__slide stats__slide--2">
+                  <Stats
+                    :styles="lineChartStyles"
+                    :chartdata="citationsData"
+                    class="stats__graph"/>
+                  <div class="stats__circle">
+                    <span class="stats__value stats__value--citations"> {{ yearCitations }}</span>
+                    <span class="stats__description">Citations this year</span>
+                  </div>
+                </div>
+                <div class="stats__slide stats__slide--3">
+                  <Stats
+                    :styles="lineChartStyles"
+                    :chartdata="interestData"
+                    class="stats__graph"/>
+                  <div class="stats__circle">
+                    <span class="stats__value stats__value--interest"> {{ scrappedData.Researchgate['C1_Weekly change'] }} </span>
+                    <span class="stats__description">Research interest this year</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -233,46 +262,6 @@
             Research Interest
           </span>
         </div>
-        <div class="scoreboard__container">
-          <div class="scoreboard">
-            <div class="scoreboard__header">
-              Scoreboard
-            </div>
-            <div class="scoreboard__data">
-              <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--1" />
-                Citations
-                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.CitasTotal }} </span>
-              </div>
-              <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--2" />
-                H-Index
-                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.IndicehTotal }} </span>
-              </div>
-              <div class="scoreboard-data__item">
-                <span class="scoreboard-item__color scoreboard-item__color--3" />
-                I10-Index
-                <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.Indicei10Total }} </span>
-              </div>
-            </div>
-          </div>
-          <div class="scoreboard scoreboard--country">
-            <div class="scoreboard__header scoreboard__header--country">
-              Global visitors ranking
-            </div>
-            <div class="scoreboard__data scoreboard__data--country">
-              <div
-                v-for="(item, index) in 10"
-                :key="item.id"
-                class="scoreboard-data__item scoreboard-data__item--country"
-              >
-                <span class="scoreboard-item__color scoreboard-item__color--country"> {{ item }} </span>
-                {{ scrappedData.Academia.Country.Country[index] }}
-                <span class="scoreboard-item__value scoreboard-item__value--country"> {{ scrappedData.Academia.Country['All_Time_Views'][index] }} </span>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
     <section class="section-stats">
@@ -287,12 +276,33 @@
         <h1 class="heading heading--primary">Keywords</h1>
         <Keywords :searches="searches"/>
 
-        <div class="clustrmaps">
+        <div class="online-visitors">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
-          <script
-            type="text/javascript"
-            id="clustrmaps"
-            src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=n&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g" />
+          <div class="online-visitors__container">
+            <script
+              type="text/javascript"
+              id="clustrmaps"
+              src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g" />
+            <div class="scoreboard__container scoreboard__container--country">
+              <div class="scoreboard scoreboard--country">
+                <div class="scoreboard__header scoreboard__header--country">
+                  Global visitors ranking
+                </div>
+                <span class="scoreboard__header--shadow" />
+                <div class="scoreboard__data scoreboard__data--country">
+                  <div
+                    v-for="(item, index) in 10"
+                    :key="item.id"
+                    class="scoreboard-data__item scoreboard-data__item--country"
+                  >
+                    <span class="scoreboard-item__color scoreboard-item__color--country"> {{ item }} </span>
+                    {{ scrappedData.Academia.Country.Country[index] }}
+                    <span class="scoreboard-item__value scoreboard-item__value--country"> {{ scrappedData.Academia.Country['All_Time_Views'][index] }} </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -812,6 +822,26 @@ export default {
     }
   }
 
+  &__container {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    @include screen(desktop) {
+      flex-direction: row;
+    }
+  }
+
+  &__view {
+    width: 100%;
+    height: 100%;
+  }
+
   &__track {
     position: absolute;
     top: 0;
@@ -891,28 +921,26 @@ export default {
   }
 }
 
-.clustrmaps {
+.online-visitors {
   margin-top: 8rem;
-  overflow: hidden;
-  // padding-top: 56.25%;
-  position: relative;
-  max-width: 100%;
+  width: 100%;
 
-  & iframe {
-    // border: 0;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include screen(tablet) {
+      flex-direction: row;
+    }
+
   }
 }
 
 .badges {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 15rem;
+  margin-bottom: 10rem;
+  width: 100%;
 
   @include screen(tablet) {
     flex-direction: row;
@@ -943,6 +971,17 @@ export default {
     flex-direction: column;
     align-items: center;
 
+    &--country {
+      margin-top: 0;
+      flex: 2 0 auto;
+      margin-top: 5rem;
+
+      @include screen(tablet) {
+        margin-left: 7rem;
+        margin-top: 0;
+      }
+    }
+
     @include screen(tablet) {
       flex-direction: row;
       align-items: initial;
@@ -958,12 +997,12 @@ export default {
     font-family: $Bebas;
     text-transform: uppercase;
     font-size: 1.8rem;
+    z-index: 10;
 
-    &::after {
-      content: '';
+    &--shadow {
       background-color: #0d5978;
       border-radius: 10rem;
-      z-index: -1;
+      z-index: 9;
       width: 100%;
       height: 4rem;
       display: block;
@@ -981,7 +1020,7 @@ export default {
     border-bottom-right-radius: 4rem;
     display: flex;
     flex-direction: column;
-    z-index: -2;
+    z-index: 8;
 
     &--country {
       flex-wrap: wrap;
