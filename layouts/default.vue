@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="website-content">
     <TheAnnouncementBar v-if="announcementBar"/>
-    <TheNavbar @hash-clicked="scrollToHash"/>
+    <TheNavbar/>
     <div class="wrapper">
       <h1
         class="heading heading--title u-margin-top--big"
@@ -32,13 +32,13 @@ export default {
     })
   },
   methods: {
-    scrollToHash: function(target) {
-      const element = document.querySelector(target)
-      console.log('scrollToHash')
-      if (element) {
-        window.scrollTo(0, element.offsetTop)
-      }
-    }
+    // scrollToHash: function(target) {
+    //   const element = document.querySelector(target)
+    //   console.log('scrollToHash')
+    //   if (element) {
+    //     window.scrollTo(0, element.offsetTop)
+    //   }
+    // }
   }
 }
 </script>
@@ -79,6 +79,7 @@ body {
 .wrapper {
   padding: $section-padding;
   background-color: #061017;
+  flex: 1;
 
   @include screen(tablet) {
     padding: $section-padding-tablet;
@@ -86,5 +87,11 @@ body {
   @include screen(desktop) {
     padding: $section-padding-desktop;
   }
+}
+
+.website-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 </style>

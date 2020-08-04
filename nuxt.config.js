@@ -81,6 +81,7 @@ module.exports = {
     publicationsUrl: process.env.PUBLICATIONS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/article?token=4458f0a2d0d2793a50fe20d0e9c519',
     contactsUrl: process.env.CONTACTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/contact?token=4458f0a2d0d2793a50fe20d0e9c519',
     statsUrl: process.env.STATS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+    interestUrl: process.env.STATS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
     awardsUrl: process.env.AWARDS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/award?token=4458f0a2d0d2793a50fe20d0e9c519',
     biosUrl: process.env.BIOS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
     postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519',

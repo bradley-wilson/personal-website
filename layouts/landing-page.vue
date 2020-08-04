@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheAnnouncementBar v-if="announcementBar"/>
-    <TheNavbar @hash-clicked="scrollToHash"/>
+    <TheNavbar/>
     <nuxt/>
     <TheFooter/>
   </div>
@@ -27,13 +27,13 @@ export default {
     })
   },
   methods: {
-    scrollToHash: function(target) {
-      const element = document.querySelector(target)
-      console.log('scrollToHash')
-      if (element) {
-        window.scrollTo(0, element.offsetTop)
-      }
-    }
+    // scrollToHash: function(target) {
+    //   const element = document.querySelector(target)
+    //   console.log('scrollToHash')
+    //   if (element) {
+    //     window.scrollTo(0, element.offsetTop)
+    //   }
+    // }
   }
   // mounted() {
   // }

@@ -52,11 +52,13 @@
           <div class="row">
             <div class="col--phone-6">
               <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/chat-icon.svg"
-                  alt="Chat icon">
-                Consulting
+                <nuxt-link to="/under-construction">
+                  <img
+                    class="service-item__icon"
+                    src="/img/chat-icon.svg"
+                    alt="Chat icon">
+                  Consulting
+                </nuxt-link>
               </div>
             </div>
             <div class="col--phone-6">
@@ -75,47 +77,50 @@
           <div class="row">
             <div class="col--phone-6">
               <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/link-icon.svg"
-                  alt="Link icon">
-                Talent-matching &amp; placement
+                <nuxt-link to="/under-construction">
+                  <img
+                    class="service-item__icon"
+                    src="/img/link-icon.svg"
+                    alt="Link icon">
+                  Talent-matching &amp; placement
+                </nuxt-link>
               </div>
             </div>
             <div class="col--phone-6">
               <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/education-icon.svg"
-                  alt="Education icon">
-                Courses &amp; seminars
+                <nuxt-link to="/under-construction">
+                  <img
+                    class="service-item__icon"
+                    src="/img/education-icon.svg"
+                    alt="Education icon">
+                  Courses &amp; seminars
+              </nuxt-link>
               </div>
             </div>
           </div>
 
           <div
             class="row u-margin-bottom--medium">
-            <div
-              class="col--phone-6"
-              @click="toTarget('#section-awards')"
-            >
-              <a href="/#section-awards">
-                <div class="service-item">
+            <div class="col--phone-6">
+              <div class="service-item">
+                <nuxt-link to="/#section-awards">
                   <img
                     class="service-item__icon"
                     src="/img/award-icon.svg"
-                    alt="Award icon">
+                    alt="Awards icon">
                   Awards
-                </div>
-              </a>
+                </nuxt-link>
+              </div>
             </div>
             <div class="col--phone-6">
               <div class="service-item">
-                <img
-                  class="service-item__icon"
-                  src="/img/stats-icon.svg"
-                  alt="Stats icon">
-                Statistics
+                <nuxt-link to="/under-construction">
+                  <img
+                    class="service-item__icon"
+                    src="/img/stats-icon.svg"
+                    alt="Stats icon">
+                  Statistics
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -408,6 +413,7 @@ export default {
       'https://profiles.impactstory.org/api/person/0000-0002-3730-6295'
     )
     let statsRes = await $axios.$get(`${env.statsUrl}&sort[week]=1`)
+    let interestRes = await $axios.$get(`${env.interestUrl}&sort[year]=1`)
 
     let citationYears = Object.getOwnPropertyNames(
       scrappedData.GoogleScholar.Total
@@ -437,6 +443,7 @@ export default {
       citationValues,
       citationYears,
       stats: statsRes.entries,
+      interest: interestRes.entries,
       readsData: {
         labels: statsRes.entries.map(stat => stat.week),
         datasets: [
@@ -468,11 +475,11 @@ export default {
         ]
       },
       interestData: {
-        labels: statsRes.entries.map(stat => stat.week),
+        labels: interestRes.entries.map(stat => stat.year),
         datasets: [
           {
             label: 'Research Interest',
-            data: statsRes.entries.map(stat => stat.interest),
+            data: interestRes.entries.map(stat => stat.interest),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(0, 240, 170)',
@@ -526,12 +533,12 @@ export default {
     }
   },
   methods: {
-    toTarget: function(target) {
-      if (target) {
-        console.log('Has target')
-        this.$emit('hash-clicked', target)
-      }
-    },
+    // toTarget: function(target) {
+    //   if (target) {
+    //     console.log('Has target')
+    //     this.$emit('hash-clicked', target)
+    //   }
+    // },
     statsMoveForward: function() {
       let statsOffset = -100 * this.statsCounter
       let track = document.getElementById('stats__track')

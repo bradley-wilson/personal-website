@@ -17,7 +17,7 @@
             v-for="(link, id) in links"
             :key="id"
             class="menu__link"
-            @click="toTarget(link.target); closeNav()">
+            @click="closeNav()">
             <a
               :href="link.url"
               class="menu__link--inner"> {{ link.title }} </a>
