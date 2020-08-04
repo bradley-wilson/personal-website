@@ -144,25 +144,11 @@
     <section
       id="section-connections"
       class="section-connections">
-      <div class="container section-connections__container">
+      <div class="container">
         <h1 class="heading heading--primary">Connections</h1>
-        <div class="connections">
-          <div class="connections__buttons">
-            <a
-              href="/work-connections"
-              class="button button--tab">Work connections</a>
-            <a
-              href="/global-readership"
-              class="button button--tab">Global readership</a>
-            <a
-              href="/invited-presentations"
-              class="button button--tab">Invited presentations</a>
-            <a
-              href="/countries-visited"
-              class="button button--tab">Countries visited</a>
-          </div>
-          <div class="connections-thumbnail heading heading--secondary" />
-        </div>
+        <a
+          class="connections-thumbnail heading heading--secondary"
+          href="/connections">Touch to view!</a>
       </div>
     </section>
 
