@@ -150,6 +150,7 @@ function showMarkerData(obj, id) {
 
 var mapWork = document.querySelector('#map__work');
 var mapPresentations = document.querySelector('#map__presentations');
+var mapVisited = document.querySelector('#map__visited');
 var map = document.querySelector('.map');
 
 // Toggle button
@@ -164,8 +165,9 @@ function toggleButton(button, id) {
 function toggleWork(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
-    var countriesVisited = document.getElementById('countries-visited');
-    countryRankings.style.display = 'none';
+    var mapInfoMeta = document.getElementById('map-info__meta');
+    mapInfoMeta.style.display = 'block';
+    mapVisited.style.display = 'none';
     mapInfo.style.display = 'block';
     toggleButton(button, id);
     resetMapColors();
@@ -177,23 +179,25 @@ function toggleWork(button, id) {
 
 function toggleVisited(button, id) {
     var mapInfo = document.getElementById('map__info');
+    var mapInfoMeta = document.getElementById('map-info__meta');
     var countryRankings = document.getElementById('country-rankings');
-    var countriesVisited = document.getElementById('countries-visited');
-    countriesVisited.style.display = 'block';
+    mapVisited.style.display = 'block';
     toggleButton(button, id);
-    toggleMapColors();
+    resetMapColors();
     map.style.visibility = 'visible';
     mapPresentations.style.display = 'none';
     mapWork.style.display = 'none';
-    mapInfo.style.display = 'none';
+    mapInfo.style.display = 'block';
+    mapInfoMeta.style.display = 'none';
     countryRankings.style.display = 'none';
 }
 
 function toggleEngagement(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
-    var countriesVisited = document.getElementById('countries-visited');
-    countryRankings.style.display = 'block';
+    var mapInfoMeta = document.getElementById('map-info__meta');
+    mapInfoMeta.style.display = 'block';
+    mapVisited.style.display = 'none';
     toggleButton(button, id);
     toggleMapColors();
     map.style.visibility = 'visible';
@@ -275,7 +279,8 @@ function resetMapColors() {
 function togglePresentations(button, id) {
     var mapInfo = document.getElementById('map__info');
     var countryRankings = document.getElementById('country-rankings');
-    var countriesVisited = document.getElementById('countries-visited');
+    var mapInfoMeta = document.getElementById('map-info__meta');
+    mapInfoMeta.style.display = 'block';
     countryRankings.style.display = 'none';
     mapInfo.style.display = 'block';
     toggleButton(button, id);
@@ -283,7 +288,7 @@ function togglePresentations(button, id) {
     map.style.visibility = 'visible';
     mapPresentations.style.display = 'initial';
     mapWork.style.display = 'none';
-    countriesVisited.style.display = 'none';
+    mapVisited.style.display = 'none';
 }
 
 // Performs AJAX JSON request from server

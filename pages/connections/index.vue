@@ -2702,7 +2702,7 @@
             <circle class="map__marker" id="uni-rmit" cx="1019.28" cy="553.859" r="7" style="fill:#09a47c;"/>
           </g>
 
-          <g id="map__visited">
+          <g id="map__visited" style="display: none;">
             <g id="map__visited-lines">
               <path class="map__line" d="M306.368,396.323C353.967,336.128 512.777,245.357 598.119,233.496" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
               <path class="map__line" d="M306.368,396.323C351.957,328.272 483.394,230.299 571.647,214.309" style="fill:none;fill-rule:nonzero;stroke:rgb(9,164,124);stroke-width:1.26px;"/>
@@ -2928,7 +2928,7 @@
           <div class="map__column map__column--text">
             <div class="map-info__title heading heading--tertiary"></div>
             <div class="map-info__description text--description">Select a point on the map to get started.</div>
-            <div class="map-info__meta text--metadata"></div>
+            <div class="map-info__meta text--metadata" id="map-info__meta"></div>
           </div>
         </div>
         <div id="country-rankings" class="country-rankings map__info">
@@ -2962,7 +2962,7 @@ export default {
         { src: '/scripts/svg-pan-zoom.min.js', defer: true },
         { src: '/scripts/hammer.js', defer: true },
         { src: '/scripts/map.js', body: true, defer: true },
-        { src: '/scripts/sidebar.js', defer: true }
+        { src: '/scripts/sidebar.js' }
       ]
     }
   },
