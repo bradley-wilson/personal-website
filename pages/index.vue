@@ -534,8 +534,54 @@ export default {
       let thisYear = this.citationValues[this.citationValues.length - 1]
       return thisYear
     },
+    academiaSearches: function() {
+      let searches = scrappedData.Academia.Overview
+      let keywords = []
+      
+      for (let i = 0; i < 5;) {
+        let j = Math.floor(Math.random() * (searches['City_and_State'].length + 1))
+        if (searches['City_and_State'][j] !== keywords[i] && searches['City_and_State'][j] !== '') {
+          keywords.push(searches['City_and_State'][j])
+          i++
+        }
+      }
+
+      for (let i = 0; i < 5;) {
+        let j = Math.floor(Math.random() * (searches.Content.length + 1))
+        if (searches.Content[j] !== keywords[i + 5] && searches.Content[j] !== '') {
+          keywords.push(searches.Content[j])
+          i++
+        }
+      }
+
+      for (let i = 0; i < 5;) {
+        let j = Math.floor(Math.random() * (searches.Country.length + 1))
+        if (searches.Country[j] !== keywords[i + 10] && searches.Country[j] !== '') {
+          keywords.push(searches.Country[j])
+          i++
+        }
+      }
+
+      for (let i = 0; i < 5;) {
+        let j = Math.floor(Math.random() * (searches.Role.length + 1))
+        if (searches.Role[j] !== keywords[i + 15] && searches.Role[j] !== '') {
+          keywords.push(searches.Role[j])
+          i++
+        }
+      }
+
+      for (let i = 0; i < 5;) {
+        let j = Math.floor(Math.random() * (searches.University.length + 1))
+        if (searches.University[j] !== keywords[i + 20] && searches.University[j] !== '') {
+          keywords.push(searches.University[j])
+          i++
+        }
+      }
+
+      return keywords
+    },
     shuffledSearches: function() {
-      let array = this.searches
+      let array = this.academiaSearches
       for (let i = array.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i + 1))
         let temp = array[i];

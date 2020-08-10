@@ -9,14 +9,14 @@
           ref="searches"
           :key="search.index"
         >
-          {{ search.keyword }}
+          {{ search }}
         </strong>
         <strong
           v-for="search in searches"
           ref="searches"
           :key="search.index"
         >
-          {{ search.keyword }}
+          {{ search }}
         </strong>
       </div>
     </div>
