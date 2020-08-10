@@ -75,7 +75,7 @@ export default {
         },
         {
           title: 'Facebook',
-          url: '#',
+          url: 'https://www.facebook.com/bradley.wilson.52056',
           icon: '/img/facebook-logo.png'
         }
       ],
@@ -94,16 +94,12 @@ export default {
             'https://scholar.google.com.co/citations?user=Bhp3eugAAAAJ&hl=en<Paste>'
         },
         {
-          title: 'ResearchID',
+          title: 'Publons',
           url: 'http://www.researcherid.com/rid/S-6002-2016'
         },
         {
           title: 'ORCHID',
           url: 'https://orcid.org/0000-0002-3730-6295'
-        },
-        {
-          title: 'Google+',
-          url: '#'
         }
       ]
     }

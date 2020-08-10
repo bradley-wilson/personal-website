@@ -112,12 +112,15 @@ export default {
   methods: {
     submitContact: function() {
       try {
-        axios.post('/api/contact', {
-          name: this.contact.name,
-          email: this.contact.email,
-          message: this.contact.message
+        axios.post(`${process.env.formUrl}`, {
+          form: {
+            name: this.contact.name,
+            email: this.contact.email,
+            message: this.contact.message
+          }
         })
         this.error = false
+        console.log('Form sent')
       } catch (e) {
         this.error = true
         console.log(e)
@@ -159,6 +162,7 @@ export default {
     &--message {
       height: 15rem;
       color: $light-grey;
+      font-family: $Muli;
 
       @include screen(tablet) {
         height: 25rem;

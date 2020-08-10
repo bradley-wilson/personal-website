@@ -108,7 +108,7 @@ export default {
         },
         {
           title: 'Facebook',
-          url: '#',
+          url: 'https://www.facebook.com/bradley.wilson.52056',
           icon: '/img/facebook-logo.png'
         }
       ]

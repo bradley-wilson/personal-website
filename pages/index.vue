@@ -265,7 +265,7 @@
         </div>
 
         <h1 class="heading heading--primary">Keywords</h1>
-        <Keywords :searches="shuffledSearched"/>
+        <Keywords :searches="shuffledSearches"/>
 
         <div class="online-visitors">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
@@ -537,8 +537,10 @@ export default {
     shuffledSearches: function() {
       let array = this.searches
       for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1))
-        [array[i], array[j]] = [array[j], array[i]]
+        let j = Math.floor(Math.random() * (i + 1))
+        let temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
       }
 
       return array
@@ -957,9 +959,14 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 35rem;
+  width: 90%;
   margin-bottom: 1rem;
-  margin-right: 1.5rem;
+  margin-right: 0;
+
+  @include screen(tablet) {
+    margin-right: 1.5rem;
+    width: 35rem;
+  }
 
   &::last-of-type {
     margin-right: 0;
@@ -1030,6 +1037,13 @@ export default {
     &--country {
       flex-wrap: wrap;
       height: 25rem;
+      flex-direction: row;
+      overflow: scroll;
+
+      @include screen(tablet) {
+        flex-direction: column;
+        overflow: initial;
+      }
     }
   }
 

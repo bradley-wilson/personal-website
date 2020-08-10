@@ -16,8 +16,16 @@
           class="carousel__slide">
           <div class="quote u-center">
             <div class="quote__text subheading"> {{ quote.quote }} </div>
-            <div class="quote__by heading--tertiary"> {{ quote.author ? quote.author : 'Author' }} </div>
-            <div class="quote__place text--description"> {{ quote.role ? quote.role : 'Role' }}, {{ quote.country ? quote.country : 'Country' }} </div>
+            <div
+              class="quote__by heading--tertiary"
+              v-show="quote.author">
+              {{ quote.author ? quote.author : 'Author' }}
+            </div>
+            <div
+              class="quote__place text--description"
+              v-show="quote.role && quote.country">
+              {{ quote.role ? quote.role : 'Role' }}, {{ quote.country ? quote.country : 'Country' }}
+            </div>
           </div>
         </div>
       </div>
@@ -94,7 +102,11 @@ export default {
 <style scoped lang="scss">
 .carousel {
   position: relative;
-  height: 30vh;
+  height: 50vh;
+
+  @include screen(tablet) {
+    height: 30vh;
+  }
 
   &__chevron-left {
     left: 0;

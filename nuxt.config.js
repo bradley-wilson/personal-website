@@ -86,7 +86,8 @@ module.exports = {
     biosUrl: process.env.BIOS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/bios?token=4458f0a2d0d2793a50fe20d0e9c519',
     postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519',
     searchesUrl: process.env.SEARCHES_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/searches?token=4458f0a2d0d2793a50fe20d0e9c519',
-    weekUrl: process.env.WEEK_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519'
+    weekUrl: process.env.WEEK_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+    formUrl: process.env.FORM_URL || 'https://www.bradwilsonphd.com/cockpit/api/forms/submit/contact?token=4458f0a2d0d2793a50fe20d0e9c519'
   },
 
   generate: {
@@ -102,7 +103,7 @@ module.exports = {
   },
 
   serverMiddleware: [
-  '@/api/contact'
+  // '@/api/contact'
   ],
 
   /*

@@ -13,4 +13,5 @@ POSTS_URL=${process.env.POSTS_URL}\n
 URL=${process.env.URL}\n
 SEARCHES_URL=${process.env.SEARCHES_URL}\n
 WEEK_URL=${process.env.WEEK_URL}
+FORM_URL=${process.env.FORM_URL}
 `)
