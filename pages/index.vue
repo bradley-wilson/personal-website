@@ -265,7 +265,7 @@
         </div>
 
         <h1 class="heading heading--primary">Keywords</h1>
-        <Keywords :searches="searches"/>
+        <Keywords :searches="shuffledSearched"/>
 
         <div class="online-visitors">
           <h1 class="heading heading--primary u-block">Online Visitors</h1>
@@ -533,6 +533,15 @@ export default {
     yearCitations: function() {
       let thisYear = this.citationValues[this.citationValues.length - 1]
       return thisYear
+    },
+    shuffledSearches: function() {
+      let array = this.searches
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1))
+        [array[i], array[j]] = [array[j], array[i]]
+      }
+
+      return array
     }
   },
   methods: {
