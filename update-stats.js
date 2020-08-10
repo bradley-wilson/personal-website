@@ -11,12 +11,11 @@ async function updateStats() {
   const scrappedStats = scrappedRes.data
 
   const weekReads = scrappedStats.Researchgate['C4_Weekly change']
-  const yearInterest = scrappedStats.Researchgate['C1_Research interest']
+  const yearInterest = scrappedStats.Researchgate['C1_Research Interest']
 
   const statsData = {
     week: scrappedStats.Researchgate.weekdate,
     reads: weekReads.split('+').pop(),
-    interest: weekInterest.split('+').pop()
   }
 
   const scrappedYear = scrappedStats.Researchgate.weekdate.slice(0,4)
@@ -37,9 +36,9 @@ async function updateStats() {
 
   if (interestData.year !== currentInterest[currentInterest.length - 1].year) {
     await axios.post(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+      'https://www.bradwilsonphd.com/cockpit/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
       {
-        data: statsData
+        data: interestData
       }
     )
   }

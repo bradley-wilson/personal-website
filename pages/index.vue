@@ -222,7 +222,7 @@
                     :chartdata="interestData"
                     class="stats__graph"/>
                   <div class="stats__circle">
-                    <span class="stats__value stats__value--interest"> {{ scrappedData.Researchgate['C1_Weekly change'] }} </span>
+                    <span class="stats__value stats__value--interest"> {{ scrappedData.Researchgate['C1_Research Interest'].split('Total:  ').pop() }} </span>
                     <span class="stats__description">Research interest this year</span>
                   </div>
                 </div>
@@ -445,47 +445,50 @@ export default {
       stats: statsRes.entries,
       interest: interestRes.entries,
       readsData: {
-        labels: statsRes.entries.map(stat => stat.week),
+        labels: statsRes.entries.slice(statsRes.entries.length - 7,statsRes.entries.length).map(stat => stat.week),
         datasets: [
           {
             label: 'Reads',
-            data: statsRes.entries.map(stat => stat.reads),
+            data: statsRes.entries.slice(statsRes.entries.length - 7,statsRes.entries.length).map(stat => stat.reads),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(255, 139, 14)',
             lineTension: 0.2,
-            pointHitRadius: 20,
-            borderWidth: 2
+            pointHitRadius: 60,
+            pointRadius: 5,
+            borderWidth: 4
           }
         ]
       },
       citationsData: {
-        labels: citationYears,
+        labels: citationYears.slice(citationYears.length - 7,citationYears.length),
         datasets: [
           {
             label: 'Citations',
-            data: citationValues,
+            data: citationValues.slice(citationValues.length - 7,citationValues.length),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(66, 75, 175, 0.2)',
             pointBackgroundColor: 'rgb(0, 172, 246)',
             lineTension: 0.2,
-            pointHitRadius: 20,
-            borderWidth: 2
+            pointHitRadius: 60,
+            pointRadius: 5,
+            borderWidth: 4
           }
         ]
       },
       interestData: {
-        labels: interestRes.entries.map(stat => stat.year),
+        labels: interestRes.entries.slice(interestRes.entries.length - 7,interestRes.entries.length).map(stat => stat.year),
         datasets: [
           {
             label: 'Research Interest',
-            data: interestRes.entries.map(stat => stat.interest),
+            data: interestRes.entries.slice(interestRes.entries.length - 7,interestRes.length).map(stat => stat.interest),
             borderColor: 'rgb(102, 113, 124)',
             // backgroundColor: 'rgba(50, 164, 123, 0.2)',
             pointBackgroundColor: 'rgb(0, 240, 170)',
             lineTension: 0.2,
-            pointHitRadius: 20,
-            borderWidth: 2
+            pointHitRadius: 60,
+            pointRadius: 5,
+            borderWidth: 4
           }
         ]
       }

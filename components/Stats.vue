@@ -26,6 +26,9 @@ export default {
             right: 60,
             left: 30
           }
+        },
+        legend: {
+          display: false
         }
       }
     }
