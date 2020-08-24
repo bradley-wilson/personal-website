@@ -1,11 +1,16 @@
 <template>
-  <div class="badge">
+  <div
+    @mouseover="hover = true"
+    @mouseleave="hover = false"
+    class="badge">
     <img
       :src="'/img/' + badge.name + '.png'"
       alt="Impact Story Badge"
       class="badge__icon">
     <div class="badge__title heading--tertiary"> {{ badge.display_name }} </div>
-    <!-- <div class="badge__description text--description"> {{ badge.description + ' ' }} <span v-html="badge.context" /></div> -->
+    <div
+      v-if="hover"
+      class="badge__description text--description"> {{ badge.description + ' ' }} <span v-html="badge.context" /></div>
   </div>
 </template>
 
@@ -17,6 +22,11 @@ export default {
       default: function() {
         return { message: 'initiated' }
       }
+    }
+  },
+  data() {
+    return {
+      hover: false
     }
   }
 }
@@ -41,6 +51,14 @@ export default {
 
   &__title {
     color: white !important;
+  }
+
+  &__description {
+    background-color: $black;
+    padding: 2rem;
+    position: absolute;
+    max-width: 20rem;
+    top: 20rem;
   }
 }
 </style>
