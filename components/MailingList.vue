@@ -1,47 +1,51 @@
 <template>
   <div class="container">
-    <h1 class="heading heading--primary">Contact</h1>
-
     <div id="contact-form__wrapper"> 
+      <h2
+        class="heading heading--secondary u-margin-top--big"
+        style="text-align: center">Subscribe to our mailing list:</h2>
       <form
-        id="contact-form"
+        id="newsletter"
         class="form"
+        action="https://bradwilsonphd.us7.list-manage.com/subscribe/post"
         method="post"
-        accept-charset="UTF-8"
-        @submit.prevent="submitContact">
+        accept-charset="UTF-8">
         <input
-          id="name"
-          v-model="contact.name"
-          type="text"
-          class="form__input form__input--name"
-          name="name"
-          required
-          placeholder="Name">
+          type="hidden"
+          name="u"
+          value="0ca2187b7102f72e754391083">
         <input
-          id="email"
-          v-model="contact.email"
+          type="hidden"
+          name="id"
+          value="eede23b3c3">
+        <input
+          id="MERGE0"
+          v-model="newsletter.email"
           type="email"
-          class="form__input form__input--email"
-          name="email"
+          class="form__input form__input--newsletter"
+          name="MERGE0"
+          autocapitalize="off"
+          autocorrect="off"
+          size="25"
+          value=""
           required
           placeholder="Email">
-        <textarea
-          id="message"
-          v-model="contact.message"
-          class="form__input form__input--message"
-          name="message"
-          placeholder="Message" />
-
+        <input
+          id="sooner"
+          type="checkbox"
+          name="sooner"
+          value="true">
+        <label
+          for="sooner"
+          class="form__label">Get content sooner</label>
         <div style="text-align: center">
-          <button
+          <input
             class="button button--primary"
-            type="submit">Submit</button>
+            type="submit"
+            name="submit"
+            value="Sign up">
         </div>
       </form>
-
-      <div
-        :class="{'form__message--visible': contactMessage, 'form__message--hidden': !contactMessage}"
-        class="form__message text--description"> {{ formMessage }} </div>
     </div>
   </div>
 </template>
@@ -102,6 +106,12 @@ export default {
 .form {
   max-width: 60rem;
   margin: 0 auto;
+
+  &__label {
+    font-size: 1.6rem;
+    color: $light-grey;
+    margin-left: .5rem;
+  }
 
   &__input {
     margin-bottom: 2rem;

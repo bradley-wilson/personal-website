@@ -27,6 +27,10 @@
       </div>
     </section>
 
+    <section class="section-mailing-list">
+      <MailingList />
+    </section>
+
     <!-- About section -------------------------------------------------->
     <section
       id="section-about"
@@ -187,6 +191,11 @@
                   <span class="scoreboard-item__color scoreboard-item__color--3" />
                   I10-Index
                   <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.Indicei10Total }} </span>
+                </div>
+                <div class="scoreboard-data__item">
+                  <span class="scoreboard-item__color scoreboard-item__color--4" />
+                  Reads
+                  <span class="scoreboard-item__value"> {{ scrappedData.Researchgate["C4_Reads"].split('Total: ').pop() }} </span>
                 </div>
               </div>
             </div>
@@ -395,6 +404,7 @@ import HotSaleModal from '@/components/HotSaleModal'
 import Award from '@/components/Award'
 import Badge from '@/components/Badge'
 import Keywords from '@/components/Keywords'
+import MailingList from '@/components/MailingList'
 import markdownIt from 'markdown-it'
 import scrappedData from '@/assets/scrapped-data'
 
@@ -506,7 +516,8 @@ export default {
     HotSaleModal,
     Award,
     Badge,
-    Keywords
+    Keywords,
+    MailingList
   },
   data() {
     return {
@@ -626,6 +637,11 @@ export default {
 .section-banner {
   height: 90vh;
   position: relative;
+}
+
+.section-mailing-list {
+  background-color: $light-blue;  
+  padding-bottom: 6rem;
 }
 
 // ABOUT -----------------------------------------------------------
@@ -1143,6 +1159,9 @@ export default {
     }
     &--3 {
       background-color: #1244e5;
+    }
+    &--4 {
+      background-color: #ff8b0e;
     }
   }
 }
