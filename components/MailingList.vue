@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .form {
   max-width: 60rem;
   margin: 0 auto;

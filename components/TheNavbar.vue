@@ -1,6 +1,5 @@
 <template>
   <header class="header">
-    <div class="container">
       <NavigationLogo/>
 
       <!-- Navigation icon for mobile -------------------------------------------->
@@ -34,7 +33,6 @@
           </div>
         </div>
       </nav>
-    </div>
   </header>
 </template>
 
@@ -62,6 +60,8 @@ export default {
         { title: 'Connections', url: '/#section-connections' },
         { title: 'Publications', url: '/publications' },
         { title: 'Team', url: '/team' },
+        { title: 'Bookclub', url: '/under-construction' },
+        { title: 'Shop', url: '/under-construction' },
         { title: 'Blog', url: '/blog' },
         {
           title: 'Contact',
@@ -156,6 +156,7 @@ export default {
 .header {
   position: absolute;
   width: 100%;
+  padding: 1rem;
   z-index: 9;
 
   &__menu {

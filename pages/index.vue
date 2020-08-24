@@ -375,6 +375,10 @@
     <section
       id="section-contact"
       class="section-contact">
+      <BGVideo 
+        poster="img/feedback-video.jpg"
+        mp4-src="/videos/bg_lights_low.mp4"
+        webm-src="/videos/bg_lights_low.webm"/>
       <Contact/>
     </section>
 
@@ -1224,7 +1228,7 @@ export default {
 // CONTACT SECTION -------------------------------------
 .section-contact {
   padding: $section-padding;
-  background-color: #061017;
+  position: relative;
 
   @include screen(tablet) {
     padding: $section-padding-tablet;

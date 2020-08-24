@@ -26,21 +26,29 @@ async function updateStats() {
   }
 
   if (statsData.week !== currentStats[currentStats.length - 1].week) {
-    await axios.post(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-      {
-        data: statsData
-      }
-    )
+    try {
+      await axios.post(
+        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+        {
+          data: statsData
+        }
+      )
+    } catch (err) {
+      console.error(err.message)
+    }
   }
 
   if (interestData.year !== currentInterest[currentInterest.length - 1].year) {
-    await axios.post(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
-      {
-        data: interestData
-      }
-    )
+    try {
+      await axios.post(
+        'https://www.bradwilsonphd.com/cockpit/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
+        {
+          data: interestData
+        }
+      )
+    } catch (err) {
+      console.error(err.message)
+    }
   }
 
   let data = JSON.stringify(scrappedStats)

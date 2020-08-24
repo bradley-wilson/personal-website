@@ -98,7 +98,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .form {
   max-width: 60rem;
   margin: 0 auto;
@@ -107,7 +107,7 @@ export default {
     margin-bottom: 2rem;
     width: 100%;
     height: 5rem;
-    background-color: rgba($black, 0.6);
+    background-color: $black;
     padding: 1.5rem;
     border: 0.5px solid white;
     border-radius: 4px;
@@ -134,7 +134,7 @@ export default {
 
   &__message {
     padding: 4rem;
-    background-color: rgba($black, 0.6);
+    background-color: $black;
     text-align: center;
 
     &--visible {

@@ -10,7 +10,7 @@
             v-for="(link, id) in socialLinks"
             :key="id"
             :href="link.url"
-            :style="{backgroundImage: 'url(https://bradwilsonphd.com' + link.icon + ')'}"
+            :style="{backgroundImage: 'url(' + link.icon + ')'}"
             :title="link.title"
             class="social-media__button"/>
         </div>
