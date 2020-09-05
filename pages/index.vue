@@ -719,7 +719,7 @@ export default {
     }
 
     &__icon {
-      height: 4rem;
+      width: 4rem;
       display: block;
       margin: 0 auto 1.5rem auto;
 

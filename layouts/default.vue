@@ -1,5 +1,6 @@
 <template>
   <div class="website-content">
+    <cookie-law theme="dark-lime" />
     <TheAnnouncementBar v-if="announcementBar"/>
     <TheNavbar/>
     <div class="wrapper">
@@ -21,7 +22,7 @@ export default {
   components: {
     TheAnnouncementBar,
     TheNavbar,
-    TheFooter
+    TheFooter,
   },
   data() {
     return { announcementBar: '' }

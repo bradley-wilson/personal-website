@@ -29,6 +29,7 @@
     "nuxt-sass-resources-loader": "^2.0.5",
     "validator": "^13.1.1",
     "vue-chartjs": "^3.5.0",
+    "vue-cookie-law": "^1.13.3",
     "xss-filters": "^1.2.7"
   },
   "devDependencies": {
