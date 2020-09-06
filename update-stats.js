@@ -3,7 +3,7 @@ const axios = require('axios')
 
 async function updateStats() {
   try {
-    const scrappedRes = await axios.get('http://ec2-3-22-118-235.us-east-2.compute.amazonaws.com/data.json')
+    const scrappedRes = await axios.get('http://ec2-3-133-92-96.us-east-2.compute.amazonaws.com/data.json')
     return scrappedRes
   } catch (err) {
     console.error(err.message)
