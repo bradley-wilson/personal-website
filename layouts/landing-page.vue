@@ -1,5 +1,6 @@
 <template>
   <div>
+    <CookiesBanner />
     <TheAnnouncementBar v-if="announcementBar"/>
     <TheNavbar/>
     <nuxt/>
@@ -11,12 +12,14 @@
 import TheAnnouncementBar from '@/components/TheAnnouncementBar'
 import TheNavbar from '@/components/TheNavbar'
 import TheFooter from '@/components/TheFooter'
+import CookiesBanner from '@/components/CookiesBanner'
 
 export default {
   components: {
     TheAnnouncementBar,
     TheNavbar,
-    TheFooter
+    TheFooter,
+    CookiesBanner,
   },
   data() {
     return { announcementBar: '' }
