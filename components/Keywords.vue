@@ -56,6 +56,9 @@ export default {
     width: 100vw;
     background-color: $black;
     padding: 0.5rem 0;
+    position: absolute;
+    left: 0;
+    margin: 2.5rem 0;
   }
 
   &__track {

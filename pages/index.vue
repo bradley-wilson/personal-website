@@ -351,11 +351,31 @@
             Online Visitors
           </h1>
           <div class="online-visitors__container">
-            <script
-              id="clustrmaps"
-              type="text/javascript"
-              src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g"
-            />
+            <div class="clustrmaps__container">
+              <div class="clustrmaps__border">
+                <div class="clustrmaps__frame">
+                  <script
+                    id="clustrmaps"
+                    type="text/javascript"
+                    src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g"
+                  />
+                </div>
+                <div class="clustrmaps__info">
+                  <div class="clustrmaps__item">
+                    <span class="clustrmaps__dot clustrmaps__dot--yellow" />
+                    Recent visits
+                  </div>
+                  <div class="clustrmaps__item">
+                    <span class="clustrmaps__dot clustrmaps__dot--red" />
+                    Visits in the last 8 months
+                  </div>
+                </div>
+              </div>
+              <div class="clustrmaps__total">
+                Total page views
+                <span class="clustrmaps__total-number">1,858</span>
+              </div>
+            </div>
             <div class="scoreboard__container scoreboard__container--country">
               <div class="scoreboard scoreboard--country">
                 <div class="scoreboard__header scoreboard__header--country">
@@ -1094,7 +1114,7 @@ export default {
 }
 
 .online-visitors {
-  margin-top: 8rem;
+  margin-top: 15rem;
   width: 100%;
 
   &__container {
@@ -1103,6 +1123,68 @@ export default {
 
     @include screen(tablet) {
       flex-direction: row;
+    }
+  }
+}
+
+.clustrmaps {
+  &__border {
+    padding: 1.5rem;
+    background-color: #2B3B4C;
+    border-radius: 10px;
+  }
+
+  &__frame {
+    background-color: #008BB7;
+    border-radius: 5px;
+    padding: .7rem;
+    overflow: hidden;
+  }
+
+  &__info {
+    background: $dark-blue;
+    margin-top: 1.5rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 1rem .5rem;
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    font-size: 1.2rem;
+  }
+
+  &__dot {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    border-radius: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+    &--yellow {
+      background-color: #EDA73A;
+    }
+
+    &--red {
+      background-color: #FF1D25;
+    }
+  }
+
+  &__total {
+    font-family: $Bebas;
+    font-size: 3.2rem;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    &-number {
+      background-color: #00EEA1;
+      padding: .2rem 3rem;
+      border-radius: 50px;
+      color: black;
     }
   }
 }
@@ -1235,6 +1317,7 @@ export default {
 
     &--country {
       background-color: #4eefa1;
+      color: black;
     }
   }
 
