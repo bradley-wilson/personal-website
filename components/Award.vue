@@ -4,19 +4,26 @@
       v-if="award.type === 'Normal'"
       src="/img/laurel.svg"
       alt="Laurel icon"
-      class="award__icon">
+      class="award__icon"
+    />
     <img
       v-if="award.type === 'Financial'"
       src="/img/laurel-money.svg"
       alt="Laurel icon"
-      class="award__icon">
+      class="award__icon"
+    />
     <img
       v-if="award.type === 'Academic'"
       src="/img/laurel-hat.svg"
       alt="Laurel icon"
-      class="award__icon">
-    <div class="award__title heading--tertiary"> {{ award.title }} </div>
-    <div class="award__description text--description"> {{ award.description }} </div>
+      class="award__icon"
+    />
+    <div class="award__title heading--tertiary">
+      {{ award.title }}
+    </div>
+    <div class="award__description text--description">
+      {{ award.description }}
+    </div>
   </div>
 </template>
 
@@ -25,11 +32,11 @@ export default {
   props: {
     award: {
       type: Object,
-      default: function() {
+      default: function () {
         return { message: 'initiated' }
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

@@ -1,11 +1,12 @@
 <template>
   <a
-    href="/"
-    class="logo">
+href="/"
+class="logo">
     <img
       class="logo__content"
       src="/img/brad-wilson-logo-white.svg"
-      alt="Brad Wilson logo">
+      alt="Brad Wilson logo"
+    >
   </a>
 </template>
 

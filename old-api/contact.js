@@ -9,12 +9,12 @@ app.use(express.json())
 
 app.post('/', function (req, res) {
   sendMail(req.body.name, req.body.email, req.body.message)
-  res.status(200).json({ 'message': 'Success!' })
+  res.status(200).json({ message: 'Success!' })
 })
 
 export default {
   path: '/api/contact',
-  handler: app
+  handler: app,
 }
 
 const sendMail = (name, email, message) => {
@@ -22,17 +22,18 @@ const sendMail = (name, email, message) => {
     service: 'Zoho',
     auth: {
       user: 'contact@bradwilsonphd.com',
-      pass: 'wade$1Novel$Sloe9'
-    }
+      pass: 'wade$1Novel$Sloe9',
+    },
   })
   transporter.sendMail({
     from: name + '<contact@bradwilsonphd.com>',
     replyTo: {
       name: name,
-      address: email
+      address: email,
     },
-    to: 'admin@bradwilsonphd.com, info@bradwilsonphd.com, team@bradwilsonphd.com',
+    to:
+      'admin@bradwilsonphd.com, info@bradwilsonphd.com, team@bradwilsonphd.com',
     subject: 'New contact form message',
-    text: message
+    text: message,
   })
 }

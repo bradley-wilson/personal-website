@@ -2,17 +2,25 @@
   <div class="events__container">
     <div class="event row">
       <div class="col--phone-4 col--tablet-3">
-        <div class="event__date">{{ event.date }}</div>
+        <div class="event__date">
+          {{ event.date }}
+        </div>
         <a
-          :href="event.url"
-          class="event__button">View more</a>
+:href="event.url"
+class="event__button">View more</a>
       </div>
       <div class="col--phone-8 col--tablet-9">
-        <div class="event__title heading--tertiary">{{ event.title }}</div>
-        <div class="event__description text--description">{{ event.description }}</div>
-        <div class="event__location text--metadata">{{ event.location }}</div>
+        <div class="event__title heading--tertiary">
+          {{ event.title }}
+        </div>
+        <div class="event__description text--description">
+          {{ event.description }}
+        </div>
+        <div class="event__location text--metadata">
+          {{ event.location }}
+        </div>
       </div>
-    </div> 
+    </div>
   </div>
 </template>
 
@@ -21,11 +29,11 @@ export default {
   props: {
     event: {
       type: Object,
-      default: function() {
+      default: function () {
         return { message: 'initiated' }
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

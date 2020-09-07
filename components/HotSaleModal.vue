@@ -1,16 +1,22 @@
 <template>
   <div
-    id="hot-sale-modal"
-    class="modal modal--sticky">
+id="hot-sale-modal"
+class="modal modal--sticky">
     <div class="modal__content">
       <button
         class="button button--close"
-        @click="closeModal('hot-sale-modal')" />
-      <h1 class="heading heading--promo u-margin-bottom--none">Hot sale<br>get it now</h1>
+        @click="closeModal('hot-sale-modal')"
+      />
+      <h1 class="heading heading--promo u-margin-bottom--none">
+        Hot sale<br >get it now
+      </h1>
       <a href="#booking-modal">
         <button
           class="button button--bar"
-          @click="closeModal('hot-sale-modal')">Book a meeting</button>
+          @click="closeModal('hot-sale-modal')"
+        >
+          Book a meeting
+        </button>
       </a>
     </div>
   </div>
@@ -19,7 +25,7 @@
 <script>
 export default {
   methods: {
-    closeModal: function(id) {
+    closeModal: function (id) {
       let modal = document.getElementById(id)
 
       switch (id) {
@@ -33,7 +39,7 @@ export default {
           modalCalendly.style.display = 'none'
           break
       }
-    }
-  }
+    },
+  },
 }
 </script>

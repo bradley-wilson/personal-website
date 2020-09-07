@@ -3,30 +3,56 @@
     <div
       v-for="publication in publications"
       :key="publication.id"
-      class="row publication publication--expanded">
+      class="row publication publication--expanded"
+    >
       <a
-        :href="publication.url"
-        target="_blank">
+:href="publication.url"
+target="_blank">
         <div class="col--phone-12 col--desktop-8">
           <div
-            :style="[ publication.image.path ? { backgroundImage: 'url(https://bradwilsonphd.com/' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
-            class="publication__thumbnail"/>
+            :style="[
+              publication.image.path
+                ? {
+                  backgroundImage:
+                    'url(https://bradwilsonphd.com/' +
+                    publication.image.path +
+                    ')',
+                }
+                : { backgroundImage: 'url(/img/publication-thumbnail.svg)' },
+            ]"
+            class="publication__thumbnail"
+          />
           <!-- <div class="publication__info"> -->
-          <div class="publication__title heading heading--tertiary"> {{ publication.title }} </div>
-          <div class="publication__abstract text--description"> {{ publication.abstract ? truncateAbstract(publication.abstract) : 'Abstract unavailable.' }} </div>
-          <div class="publication__authors text--metadata"> {{ publication.authors }} </div>
+          <div class="publication__title heading heading--tertiary">
+            {{ publication.title }}
+          </div>
+          <div class="publication__abstract text--description">
+            {{
+              publication.abstract
+                ? truncateAbstract(publication.abstract)
+                : 'Abstract unavailable.'
+            }}
+          </div>
+          <div class="publication__authors text--metadata">
+            {{ publication.authors }}
+          </div>
           <!-- </div>  -->
         </div>
         <div class="col--phone-12 col--desktop-4">
           <div class="publication__side-info">
-            <div class="publication__year text--metadata"> {{ publication.year }} </div>
+            <div class="publication__year text--metadata">
+              {{ publication.year }}
+            </div>
             <div
-              v-if="publication.tags"
-              class="publication__tags">
+v-if="publication.tags"
+class="publication__tags">
               <div
                 v-for="(tag, index) in publication.tags"
                 :key="index"
-                class="publication__tag"> {{ tag }} </div>
+                class="publication__tag"
+              >
+                {{ tag }}
+              </div>
             </div>
           </div>
         </div>
@@ -40,21 +66,18 @@ export default {
   props: {
     publications: {
       type: Array,
-      default: function() {
+      default: function () {
         return { message: 'publications' }
-      }
-    }
+      },
+    },
   },
   methods: {
-    truncateAbstract: function(str) {
-      let abs = str
-        .split(/\s+/)
-        .slice(0, 40)
-        .join(' ')
+    truncateAbstract: function (str) {
+      let abs = str.split(/\s+/).slice(0, 40).join(' ')
       abs += '...'
       return abs
-    }
-  }
+    },
+  },
 }
 </script>
 

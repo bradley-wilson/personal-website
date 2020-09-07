@@ -1,5 +1,2 @@
 # Ignore files
-pages/countries-visited/index.vue
-pages/global-readership/index.vue
-pages/invited-presentations/index.vue
-pages/work-connections/index.vue
+pages/connections/index.vue

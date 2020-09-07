@@ -1,14 +1,15 @@
 <template>
   <div>
     <div
-      id="publications__tab-bar"
-      class="tab-bar tab-bar--scrollable">
+id="publications__tab-bar"
+class="tab-bar tab-bar--scrollable">
       <button
         v-for="tab in tabs"
         :key="tab"
-        :class="[{'button--active': currentTab === tab }]"
+        :class="[{ 'button--active': currentTab === tab }]"
         class="button button--tab"
-        @click="currentTab = tab">
+        @click="currentTab = tab"
+      >
         {{ tab }}
       </button>
     </div>
@@ -17,18 +18,40 @@
       <div
         v-for="publication in selectedPublications"
         :key="publication.id"
-        class="publication publication--expanded">
+        class="publication publication--expanded"
+      >
+        >
         <a
-          :href="publication.url"
-          target="_blank">
+:href="publication.url"
+target="_blank">
           <div
-            :style="[ publication.image.path ? { backgroundImage: 'url(https://bradwilsonphd.com/' + publication.image.path + ')' } : { backgroundImage: 'url(/img/publication-thumbnail.svg)' } ]"
-            class="publication__thumbnail"/>
+            :style="[
+              publication.image.path
+                ? {
+                  backgroundImage:
+                    'url(https://bradwilsonphd.com/' +
+                    publication.image.path +
+                    ')',
+                }
+                : { backgroundImage: 'url(/img/publication-thumbnail.svg)' },
+            ]"
+            class="publication__thumbnail"
+          />
           <div class="publication__info">
-            <div class="publication__title heading heading--tertiary"> {{ publication.title }} </div>
-            <div class="publication__abstract text--description"> {{ publication.abstract ? truncateAbstract(publication.abstract) : 'Abstract unavailable.' }} </div>
-            <div class="publication__authors text--metadata"> {{ publication.authors }} </div>
-          </div> 
+            <div class="publication__title heading heading--tertiary">
+              {{ publication.title }}
+            </div>
+            <div class="publication__abstract text--description">
+              {{
+                publication.abstract
+                  ? truncateAbstract(publication.abstract)
+                  : 'Abstract unavailable.'
+              }}
+            </div>
+            <div class="publication__authors text--metadata">
+              {{ publication.authors }}
+            </div>
+          </div>
         </a>
       </div>
     </div>
@@ -39,32 +62,32 @@ export default {
   props: {
     publications: {
       type: Array,
-      default: function() {
+      default: function () {
         return { message: 'publications' }
-      }
-    }
+      },
+    },
   },
   data() {
     return {
       tabs: ['Journals', 'Book chapters', 'Conferences', 'Other'],
       currentTab: 'Journals',
-      results: 6
+      results: 6,
     }
   },
   computed: {
-    journals: function() {
+    journals: function () {
       return this.filterPublications('Journal')
     },
-    bookChapters: function() {
+    bookChapters: function () {
       return this.filterPublications('Book chapter')
     },
-    conferences: function() {
+    conferences: function () {
       return this.filterPublications('Conference')
     },
-    other: function() {
+    other: function () {
       return this.filterPublications('Other')
     },
-    selectedPublications: function() {
+    selectedPublications: function () {
       let selection
       switch (this.currentTab) {
         case 'Journals':
@@ -83,18 +106,15 @@ export default {
           selection = this.journals
       }
       return selection
-    }
+    },
   },
   methods: {
-    truncateAbstract: function(str) {
-      let abs = str
-        .split(/\s+/)
-        .slice(0, 20)
-        .join(' ')
+    truncateAbstract: function (str) {
+      let abs = str.split(/\s+/).slice(0, 20).join(' ')
       abs += '...'
       return abs
     },
-    filterPublications: function(type) {
+    filterPublications: function (type) {
       let publicationsFiltered = []
       const results = this.results
       for (
@@ -106,8 +126,8 @@ export default {
           publicationsFiltered.push(this.publications[i])
         }
       return publicationsFiltered
-    }
-  }
+    },
+  },
 }
 </script>
 

@@ -1,18 +1,23 @@
 <template>
   <div class="contact__container">
     <div
-      v-for="contact in contacts"
-      :key="contact.id"
-      class="contact">
+v-for="contact in contacts"
+:key="contact.id" class="contact">
       <a
-        :href="contact.url"
-        target="_blank">
+:href="contact.url"
+target="_blank">
         <div
-          :style="{backgroundImage: 'url(https://bradwilsonphd.com/' + contact.image.path + ')'}"
-          class="contact__picture"/>
-        <div class="contact__name heading--tertiary"> {{ contact.name }} </div>
-      </a> 
-      <div class="contact__description text--description"> {{ contact.role }} </div>
+          :style="{
+            backgroundImage:
+              'url(https://bradwilsonphd.com/' + contact.image.path + ')',
+          }"
+          class="contact__picture"
+        />
+        <div class="contact__name heading--tertiary">{{ contact.name }}</div>
+      </a>
+      <div class="contact__description text--description">
+        {{ contact.role }}
+      </div>
     </div>
   </div>
 </template>
@@ -22,11 +27,11 @@ export default {
   props: {
     contacts: {
       type: Array,
-      default: function() {
+      default: function () {
         return { message: 'contacts' }
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

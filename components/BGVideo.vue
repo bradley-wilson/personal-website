@@ -7,13 +7,13 @@
       loop
       playsinline
       webkit-playsinline
-      class="bg-video__content">
+      class="bg-video__content"
+    >
+      <source :src="mp4Src" type="video/mp4" />
       <source
-        :src="mp4Src"
-        type="video/mp4">
-      <source
-        :src="webmSrc"
-        type="video/webm">
+      :src="webmSrc"
+      type="video/webm"
+      />
     </video>
   </div>
 </template>
@@ -23,17 +23,17 @@ export default {
   props: {
     posterSrc: {
       type: String,
-      default: 'none'
+      default: 'none',
     },
     mp4Src: {
       type: String,
-      default: 'none'
+      default: 'none',
     },
     webmSrc: {
       type: String,
-      default: 'none'
-    }
-  }
+      default: 'none',
+    },
+  },
 }
 </script>
 

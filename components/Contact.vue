@@ -1,14 +1,17 @@
 <template>
   <div class="container">
-    <h1 class="heading heading--primary">Contact</h1>
+    <h1 class="heading heading--primary">
+      Contact
+    </h1>
 
-    <div id="contact-form__wrapper"> 
+    <div id="contact-form__wrapper">
       <form
         id="contact-form"
         class="form"
         method="post"
         accept-charset="UTF-8"
-        @submit.prevent="submitContact">
+        @submit.prevent="submitContact"
+      >
         <input
           id="name"
           v-model="contact.name"
@@ -16,7 +19,8 @@
           class="form__input form__input--name"
           name="name"
           required
-          placeholder="Name">
+          placeholder="Name"
+        >
         <input
           id="email"
           v-model="contact.email"
@@ -24,24 +28,34 @@
           class="form__input form__input--email"
           name="email"
           required
-          placeholder="Email">
+          placeholder="Email"
+        >
         <textarea
           id="message"
           v-model="contact.message"
           class="form__input form__input--message"
           name="message"
-          placeholder="Message" />
+          placeholder="Message"
+        />
 
-        <div style="text-align: center">
+        <div style="text-align: center;">
           <button
-            class="button button--primary"
-            type="submit">Submit</button>
+class="button button--primary"
+type="submit">
+            Submit
+          </button>
         </div>
       </form>
 
       <div
-        :class="{'form__message--visible': contactMessage, 'form__message--hidden': !contactMessage}"
-        class="form__message text--description"> {{ formMessage }} </div>
+        :class="{
+          'form__message--visible': contactMessage,
+          'form__message--hidden': !contactMessage,
+        }"
+        class="form__message text--description"
+      >
+        {{ formMessage }}
+      </div>
     </div>
   </div>
 </template>
@@ -55,31 +69,31 @@ export default {
       contact: {
         name: '',
         email: '',
-        message: ''
+        message: '',
       },
       newsletter: {
-        email: ''
+        email: '',
       },
       contactError: false,
-      contactMessage: false
+      contactMessage: false,
     }
   },
   computed: {
-    formMessage: function() {
+    formMessage: function () {
       return this.contactError
         ? 'Submission failed. Try again.'
         : "Submission successful. We'll be in contact shortly."
-    }
+    },
   },
   methods: {
-    submitContact: function() {
+    submitContact: function () {
       try {
         axios.post(`${process.env.formUrl}`, {
           form: {
             name: this.contact.name,
             email: this.contact.email,
-            message: this.contact.message
-          }
+            message: this.contact.message,
+          },
         })
         this.error = false
         console.log('Form sent')
@@ -89,12 +103,12 @@ export default {
       }
       this.toggleContactMessage()
     },
-    toggleContactMessage: function() {
+    toggleContactMessage: function () {
       let form = document.getElementById('contact-form')
       form.style.display = 'none'
       this.contactMessage = true
-    }
-  }
+    },
+  },
 }
 </script>
 

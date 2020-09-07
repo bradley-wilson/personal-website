@@ -1,16 +1,18 @@
 <template>
   <div
-    @mouseover="hover = true"
-    @mouseleave="hover = false"
-    class="badge">
+@mouseover="hover = true"
+@mouseleave="hover = false" class="badge">
     <img
       :src="'/img/' + badge.name + '.png'"
       alt="Impact Story Badge"
-      class="badge__icon">
-    <div class="badge__title heading--tertiary"> {{ badge.display_name }} </div>
-    <div
-      v-if="hover"
-      class="badge__description text--description"> {{ badge.description + ' ' }} <span v-html="badge.context" /></div>
+      class="badge__icon"
+    >
+    <div class="badge__title heading--tertiary">
+      {{ badge.display_name }}
+    </div>
+    <div v-if="hover" class="badge__description text--description">
+      {{ badge.description + ' ' }} <span v-html="badge.context" />
+    </div>
   </div>
 </template>
 
@@ -19,16 +21,16 @@ export default {
   props: {
     badge: {
       type: Object,
-      default: function() {
+      default: function () {
         return { message: 'initiated' }
-      }
-    }
+      },
+    },
   },
   data() {
     return {
-      hover: false
+      hover: false,
     }
-  }
+  },
 }
 </script>
 

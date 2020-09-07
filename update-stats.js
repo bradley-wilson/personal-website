@@ -3,21 +3,27 @@ const axios = require('axios')
 
 async function updateStats() {
   try {
-    const scrappedRes = await axios.get('http://ec2-3-133-92-96.us-east-2.compute.amazonaws.com/data.json')
+    const scrappedRes = await axios.get(
+      'http://ec2-3-133-92-96.us-east-2.compute.amazonaws.com/data.json'
+    )
     return scrappedRes
   } catch (err) {
     console.error(err.message)
   }
 
   try {
-    const statsRes = await axios.get('https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519')
+    const statsRes = await axios.get(
+      'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519'
+    )
     return statsRes
   } catch (err) {
     console.error(err.message)
   }
 
   try {
-    const interestRes = await axios.get('https://www.bradwilsonphd.com/cockpit/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519')
+    const interestRes = await axios.get(
+      'https://www.bradwilsonphd.com/cockpit/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519'
+    )
     return interestRes
   } catch (err) {
     console.error(err.message)
@@ -35,11 +41,11 @@ async function updateStats() {
     reads: weekReads.split('+').pop(),
   }
 
-  const scrappedYear = scrappedStats.Researchgate.weekdate.slice(0,4)
+  const scrappedYear = scrappedStats.Researchgate.weekdate.slice(0, 4)
 
   const interestData = {
     year: scrappedYear,
-    interest: yearInterest.split('Total:  ').pop()
+    interest: yearInterest.split('Total:  ').pop(),
   }
 
   if (statsData.week !== currentStats[currentStats.length - 1].week) {
@@ -47,7 +53,7 @@ async function updateStats() {
       await axios.post(
         'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
         {
-          data: statsData
+          data: statsData,
         }
       )
     } catch (err) {
@@ -60,7 +66,7 @@ async function updateStats() {
       await axios.post(
         'https://www.bradwilsonphd.com/cockpit/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
         {
-          data: interestData
+          data: interestData,
         }
       )
     } catch (err) {

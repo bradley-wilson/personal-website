@@ -1,15 +1,18 @@
 <template>
   <div class="website-content">
     <CookiesBanner />
-    <TheAnnouncementBar v-if="announcementBar"/>
-    <TheNavbar/>
+    <TheAnnouncementBar v-if="announcementBar" />
+    <TheNavbar />
     <div class="wrapper">
       <h1
         class="heading heading--title u-margin-top--big"
-        style="text-align: center">Bradley Wilson</h1>
-      <nuxt/>
+        style="text-align: center;"
+      >
+        Bradley Wilson
+      </h1>
+      <nuxt />
     </div>
-    <TheFooter/>
+    <TheFooter />
   </div>
 </template>
 
@@ -30,7 +33,7 @@ export default {
     return { announcementBar: '' }
   },
   mounted() {
-    this.$axios.$get(`${process.env.barUrl}`).then(res => {
+    this.$axios.$get(`${process.env.barUrl}`).then((res) => {
       this.announcementBar = res.show
     })
   },
@@ -42,7 +45,7 @@ export default {
     //     window.scrollTo(0, element.offsetTop)
     //   }
     // }
-  }
+  },
 }
 </script>
 

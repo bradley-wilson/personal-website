@@ -2,20 +2,17 @@
   <div class="container">
     <div class="blog">
       <div class="search-box">
-        <img
-          src="/img/glass.svg"
-          alt="Search icon"
-          class="search-box__icon">
+        <img src="/img/glass.svg"
+alt="Search icon" class="search-box__icon"
+/>
         <input
           v-model="searchQuery"
           placeholder="Search"
-          class="search-box__input">
+          class="search-box__input"
+        >
       </div>
       <section class="posts-view">
-        <Post
-          v-for="post in displayedPosts"
-          :key="post.id"
-          :post="post"/>
+        <Post v-for="post in displayedPosts" :key="post.id" :post="post" />
       </section>
       <div
         v-if="posts[0] == undefined"
@@ -29,14 +26,24 @@
           src="/img/chevron-left.svg"
           class="chevron chevron-left"
           alt="Chevron left"
-          @click="currentPage--; scrollToTop()">
-        <div class="pagination__text text--description"> Page {{ currentPage }} of {{ pages }} </div>
+          @click="
+            currentPage--
+            scrollToTop()
+          "
+        >
+        <div class="pagination__text text--description">
+          Page {{ currentPage }} of {{ pages }}
+        </div>
         <img
           v-if="currentPage < pages && pages > currentPage"
           src="/img/chevron-right.svg"
           class="chevron chevron-right"
           alt="Chevron left"
-          @click="currentPage++; scrollToTop()">
+          @click="
+            currentPage++
+            scrollToTop()
+          "
+        >
       </div>
     </div>
   </div>
@@ -46,33 +53,33 @@
 import Post from '@/components/Post'
 
 export default {
+  components: {
+    Post,
+  },
   async asyncData({ $axios, env }) {
     let postsRes = await $axios.$get(
       `${env.postsUrl}&filter[published]=true&sort[_created]=-1`
     )
     return { posts: postsRes.entries }
   },
-  components: {
-    Post
-  },
   data() {
     return {
       perPage: 9,
       currentPage: 1,
-      searchQuery: ''
+      searchQuery: '',
     }
   },
   computed: {
-    pages: function() {
+    pages: function () {
       return Math.ceil(this.posts.length / this.perPage)
     },
-    displayedPosts: function() {
+    displayedPosts: function () {
       let posts = this.searchResults ? this.searchResults : this.posts
       let postEnd = this.currentPage * this.perPage
       let postStart = postEnd - this.perPage
       return posts.slice(postStart, postEnd)
     },
-    searchResults: function() {
+    searchResults: function () {
       let results = []
       let posts = this.posts
       let search = new RegExp(`${this.searchQuery.replace(/ /gi, '|')}`, 'ig')
@@ -92,14 +99,14 @@ export default {
         }
       }
       return results
-    }
+    },
   },
   methods: {
-    scrollToTop: function() {
+    scrollToTop: function () {
       console.log('Called')
       window.scrollTo(0, 0)
-    }
-  }
+    },
+  },
 }
 </script>
 

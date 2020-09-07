@@ -5,24 +5,31 @@
       <BGVideo
         poster="img/banner-video.jpg"
         mp4-src="/videos/bg_banner.mp4"
-        webm-src="/videos/bg_banner.webm" />
+        webm-src="/videos/bg_banner.webm"
+      />
       <!-- <BGVideo
         poster="img/map-line-connection.ong"
         mp4-src="/videos/map-line-connection.mp4"
         webm-src="/videos/map-line-connection.webm" /> -->
       <div class="container u-center">
-        <h1 class="heading heading--title">Bradley Wilson</h1>
+        <h1 class="heading heading--title">
+          Bradley Wilson
+        </h1>
         <p class="subheading">
-          Bradley has a keen interest in sponsorship, branding, advertising research,
-          understanding image transfer, and methods advancement research.
+          Bradley has a keen interest in sponsorship, branding, advertising
+          research, understanding image transfer, and methods advancement
+          research.
         </p>
         <a
           href="#booking-modal"
-          class="button">
+          class="button"
+        >
           <button
             class="button button--primary"
-            onclick="closeModal('hot-sale-modal')">
-            Book a meeting</button>
+            onclick="closeModal('hot-sale-modal')"
+          >
+            Book a meeting
+          </button>
         </a>
       </div>
     </section>
@@ -34,7 +41,8 @@
     <!-- About section -------------------------------------------------->
     <section
       id="section-about"
-      class="section-about">
+      class="section-about"
+    >
       <div class="container container--narrow">
         <div
           class="section-about__content"
@@ -48,11 +56,14 @@
     <!-- Services section ---------------------------------------------->
     <section
       id="section-services"
-      class="section-services">
+      class="section-services"
+    >
       <div class="container">
-        <h1 class="heading heading--primary">Services</h1>
+        <h1 class="heading heading--primary">
+          Services
+        </h1>
 
-        <div class="container container--narrow ">
+        <div class="container container--narrow">
           <div class="row">
             <div class="col--phone-6">
               <div class="service-item">
@@ -60,7 +71,8 @@
                   <img
                     class="service-item__icon"
                     src="/img/chat-icon.svg"
-                    alt="Chat icon">
+                    alt="Chat icon"
+                  >
                   Consulting
                 </nuxt-link>
               </div>
@@ -71,7 +83,8 @@
                   <img
                     class="service-item__icon"
                     src="/img/presentation-icon.svg"
-                    alt="Presentation icon">
+                    alt="Presentation icon"
+                  >
                   Invited presentations
                 </nuxt-link>
               </div>
@@ -85,7 +98,8 @@
                   <img
                     class="service-item__icon"
                     src="/img/link-icon.svg"
-                    alt="Link icon">
+                    alt="Link icon"
+                  >
                   Talent-matching &amp; placement
                 </nuxt-link>
               </div>
@@ -96,22 +110,25 @@
                   <img
                     class="service-item__icon"
                     src="/img/education-icon.svg"
-                    alt="Education icon">
+                    alt="Education icon"
+                  >
                   Courses &amp; seminars
-              </nuxt-link>
+                </nuxt-link>
               </div>
             </div>
           </div>
 
           <div
-            class="row u-margin-bottom--medium">
+            class="row u-margin-bottom--medium"
+          >
             <div class="col--phone-6">
               <div class="service-item">
                 <nuxt-link to="/#section-awards">
                   <img
                     class="service-item__icon"
                     src="/img/award-icon.svg"
-                    alt="Awards icon">
+                    alt="Awards icon"
+                  >
                   Awards
                 </nuxt-link>
               </div>
@@ -122,17 +139,19 @@
                   <img
                     class="service-item__icon"
                     src="/img/stats-icon.svg"
-                    alt="Stats icon">
+                    alt="Stats icon"
+                  >
                   Statistics
                 </nuxt-link>
               </div>
             </div>
           </div>
 
-          <div style="text-align: center">
+          <div style="text-align: center;">
             <a
               href="#section-contact"
-              class="button button--primary u-margin-bottom--big">Contact</a>
+              class="button button--primary u-margin-bottom--big"
+            >Contact</a>
           </div>
         </div>
       </div>
@@ -141,23 +160,30 @@
     <!-- Events section -------------------------------------------------->
     <section class="section-events">
       <div class="container">
-        <h1 class="heading heading--primary">Upcoming events</h1>
+        <h1 class="heading heading--primary">
+          Upcoming events
+        </h1>
         <Events
           v-for="event in events"
           :key="event.id"
-          :event="event"/>
+          :event="event"
+        />
       </div>
     </section>
 
     <!-- Connections section -------------------------------------------->
     <section
       id="section-connections"
-      class="section-connections">
+      class="section-connections"
+    >
       <div class="container">
-        <h1 class="heading heading--primary">Connections</h1>
+        <h1 class="heading heading--primary">
+          Connections
+        </h1>
         <a
           class="connections-thumbnail heading heading--secondary"
-          href="/connections">Touch to view!</a>
+          href="/connections"
+        >Touch to view!</a>
       </div>
     </section>
 
@@ -166,9 +192,12 @@
       <BGVideo
         poster="img/map-line-connection.ong"
         mp4-src="/videos/map-line-connection.mp4"
-        webm-src="/videos/map-line-connection.webm" />
+        webm-src="/videos/map-line-connection.webm"
+      />
       <div class="container">
-        <h1 class="heading heading--primary u-block">Research Impact and Audience Engagement</h1>
+        <h1 class="heading heading--primary u-block">
+          Research Impact and Audience Engagement
+        </h1>
         <div class="stats__container">
           <div class="scoreboard__container">
             <div class="scoreboard">
@@ -178,24 +207,44 @@
               <span class="scoreboard__header--shadow" />
               <div class="scoreboard__data">
                 <div class="scoreboard-data__item">
-                  <span class="scoreboard-item__color scoreboard-item__color--1" />
+                  <span
+                    class="scoreboard-item__color scoreboard-item__color--1"
+                  />
                   Citations
-                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.CitasTotal }} </span>
+                  <span class="scoreboard-item__value">
+                    {{ scrappedData.GoogleScholar.CitasTotal }}
+                  </span>
                 </div>
                 <div class="scoreboard-data__item">
-                  <span class="scoreboard-item__color scoreboard-item__color--2" />
+                  <span
+                    class="scoreboard-item__color scoreboard-item__color--2"
+                  />
                   H-Index
-                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.IndicehTotal }} </span>
+                  <span class="scoreboard-item__value">
+                    {{ scrappedData.GoogleScholar.IndicehTotal }}
+                  </span>
                 </div>
                 <div class="scoreboard-data__item">
-                  <span class="scoreboard-item__color scoreboard-item__color--3" />
+                  <span
+                    class="scoreboard-item__color scoreboard-item__color--3"
+                  />
                   I10-Index
-                  <span class="scoreboard-item__value"> {{ scrappedData.GoogleScholar.Indicei10Total }} </span>
+                  <span class="scoreboard-item__value">
+                    {{ scrappedData.GoogleScholar.Indicei10Total }}
+                  </span>
                 </div>
                 <div class="scoreboard-data__item">
-                  <span class="scoreboard-item__color scoreboard-item__color--4" />
+                  <span
+                    class="scoreboard-item__color scoreboard-item__color--4"
+                  />
                   Reads
-                  <span class="scoreboard-item__value"> {{ scrappedData.Researchgate["C4_Reads"].split('Total: ').pop() }} </span>
+                  <span class="scoreboard-item__value">
+                    {{
+                      scrappedData.Researchgate['C4_Reads']
+                        .split('Total: ')
+                        .pop()
+                    }}
+                  </span>
                 </div>
               </div>
             </div>
@@ -204,14 +253,18 @@
             <div class="stats__carousel">
               <div
                 id="stats__track"
-                class="stats__track">
+                class="stats__track"
+              >
                 <div class="stats__slide stats__slide--1">
                   <Stats
                     :styles="lineChartStyles"
                     :chartdata="readsData"
-                    class="stats__graph"/>
+                    class="stats__graph"
+                  />
                   <div class="stats__circle">
-                    <span class="stats__value stats__value--reads"> {{ scrappedData.Researchgate['C4_Weekly change'] }} </span>
+                    <span class="stats__value stats__value--reads">
+                      {{ scrappedData.Researchgate['C4_Weekly change'] }}
+                    </span>
                     <span class="stats__description">Reads this week</span>
                   </div>
                 </div>
@@ -219,9 +272,11 @@
                   <Stats
                     :styles="lineChartStyles"
                     :chartdata="citationsData"
-                    class="stats__graph"/>
+                    class="stats__graph"
+                  />
                   <div class="stats__circle">
-                    <span class="stats__value stats__value--citations"> {{ yearCitations }}</span>
+                    <span class="stats__value stats__value--citations">
+                      {{ yearCitations }}</span>
                     <span class="stats__description">Citations this year</span>
                   </div>
                 </div>
@@ -229,10 +284,19 @@
                   <Stats
                     :styles="lineChartStyles"
                     :chartdata="interestData"
-                    class="stats__graph"/>
+                    class="stats__graph"
+                  />
                   <div class="stats__circle">
-                    <span class="stats__value stats__value--interest"> {{ scrappedData.Researchgate['C1_Research Interest'].split('Total:  ').pop() }} </span>
-                    <span class="stats__description">Research interest this year</span>
+                    <span class="stats__value stats__value--interest">
+                      {{
+                        scrappedData.Researchgate['C1_Research Interest']
+                          .split('Total:  ')
+                          .pop()
+                      }}
+                    </span>
+                    <span
+                      class="stats__description"
+                    >Research interest this year</span>
                   </div>
                 </div>
               </div>
@@ -243,21 +307,24 @@
           <span
             id="button-reads"
             class="graph__button"
-            @click="goToStat(0)">
+            @click="goToStat(0)"
+          >
             <span class="graph__button--icon graph__button--icon-reads" />
             Reads
           </span>
           <span
             id="button-citations"
             class="graph__button"
-            @click="goToStat(1)">
+            @click="goToStat(1)"
+          >
             <span class="graph__button--icon graph__button--icon-citations" />
             Citations
           </span>
           <span
             id="button-interest"
             class="graph__button"
-            @click="goToStat(2)">
+            @click="goToStat(2)"
+          >
             <span class="graph__button--icon graph__button--icon-interest" />
             Research Interest
           </span>
@@ -270,19 +337,25 @@
           <Badge
             v-for="badge in badges"
             :key="badge.id"
-            :badge="badge"/>
+            :badge="badge"
+          />
         </div>
 
-        <h1 class="heading heading--primary">Keywords</h1>
-        <Keywords :searches="shuffledSearches"/>
+        <h1 class="heading heading--primary">
+          Keywords
+        </h1>
+        <Keywords :searches="shuffledSearches" />
 
         <div class="online-visitors">
-          <h1 class="heading heading--primary u-block">Online Visitors</h1>
+          <h1 class="heading heading--primary u-block">
+            Online Visitors
+          </h1>
           <div class="online-visitors__container">
             <script
-              type="text/javascript"
               id="clustrmaps"
-              src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g" />
+              type="text/javascript"
+              src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=_FPmRCaNhdSR-8Sm-yDSb5o4wV5syFTy1N482BLeb0g"
+            />
             <div class="scoreboard__container scoreboard__container--country">
               <div class="scoreboard scoreboard--country">
                 <div class="scoreboard__header scoreboard__header--country">
@@ -295,9 +368,19 @@
                     :key="item.id"
                     class="scoreboard-data__item scoreboard-data__item--country"
                   >
-                    <span class="scoreboard-item__color scoreboard-item__color--country"> {{ item }} </span>
+                    <span
+                      class="scoreboard-item__color scoreboard-item__color--country"
+                    >
+                      {{ item }}
+                    </span>
                     {{ scrappedData.Academia.Country.Country[index] }}
-                    <span class="scoreboard-item__value scoreboard-item__value--country"> {{ scrappedData.Academia.Country['All_Time_Views'][index] }} </span>
+                    <span
+                      class="scoreboard-item__value scoreboard-item__value--country"
+                    >
+                      {{
+                        scrappedData.Academia.Country['All_Time_Views'][index]
+                      }}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -310,16 +393,22 @@
     <!-- Publications section --------------------------------------------->
     <section
       id="section-publications"
-      class="section-publications">
+      class="section-publications"
+    >
       <div class="container">
-        <h1 class="heading heading--primary">Publications</h1>
+        <h1 class="heading heading--primary">
+          Publications
+        </h1>
 
-        <RecentPublications :publications="publications"/>
+        <RecentPublications :publications="publications" />
 
-        <div style="text-align: center">
+        <div style="text-align: center;">
           <nuxt-link
             to="/publications"
-            class="button button--primary">View all</nuxt-link>
+            class="button button--primary"
+          >
+            View all
+          </nuxt-link>
         </div>
       </div>
     </section>
@@ -330,26 +419,30 @@
       class="section-awards"
     >
       <div class="container">
-        <h1 class="heading heading--primary">Awards</h1>
+        <h1 class="heading heading--primary">
+          Awards
+        </h1>
         <div class="awards">
           <Award
             v-for="award in awards"
             :key="award.id"
-            :award="award"/>
+            :award="award"
+          />
         </div>
       </div>
     </section>
 
     <!-- Feedback section ------------------------------------------------->
     <section class="section-feedback">
-      <BGVideo 
+      <BGVideo
         poster="img/feedback-video.jpg"
         mp4-src="/videos/bg_lights_low.mp4"
-        webm-src="/videos/bg_lights_low.webm"/>
+        webm-src="/videos/bg_lights_low.webm"
+      />
 
       <div class="container">
-        <Carousel :quotes="quotes"/>
-        <Carousel :quotes="quotes"/>
+        <Carousel :quotes="quotes" />
+        <Carousel :quotes="quotes" />
       </div>
     </section>
 
@@ -358,40 +451,46 @@
       <div class="container">
         <h2
           class="heading heading--primary u-margin-bottom u-margin-bottom--none"
-        >Teaching Style</h2>
-        <h2
-          class="heading--secondary heading"
         >
+          Teaching Style
+        </h2>
+        </h2>
+        <h2 class="heading--secondary heading">
           As described by students
         </h2>
         <img
           class="word-cloud"
           src="/img/word-cloud.svg"
-          alt="Word cloud graphic">
+          alt="Word cloud graphic"
+        >
       </div>
     </section>
 
     <!-- Contact section --------------------------------------------------->
     <section
       id="section-contact"
-      class="section-contact">
-      <BGVideo 
+      class="section-contact"
+    >
+      <BGVideo
         poster="img/feedback-video.jpg"
         mp4-src="/videos/bg_lights_low.mp4"
-        webm-src="/videos/bg_lights_low.webm"/>
-      <Contact/>
+        webm-src="/videos/bg_lights_low.webm"
+      />
+      <Contact />
     </section>
 
     <!-- Contacts section -------------------------------------------------->
     <section class="section-contacts">
       <div class="container">
-        <h1 class="heading heading--primary">Contacts</h1>
-        <TheContacts :contacts="contacts"/>
+        <h1 class="heading heading--primary">
+          Contacts
+        </h1>
+        <TheContacts :contacts="contacts" />
       </div>
     </section>
 
-    <BookingModal/>
-    <HotSaleModal/>
+    <BookingModal />
+    <HotSaleModal />
   </div>
 </template>
 
@@ -413,6 +512,21 @@ import markdownIt from 'markdown-it'
 import scrappedData from '@/assets/scrapped-data'
 
 export default {
+  components: {
+    BGVideo,
+    Events,
+    TheContacts,
+    Carousel,
+    Stats,
+    RecentPublications,
+    Contact,
+    BookingModal,
+    HotSaleModal,
+    Award,
+    Badge,
+    Keywords,
+    MailingList
+  },
   async asyncData({ $axios, env }) {
     let bioRes = await $axios.$get(env.bioUrl)
     let eventsRes = await $axios.$get(env.eventsUrl)
@@ -508,21 +622,6 @@ export default {
       }
     }
   },
-  components: {
-    BGVideo,
-    Events,
-    TheContacts,
-    Carousel,
-    Stats,
-    RecentPublications,
-    Contact,
-    BookingModal,
-    HotSaleModal,
-    Award,
-    Badge,
-    Keywords,
-    MailingList
-  },
   data() {
     return {
       statsCounter: 1,
@@ -531,12 +630,9 @@ export default {
         width: '`100%',
         position: 'relative',
         backgroundColor: '#011a2a',
-        borderRadius: '4px'
-      }
+        borderRadius: '4px',
+      },
     }
-  },
-  mounted: function() {
-    setInterval(this.statsMoveForward, 10000)
   },
   computed: {
     citationsYearlyChange: function () {
@@ -607,6 +703,9 @@ export default {
       return array
     }
   },
+  mounted: function() {
+    setInterval(this.statsMoveForward, 10000)
+  },
   methods: {
     // toTarget: function(target) {
     //   if (target) {
@@ -614,7 +713,7 @@ export default {
     //     this.$emit('hash-clicked', target)
     //   }
     // },
-    statsMoveForward: function() {
+    statsMoveForward: function () {
       let statsOffset = -100 * this.statsCounter
       let track = document.getElementById('stats__track')
       if (this.statsCounter == 3) {
@@ -625,14 +724,14 @@ export default {
         this.statsCounter++
       }
     },
-    goToStat: function(target) {
+    goToStat: function (target) {
       let statsOffset = -100 * target
       let track = document.getElementById('stats__track')
       track.style.transform = 'translateX(' + statsOffset + '%)'
       this.statsCounter = target + 1
-    }
+    },
   },
-  layout: 'landing-page'
+  layout: 'landing-page',
 }
 </script>
 
@@ -644,7 +743,7 @@ export default {
 }
 
 .section-mailing-list {
-  background-color: $light-blue;  
+  background-color: $light-blue;
   padding-bottom: 6rem;
 }
 
@@ -1005,7 +1104,6 @@ export default {
     @include screen(tablet) {
       flex-direction: row;
     }
-
   }
 }
 

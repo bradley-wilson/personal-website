@@ -5,7 +5,7 @@
         src="/img/warning-white.svg"
         alt="Warning icon"
         class="construction__icon"
-      >
+      />
       This page is under construction. Come back soon for more info!
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  layout: 'default'
+  layout: 'default',
 }
 </script>
 
@@ -42,5 +42,5 @@ export default {
   &__icon {
     width: 6.4rem;
   }
-} 
+}
 </style>

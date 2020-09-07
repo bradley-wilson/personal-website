@@ -1,13 +1,23 @@
 <template>
   <article class="blog-post">
-    <div 
-      :style="{ backgroundImage: `url(https://bradwilsonphd.com/${post.image.path})` }"
-      class="blog-post__image"/>
-    <h2 class="blog-post__title heading--secondary"> {{ post.title }}</h2>
-    <p class="blog-post__excerpt text--description"> {{ post.excerpt }} </p>
+    <div
+      :style="{
+        backgroundImage: `url(https://bradwilsonphd.com/${post.image.path})`,
+      }"
+      class="blog-post__image"
+    />
+    <h2 class="blog-post__title heading--secondary">
+      {{ post.title }}
+    </h2>
+    <p class="blog-post__excerpt text--description">
+      {{ post.excerpt }}
+    </p>
     <nuxt-link
       :to="'/blog/' + post.slug"
-      class="blog-post__link button button--bar"> Read more </nuxt-link>
+      class="blog-post__link button button--bar"
+    >
+      Read more
+    </nuxt-link>
   </article>
 </template>
 
@@ -16,11 +26,11 @@ export default {
   props: {
     post: {
       type: Object,
-      default: function() {
+      default: function () {
         return { message: 'Initiated' }
-      }
-    }
-  }
+      },
+    },
+  },
 }
 </script>
 

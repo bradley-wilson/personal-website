@@ -1,29 +1,7 @@
 <template>
   <div class="container">
     <section class="article u-margin-top--medium">
-      <h1 class="heading heading--primary article__title">
-        {{ post.title }}
-      </h1>
-      <div class="article__author text--body">
-        {{ post.author }}
-      </div>
-      <img
-        :src="'https://bradwilsonphd.com/' + post.image.path"
-        alt="Thumbnail"
-        class="article__image"
-      >
-      <div class="text--body article__body" v-html="$md.render(post.content)" />
-
-      <div
-v-if="post.tags[0]"
-class="article__info">
-        <span class="text--description tags__title">Tags:</span>
-        <div class="article__tags text--description">
-          <div v-for="(tag, id) in post.tags" :key="id" class="article__tag">
-            {{ tag }}
-          </div>
-        </div>
-      </div>
+      <div class="text--body article__body" v-html="$md.render(policy)" />
     </section>
   </div>
 </template>
@@ -33,10 +11,8 @@ import markdownIt from 'markdown-it'
 
 export default {
   async asyncData({ $axios, params, env }) {
-    const postRes = await $axios.$get(
-      `${env.postsUrl}&filter[slug]=${params.id}`
-    )
-    return { post: postRes.entries[0] }
+    const policyRes = await $axios.$get(env.cookieUrl)
+    return { policy: policyRes.content }
   },
 }
 </script>

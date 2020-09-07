@@ -6,56 +6,48 @@ module.exports = {
   mode: 'universal',
 
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: pkg.description },
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
 
   /*
-  ** Customize the progress-bar color
-  */
+   ** Customize the progress-bar color
+   */
   loading: { color: '#32a47b' },
 
   /*
-  ** Global CSS
-  */
+   ** Global CSS
+   */
   css: [
     // '@/assets/sass/main.scss'
   ],
 
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: [],
 
   /*
-  ** Nuxt.js modules
-  */
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/markdownit',
-    '@nuxtjs/style-resources'
-  ],
+   ** Nuxt.js modules
+   */
+  modules: ['@nuxtjs/axios', '@nuxtjs/markdownit', '@nuxtjs/style-resources'],
 
   /*
-  ** Axios module configuration
-  */
-  axios: {
-  },
+   ** Axios module configuration
+   */
+  axios: {},
 
   markdownit: {
     injected: true,
-    breaks: true
+    breaks: true,
   },
 
   // buildModules: [
@@ -63,14 +55,12 @@ module.exports = {
   // ],
 
   styleResources: {
-    scss: [
-      './assets/sass/main.scss'
-    ]
+    scss: ['./assets/sass/main.scss'],
   },
 
   /*
-  ** Environment variables
-  */
+   ** Environment variables
+   */
   env: {
     baseUrl: process.env.BASE_URL || 'https://www.bradwilsonphd.com/cockpit',
     url: process.env.URL || 'https://bradwilsonphd.com',
@@ -87,7 +77,8 @@ module.exports = {
     postsUrl: process.env.POSTS_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/post?token=4458f0a2d0d2793a50fe20d0e9c519',
     searchesUrl: process.env.SEARCHES_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/get/searches?token=4458f0a2d0d2793a50fe20d0e9c519',
     weekUrl: process.env.WEEK_URL || 'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
-    formUrl: process.env.FORM_URL || 'https://www.bradwilsonphd.com/cockpit/api/forms/submit/contact?token=4458f0a2d0d2793a50fe20d0e9c519'
+    formUrl: process.env.FORM_URL || 'https://www.bradwilsonphd.com/cockpit/api/forms/submit/contact?token=4458f0a2d0d2793a50fe20d0e9c519',
+    cookieUrl: process.env.COOKIE_URL || 'https://www.bradwilsonphd.com/cockpit/api/singletons/get/cookiePolicy?token=4458f0a2d0d2793a50fe20d0e9c519',
   },
 
   generate: {
@@ -96,33 +87,33 @@ module.exports = {
       return data.entries.map((post) => {
         return {
           route: '/blog/' + post.slug,
-          payload: post
+          payload: post,
         }
       })
-    }
+    },
   },
 
   serverMiddleware: [
-  // '@/api/contact'
+    // '@/api/contact'
   ],
 
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+     ** You can extend webpack config here
+     */
     extend(config, ctx) {
       // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
-  }
+      // if (ctx.isDev && ctx.isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/,
+      //   })
+      // }
+    },
+  },
 }

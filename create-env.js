@@ -1,5 +1,7 @@
 const fs = require('fs')
-fs.writeFileSync('./.env', `
+fs.writeFileSync(
+  './.env',
+  `
 BASE_URL=${process.env.BASE_URL}\n
 EVENTS_URL=${process.env.EVENTS_URL}\n
 QUOTES_URL=${process.env.QUOTES_URL}\n
@@ -12,6 +14,8 @@ BIOS_URL=${process.env.BIOS_URL}\n
 POSTS_URL=${process.env.POSTS_URL}\n
 URL=${process.env.URL}\n
 SEARCHES_URL=${process.env.SEARCHES_URL}\n
-WEEK_URL=${process.env.WEEK_URL}
-FORM_URL=${process.env.FORM_URL}
-`)
+WEEK_URL=${process.env.WEEK_URL}\n
+FORM_URL=${process.env.FORM_URL}\n
+COOKIE_URL=${process.env.COOKIE_URL}
+`
+)

@@ -1,10 +1,15 @@
 <template>
   <section class="announcement-bar">
     <div class="container">
-      <p class="announcement-bar__text">Check out our latest blog post!</p>
+      <p class="announcement-bar__text">
+        Check out our latest blog post!
+      </p>
       <nuxt-link
         :to="'/blog/' + recentPost.slug"
-        class="announcement-bar__link">Click here.</nuxt-link>
+        class="announcement-bar__link"
+      >
+        Click here.
+      </nuxt-link>
     </div>
   </section>
 </template>
@@ -17,10 +22,10 @@ export default {
   mounted() {
     this.$axios
       .$get(`${process.env.postsUrl}&filter[published]=true&sort[_created]=-1`)
-      .then(res => {
+      .then((res) => {
         this.recentPost = res.entries[0]
       })
-  }
+  },
 }
 </script>
 

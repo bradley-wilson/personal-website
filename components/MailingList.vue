@@ -1,23 +1,25 @@
 <template>
   <div class="container">
-    <div id="contact-form__wrapper"> 
+    <div id="contact-form__wrapper">
       <h2
         class="heading heading--secondary u-margin-top--big"
-        style="text-align: center">Subscribe to our mailing list:</h2>
+        style="text-align: center;"
+      >
+        Subscribe to our mailing list:
+      </h2>
       <form
         id="newsletter"
         class="form"
         action="https://bradwilsonphd.us7.list-manage.com/subscribe/post"
         method="post"
-        accept-charset="UTF-8">
-        <input
-          type="hidden"
-          name="u"
-          value="0ca2187b7102f72e754391083">
-        <input
-          type="hidden"
-          name="id"
-          value="eede23b3c3">
+        accept-charset="UTF-8"
+      >
+        <input type="hidden"
+name="u" value="0ca2187b7102f72e754391083"
+/>
+        <input type="hidden"
+name="id" value="eede23b3c3"
+/>
         <input
           id="MERGE0"
           v-model="newsletter.email"
@@ -29,21 +31,21 @@
           size="25"
           value=""
           required
-          placeholder="Email">
-        <input
-          id="sooner"
-          type="checkbox"
-          name="sooner"
-          value="true">
+          placeholder="Email"
+        >
+        <input id="sooner"
+type="checkbox" name="sooner" value="true"
+/>
         <label
-          for="sooner"
-          class="form__label">Get content sooner</label>
-        <div style="text-align: center">
+for="sooner"
+class="form__label">Get content sooner</label>
+        <div style="text-align: center;">
           <input
             class="button button--primary"
             type="submit"
             name="submit"
-            value="Sign up">
+            value="Sign up"
+          >
         </div>
       </form>
     </div>
@@ -59,31 +61,31 @@ export default {
       contact: {
         name: '',
         email: '',
-        message: ''
+        message: '',
       },
       newsletter: {
-        email: ''
+        email: '',
       },
       contactError: false,
-      contactMessage: false
+      contactMessage: false,
     }
   },
   computed: {
-    formMessage: function() {
+    formMessage: function () {
       return this.contactError
         ? 'Submission failed. Try again.'
         : "Submission successful. We'll be in contact shortly."
-    }
+    },
   },
   methods: {
-    submitContact: function() {
+    submitContact: function () {
       try {
         axios.post(`${process.env.formUrl}`, {
           form: {
             name: this.contact.name,
             email: this.contact.email,
-            message: this.contact.message
-          }
+            message: this.contact.message,
+          },
         })
         this.error = false
         console.log('Form sent')
@@ -93,12 +95,12 @@ export default {
       }
       this.toggleContactMessage()
     },
-    toggleContactMessage: function() {
+    toggleContactMessage: function () {
       let form = document.getElementById('contact-form')
       form.style.display = 'none'
       this.contactMessage = true
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -110,7 +112,7 @@ export default {
   &__label {
     font-size: 1.6rem;
     color: $light-grey;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
   }
 
   &__input {

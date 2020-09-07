@@ -6,10 +6,10 @@ export default {
   props: {
     chartdata: {
       type: Object,
-      default: function() {
+      default: function () {
         return { message: 'initiated' }
-      }
-    }
+      },
+    },
   },
   data() {
     return {
@@ -17,24 +17,24 @@ export default {
         responsive: true,
         maintainAspectRatio: false,
         tooltips: {
-          mode: 'point'
+          mode: 'point',
         },
         layout: {
           padding: {
             top: 30,
             bottom: 50,
             right: 60,
-            left: 30
-          }
+            left: 30,
+          },
         },
         legend: {
-          display: false
-        }
-      }
+          display: false,
+        },
+      },
     }
   },
   mounted() {
     this.renderChart(this.chartdata, this.options)
-  }
+  },
 }
 </script>

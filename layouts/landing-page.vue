@@ -1,10 +1,10 @@
 <template>
   <div>
     <CookiesBanner />
-    <TheAnnouncementBar v-if="announcementBar"/>
-    <TheNavbar/>
-    <nuxt/>
-    <TheFooter/>
+    <TheAnnouncementBar v-if="announcementBar" />
+    <TheNavbar />
+    <nuxt />
+    <TheFooter />
   </div>
 </template>
 
@@ -25,7 +25,7 @@ export default {
     return { announcementBar: '' }
   },
   mounted() {
-    this.$axios.$get(`${process.env.barUrl}`).then(res => {
+    this.$axios.$get(`${process.env.barUrl}`).then((res) => {
       this.announcementBar = res.show
     })
   },
@@ -37,7 +37,7 @@ export default {
     //     window.scrollTo(0, element.offsetTop)
     //   }
     // }
-  }
+  },
   // mounted() {
   // }
 }
