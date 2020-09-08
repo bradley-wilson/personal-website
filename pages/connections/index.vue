@@ -1,46 +1,23 @@
 <template>
   <div>
     <div class="u-view u-view--scroll">
-      <div
-        class="nav-icon side-bar__icon"
-        onclick="showSideBar()"
-      >
-        <span class="nav-icon__bar" />
-        <span class="nav-icon__bar" />
-      </div>
-      <div
-        id="map__side-bar"
-        class="side-bar map__side-bar"
-      >
-        <a
-          class="button button--tab side-bar__button"
-          href="/#section-connections"
-        >&lt; Go back</a>
-        <button
-          class="button button--tab side-bar__button button--active"
-          onclick="toggleWork(this, 'map__side-bar')"
-        >
+      <a
+        class="button button--primary button--back"
+        to="/#section-connections">Go back</a>
+      <div class="map-nav u-center-x">
+        <img
+          @click="previousMap"
+          src='/img/chevron-left-2.svg'
+          class="map-nav__button map-nav__button--left" />
+        <span
+          id="map-nav__title"
+          class="map-nav__title">
           Work connections
-        </button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="toggleEngagement(this, 'map__side-bar');"
-          @click="sortCountries"
-        >
-          Global readership
-        </button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="togglePresentations(this, 'map__side-bar')"
-        >
-          Invited Presentations
-        </button>
-        <button
-          class="button button--tab side-bar__button"
-          onclick="toggleVisited(this, 'map__side-bar');"
-        >
-          Countries Visited
-        </button>
+        </span>
+        <img
+          @click="nextMap"
+          src='/img/chevron-right-2.svg'
+          class="map-nav__button map-nav__button--right" />
       </div>
       <div class="map">
         <svg
@@ -16562,26 +16539,6 @@
             />
           </div>
         </div>
-        <div
-          id="country-rankings"
-          class="country-rankings map__info"
-        >
-          <h2
-            class="heading heading--secondary u-margin-bottom u-margin-bottom--none"
-            @click="sortCountries"
-          >
-            Where Brad is being read
-          </h2>
-          <div class="list">
-            <div
-              v-for="(country, index) in countries"
-              :key="index"
-              class="country-rankings__country"
-            >
-              {{ index + 1 }}. {{ country.name }}
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -16871,7 +16828,8 @@ export default {
           name: 'Scotland',
           icon: '/img/flags/Scotland.png'
         }
-      ]
+      ],
+      currentMap: 0
     }
   },
   mounted() {
@@ -16889,6 +16847,58 @@ export default {
       if (this.reloaded == false) {
         this.reloaded = true
         location.reload()
+      }
+    },
+    nextMap: function() {
+      let title = document.getElementById('map-nav__title')
+
+      switch (this.currentMap) {
+        case 0:
+          this.currentMap++
+          toggleEngagement()
+          title.innerHTML = 'Global readership'
+          break
+        case 1:
+          this.currentMap++
+          togglePresentations()
+          title.innerHTML = 'Invited presentations'
+          break
+        case 2:
+          this.currentMap++
+          toggleVisited()
+          title.innerHTML = 'Countries visited'
+          break
+        case 3:
+          this.currentMap = 0
+          toggleWork()
+          title.innerHTML = 'Work connections'
+          break
+      }
+    },
+    previousMap: function() {
+      let title = document.getElementById('map-nav__title')
+
+      switch (this.currentMap) {
+        case 0:
+          this.currentMap = 3
+          toggleVisited()
+          title.innerHTML = 'Countries visited'
+          break
+        case 1:
+          this.currentMap--
+          toggleWork()
+          title.innerHTML = 'Work connections'
+          break
+        case 2:
+          this.currentMap--
+          toggleEngagement()
+          title.innerHTML = 'Global readership'
+          break
+        case 3:
+          this.currentMap--
+          togglePresentations()
+          title.innerHTML = 'Invited presentations'
+          break
       }
     }
   },
@@ -17014,23 +17024,57 @@ export default {
     width: 16px;
   }
 }
-.side-bar {
-  position: fixed;
-  padding: 5rem 2rem;
-  background-color: $gradient-dark;
-  height: 100%;
-  z-index: 100;
-  transform: translateX(-100%);
-  transition: all .3s;
+
+.button--back {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  display: none;
+
+  @include screen(tablet) {
+    display: initial;
+  }
+}
+
+.map-nav {
+  position: absolute;
+  top: 2rem;
+  font-family: $Bebas;
+  font-size: 1.6rem;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: rgba(15,15,15,0.6);
+  border-radius: 5px;
+  border: 1px solid white;
+
+  @include screen(tablet) {
+    font-size: 3.2rem;
+    padding: 1rem 6rem;
+    width: initial;
+    display: initial;
+  }
 
   &__button {
-    display: block;
-    margin-top: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+
+    @include screen(tablet) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+
+    &--left {
+      margin-right: 1.5rem;
+    }
+    &--right {
+      margin-left: 1.5rem;
+    }
   }
-  &__icon {
-    position: absolute;
-    top: 2rem;
-    left: 4rem;
+
+  &__title {
+
   }
 }
 </style>

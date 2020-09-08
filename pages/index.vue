@@ -474,7 +474,6 @@
         >
           Teaching Style
         </h2>
-        </h2>
         <h2 class="heading--secondary heading">
           As described by students
         </h2>

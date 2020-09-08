@@ -284,7 +284,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/russia.png",
+        "icon": "/img/flags/Russia.png",
         "id": "russia"
     },
     {
@@ -292,7 +292,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/colombia.png",
+        "icon": "/img/flags/Colombia.png",
         "id": "colombia"
     },
     {
@@ -300,7 +300,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/ecuador.png",
+        "icon": "/img/flags/Ecuador.png",
         "id": "ecuador"
     },
     {
@@ -308,7 +308,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/peru.png",
+        "icon": "/img/flags/Peru.png",
         "id": "peru"
     },
     {
@@ -316,7 +316,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/el-salvador.png",
+        "icon": "/img/flags/El-Salvador.png",
         "id": "el-salvador"
     },
     {
@@ -324,7 +324,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/panama.png",
+        "icon": "/img/flags/Panama.png",
         "id": "panama"
     },
     {
@@ -332,7 +332,7 @@
         "description" : "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/puerto-rico.png",
+        "icon": "/img/flags/Puerto-Rico.png",
         "id": "puerto-rico"
     },
     {
@@ -340,7 +340,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/france.png",
+        "icon": "/img/flags/France.png",
         "id": "france"
     },
     {
@@ -348,7 +348,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/switzerland.png",
+        "icon": "/img/flags/Switzerland.png",
         "id": "switzerland"
     },
     {
@@ -356,7 +356,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/portugal.png",
+        "icon": "/img/flags/Portugal.png",
         "id": "portugal"
     },
     {
@@ -364,7 +364,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/spain.png",
+        "icon": "/img/flags/Spain.png",
         "id": "spain"
     },
     {
@@ -372,7 +372,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/georgia.png",
+        "icon": "/img/flags/Georgia.png",
         "id": "georgia"
     },
     {
@@ -380,7 +380,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/turkey.png",
+        "icon": "/img/flags/Turkey.png",
         "id": "turkey"
     },
     {
@@ -388,7 +388,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/costa-rica.png",
+        "icon": "/img/flags/Costa-Rica.png",
         "id": "costa-rica"
     },
     {
@@ -396,7 +396,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/belize.png",
+        "icon": "/img/flags/Belize.png",
         "id": "belize"
     },
     {
@@ -404,7 +404,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/mexico.png",
+        "icon": "/img/flags/Mexico.png",
         "id": "mexico"
     },
     {
@@ -412,7 +412,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/united-states-of-america.png",
+        "icon": "/img/flags/United-States.png",
         "id": "usa"
     },
     {
@@ -420,7 +420,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/canada.png",
+        "icon": "/img/flags/Canada.png",
         "id": "canada"
     },
     {
@@ -428,7 +428,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/chile.png",
+        "icon": "/img/flags/Chile.png",
         "id": "chile"
     },
     {
@@ -436,7 +436,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/belgium.png",
+        "icon": "/img/flags/Belgium.png",
         "id": "belgium"
     },
     {
@@ -444,7 +444,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/uk.png",
+        "icon": "/img/flags/United-Kingdom.png",
         "id": "uk"
     },
     {
@@ -452,7 +452,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/scotland.png",
+        "icon": "/img/flags/Scotland.png",
         "id": "scotland"
     },
     {
@@ -460,7 +460,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/netherlands.png",
+        "icon": "/img/flags/Netherlands.png",
         "id": "netherlands"
     },
     {
@@ -468,7 +468,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/norway.png",
+        "icon": "/img/flags/Norway.png",
         "id": "norway"
     },
     {
@@ -476,7 +476,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/sweden.png",
+        "icon": "/img/flags/Sweden.png",
         "id": "sweden"
     },
     {
@@ -484,7 +484,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/luxembourg.png",
+        "icon": "/img/flags/Luxembourg.png",
         "id": "luxembourg"
     },
     {
@@ -492,7 +492,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/austria.png",
+        "icon": "/img/flags/Austria.png",
         "id": "austria"
     },
     {
@@ -500,7 +500,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/slovenia.png",
+        "icon": "/img/flags/Slovenia.png",
         "id": "slovenia"
     },
     {
@@ -508,7 +508,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/romania.png",
+        "icon": "/img/flags/Romania.png",
         "id": "romania"
     },
     {
@@ -516,7 +516,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/qatar.png",
+        "icon": "/img/flags/Qatar.png",
         "id": "qatar"
     },
     {
@@ -524,7 +524,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/united-arab-emirates.png",
+        "icon": "/img/flags/United-Arab-Emirates.png",
         "id": "united-arab-emirates"
     },
     {
@@ -532,7 +532,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/czech-republic.png",
+        "icon": "/img/flags/Czech-Republic.png",
         "id": "czech-republic"
     },
     {
@@ -540,7 +540,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/germany.png",
+        "icon": "/img/flags/Germany.png",
         "id": "germany"
     },
     {
@@ -548,7 +548,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/poland.png",
+        "icon": "/img/flags/Poland.png",
         "id": "poland"
     },
     {
@@ -556,7 +556,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/ukraine.png",
+        "icon": "/img/flags/Ukraine.png",
         "id": "ukraine"
     },
     {
@@ -564,7 +564,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/denmark.png",
+        "icon": "/img/flags/Denmark.png",
         "id": "denmark"
     },
     {
@@ -572,7 +572,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/latvia.png",
+        "icon": "/img/flags/Latvia.png",
         "id": "latvia"
     },
     {
@@ -580,7 +580,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/australia.png",
+        "icon": "/img/flags/Australia.png",
         "id": "australia"
     },
     {
@@ -588,7 +588,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/new-zealand.png",
+        "icon": "/img/flags/New-Zealand.png",
         "id": "new-zealand"
     },
     {
@@ -596,7 +596,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/indonesia.png",
+        "icon": "/img/flags/Indonesia.png",
         "id": "indonesia"
     },
     {
@@ -604,7 +604,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/malaysia.png",
+        "icon": "/img/flags/Malaysia.png",
         "id": "malaysia"
     },
     {
@@ -612,7 +612,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/thailand.png",
+        "icon": "/img/flags/Thailand.png",
         "id": "thailand"
     },
     {
@@ -620,7 +620,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/singapore.png",
+        "icon": "/img/flags/Singapore.png",
         "id": "singapore"
     },
     {
@@ -628,7 +628,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/japan.png",
+        "icon": "/img/flags/Japan.png",
         "id": "japan"
     },
     { 
@@ -636,7 +636,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/south-korea.png",
+        "icon": "/img/flags/South-Korea.png",
         "id": "south-korea"
     },
     {
@@ -644,7 +644,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/china.png",
+        "icon": "/img/flags/China.png",
         "id": "china"
     },
     {
@@ -652,7 +652,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/hong-kong.png",
+        "icon": "/img/flags/Hong-Kong.png",
         "id": "hong-kong"
     },
     {
@@ -660,7 +660,7 @@
         "description": "",
         "country": "",
         "date": "",
-        "icon": "/img/flags/macao.png",
+        "icon": "/img/flags/Macao.png",
         "id": "macao"
     }
 ]

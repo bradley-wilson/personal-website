@@ -176,28 +176,17 @@ var mapPresentations = document.querySelector('#map__presentations')
 var mapVisited = document.querySelector('#map__visited')
 var map = document.querySelector('.map')
 
-// Toggle button
-function toggleButton(button, id) {
-  var buttons = document.getElementById(id).getElementsByTagName('button')
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove('button--active')
-  }
-  button.classList.add('button--active')
-}
-
-function toggleWork(button, id) {
+function toggleWork() {
   var mapInfo = document.getElementById('map__info')
   var countryRankings = document.getElementById('country-rankings')
   var mapInfoMeta = document.getElementById('map-info__meta')
   mapInfoMeta.style.display = 'block'
   mapVisited.style.display = 'none'
   mapInfo.style.display = 'block'
-  toggleButton(button, id)
   resetMapColors()
   map.style.visibility = 'visible'
   mapWork.style.display = 'initial'
   mapPresentations.style.display = 'none'
-  countriesVisited.style.display = 'none'
 }
 
 function toggleVisited(button, id) {
@@ -205,14 +194,12 @@ function toggleVisited(button, id) {
   var mapInfoMeta = document.getElementById('map-info__meta')
   var countryRankings = document.getElementById('country-rankings')
   mapVisited.style.display = 'block'
-  toggleButton(button, id)
   resetMapColors()
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'none'
   mapWork.style.display = 'none'
   mapInfo.style.display = 'block'
   mapInfoMeta.style.display = 'none'
-  countryRankings.style.display = 'none'
 }
 
 function toggleEngagement(button, id) {
@@ -221,13 +208,11 @@ function toggleEngagement(button, id) {
   var mapInfoMeta = document.getElementById('map-info__meta')
   mapInfoMeta.style.display = 'block'
   mapVisited.style.display = 'none'
-  toggleButton(button, id)
   toggleMapColors()
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'none'
   mapWork.style.display = 'none'
   mapInfo.style.display = 'none'
-  countriesVisited.style.display = 'none'
 }
 
 // Set map colors in Global Engagement mode
@@ -324,9 +309,7 @@ function togglePresentations(button, id) {
   var countryRankings = document.getElementById('country-rankings')
   var mapInfoMeta = document.getElementById('map-info__meta')
   mapInfoMeta.style.display = 'block'
-  countryRankings.style.display = 'none'
   mapInfo.style.display = 'block'
-  toggleButton(button, id)
   resetMapColors()
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'initial'
