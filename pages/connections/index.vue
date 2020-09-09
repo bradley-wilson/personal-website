@@ -19,6 +19,11 @@
           src='/img/chevron-right-2.svg'
           class="map-nav__button map-nav__button--right" />
       </div>
+      <div class="map-tooltip">
+        <div class="map-tooltip__icon" />
+        <div class="map-tooltip__title"></div>
+        <div class="map-tooltip__tag"></div>
+      </div>
       <div class="map">
         <svg
           class="map__content"
@@ -8695,8 +8700,8 @@
             </g>
 
             <g
-              id="map__country--us"
-              class="map__highlight--1"
+              id="usa"
+              class="map__highlight--1 map__country"
             >
               <rect
                 x="0.657"
@@ -9726,7 +9731,7 @@
               />
             </g>
 
-            <g id="map__country--canada">
+            <g id="canada" class="map__country">
               <rect
                 x="83.911"
                 y="117.322"
@@ -11973,7 +11978,7 @@
               />
             </g>
 
-            <g id="map__country--mexico">
+            <g id="mexico" class="map__country">
               <rect
                 x="167.165"
                 y="297.639"
@@ -12139,8 +12144,8 @@
             </g>
 
             <g
-              id="map__country--colombia"
-              class="map__highlight--2"
+              id="colombia"
+              class="map__highlight--2 map__country"
             >
               <rect
                 x="281.638"
@@ -12217,8 +12222,8 @@
             </g>
 
             <g
-              id="map__country--brazil"
-              class="map__highlight--4"
+              id="brazil"
+              class="map__highlight--4 map__country"
             >
               <rect
                 x="302.452"
@@ -12727,8 +12732,8 @@
             </g>
 
             <g
-              id="map__country--venezuela"
-              class="map__highlight--3"
+              id="venezuela"
+              class="map__highlight--3 map__country"
             >
               <rect
                 x="312.858"
@@ -12787,8 +12792,8 @@
             </g>
 
             <g
-              id="map__country--uk"
-              class="map__highlight--2"
+              id="uk"
+              class="map__highlight--2 map__country"
             >
               <rect
                 x="520.992"
@@ -12847,8 +12852,8 @@
             </g>
 
             <g
-              id="map__country--germany"
-              class="map__highlight--2"
+              id="germany"
+              class="map__highlight--2 map__country"
             >
               <rect
                 x="562.619"
@@ -12901,8 +12906,8 @@
             </g>
 
             <g
-              id="map__country--sweden"
-              class="map__highlight--5"
+              id="sweden"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="583.432"
@@ -13009,8 +13014,8 @@
             </g>
 
             <g
-              id="map__country--poland"
-              class="map__highlight--5"
+              id="poland"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="593.839"
@@ -13057,8 +13062,8 @@
             </g>
 
             <g
-              id="map__country--greece"
-              class="map__highlight--5"
+              id="greece"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="614.653"
@@ -13087,8 +13092,8 @@
             </g>
 
             <g
-              id="map__country--egypt"
-              class="map__highlight--5"
+              id="egypt"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="625.059"
@@ -13171,8 +13176,8 @@
             </g>
 
             <g
-              id="map__country--turkey"
-              class="map__highlight--3"
+              id="turkey"
+              class="map__highlight--3 map__country"
             >
               <rect
                 x="635.466"
@@ -13255,8 +13260,8 @@
             </g>
 
             <g
-              id="map__country--kenya"
-              class="map__highlight--3"
+              id="kenya"
+              class="map__highlight--3 map__country"
             >
               <rect
                 x="656.279"
@@ -13303,8 +13308,8 @@
             </g>
 
             <g
-              id="map__country--china"
-              class="map__highlight--5"
+              id="china"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="791.566"
@@ -14005,8 +14010,8 @@
             </g>
 
             <g
-              id="map__country--india"
-              class="map__highlight--5"
+              id="india"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="770.753"
@@ -14233,8 +14238,8 @@
             </g>
 
             <g
-              id="map__country--united-arab-emirates"
-              class="map__highlight--3"
+              id="united-arab-emirates"
+              class="map__highlight--3 map__country"
             >
               <rect
                 x="718.72"
@@ -14251,8 +14256,8 @@
             </g>
 
             <g
-              id="map__country--ireland"
-              class="map__highlight--2"
+              id="ireland"
+              class="map__highlight--2 map__country"
             >
               <rect
                 x="520.992"
@@ -14263,8 +14268,8 @@
             </g>
             
             <g
-              id="map__country--indonesia"
-              class="map__highlight--3"
+              id="indonesia"
+              class="map__highlight--3 map__country"
             >
               <rect
                 x="854.007"
@@ -14473,8 +14478,8 @@
             </g>
 
             <g
-              id="map__country--malaysia"
-              class="map__highlight--5"
+              id="malaysia"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="864.413"
@@ -14521,8 +14526,8 @@
             </g>
 
             <g
-              id="map__country--philipines"
-              class="map__highlight--5"
+              id="philippines"
+              class="map__highlight--5 map__country"
             >
               <rect
                 x="937.26"
@@ -14569,8 +14574,8 @@
             </g>
 
             <g
-              id="map__country--australia"
-              class="map__highlight--2"
+              id="australia"
+              class="map__highlight--2 map__country"
             >
               <rect
                 x="916.447"
@@ -16550,293 +16555,501 @@
 export default {
   data() {
     return {
+      currentMap: 0,
       countries: [
-        { name: 'United States' },
-        { name: 'Colombia' },
-        { name: 'Germany' },
-        { name: 'United Kingdom' },
-        { name: 'Australia' },
-        { name: 'Indonesia' },
-        { name: 'France' },
-        { name: 'India' },
-        { name: 'Malaysia' },
-        { name: 'Austria' },
-        { name: 'Republic of Korea' },
-        { name: 'Netherlands' },
-        { name: 'Denmark' },
-        { name: 'Turkey' },
-        { name: 'New Zealand' },
-        { name: 'Greece' },
-        { name: 'Canada' },
-        { name: 'Poland' },
-        { name: 'Peru' },
-        { name: 'China' },
-        { name: 'Italy' },
-        { name: 'Vietnam' },
-        { name: 'Pakistan' },
-        { name: 'Hong Kong' },
-        { name: 'Brazil' },
-        { name: 'Sweden' },
-        { name: 'Philippines' },
-        { name: 'Spain' },
-        { name: 'South Africa' },
-        { name: 'Russian Federation' },
-        { name: 'Switzerland' },
-        { name: 'Islam Republic of Iran' },
-        { name: 'Ireland' },
-        { name: 'Venezuela' },
-        { name: 'Taiwan' },
-        { name: 'Singapore' },
-        { name: 'Thailand' },
-        { name: 'Romania' },
-        { name: 'Portugal' },
-        { name: 'Kenya' },
-        { name: 'Japan' },
-        { name: 'Jordan' },
-        { name: 'United Arab Emirates' },
-        { name: 'Mexico' },
-        { name: 'Sri Lanka' },
-        { name: 'Egypt' },
-        { name: 'Czech Republic' },
-        { name: 'Chile' },
-        { name: 'Puerto Rico' },
-        { name: 'Norway' },
-        { name: 'Maldives' },
-        { name: 'Mauritius' },
-        { name: 'Malta' },
-        { name: 'Kuwait' },
-        { name: 'Israel' },
-        { name: 'Hungary' },
-        { name: 'Tunisia' },
-        { name: 'Serbia' },
-        { name: 'Nigeria' },
-        { name: 'Morocco' },
-        { name: 'Croatia' },
-        { name: 'Finland' },
-        { name: 'Belgium' },
-        { name: 'Zambia' },
-        { name: 'Uganda' },
-        { name: 'Ukraine' },
-        { name: 'Trinidad and Tobago' },
-        { name: 'Slovakia' },
-        { name: 'Slovenia' },
-        { name: 'Panama' },
-        { name: 'Oman' },
-        { name: 'Nepal' },
-        { name: 'MMacao' },
-        { name: 'Lithuania' },
-        { name: 'Guadeloupe' },
-        { name: 'Estonia' },
-        { name: 'Ecuador' },
-        { name: 'Algeria' },
-        { name: 'Cyprus' },
-        { name: 'Argentina' },
-        { name: 'Albania' }
-      ],
-      countriesVisited: [
         {
-          name: 'Australia',
-          icon: '/img/flags/Australia.png'
+            "title": "Russia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Russia.png",
+            "id": "russia"
         },
         {
-          name: 'Austria',
-          icon: '/img/flags/Austria.png'
+            "title": "Colombia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Colombia.png",
+            "tag": "319 views",
+            "id": "colombia"
         },
         {
-          name: 'Belgium',
-          icon: '/img/flags/Belgium.png'
+            "title": "Brazil",
+            "icon": "/img/flags/Brazil.png",
+            "tag": "30 views",
+            "id": "brazil"
         },
         {
-          name: 'Belize',
-          icon: '/img/flags/Belize.png'
+            "title": "Venezuela",
+            "icon": "/img/flags/Venezuela.png",
+            "tag": "8 views",
+            "id": "venezuela"
         },
         {
-          name: 'Chile',
-          icon: '/img/flags/Chile.png'
+            "title": "Ecuador",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Ecuador.png",
+            "id": "ecuador"
         },
         {
-          name: 'China',
-          icon: '/img/flags/China.png'
+            "title": "Peru",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Peru.png",
+            "id": "peru"
         },
         {
-          name: 'Colombia',
-          icon: '/img/flags/Colombia.png'
+            "title": "El Salvador",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/El-Salvador.png",
+            "id": "el-salvador"
         },
         {
-          name: 'Costa Rica',
-          icon: '/img/flags/Costa-Rica.png'
+            "title": "Panama",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Panama.png",
+            "id": "panama"
         },
         {
-          name: 'Czech Republic',
-          icon: '/img/flags/Czech-Republic.png'
+            "title": "Puerto Rico",
+            "description" : "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Puerto-Rico.png",
+            "id": "puerto-rico"
         },
         {
-          name: 'Denmark',
-          icon: '/img/flags/Denmark.png'
+            "title": "France",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/France.png",
+            "id": "france"
         },
         {
-          name: 'Ecuador',
-          icon: '/img/flags/Ecuador.png'
+            "title": "Switzerland",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Switzerland.png",
+            "id": "switzerland"
         },
         {
-          name: 'El Salvador',
-          icon: '/img/flags/El-Salvador.png'
+            "title": "Portugal",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Portugal.png",
+            "id": "portugal"
         },
         {
-          name: 'France',
-          icon: '/img/flags/France.png'
+            "title": "Spain",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Spain.png",
+            "tag": "24 views",
+            "id": "spain"
         },
         {
-          name: 'Georgia',
-          icon: '/img/flags/Georgia.png'
+            "title": "Georgia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Georgia.png",
+            "id": "georgia"
         },
         {
-          name: 'Hong Kong',
-          icon: '/img/flags/Hong-Kong.png'
+            "title": "Turkey",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Turkey.png",
+            "tag": "50 views",
+            "id": "turkey"
         },
         {
-          name: 'Indonesia',
-          icon: '/img/flags/Indonesia.png'
+            "title": "Kneya",
+            "icon": "/img/flags/Kenya.png",
+            "tag": "18 views",
+            "id": "kenya"
         },
         {
-          name: 'Japan',
-          icon: '/img/flags/Japan.png'
+            "title": "Costa Rica",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Costa-Rica.png",
+            "id": "costa-rica"
         },
         {
-          name: 'Latvia',
-          icon: '/img/flags/Latvia.png'
+            "title": "Belize",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Belize.png",
+            "id": "belize"
         },
         {
-          name: 'Luxembourg',
-          icon: '/img/flags/Luxembourg.png'
+            "title": "Mexico",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Mexico.png",
+            "tag": "8 iews",
+            "id": "mexico"
         },
         {
-          name: 'Macao',
-          icon: '/img/flags/Macao.png'
+            "title": "United States of America",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/United-States.png",
+            "tag": "455 views",
+            "id": "usa"
         },
         {
-          name: 'Malaysia',
-          icon: '/img/flags/Malaysia.png'
+            "title": "Canada",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Canada.png",
+            "tag": "31 views",
+            "id": "canada"
         },
         {
-          name: 'Mexico',
-          icon: '/img/flags/Mexico.png'
+            "title": "Chile",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Chile.png",
+            "id": "chile"
         },
         {
-          name: 'Netherlands',
-          icon: '/img/flags/Netherlands.png'
+            "title": "Belgium",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Belgium.png",
+            "id": "belgium"
         },
         {
-          name: 'New Zealand',
-          icon: '/img/flags/New-Zealand.png'
+            "title": "United Kingdom",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/United-Kingdom.png",
+            "id": "uk",
+            "tag": "201 views"
         },
         {
-          name: 'Norway',
-          icon: '/img/flags/Norway.png'
+            "title": "Scotland",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Scotland.png",
+            "id": "scotland"
         },
         {
-          name: 'Panama',
-          icon: '/img/flags/Panama.png'
+            "title": "Netherlands",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Netherlands.png",
+            "tag": "31 views",
+            "id": "netherlands"
         },
         {
-          name: 'Peru',
-          icon: '/img/flags/Peru.png'
+            "title": "Norway",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Norway.png",
+            "id": "norway"
         },
         {
-          name: 'Poland',
-          icon: '/img/flags/Poland.png'
+            "title": "Sweden",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Sweden.png",
+            "tag": "20 views",
+            "id": "sweden"
         },
         {
-          name: 'Portugal',
-          icon: '/img/flags/Portugal.png'
+            "title": "Luxembourg",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Luxembourg.png",
+            "id": "luxembourg"
         },
         {
-          name: 'Puerto Rico',
-          icon: '/img/flags/Puerto-Rico.png'
+            "title": "Austria",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Austria.png",
+            "id": "austria"
         },
         {
-          name: 'Qatar',
-          icon: '/img/flags/Qatar.png'
+            "title": "Slovenia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Slovenia.png",
+            "id": "slovenia"
         },
         {
-          name: 'Romania',
-          icon: '/img/flags/Romania.png'
+            "title": "Romania",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Romania.png",
+            "id": "romania"
         },
         {
-          name: 'Russia',
-          icon: '/img/flags/Russia.png'
+            "title": "Qatar",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Qatar.png",
+            "id": "qatar"
         },
         {
-          name: 'Singapore',
-          icon: '/img/flags/Singapore.png'
+            "title": "United Arab Emirates",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/United-Arab-Emirates.png",
+            "tag": "15 views",
+            "id": "united-arab-emirates"
         },
         {
-          name: 'Slovenia',
-          icon: '/img/flags/Slovenia.png'
+            "title": "Czech Republic",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Czech-Republic.png",
+            "id": "czech-republic"
         },
         {
-          name: 'South Korea',
-          icon: '/img/flags/South-Korea.png'
+            "title": "Germany",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Germany.png",
+            "tag": "274 views",
+            "id": "germany"
         },
         {
-          name: 'Spain',
-          icon: '/img/flags/Spain.png'
+            "title": "Poland",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Poland.png",
+            "tag": "26 views",
+            "id": "poland"
         },
         {
-          name: 'Sweden',
-          icon: '/img/flags/Sweden.png'
+            "title": "Greece",
+            "icon": "/img/flags/Greece.png",
+            "tag": "26 views",
+            "id": "greece"
         },
         {
-          name: 'Switzerland',
-          icon: '/img/flags/Switzerland.png'
+            "title": "Egypt",
+            "icon": "/img/flags/Egypt.png",
+            "tag": "7 views",
+            "id": "egypt"
         },
         {
-          name: 'Thailand',
-          icon: '/img/flags/Thailand.png'
+            "title": "Ukraine",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Ukraine.png",
+            "id": "ukraine"
         },
         {
-          name: 'Turkey',
-          icon: '/img/flags/Turkey.png'
+            "title": "Denmark",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Denmark.png",
+            "id": "denmark"
         },
         {
-          name: 'United Arab Emirates',
-          icon: '/img/flags/United-Arab-Emirates.png'
+            "title": "Ireland",
+            "icon": "/img/flags/Ireland.png",
+            "tag": "13 views",
+            "id": "ireland"
         },
         {
-          name: 'United Kingdom',
-          icon: '/img/flags/United-Kingdom.png'
+            "title": "Latvia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Latvia.png",
+            "id": "latvia"
         },
         {
-          name: 'Ukraine',
-          icon: '/img/flags/Ukraine.png'
+            "title": "Australia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Australia.png",
+            "tag": "176 views",
+            "id": "australia"
         },
         {
-          name: 'United States of America',
-          icon: '/img/flags/United-States.png'
+            "title": "New Zealand",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/New-Zealand.png",
+            "id": "new-zealand"
         },
         {
-          name: 'Bali',
-          icon: '/img/flags/Indonesia.png'
+            "title": "Indonesia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Indonesia.png",
+            "tag": "73 views",
+            "id": "indonesia"
         },
         {
-          name: 'Canada',
-          icon: '/img/flags/Canada.png'
+            "title": "Philippines",
+            "icon": "/img/flags/Philippines.png",
+            "tag": "51 views",
+            "id": "philippines"
         },
         {
-          name: 'Germany',
-          icon: '/img/flags/Germany.png'
+            "title": "Malaysia",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Malaysia.png",
+            "tag": "64 views",
+            "id": "malaysia"
         },
         {
-          name: 'Scotland',
-          icon: '/img/flags/Scotland.png'
+            "title": "Thailand",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Thailand.png",
+            "id": "thailand"
+        },
+        {
+            "title": "Singapore",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Singapore.png",
+            "id": "singapore"
+        },
+        {
+            "title": "Japan",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Japan.png",
+            "id": "japan"
+        },
+        { 
+            "title": "South Korea",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/South-Korea.png",
+            "id": "south-korea"
+        },
+        {
+            "title": "China",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/China.png",
+            "tag": "28 views",
+            "id": "china"
+        },
+        {
+            "title": "Hong Kong",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Hong-Kong.png",
+            "id": "hong-kong"
+        },
+        {
+            "title": "Macao",
+            "description": "",
+            "country": "",
+            "date": "",
+            "icon": "/img/flags/Macao.png",
+            "id": "macao"
+        },
+        {
+            "title": "India",
+            "icon": "/img/flags/India.png",
+            "id": "india",
+            "tag": "110 views"
         }
-      ],
-      currentMap: 0
+      ]
     }
   },
-  mounted() {
+  mounted: function() {
+    let visitedMarkers = document.getElementsByClassName('map__marker--visited')
+    let mapCountries = document.getElementsByClassName('map__country')
+
+    let nuxt = this
+
+    for (let country of mapCountries) {
+      country.addEventListener(
+        'click',
+        this.showTooltip(country.id, true),
+        false
+      )
+    }
   },
   methods: {
+    showTooltip: function(id, showTag) {
+      let tooltip = document.querySelector('.map-tooltip')
+      let tooltipIcon = document.querySelector('.map-tooltip__icon')
+      let tooltipTitle = document.querySelector('.map-tooltip__title')
+      let tooltipTag = document.querySelector('.map-tooltip__tag')
+
+      tooltip.style.display = 'block'
+
+      console.log(id)
+
+      for (let item of this.countries) {
+        if (item.id === id) {
+          tooltipIcon.style.backgroundImage = 'url("' + item.icon + '")'
+          tooltipTitle.innerHTML = item.title
+
+          if (showTag == true) {
+            tooltipTag.innerHTML = item.tag
+            tooltipTag.style.display = 'block'
+          }
+        }
+      }
+    },
+    hideTooltip: function() {
+      let tooltip = document.querySelector('.map-tooltip')
+
+      tooltip.style.display = 'none'
+    },
     sortCountries: function() {
       setInterval(() => {
         let rand = Math.round(Math.random() * 6)
