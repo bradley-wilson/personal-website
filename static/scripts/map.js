@@ -156,6 +156,8 @@ function showMarkerData(obj, id) {
   var infoIcon = document.querySelector('.map-info__icon')
   var infoDescription = document.querySelector('.map-info__description')
   var infoMeta = document.querySelector('.map-info__meta')
+  let infoLocation = document.querySelector('.map-info__location')
+  let infoImage = document.querySelector('.map__column--image')
 
   for (var i = 0; i < obj.length; i++) {
     if (obj[i].id == id) {
@@ -163,10 +165,32 @@ function showMarkerData(obj, id) {
       infoIcon.style.display = 'block'
       infoIcon.style.backgroundImage = "url('" + obj[i].icon + "'"
       infoDescription.innerHTML = obj[i].description
-      infoMeta.innerHTML = obj[i].country + ' | ' + obj[i].date
+      infoMeta.innerHTML = obj[i].date
+      infoLocation.innerHTML = obj[i].country
+      infoLocation.style.display = 'initial'
+      infoImage.style.backgroundImage = 'url("' + obj[i].image + '"'
+      infoImage.style.width = '12.8rem'
+      infoImage.style.height = '12.8rem'
+      infoImage.style.display = 'initial'
       return
     }
   }
+}
+
+function resetMarkerData() {
+  var infoTitle = document.querySelector('.map-info__title')
+  var infoIcon = document.querySelector('.map-info__icon')
+  var infoDescription = document.querySelector('.map-info__description')
+  var infoMeta = document.querySelector('.map-info__meta')
+  let infoLocation = document.querySelector('.map-info__location')
+  let infoImage = document.querySelector('.map__column--image')
+
+  infoTitle.innerHTML = ''
+  infoIcon.style.display = 'none'
+  infoDescription.innerHTML = 'Select a point on the map to get started.'
+  infoMeta.innerHTML = ''
+  infoLocation.style.display = 'none'
+  infoImage.style.display = 'none'
 }
 
 /* -------------------- TAB BAR --------------------*/
@@ -182,8 +206,9 @@ function toggleWork() {
   var mapInfoMeta = document.getElementById('map-info__meta')
   mapInfoMeta.style.display = 'block'
   mapVisited.style.display = 'none'
-  mapInfo.style.display = 'block'
+  mapInfo.style.display = 'flex'
   resetMapColors()
+  resetMarkerData()
   map.style.visibility = 'visible'
   mapWork.style.display = 'initial'
   mapPresentations.style.display = 'none'
@@ -198,7 +223,7 @@ function toggleVisited(button, id) {
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'none'
   mapWork.style.display = 'none'
-  mapInfo.style.display = 'block'
+  mapInfo.style.display = 'none'
   mapInfoMeta.style.display = 'none'
 }
 
@@ -209,6 +234,7 @@ function toggleEngagement(button, id) {
   mapInfoMeta.style.display = 'block'
   mapVisited.style.display = 'none'
   toggleMapColors()
+  resetMarkerData()
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'none'
   mapWork.style.display = 'none'
@@ -309,8 +335,9 @@ function togglePresentations(button, id) {
   var countryRankings = document.getElementById('country-rankings')
   var mapInfoMeta = document.getElementById('map-info__meta')
   mapInfoMeta.style.display = 'block'
-  mapInfo.style.display = 'block'
+  mapInfo.style.display = 'flex'
   resetMapColors()
+  resetMarkerData()
   map.style.visibility = 'visible'
   mapPresentations.style.display = 'initial'
   mapWork.style.display = 'none'

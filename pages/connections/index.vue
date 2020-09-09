@@ -16043,7 +16043,7 @@
             <g transform="matrix(1,0,0,1,187.908,-17.9161)">
               <circle
                 id="russia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="641.348"
                 cy="181.681"
                 r="6.543"
@@ -16052,7 +16052,7 @@
             </g>
             <circle
               id="colombia"
-              class="map__marker"
+              class="map__marker map__marker--visited"
               cx="306.368"
               cy="396.323"
               r="6.543"
@@ -16061,7 +16061,7 @@
             <g transform="matrix(1,0,0,1,-19.474,20.8148)">
               <circle
                 id="ecuador"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16071,7 +16071,7 @@
             <g transform="matrix(1,0,0,1,-14.7197,44.5716)">
               <circle
                 id="peru"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16081,7 +16081,7 @@
             <g transform="matrix(1,0,0,1,-43.6695,-15.5488)">
               <circle
                 id="el-salvador"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16091,7 +16091,7 @@
             <g transform="matrix(1,0,0,1,-26.3601,-11.4631)">
               <circle
                 id="panama"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16101,7 +16101,7 @@
             <g transform="matrix(1,0,0,1,12.7851,-46.5465)">
               <circle
                 id="puerto-rico"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16111,7 +16111,7 @@
             <g transform="matrix(1,0,0,1,250.382,-164.748)">
               <circle
                 id="france"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16121,7 +16121,7 @@
             <g transform="matrix(1,0,0,1,267.044,-165.465)">
               <circle
                 id="switzerland"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16131,7 +16131,7 @@
             <g transform="matrix(1,0,0,1,207.259,-135.833)">
               <circle
                 id="portugal"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16141,7 +16141,7 @@
             <g transform="matrix(1,0,0,1,228.86,-136.83)">
               <circle
                 id="spain"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16151,7 +16151,7 @@
             <g transform="matrix(1,0,0,1,376.94,-147.965)">
               <circle
                 id="georgia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16161,7 +16161,7 @@
             <g transform="matrix(1,0,0,1,349.157,-134.879)">
               <circle
                 id="turkey"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16171,7 +16171,7 @@
             <g transform="matrix(1,0,0,1,-37.0649,-28.675)">
               <circle
                 id="costa-rica"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16181,7 +16181,7 @@
             <g transform="matrix(1,0,0,1,-46.6845,-43.3666)">
               <circle
                 id="belize"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16191,7 +16191,7 @@
             <g transform="matrix(1,0,0,1,-95.0321,-63.0029)">
               <circle
                 id="mexico"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16201,7 +16201,7 @@
             <g transform="matrix(1,0,0,1,-85.5122,-128.226)">
               <circle
                 id="usa"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16211,7 +16211,7 @@
             <g transform="matrix(1,0,0,1,-92.3705,-209.207)">
               <circle
                 id="canada"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16221,7 +16221,7 @@
             <g transform="matrix(1,0,0,1,-2.85702,174.148)">
               <circle
                 id="chile"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="306.368"
                 cy="396.323"
                 r="6.543"
@@ -16231,7 +16231,7 @@
             <g transform="matrix(1,0,0,1,-4.92401,-2.75189)">
               <circle
                 id="belgium"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16241,7 +16241,7 @@
             <g transform="matrix(1,0,0,1,-34.0947,-9.29489)">
               <circle
                 id="uk"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16251,7 +16251,7 @@
             <g transform="matrix(1,0,0,1,-46.0232,-36.7499)">
               <circle
                 id="scotland"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16261,7 +16261,7 @@
             <g transform="matrix(1,0,0,1,-2.37135,-17.8057)">
               <circle
                 id="netherlands"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16271,7 +16271,7 @@
             <g transform="matrix(1,0,0,1,-4.41149,-58.3722)">
               <circle
                 id="norway"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16281,7 +16281,7 @@
             <g transform="matrix(1,0,0,1,17.7591,-59.1383)">
               <circle
                 id="sweden"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16291,7 +16291,7 @@
             <g transform="matrix(1,0,0,1,9.0017,7.43592)">
               <circle
                 id="luxembourg"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="215.994"
                 r="6.543"
@@ -16301,7 +16301,7 @@
             <g transform="matrix(1,0,0,1,21.1245,-2.7213)">
               <circle
                 id="austria"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16311,7 +16311,7 @@
             <g transform="matrix(1,0,0,1,30.7224,8.20736)">
               <circle
                 id="slovenia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16321,7 +16321,7 @@
             <g transform="matrix(1,0,0,1,44.8544,7.1325)">
               <circle
                 id="romania"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16331,7 +16331,7 @@
             <g transform="matrix(1,0,0,1,129.69,88.7464)">
               <circle
                 id="qatar"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16341,7 +16341,7 @@
             <g transform="matrix(1,0,0,1,145.486,93.592)">
               <circle
                 id="united-arab-emirates"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16351,7 +16351,7 @@
             <g transform="matrix(1,0,0,1,21.1245,-20.3075)">
               <circle
                 id="czech-republic"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16361,7 +16361,7 @@
             <g transform="matrix(1,0,0,1,11.0975,-30.0236)">
               <circle
                 id="germany"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16371,7 +16371,7 @@
             <g transform="matrix(1,0,0,1,29.9265,-31.545)">
               <circle
                 id="poland"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16381,7 +16381,7 @@
             <g transform="matrix(1,0,0,1,36.6854,-13.7645)">
               <circle
                 id="ukraine"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16391,7 +16391,7 @@
             <g transform="matrix(1,0,0,1,10.7147,-45.6673)">
               <circle
                 id="denmark"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16401,7 +16401,7 @@
             <g transform="matrix(1,0,0,1,35.897,-51.0332)">
               <circle
                 id="latvia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="576.571"
                 cy="235.272"
                 r="6.543"
@@ -16411,7 +16411,7 @@
             <g transform="matrix(1,0,0,1,-2.80311,-26.9101)">
               <circle
                 id="australia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16421,7 +16421,7 @@
             <g transform="matrix(1,0,0,1,120.082,41.1352)">
               <circle
                 id="new-zealand"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16431,7 +16431,7 @@
             <g transform="matrix(1,0,0,1,-53.2261,-113.61)">
               <circle
                 id="indonesia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16441,7 +16441,7 @@
             <g transform="matrix(1,0,0,1,-112.663,-127.88)">
               <circle
                 id="malaysia"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16451,7 +16451,7 @@
             <g transform="matrix(1,0,0,1,-114.841,-176.367)">
               <circle
                 id="thailand"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16461,7 +16461,7 @@
             <g transform="matrix(1,0,0,1,-105.959,-113.55)">
               <circle
                 id="singapore"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16471,7 +16471,7 @@
             <g transform="matrix(1,0,0,1,8.41366,-260.985)">
               <circle
                 id="japan"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16481,7 +16481,7 @@
             <g transform="matrix(1,0,0,1,-26.8291,-259.318)">
               <circle
                 id="south-korea"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16491,7 +16491,7 @@
             <g transform="matrix(1,0,0,1,-90.3446,-249.628)">
               <circle
                 id="china"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16501,7 +16501,7 @@
             <g transform="matrix(1,0,0,1,-56.5111,-211.191)">
               <circle
                 id="hong-kong"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16511,7 +16511,7 @@
             <g transform="matrix(1,0,0,1,-67.8197,-204.437)">
               <circle
                 id="macao"
-                class="map__marker"
+                class="map__marker map__marker--visited"
                 cx="989.414"
                 cy="538.056"
                 r="6.543"
@@ -16525,6 +16525,7 @@
           id="map__info"
           class="map__info"
         >
+          <div class="map-info__location" />
           <div class="map__column">
             <div class="map-info__icon" />
           </div>
@@ -16538,6 +16539,7 @@
               class="map-info__meta text--metadata"
             />
           </div>
+          <div class="map__column map__column--image" />
         </div>
       </div>
     </div>
@@ -16933,6 +16935,8 @@ export default {
     bottom: 1rem;
     left: 50%;
     transform: translate(-50%, 0);
+    display: flex;
+    align-items: center;
 
     @include screen(desktop) {
       width: 80rem;
@@ -16955,7 +16959,16 @@ export default {
   }
 
   &__column {
-    float: left;
+    &--image {
+      background-size: cover;
+      background-position: center;
+      margin-left: auto;
+      display: none;
+
+      @include screen(tablet) {
+        display: initial;
+      }
+    }
   }
 
   &-info {
@@ -16968,6 +16981,19 @@ export default {
       margin-right: 1rem;
       margin-bottom: 1rem;
       border-radius: 50%;
+    }
+
+    &__location {
+      position: absolute;
+      left: 1rem;
+      top: -2rem;
+      background-color: $color-secondary;
+      padding: .5rem 4.5rem;
+      font-size: 1.8rem;
+      font-family: $Bebas;
+      color: black;
+      border-radius: 50px;
+      display: none;
     }
   }
 }
@@ -17071,10 +17097,6 @@ export default {
     &--right {
       margin-left: 1.5rem;
     }
-  }
-
-  &__title {
-
   }
 }
 </style>

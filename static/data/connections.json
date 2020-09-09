@@ -5,6 +5,7 @@
         "country": "Colombia",
         "date": "2014 - Present",
         "icon": "/img/logo_andes_cropped.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Universidad_de_los_Andes_%283326108271%29.jpg/1200px-Universidad_de_los_Andes_%283326108271%29.jpg",
         "id": "uni-andes"
     },
     {
@@ -13,6 +14,7 @@
         "country": "Germany",
         "date": "2013 - 2017",
         "icon": "/img/logo_bayreuth_cropped.jpg",
+        "image": "https://www.uni-bayreuth.de/de/universitaet/presse/images/2017/047/Jura-Wirtschaft_Uni-Bayreuth.jpg",
         "id": "uni-bayreuth"
     },
     {
@@ -21,6 +23,7 @@
         "country": "Germany",
         "date": "2013 and 2016",
         "icon": "/img/logo_lmu.jpg",
+        "image": "http://portal.idc.ac.il/en/main/study-exchange-programs/publishingimages/partners/lmu_view.jpg",
         "id": "uni-munich"
     },
     {
@@ -29,6 +32,7 @@
         "country": "Australia",
         "date": null,
         "icon": "/img/logo_rmit_cropped.jpg",
+        "image": "https://discovermelbourne.files.wordpress.com/2015/04/dscn2399-rmit-university-swanston-street-melbourne.jpg",
         "id": "uni-rmit"
     },
     {
@@ -37,6 +41,7 @@
         "country": "Russia",
         "date": "2014",
         "icon": "/img/logo_stpetersburg.jpg",
+        "image": "http://www.saint-petersburg.com/images/virtual-tour/state-university.jpg",
         "id": "uni-st-petersburg"
     },
     {
@@ -45,6 +50,7 @@
         "country": "Colombia",
         "date": "2015",
         "icon": "/img/logo_andes_cropped.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Universidad_de_los_Andes_%283326108271%29.jpg/1200px-Universidad_de_los_Andes_%283326108271%29.jpg",
         "id": "pres-colombia-2015"
     },
     {
@@ -53,6 +59,7 @@
         "country": "Russia",
         "date": "2014",
         "icon": "/img/logo_stpetersburg.jpg",
+        "image": "http://www.saint-petersburg.com/images/virtual-tour/state-university.jpg",
         "id": "pres-st-petersburg-2014" 
     },
     {
@@ -61,6 +68,7 @@
         "country": "Colombia",
         "date": "2013",
         "icon": "/img/logo_andes_cropped.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Universidad_de_los_Andes_%283326108271%29.jpg/1200px-Universidad_de_los_Andes_%283326108271%29.jpg",
         "id": "pres-colombia-2013"
     },
     {
@@ -69,6 +77,7 @@
         "country": "Denmark",
         "date": "2013",
         "icon": "/img/logo_copenhagen_business_school_cropped.jpg",
+        "image": "https://aasarchitecture.com/wp-content/uploads/Copenhagen-Business-School-Campus-by-C-F-Moller-Architects-01.jpg",
         "id": "pres-copenhagen-2013"
     },
     {
@@ -77,6 +86,7 @@
         "country": "Spain",
         "date": "2013",
         "icon": "/img/logo-uab.jpg",
+        "image": "https://www.saiprograms.com/wp/wp-content/uploads/2016/05/UAB-Campus-photo.jpg",
         "id": "pres-barcelona-2013"
     },
     {
@@ -85,6 +95,7 @@
         "country": "France",
         "date": "2013",
         "icon": "/img/logo_isc.jpg",
+        "image": "https://i0.wp.com/business-cool.com/wp-content/uploads/2017/03/ISC-Paris-couv.jpg?fit=5215%2C3481",
         "id": "pres-paris-2013"
     },
     {
@@ -93,6 +104,7 @@
         "country": "UK",
         "date": "2013",
         "icon": "/img/logo_university_of_southampton.jpg",
+        "image": "http://cdn.images.express.co.uk/img/dynamic/41/590x/Southampton-university-563569.jpg",
         "id": "pres-southampton-2013"
     },
     {
@@ -101,6 +113,7 @@
         "country": "South Korea",
         "date": "2013",
         "icon": "/img/logo_yonsei_university.jpg",
+        "image": "https://myea.umd.edu/_customtags/ct_Image.cfm?Image_ID=72992",
         "id": "pres-seoul-2013"
     },
     {
@@ -109,6 +122,7 @@
         "country": "China",
         "date": "2012",
         "icon": "/img/logo_university_of_nottingham.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/0130_-_England%2C_Nottingham%2C_Trent_Building_HDR_-HQ-.jpg/1920px-0130_-_England%2C_Nottingham%2C_Trent_Building_HDR_-HQ-.jpg",
         "id": "pres-ningbo-2012"
     },
     {
@@ -117,6 +131,7 @@
         "country": "Germany",
         "date": "2012",
         "icon": "/img/logo_bayreuth_cropped.jpg",
+        "image": "https://www.uni-bayreuth.de/de/universitaet/presse/images/2017/047/Jura-Wirtschaft_Uni-Bayreuth.jpg",
         "id": "pres-bayreuth-2012"
     },
     {
@@ -125,6 +140,7 @@
         "country": "Portugal",
         "date": "2012",
         "icon": "/img/logo_iscte.jpg",
+        "image": "https://www.timeshighereducation.com/sites/default/files/institution/header_image/header_image_14.jpg",
         "id": "pres-lisbon-2012"
     },
     {
@@ -133,6 +149,7 @@
         "country": "Malaysia",
         "date": "2012",
         "icon": "/img/logo_monash_university.jpg",
+        "image": "https://studyco.com/db/files/images/content/aa_gallery_photo132-8831629.jpg",
         "id": "pres-malaysia-2012"
     },
     {
@@ -141,6 +158,7 @@
         "country": "Denmark",
         "date": "2011",
         "icon": "/img/logo_copenhagen_cropped.jpg",
+        "image": "https://aasarchitecture.com/wp-content/uploads/Copenhagen-Business-School-Campus-by-C-F-Moller-Architects-01.jpg",
         "id": "pres-copenhagen-2011"
     },
     {
@@ -149,6 +167,7 @@
         "country": "Austria",
         "date": "2009",
         "icon": "/img/logo_wu.jpg",
+        "image": "https://skift.com/wp-content/uploads/2015/11/University-of-Vienna-Economics-Business.jpg",
         "id": "pres-vienna-2009"
     },
     {
@@ -157,6 +176,7 @@
         "country": "Germany",
         "date": "2009",
         "icon": "/img/logo_lmu.jpg",
+        "image": "http://portal.idc.ac.il/en/main/study-exchange-programs/publishingimages/partners/lmu_view.jpg",
         "id": "pres-munich-2009"
     },
     {
@@ -165,6 +185,7 @@
         "country": "Germany",
         "date": "2009",
         "icon": "/img/logo_kaiserslautern.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Uni_kl_verwaltung.jpg",
         "id": "pres-kaiserslautern-2009"
     },
     {
@@ -173,6 +194,7 @@
         "country": "Germany",
         "date": "2009",
         "icon": "/img/logo_university_of_munster.jpg",
+        "image": "https://www.uni-muenster.de/imperia/md/images/zentral/studieninteressierte/fittosize_761_381_22ccf501d5f8d70060fae0716f16b8c3_schloss_2_1.jpeg",
         "id": "pres-münster-2009"
     },
     {
@@ -181,6 +203,7 @@
         "country": "Germany",
         "date": "2009",
         "icon": "/img/logo_university_of_hamburg.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/New_building,_University_Medical_Center_Hamburg-Eppendorf.jpg",
         "id": "pres-hamburg-2009"
     },
     {
@@ -189,6 +212,7 @@
         "country": "Germany",
         "date": "2009",
         "icon": "/img/logo_university_of_gottingen.jpg",
+        "image": "http://www.simscience2017.uni-goettingen.de/wp-content/uploads/2016/08/Aula_aussen_Frank_Stefan_Kimmel_1-800x500.jpg",
         "id": "pres-gottingen-2009"
     },
     {
@@ -197,6 +221,7 @@
         "country": "South Korea",
         "date": "2009",
         "icon": "/img/logo_kubs.jpg",
+        "image": "http://www.multivu.com/players/English/7553551-international-business-europe-asia/gallery/image/c1258dee-c491-4257-8f19-533f3cf405f9.HR.jpg",
         "id": "pres-seoul-2009"
     },
     {
@@ -205,6 +230,7 @@
         "country": "Australia",
         "date": "2009",
         "icon": "/img/logo_rmit_cropped.jpg",
+        "image": "https://discovermelbourne.files.wordpress.com/2015/04/dscn2399-rmit-university-swanston-street-melbourne.jpg",
         "id": "pres-australia-2009"
     },
     {
@@ -213,6 +239,7 @@
         "country": "Netherlands",
         "date": "2008",
         "icon": "/img/logo_radboud_university.jpg",
+        "image": "https://everipedia-storage.s3-accelerate.amazonaws.com/NewlinkFiles/3158754/16749302.jpg",
         "id": "pres-nijmegen-2008"
     },
     {
@@ -221,6 +248,7 @@
         "country": "Germany",
         "date": "2008",
         "icon": "/img/logo_university_of_hamburg.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c9/New_building,_University_Medical_Center_Hamburg-Eppendorf.jpg",
         "id": "pres-hamburg-2008"
     },
     {
@@ -229,6 +257,7 @@
         "country": "Australia",
         "date": "2006",
         "icon": "/img/logo_rmit_cropped.jpg",
+        "image": "https://discovermelbourne.files.wordpress.com/2015/04/dscn2399-rmit-university-swanston-street-melbourne.jpg",
         "id": "pres-australia-2006"
     },
     {
@@ -237,6 +266,7 @@
         "country": "USA",
         "date": "2018",
         "icon": "/img/logo-oregon.jpg",
+        "image": "https://kentcollegesearch.files.wordpress.com/2012/07/uo-bus2.jpg",
         "id": "pres-oregon-2018"
     },
     {
@@ -245,6 +275,7 @@
         "country": "Panama",
         "date": "2018",
         "icon": "/img/logo-santa-maria.png",
+        "image": "http://info.usma.ac.pa/wp-content/uploads/2017/06/52-anos-d-ela-USMA-Panama-celebracion-.jpg",
         "id": "pres-panama-2018"
     },
     {
@@ -253,6 +284,7 @@
         "country": "Germany",
         "date": "2018",
         "icon": "/img/logo_kaiserslautern.jpg",
+        "image": "https://cdn.pressebox.de/r/6eb80071efa7538d/attachments/67/93/83/thumbnail_679383_580x300.jpg",
         "id": "pres-kaiserslautern-2018"
     },
     {
@@ -261,6 +293,7 @@
         "country": "Germany",
         "date": "2018",
         "icon": "/img/logo-saarland.jpg",
+        "image": "https://i.pinimg.com/originals/ed/d8/23/edd823960922d70abc8e1bdd5904c061.jpg",
         "id": "pres-saarland-2018"
     },
     {
@@ -269,6 +302,7 @@
         "country": "Austria",
         "date": "2018",
         "icon": "/img/logo-alpen-adria.jpg",
+        "image": "http://www.esst.eu/wp-content/uploads/Adria-campus.jpg",
         "id": "pres-klagenfurt-2018"
     },
     {
@@ -277,6 +311,7 @@
         "country": "Puerto Rico",
         "date": "2018",
         "icon": "/img/logo-upr.jpg",
+        "image": "https://live.staticflickr.com/1362/768105783_236bfff1be_b.jpg",
         "id": "pres-puerto-rico-2018"
     },
     {
