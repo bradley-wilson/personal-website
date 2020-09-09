@@ -171,7 +171,10 @@ function showMarkerData(obj, id) {
       infoImage.style.backgroundImage = 'url("' + obj[i].image + '"'
       infoImage.style.width = '12.8rem'
       infoImage.style.height = '12.8rem'
-      infoImage.style.display = 'initial'
+
+      if (screen.width > 767) {
+        infoImage.style.display = 'initial'
+      }
       return
     }
   }
