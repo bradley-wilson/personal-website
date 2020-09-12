@@ -84,4 +84,4 @@ dist
 .DS_Store
 
 # scrapped-data file
-assets/scrapped-data.json
+# assets/scrapped-data.json
