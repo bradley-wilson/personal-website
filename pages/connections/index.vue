@@ -3,7 +3,7 @@
     <div class="u-view u-view--scroll">
       <a
         class="button button--primary button--back"
-        to="/#section-connections">Go back</a>
+        href="/#section-connections">Go back</a>
       <div class="map-nav u-center-x">
         <img
           @click="previousMap"
@@ -20,8 +20,10 @@
           class="map-nav__button map-nav__button--right" />
       </div>
       <div class="map-tooltip">
-        <div class="map-tooltip__icon" />
-        <div class="map-tooltip__title"></div>
+        <div class="map-tooltip__row">
+          <div class="map-tooltip__icon" />
+          <div class="map-tooltip__title heading--tertiary"></div>
+        </div>
         <div class="map-tooltip__tag"></div>
       </div>
       <div class="map">
@@ -17009,29 +17011,89 @@ export default {
     }
   },
   mounted: function() {
-    let visitedMarkers = document.getElementsByClassName('map__marker--visited')
-    let mapCountries = document.getElementsByClassName('map__country')
-
-    let nuxt = this
-
-    for (let country of mapCountries) {
-      country.addEventListener(
-        'click',
-        this.showTooltip(country.id, true),
-        false
-      )
-    }
   },
   methods: {
-    showTooltip: function(id, showTag) {
+    addVisitedListeners: function() {
+      let visitedMarkers = document.getElementsByClassName('map__marker--visited')
+      let nuxt = this
+
+      for (let marker of visitedMarkers) {
+        marker.addEventListener(
+          'mouseover',
+          function (event) {
+            nuxt.showTooltip(marker.id, false, event)
+          },
+          false
+        )
+      }
+
+      for (let marker of visitedMarkers) {
+        marker.addEventListener(
+          'mouseleave',
+          function (event) {
+            nuxt.hideTooltip()
+          },
+          false
+        )
+      }
+    },
+    addReadershipListeners: function() {
+      let mapCountries = document.getElementsByClassName('map__country')
+
+      let nuxt = this
+
+      for (let country of mapCountries) {
+        country.addEventListener(
+          'mouseover',
+          function (event) {
+            nuxt.showTooltip(country.id, true, event)
+          },
+          false
+        )
+
+        country.addEventListener(
+          'mouseleave',
+          function hideReadersTooltip() {
+            nuxt.hideTooltip()
+          },
+          false
+        )
+      }
+    },
+    removeVisitedListeners: function() {
+      let visitedMarkers = document.getElementsByClassName('map__marker--visited')
+      let nuxt = this
+
+      for (let marker of visitedMarkers) {
+        marker.outerHTML = marker.outerHTML
+      }
+    },
+    removeReadershipListeners: function() {
+      let mapCountries = document.getElementsByClassName('map__country')
+
+      let nuxt = this
+
+      for (let country of mapCountries) {
+        country.outerHTML = country.outerHTML
+      }
+    },
+    showTooltip: function(id, showTag, event) {
       let tooltip = document.querySelector('.map-tooltip')
       let tooltipIcon = document.querySelector('.map-tooltip__icon')
       let tooltipTitle = document.querySelector('.map-tooltip__title')
       let tooltipTag = document.querySelector('.map-tooltip__tag')
+      let posX = event.clientX
+      let posY = event.clientY
 
-      tooltip.style.display = 'block'
+      console.log('X: ' + posX + ', Y: ' + posY)
 
-      console.log(id)
+      if (this.currentMap == 1 || this.currentMap == 3) {
+        tooltip.style.display = 'flex'
+        tooltip.style.left = posX + 'px'
+        tooltip.style.top = posY + 'px'
+      }
+
+
 
       for (let item of this.countries) {
         if (item.id === id) {
@@ -17047,8 +17109,11 @@ export default {
     },
     hideTooltip: function() {
       let tooltip = document.querySelector('.map-tooltip')
+      let tooltipTag = document.querySelector('.map-tooltip__tag')
 
       tooltip.style.display = 'none'
+      tooltipTag.innerHTML = ''
+      tooltipTag.style.display = 'none'
     },
     sortCountries: function() {
       setInterval(() => {
@@ -17071,21 +17136,26 @@ export default {
         case 0:
           this.currentMap++
           toggleEngagement()
+          this.addReadershipListeners()
           title.innerHTML = 'Global readership'
           break
         case 1:
           this.currentMap++
           togglePresentations()
+          this.removeReadershipListeners()
           title.innerHTML = 'Invited presentations'
           break
         case 2:
           this.currentMap++
           toggleVisited()
+          this.addVisitedListeners()
           title.innerHTML = 'Countries visited'
           break
         case 3:
           this.currentMap = 0
           toggleWork()
+          this.removeVisitedListeners()
+          this.hideTooltip()
           title.innerHTML = 'Work connections'
           break
       }
@@ -17097,21 +17167,26 @@ export default {
         case 0:
           this.currentMap = 3
           toggleVisited()
+          this.addVisitedListeners()
           title.innerHTML = 'Countries visited'
           break
         case 1:
           this.currentMap--
           toggleWork()
+          this.removeReadershipListeners()
           title.innerHTML = 'Work connections'
           break
         case 2:
           this.currentMap--
           toggleEngagement()
+          this.addReadershipListeners()
           title.innerHTML = 'Global readership'
           break
         case 3:
           this.currentMap--
           togglePresentations()
+          this.removeVisitedListeners()
+          this.hideTooltip()
           title.innerHTML = 'Invited presentations'
           break
       }
@@ -17208,6 +17283,51 @@ export default {
       border-radius: 50px;
       display: none;
     }
+  }
+
+  &-tooltip {
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 20rem;
+    display: none;
+
+    &__row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    &__icon {
+      width: 3.2rem;
+      height: 3.2rem;
+      background-position: center;
+      background-size: cover;
+      border-radius: 100%;
+      margin-right: 1rem;
+      flex: 0 0 auto;
+    }
+
+    &__tag {
+      width: 100%;
+      background-color: $color-secondary;
+      flex: 1 0 auto;
+      text-align: center;
+      color: black;
+      padding: 2rem auto;
+      border-radius: 5px;
+      font-family: $Bebas;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__country rect {
+    stroke-width: 4px;
+    stroke: transparent;
   }
 }
 
