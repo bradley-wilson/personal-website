@@ -20,21 +20,12 @@ class="tab-bar tab-bar--scrollable">
         :key="publication.id"
         class="publication publication--expanded"
       >
-        >
-        <a
-:href="publication.url"
-target="_blank">
-          <div
-            :style="[
-              publication.image.path
-                ? {
-                  backgroundImage:
-                    'url(https://bradwilsonphd.com/' +
-                    publication.image.path +
-                    ')',
-                }
-                : { backgroundImage: 'url(/img/publication-thumbnail.svg)' },
-            ]"
+        <a :href="publication.url" target="_blank">
+          <div :style="[ publication.image.path ? {
+              backgroundImage: 'url(https://bradwilsonphd.com/' + publication.image.path + ')',
+            }
+           : { backgroundImage: 'url(/img/publication-thumbnail.svg)' },
+           ]"
             class="publication__thumbnail"
           />
           <div class="publication__info">

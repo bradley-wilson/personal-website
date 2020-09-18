@@ -26,6 +26,9 @@
         </div>
         <div class="map-tooltip__tag"></div>
       </div>
+      <div class="hover-text">
+        Hover over the map to get started.
+      </div>
       <div class="map">
         <svg
           class="map__content"
@@ -17013,6 +17016,23 @@ export default {
   mounted: function() {
   },
   methods: {
+    showHoverText: function() {
+      let hoverText = document.querySelector('.hover-text')
+
+      hoverText.style.opacity = '1'
+      hoverText.style.display = 'flex'
+      
+      setTimeout(this.hideHoverText, 2000)
+    },
+    hideHoverText: function() {
+      let hoverText = document.querySelector('.hover-text')
+
+      hoverText.style.opacity = '0'
+
+      setTimeout(function() {
+        hoverText.style.display = 'none'
+      }, 1000)
+    },
     addVisitedListeners: function() {
       let visitedMarkers = document.getElementsByClassName('map__marker--visited')
       let nuxt = this
@@ -17138,6 +17158,7 @@ export default {
           toggleEngagement()
           this.addReadershipListeners()
           title.innerHTML = 'Global readership'
+          this.showHoverText()
           break
         case 1:
           this.currentMap++
@@ -17150,6 +17171,7 @@ export default {
           toggleVisited()
           this.addVisitedListeners()
           title.innerHTML = 'Countries visited'
+          this.showHoverText()
           break
         case 3:
           this.currentMap = 0
@@ -17169,6 +17191,7 @@ export default {
           toggleVisited()
           this.addVisitedListeners()
           title.innerHTML = 'Countries visited'
+          this.showHoverText()
           break
         case 1:
           this.currentMap--
@@ -17181,6 +17204,7 @@ export default {
           toggleEngagement()
           this.addReadershipListeners()
           title.innerHTML = 'Global readership'
+          this.showHoverText()
           break
         case 3:
           this.currentMap--
@@ -17431,5 +17455,20 @@ export default {
       margin-left: 1.5rem;
     }
   }
+}
+
+.hover-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 3.2rem;
+  font-family: $Bebas;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 1s;
 }
 </style>
