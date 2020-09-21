@@ -8,18 +8,14 @@
         Subscribe to our mailing list:
       </h2>
       <form
-        id="newsletter"
-        class="form"
-        action="https://bradwilsonphd.us7.list-manage.com/subscribe/post"
+        action="https://bradwilsonphd.us7.list-manage.com/subscribe/post?u=0ca2187b7102f72e754391083&amp;id=fb615859a1"
         method="post"
-        accept-charset="UTF-8"
-      >
-        <input type="hidden"
-name="u" value="0ca2187b7102f72e754391083"
-/>
-        <input type="hidden"
-name="id" value="eede23b3c3"
-/>
+        id="newsletter"
+        name="mc-embedded-subscribe-form"
+        class="validate form"
+        target="_blank"
+        novalidate
+       >
         <input
           id="MERGE0"
           v-model="newsletter.email"
@@ -33,12 +29,13 @@ name="id" value="eede23b3c3"
           required
           placeholder="Email"
         >
-        <input id="sooner"
-type="checkbox" name="sooner" value="true"
-/>
-        <label
-for="sooner"
-class="form__label">Get content sooner</label>
+        <div class="form__group">
+          <strong>Receive content sooner </strong>
+          <ul>
+            <li><input type="radio" value="Yes" name="SOONER" id="mce-SOONER-0" class="radio-button"><label for="mce-SOONER-0">Yes</label></li>
+            <li><input type="radio" value="No" name="SOONER" id="mce-SOONER-1" class="radio-button"><label for="mce-SOONER-1">No</label></li>
+          </ul>
+        </div>
         <div style="text-align: center;">
           <input
             class="button button--primary"
@@ -105,6 +102,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.radio-button {
+  margin-right: 1rem;
+}
+
 .form {
   max-width: 60rem;
   margin: 0 auto;
@@ -113,6 +114,14 @@ export default {
     font-size: 1.6rem;
     color: $light-grey;
     margin-left: 0.5rem;
+  }
+
+  &__group {
+    font-size: 1.8rem;
+
+    ul {
+      list-style-type: none;
+    }
   }
 
   &__input {
