@@ -372,8 +372,8 @@
                 </div>
               </div>
               <div class="clustrmaps__total">
-                Total page views
-                <span class="clustrmaps__total-number">1,858</span>
+                All Time Views
+                <span class="clustrmaps__total-number">{{ allTimeViews }}</span>
               </div>
             </div>
             <div class="scoreboard__container scoreboard__container--country">
@@ -720,6 +720,16 @@ export default {
       }
 
       return array
+    },
+    allTimeViews: function() {
+      let views = scrappedData.Academia.Country["All_Time_Views"]
+      let totalViews = 0
+
+      for (let item of views) {
+        totalViews += item
+      }
+
+      return totalViews
     }
   },
   mounted: function() {
@@ -1284,6 +1294,7 @@ export default {
       height: 25rem;
       flex-direction: row;
       overflow: scroll;
+      padding: 3rem;
 
       @include screen(tablet) {
         flex-direction: column;
@@ -1313,6 +1324,8 @@ export default {
     padding: 0.4rem;
     background-color: #177ba6;
     border-radius: 0.5rem;
+    width: 7rem;
+    text-align: center;
 
     &--country {
       background-color: #4eefa1;
