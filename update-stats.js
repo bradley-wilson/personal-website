@@ -2,29 +2,32 @@ const fs = require('fs')
 const axios = require('axios')
 
 async function updateStats() {
+  let scrappedRes
+  let statsRes
+  let interestRes
+
   try {
-    const scrappedRes = await axios.get(
+    scrappedRes = await axios.get(
       'http://ec2-3-133-92-96.us-east-2.compute.amazonaws.com/data.json'
     )
-    return scrappedRes
   } catch (err) {
-    console.error(err.message)
+    console.log(err.message)
   }
 
   try {
-    const statsRes = await axios.get(
+    statsRes = await axios.get(
       'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519'
     )
-    return statsRes
+    // return statsRes
   } catch (err) {
     console.error(err.message)
   }
 
   try {
-    const interestRes = await axios.get(
+    interestRes = await axios.get(
       'https://www.bradwilsonphd.com/cockpit/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519'
     )
-    return interestRes
+    // return interestRes
   } catch (err) {
     console.error(err.message)
   }
