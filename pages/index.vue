@@ -309,7 +309,13 @@
             class="graph__button"
             @click="goToStat(0)"
           >
-            <span class="graph__button--icon graph__button--icon-reads" />
+            <span class="graph__button--icon graph__button--icon-reads">
+              <span
+                class="graph__button--icon-selected"
+                style="background-color: #923a06"
+                v-show="statsCounter == 1"
+              />
+            </span>
             Reads
           </span>
           <span
@@ -317,7 +323,13 @@
             class="graph__button"
             @click="goToStat(1)"
           >
-            <span class="graph__button--icon graph__button--icon-citations" />
+            <span class="graph__button--icon graph__button--icon-citations">
+              <span
+                class="graph__button--icon-selected"
+                style="background-color: #062660"
+                v-show="statsCounter == 2"
+              />
+            </span>
             Citations
           </span>
           <span
@@ -325,7 +337,13 @@
             class="graph__button"
             @click="goToStat(2)"
           >
-            <span class="graph__button--icon graph__button--icon-interest" />
+            <span class="graph__button--icon graph__button--icon-interest">
+              <span
+                class="graph__button--icon-selected"
+                style="background-color: #065144"
+                v-show="statsCounter == 3"
+              />
+            </span>
             Research Interest
           </span>
         </div>
@@ -747,11 +765,12 @@ export default {
       let track = document.getElementById('stats__track')
       if (this.statsCounter == 3) {
         track.style.transform = 'translateX(0%)'
-        this.statsCounter = 0
+        this.statsCounter = 1
       } else {
         track.style.transform = 'translateX(' + statsOffset + '%)'
         this.statsCounter++
       }
+      console.log(this.statsCounter)
     },
     goToStat: function (target) {
       let statsOffset = -100 * target
@@ -955,6 +974,19 @@ export default {
       display: inline-block;
       border-radius: 1.5rem;
       margin-right: 1.5rem;
+      position: relative;
+
+      &-selected {
+        content: "";
+        width: .8rem;
+        height: .8rem;
+        background-color: white;
+        border-radius: .8rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
       &-reads {
         background-color: rgb(255, 139, 14);
@@ -1025,13 +1057,13 @@ export default {
 
   &__container {
     display: flex;
-    width: 100vw;
+    width: 80vw;
     flex-direction: column;
     position: relative;
     left: 50%;
     right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    margin-left: -40vw;
+    margin-right: -40vw;
 
     @include screen(desktop) {
       flex-direction: row;
