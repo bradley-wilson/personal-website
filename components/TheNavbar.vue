@@ -19,10 +19,10 @@
           class="menu__link"
           @click="closeNav()"
         >
-          <a
-            :href="link.url"
+          <nuxt-link
+            :to="{path: link.url, hash: link.target}"
             class="menu__link--inner"
-          > {{ link.title }} </a>
+          > {{ link.title }} </nuxt-link>
         </div>
 
         <div class="social-media">
@@ -54,15 +54,19 @@ export default {
       links: [
         {
           title: 'About',
-          url: '/#section-about',
+          url: '/',
           target: '#section-about',
         },
         {
           title: 'Services',
-          url: '/#section-services',
+          url: '/',
           target: '#section-services',
         },
-        { title: 'Connections', url: '/#section-connections' },
+        {
+          title: 'Connections',
+          url: '/',
+          target: '#section-connections'
+        },
         { title: 'Publications', url: '/publications' },
         { title: 'Team', url: '/team' },
         { title: 'Bookclub', url: '/under-construction' },
@@ -70,7 +74,7 @@ export default {
         { title: 'Blog', url: '/blog' },
         {
           title: 'Contact',
-          url: '/#section-contact',
+          url: '/',
           target: '#section-contact',
         },
       ],

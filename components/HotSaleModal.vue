@@ -13,6 +13,7 @@ class="modal modal--sticky">
       <a href="#booking-modal">
         <button
           class="button button--bar"
+          id="hot-sale-bar"
           @click="closeModal('hot-sale-modal')"
         >
           Book a meeting
@@ -43,3 +44,14 @@ export default {
   },
 }
 </script>
+
+<style scoped lang="scss">
+ #hot-sale-bar {
+  background-color: $color-secondary;
+  color: white;
+
+  &:hover {
+    color: rgba(255,255,255,0.8);
+  }
+ } 
+</style>
