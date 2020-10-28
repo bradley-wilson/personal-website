@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="u-view u-view--scroll">
-      <a
+      <nuxt-link
         class="button button--primary button--back"
-        href="/#section-connections">Go back</a>
+        :to="{path: '/', hash: '#section-connections'}">Go back</nuxt-link>
       <div class="map-nav u-center-x">
         <img
           @click="previousMap"
