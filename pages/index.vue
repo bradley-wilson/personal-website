@@ -390,33 +390,33 @@
                 </div>
               </div>
               <div class="clustrmaps__total">
-                All Time Views
+                All Time Page Views
                 <span class="clustrmaps__total-number">{{ allTimeViews }}</span>
               </div>
             </div>
             <div class="scoreboard__container scoreboard__container--country">
               <div class="scoreboard scoreboard--country">
                 <div class="scoreboard__header scoreboard__header--country">
-                  Global visitors ranking
+                  Global Academia visitors ranking
                 </div>
                 <span class="scoreboard__header--shadow" />
                 <div class="scoreboard__data scoreboard__data--country">
                   <div
-                    v-for="(item, index) in 10"
+                    v-for="(item, index) in countryRankings"
                     :key="item.id"
                     class="scoreboard-data__item scoreboard-data__item--country"
                   >
                     <span
                       class="scoreboard-item__color scoreboard-item__color--country"
                     >
-                      {{ item }}
+                      {{ index + 1 }}
                     </span>
-                    {{ scrappedData.Academia.Country.Country[index] }}
+                    {{ item.country }}
                     <span
                       class="scoreboard-item__value scoreboard-item__value--country"
                     >
                       {{
-                        scrappedData.Academia.Country['All_Time_Views'][index]
+                        item.views
                       }}
                     </span>
                   </div>
@@ -748,6 +748,22 @@ export default {
       }
 
       return totalViews
+    },
+    countryRankings: function() {
+      let views = scrappedData.Academia.Country["All_Time_Views"] 
+      let countries = scrappedData.Academia.Country.Country
+      let rankings = []
+
+      for (let i = 0; i < 10; i++) {
+        let obj = {}
+        obj['country'] = countries[i]
+        obj['views'] = views[i]
+        rankings.push(obj)
+      }
+
+      rankings.sort((a, b) => parseFloat(b.views) - parseFloat(a.views))
+
+      return rankings
     }
   },
   mounted: function() {
@@ -791,7 +807,8 @@ export default {
 }
 
 .section-mailing-list {
-  background-color: $light-blue;
+  // background-color: $light-blue;
+  background-image: $gradient-light;
   padding-bottom: 6rem;
 }
 
@@ -1087,9 +1104,11 @@ export default {
 
   &__graph {
     width: 100%;
+    order: 2;
 
     @include screen(tablet) {
       width: 80%;
+      order: 1;
     }
   }
 
@@ -1124,7 +1143,12 @@ export default {
     flex-direction: column;
     align-items: center;
     margin-right: 3rem;
+    order: 1;
     // width: 15rem;
+
+    @include screen(tablet) {
+      order: 2;
+    }
   }
 
   &__value {

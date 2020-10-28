@@ -27,14 +27,14 @@ export default {
   },
   mounted: function () {
     this.moveSlider()
-    setInterval(this.moveSlider, 40050)
+    setInterval(this.moveSlider, 80050)
   },
   methods: {
     moveSlider: function () {
-      this.$refs.carousel.style.transition = 'transform 40s linear'
+      this.$refs.carousel.style.transition = 'transform 80s linear'
       this.$refs.carousel.style.transform = 'translateX(-50%)'
       // this.resetSlider()
-      setTimeout(this.resetSlider, 40000)
+      setTimeout(this.resetSlider, 80000)
       // clearTimeout()
     },
     resetSlider: function () {
@@ -64,7 +64,7 @@ export default {
   &__track {
     width: max-content;
     transform: translateX(0%);
-    transition: transform 40s linear;
+    transition: transform 80s linear;
   }
 
   strong {

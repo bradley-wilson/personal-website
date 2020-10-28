@@ -176,7 +176,7 @@ p {
 		font-family: $Josefin;
 		line-height: 1.2;
 		letter-spacing: 0;
-		text-shadow: rgba(255, 255, 255, .7) 0 0 .7rem, rgba(255, 255, 255, .7) 0 0 6rem;
+		text-shadow: rgba(255, 255, 255, .4) 0 0 .7rem, rgba(255, 255, 255, .4) 0 0 6rem;
 
 		@include screen(tablet) {
 			font-size: 6.2rem;

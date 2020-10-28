@@ -163,10 +163,14 @@ export default {
 
 <style lang="scss">
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   padding: 1rem;
   z-index: 9;
+
+  @include screen(desktop) {
+    position: absolute;
+  }
 
   &__menu {
     background-color: $gradient-dark;
