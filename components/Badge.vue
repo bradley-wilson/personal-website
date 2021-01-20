@@ -61,6 +61,16 @@ export default {
     position: absolute;
     max-width: 20rem;
     top: 20rem;
+    z-index: 20;
+
+    &--impact {
+      max-width: 100rem;
+      top: 10rem;
+
+      p {
+        font-size: 1.4rem;
+      }
+    }
   }
 }
 </style>

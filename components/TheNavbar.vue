@@ -24,6 +24,15 @@
             class="menu__link--inner"
           > {{ link.title }} </nuxt-link>
         </div>
+        <div
+          class="menu__link"
+          @click="closeNav()"
+        >
+          <a
+            href="https://www.insightsin.co/"
+            class="menu__link--inner"
+          >Blog</a>
+        </div>
 
         <div class="social-media">
           <a
@@ -69,9 +78,6 @@ export default {
         },
         { title: 'Publications', url: '/publications' },
         { title: 'Team', url: '/team' },
-        { title: 'Bookclub', url: '/under-construction' },
-        { title: 'Shop', url: '/under-construction' },
-        { title: 'Blog', url: '/blog' },
         {
           title: 'Contact',
           url: '/',

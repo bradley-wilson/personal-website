@@ -35,7 +35,7 @@
     </section>
 
     <section class="section-mailing-list">
-      <MailingList />
+      <div id="fd-form-60006f60871743c35042c9cc"></div>
     </section>
 
     <!-- About section -------------------------------------------------->
@@ -195,9 +195,34 @@
         webm-src="/videos/map-line-connection.webm"
       />
       <div class="container">
-        <h1 class="heading heading--primary u-block">
+        <h1
+          class="heading heading--primary u-block"
+          @mouseover="hover = true"
+          @mouseleave="hover = false"
+          >
           Research Impact and Audience Engagement
         </h1>
+        <div v-if="hover" class="badge__description badge__description--impact text--description">
+          <p>I aim to improve and demonstrate my work to various stakeholders and this is my first attempt as doing this in the public domain. So what is Research Impact? One preferred Research Impact Definition from Julie Bayley, Director of Research Impact at the University of Lincoln states:</p>
+          <p>“Provable change [benefit] of research in the ‘real world’.”</p>
+          <p>Other published definition variants guiding my thought and practice include:</p>
+          <p>Australian Research Council: The contribution that research makes to the economy, society, environment or culture, beyond the contribution to academic research.</p>
+          <p>US National Institutes of Health: The likelihood for the project to exert a sustained, powerful influence on the research field(s) involved.</p>
+          <p>Research England: An effect on, change or benefit to the economy, society, culture, public policy or services, health, the environment or quality of life beyond academia.</p>
+          <p>US National Science Foundation: The potential [for your research] to benefit society and contribute to the achievement of desired society outcomes.</p>
+          <p>My public information may not demonstrate impact along all types for all stakeholders but this is the praxis I am following. There are a number of types of impact. Professor Mark Reed, Director of Engagement & Impact at Newcastle University, has analyzed impact case studies from around the world, and proposes ten types of impact:</p>
+          <p>Understanding and awareness – meaning your research helped people understand an issue better than they had before.</p>
+          <p>Attitudinal – your research helped lead to a change in attitudes.</p>
+          <p>Economic – your research contributed to cost savings, or costs avoided; or increases in revenue, profits or funding.</p>
+          <p>Environmental – benefits arising from your research aid genetic diversity, habitat conservation and ecosystems.</p>
+          <p>Health and well-being – your research led to better outcomes for individuals or groups</p>
+          <p>Policy – your research contributed to new or amended guidelines or laws</p>
+          <p>Other forms of decision-making and behavioural impacts.</p>
+          <p>Cultural – changes in prevailing values, attitudes and beliefs.</p>
+          <p>Other social impacts –such as access to education or improvement in human rights.</p>
+          <p>Capacity or preparedness – research that helps individuals and groups better cope with changes that might otherwise have a negative impact.</p>
+          <p>Here is a link to Mark’s book titled: The Research Impact Handbook. Section adapted from www.Kudos.com</p>
+        </div>
         <div class="stats__container">
           <div class="scoreboard__container">
             <div class="scoreboard">
@@ -661,6 +686,7 @@ export default {
   },
   data() {
     return {
+      hover: false,
       statsCounter: 1,
       lineChartStyles: {
         height: '40vh',
@@ -795,6 +821,14 @@ export default {
       this.statsCounter = target + 1
     },
   },
+  head() {
+    return {
+      script: [
+        { src: '/scripts/form.js', defer: true },
+        { src: '/scripts/newsletter.js', body: true, defer: true }
+      ]
+    }
+  },
   layout: 'landing-page',
 }
 </script>
@@ -808,8 +842,8 @@ export default {
 
 .section-mailing-list {
   // background-color: $light-blue;
-  background-image: $gradient-light;
-  padding-bottom: 6rem;
+  background-color: #04263e;
+  padding: 4rem 0;
 }
 
 // ABOUT -----------------------------------------------------------
