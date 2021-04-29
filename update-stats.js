@@ -16,7 +16,7 @@ async function updateStats() {
 
   try {
     statsRes = await axios.get(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519'
+      'https://cockpit.bradwilsonphd.com/api/collections/get/stats?token=4458f0a2d0d2793a50fe20d0e9c519'
     )
     // return statsRes
   } catch (err) {
@@ -25,7 +25,7 @@ async function updateStats() {
 
   try {
     interestRes = await axios.get(
-      'https://www.bradwilsonphd.com/cockpit/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519'
+      'https://cockpit.bradwilsonphd.com/api/collections/get/interest?token=4458f0a2d0d2793a50fe20d0e9c519'
     )
     // return interestRes
   } catch (err) {
@@ -54,7 +54,7 @@ async function updateStats() {
   if (statsData.week !== currentStats[currentStats.length - 1].week) {
     try {
       await axios.post(
-        'https://www.bradwilsonphd.com/cockpit/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
+        'https://cockpit.bradwilsonphd.com/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
         {
           data: statsData,
         }
@@ -67,7 +67,7 @@ async function updateStats() {
   if (interestData.year !== currentInterest[currentInterest.length - 1].year) {
     try {
       await axios.post(
-        'https://www.bradwilsonphd.com/cockpit/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
+        'https://cockpit.bradwilsonphd.com/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
         {
           data: interestData,
         }
