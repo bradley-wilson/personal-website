@@ -36,15 +36,15 @@ async function updateStats() {
   const currentInterest = interestRes.data.entries
   const scrappedStats = scrappedRes.data
 
-  const weekReads = scrappedStats.Researchgate['C4_Weekly change']
-  const yearInterest = scrappedStats.Researchgate['C1_Research Interest']
+  const weekReads = scrappedStats.Researchgate['card4']['Weekly_change']
+  const yearInterest = scrappedStats.Researchgate['card1']['Research_Interest']
 
   const statsData = {
-    week: scrappedStats.Researchgate.weekdate,
+    week: scrappedStats.Researchgate['card1'].weekdate,
     reads: weekReads.split('+').pop(),
   }
 
-  const scrappedYear = scrappedStats.Researchgate.weekdate.slice(0, 4)
+  const scrappedYear = scrappedStats.Researchgate['card1'].weekdate.slice(0, 4)
 
   const interestData = {
     year: scrappedYear,
