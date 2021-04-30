@@ -41,14 +41,14 @@ async function updateStats() {
 
   const statsData = {
     week: scrappedStats.Researchgate['card1'].weekdate,
-    reads: weekReads.split('+').pop(),
+    reads: weekReads,
   }
 
   const scrappedYear = scrappedStats.Researchgate['card1'].weekdate.slice(0, 4)
 
   const interestData = {
     year: scrappedYear,
-    interest: yearInterest.split('Total:  ').pop(),
+    interest: yearInterest,
   }
 
   if (statsData.week !== currentStats[currentStats.length - 1].week) {
