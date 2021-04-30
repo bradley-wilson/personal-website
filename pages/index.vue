@@ -265,7 +265,7 @@
                   Reads
                   <span class="scoreboard-item__value">
                     {{
-                      scrappedData.Researchgate['C4_Reads']
+                      scrappedData.Researchgate['card4']['Total_Reads']
                         .split('Total: ')
                         .pop()
                     }}
@@ -288,7 +288,7 @@
                   />
                   <div class="stats__circle">
                     <span class="stats__value stats__value--reads">
-                      {{ scrappedData.Researchgate['C4_Weekly change'] }}
+                      {{ scrappedData.Researchgate['card4']['Weekly_change'] }}
                     </span>
                     <span class="stats__description">Reads this week</span>
                   </div>
@@ -314,7 +314,7 @@
                   <div class="stats__circle">
                     <span class="stats__value stats__value--interest">
                       {{
-                        scrappedData.Researchgate['C1_Research Interest']
+                        scrappedData.Researchgate['card1']['Research_Interest']
                           .split('Total:  ')
                           .pop()
                       }}
