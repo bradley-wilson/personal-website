@@ -34,6 +34,9 @@ async function updateStats() {
 
   const currentStats = statsRes.data.entries
   const currentInterest = interestRes.data.entries
+  
+  const lastWeek = currentStats[currentStats.length - 1].week
+  const lastYear = currentInterest[currentInterest.length - 1].year
   const scrappedStats = scrappedRes.data
 
   const weekReads = scrappedStats.Researchgate['card4']['Weekly_change']
@@ -44,6 +47,9 @@ async function updateStats() {
     reads: weekReads,
   }
 
+  console.log(statsData)
+  console.log(statsData.week !== lastWeek)
+
   const scrappedYear = scrappedStats.Researchgate['card1'].weekdate.slice(0, 4)
 
   const interestData = {
@@ -51,7 +57,10 @@ async function updateStats() {
     interest: yearInterest,
   }
 
-  if (statsData.week !== currentStats[currentStats.length - 1].week) {
+  console.log(interestData)
+  console.log(interestData.year !== lastYear)
+
+  if (statsData.week !== lastWeek) {
     try {
       await axios.post(
         'https://cockpit.bradwilsonphd.com/api/collections/save/stats?token=4458f0a2d0d2793a50fe20d0e9c519',
@@ -64,7 +73,7 @@ async function updateStats() {
     }
   }
 
-  if (interestData.year !== currentInterest[currentInterest.length - 1].year) {
+  if (interestData.year !== lastYear) {
     try {
       await axios.post(
         'https://cockpit.bradwilsonphd.com/api/collections/save/interest?token=4458f0a2d0d2793a50fe20d0e9c519',
