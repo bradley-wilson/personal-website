@@ -48,6 +48,7 @@ async function updateStats() {
   }
 
   console.log(statsData)
+  console.log(lastWeek)
   console.log(statsData.week !== lastWeek)
 
   const scrappedYear = scrappedStats.Researchgate['card1'].weekdate.slice(0, 4)
@@ -58,6 +59,7 @@ async function updateStats() {
   }
 
   console.log(interestData)
+  console.log(lastYear)
   console.log(interestData.year !== lastYear)
 
   if (statsData.week !== lastWeek) {
